@@ -1,0 +1,42 @@
+# =====================================================================
+# Danh muc ma hang board (moi ma hang = 1 bo weights YOLO + 1 bo file
+# mapping toa do rieng). Ky thuat vien tu them ma hang moi vao day khi
+# co san pham moi - KHONG can sua code.
+#
+# Cach them 1 ma hang moi:
+#   1. Train/chuan bi weights YOLO cho ma hang do, dat vao 1 thu muc rieng
+#      (vd D:\Camera\Weight\<ten_ma_hang>\weights\best.pt).
+#   2. Tao 1 thu muc rieng cho file mapping toa do cua ma hang do, vd:
+#        D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\<ma_hang>\
+#   3. Them 1 muc moi vao "products" ben duoi, tro calib_dir vao thu muc vua tao.
+#   4. Goi POST /api/products/select {"product_code": "<ma_hang>"} (hoac chon
+#      tren app Flutter) roi chay quy trinh hieu chinh calib nhu binh thuong
+#      (/api/calib/auto-board-offset, /api/calib/camera-axis...) - ket qua se
+#      tu dong luu vao dung calib_dir cua ma hang nay.
+#
+# class_name_filter: null = dung moi class cua model, chon confidence cao nhat.
+#                     Neu model co nhieu class, dien 1 chuoi con de loc theo ten class.
+# =====================================================================
+
+default_product: "23691025-250616-0004-nvq-aoi"
+
+products:
+  # Ma hang dang chay production hien tai. vrs_calib_side_a/b.json + offset_runtime_side_a/b.json
+  # da duoc gom rieng vao thu muc products/<ma_hang>/ nay (truoc do nam chung trong gateway/).
+  "23691025-250616-0004-nvq-aoi":
+    weights_path: D:\Camera\Weight\VRS_yolo11n_640x640\weights\best.pt
+    class_name_filter: 0
+    imgsz: 640
+    calib_dir: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\23691025-250616-0004-nvq-aoi
+  # Ma hang moi - da co san file calib/offset trong thu muc rieng.
+  "aoi-23692109-250613-dht":
+    weights_path: D:\Camera\Weight\VRS_yolo11n_640x640\weights\best.pt
+    class_name_filter: 0
+    imgsz: 640
+    calib_dir: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\aoi-23692109-250613-dht
+  # Ma hang moi - da co san file calib/offset trong thu muc rieng.
+  "23693107-260615-outerthanh":
+    weights_path: D:\Camera\Weight\VRS_yolo11n_640x640\weights\best.pt
+    class_name_filter: 0
+    imgsz: 640
+    calib_dir: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\23693107-260615-outerthanh

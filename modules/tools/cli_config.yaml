@@ -1,0 +1,4 @@
+base_url: http://localhost:8083
+plc_pc_ip: 192.168.3.101
+plc_ip: 192.168.3.1
+plc_port: 9600

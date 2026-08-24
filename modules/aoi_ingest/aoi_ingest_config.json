@@ -1,0 +1,8 @@
+{
+  "watch_dir": "D:/Ps_Duy/Project/Auto_VRS/Data/AOI_Output",
+  "archive_dir": "D:/Ps_Duy/Project/Auto_VRS/Data/AOI_Archive",
+  "db_path": "%USERPROFILE%/Documents/AutoVRS/autovrs.db",
+  "poll_interval_seconds": 5,
+  "stable_polls_required": 2,
+  "log_file": null
+}

@@ -1,0 +1,43 @@
+{
+  "camera_snapshot_url": "http://127.0.0.1:8001/snapshot",
+  "camera_snapshot_timeout_ms": 3000,
+  "ai_api_url": "http://192.84.106.75:8082/api/ai-detection",
+  "plc_axis_speed_mm_per_s": 60.0,
+  "use_plc_position_feedback": false,
+  "plc_done_mem_area": "D",
+  "plc_done_addr": null,
+  "plc_done_value": 1,
+  "plc_busy_mem_area": "D",
+  "plc_busy_addr": null,
+  "plc_busy_idle_value": 0,
+  "plc_poll_interval_ms": 50,
+  "use_plc_motion_status": true,
+  "plc_motion_status_mem_area": "D",
+  "plc_motion_status_addr": 466,
+  "plc_motion_status_count": 4,
+  "plc_motion_start_timeout_ms": 1500,
+  "plc_motion_idle_confirm_count": 10,
+  "plc_motion_settle_ms": 500,
+  "plc_motion_hard_timeout_ms": 20000,
+  "fiducial_api_url": "http://127.0.0.1:8191/api/detect-marker",
+  "fiducial_confidence_threshold": 0.5,
+  "camera_fov_width_mm": 10.872,
+  "camera_fov_height_mm": 5.884,
+  "camera_image_width_px": 1920,
+  "camera_image_height_px": 1080,
+  "camera_axis_matrix": [
+    [
+      -182.27433179719537,
+      1.3694450864694545
+    ],
+    [
+      0.9039789523720287,
+      182.38428858559888
+    ]
+  ],
+  "camera_axis_calibrated": true,
+  "camera_axis_invert_x": false,
+  "camera_axis_invert_y": false,
+  "max_allowed_pixel_offset_px": 800.0,
+  "max_allowed_rms_error_mm": 1.0
+}

@@ -1,0 +1,5 @@
+{
+  "weights_path": "D:\\Camera\\Weight\\VRS_yolo11n_640x640\\weights\\best.pt",
+  "class_name_filter": 0,
+  "imgsz": 640
+}

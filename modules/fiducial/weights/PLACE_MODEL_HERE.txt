@@ -1,0 +1,20 @@
+Đặt file model YOLO (.pt) đã train của bạn vào đây, đặt tên: fiducial_best.pt
+
+Đường dẫn đầy đủ mong đợi (mặc định):
+  AutoBoardOffset_YOLO/fiducial_detector/weights/fiducial_best.pt
+
+Nếu muốn dùng tên khác hoặc đặt ở chỗ khác, set biến môi trường trước khi chạy service:
+  Windows (PowerShell):  $env:FIDUCIAL_WEIGHTS_PATH = "D:\đường\dẫn\model_cua_ban.pt"
+  Windows (cmd):         set FIDUCIAL_WEIGHTS_PATH=D:\đường\dẫn\model_cua_ban.pt
+  Linux/macOS:           export FIDUCIAL_WEIGHTS_PATH=/đường/dẫn/model_cua_ban.pt
+
+Yêu cầu model:
+- Format: Ultralytics YOLO (yolov8/yolov9/yolov11...), file .pt xuất ra từ `model.train()`
+  hoặc tải từ Ultralytics Hub - load được bằng `YOLO("fiducial_best.pt")`.
+- Ít nhất 1 class là vòng tròn mốc (fiducial marker) cần phát hiện.
+- Nếu model có NHIỀU class, set thêm biến môi trường FIDUCIAL_CLASS_NAME = tên (hoặc
+  1 phần tên) của class cần dùng, ví dụ: FIDUCIAL_CLASS_NAME=circle
+  Nếu không set, service sẽ dùng candidate confidence cao nhất trong TẤT CẢ class.
+
+Cho tới khi có file này, service vẫn chạy được ở "mock mode" (found=false, có message rõ
+ràng) để phần còn lại của hệ thống (gateway, test) vẫn viết/test được bình thường.

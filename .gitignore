@@ -1,0 +1,67 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Runtime image folders
+BE-AutoVRS/Image_input/
+BE-AutoVRS/Image_output/
+
+# AI models / TensorRT / Triton generated model repo
+models/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+*.weights
+*.plan
+
+# Triton generated repository if contains heavy model files
+deployment/triton/model_repository_tensorrt/
+
+# Backup copy folders
+deployment - Copy/
+
+# Env
+venv/
+.env
+
+# Runtime image folders
+/BE-AutoVRS/Image_input/**
+/BE-AutoVRS/Image_output/**
+
+# Python cache
+**/__pycache__/**
+*.pyc
+*.pyo
+
+# AI models / TensorRT files
+/models/**
+/BE-AutoVRS/models/**
+*.pt
+*.pth
+*.onnx
+*.engine
+*.trt
+*.weights
+*.plan
+
+# Generated / backup folders
+/deployment - Copy/**
+/deployment/triton/model_repository_tensorrt/**
+
+# Runtime images
+/BE-AutoVRS/Image_input/
+/BE-AutoVRS/Image_output/
+# Visual Studio
+.vs/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Images
+*.jpg
+*.jpeg
+*.pngs

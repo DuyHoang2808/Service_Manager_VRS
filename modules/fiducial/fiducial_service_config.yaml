@@ -1,0 +1,6 @@
+weights_path: D:\Camera\Weight\VRS_yolo11n_640x640\weights\best.pt
+class_name_filter: 0
+imgsz: 640
+port: 8191
+save_images: true
+saved_images_dir: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images

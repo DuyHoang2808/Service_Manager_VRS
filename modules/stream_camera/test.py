@@ -1,0 +1,243 @@
+import cv2
+import subprocess
+import logging
+import time
+import threading
+from Config.ParamsBase import tactParametters
+
+# =========================
+# Logging
+# =========================
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s"
+)
+logger = logging.getLogger("RTSP_Streamer")
+
+
+class CameraConfig(tactParametters):
+    def __init__(self, ModuleName="CameraSonyConfig"):
+        super().__init__(ModuleName=ModuleName)
+
+        # Camera
+        self.camera_index = 1
+        self.width = 1920
+        self.height = 1080
+        self.fps = 30
+
+        # RTSP output
+        self.rtsp_url = "rtsp://localhost:8554/mystream"
+
+        # FFmpeg path
+        self.ffmpeg_path = (
+            r"D:\Driver\ffmpeg-2026-05-06-git-f2e5eff3ff-essentials_build\bin\ffmpeg.exe"
+        )
+
+        # Save config
+        self.save_to_yaml_v2(ModuleName=ModuleName)
+
+
+class SonyCameraStreamer:
+    def __init__(self, config: CameraConfig = None):
+        self.config = config if config else CameraConfig()
+        self.cap = None
+        self.process = None
+        self.stderr_thread = None
+        self.running = False
+
+    def build_ffmpeg_cmd(self, actual_width, actual_height):
+        gop = self.config.fps * 2
+
+        return [
+            self.config.ffmpeg_path,
+            "-y",
+
+            # =========================
+            # Input raw video
+            # =========================
+            "-f", "rawvideo",
+            "-pix_fmt", "bgr24",
+            "-s", f"{actual_width}x{actual_height}",
+            "-r", str(self.config.fps),
+            "-i", "-",
+
+            # =========================
+            # Encoder
+            # =========================
+            "-c:v", "libx264",
+            "-preset", "ultrafast",
+            "-tune", "zerolatency",
+            "-crf", "23",
+            "-g", str(gop),
+            "-keyint_min", str(self.config.fps),
+            "-bf", "0",
+            "-profile:v", "baseline",
+            "-pix_fmt", "yuv420p",
+
+            # =========================
+            # RTSP output
+            # =========================
+            "-f", "rtsp",
+            "-rtsp_transport", "tcp",
+            "-muxdelay", "0.1",
+            self.config.rtsp_url
+        ]
+
+    def read_ffmpeg_stderr(self):
+        """Read FFmpeg stderr continuously"""
+        try:
+            while self.running and self.process:
+                line = self.process.stderr.readline()
+                if not line:
+                    break
+
+                decoded = line.decode(errors="ignore").strip()
+                if decoded:
+                    logger.error(f"FFmpeg: {decoded}")
+        except Exception as e:
+            logger.error(f"Lỗi đọc stderr FFmpeg: {e}")
+
+    def start(self):
+        logger.info("Đang mở camera Sony...")
+
+        # Try DirectShow first
+        self.cap = cv2.VideoCapture(self.config.camera_index, cv2.CAP_DSHOW)
+
+        if not self.cap.isOpened():
+            logger.warning("CAP_DSHOW thất bại, thử CAP_MSMF...")
+            self.cap = cv2.VideoCapture(self.config.camera_index, cv2.CAP_MSMF)
+
+        if not self.cap.isOpened():
+            logger.error("Không thể mở camera!")
+            return
+
+        # Camera settings
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.config.width)
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.config.height)
+        self.cap.set(cv2.CAP_PROP_FPS, self.config.fps)
+        self.cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+
+        # Read actual config
+        actual_width = int(self.cap.get(cv2.CAP_PROP_FRAME_WIDTH))
+        actual_height = int(self.cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        actual_fps = self.cap.get(cv2.CAP_PROP_FPS)
+
+        if actual_fps <= 0:
+            actual_fps = self.config.fps
+
+        logger.info(
+            f"Camera đã mở: {actual_width}x{actual_height} @ {actual_fps} FPS"
+        )
+
+        ffmpeg_cmd = self.build_ffmpeg_cmd(actual_width, actual_height)
+
+        logger.info(f"Đang khởi động FFmpeg tới: {self.config.rtsp_url}")
+        logger.info("FFmpeg command:")
+        logger.info(" ".join(ffmpeg_cmd))
+
+        try:
+            self.process = subprocess.Popen(
+                ffmpeg_cmd,
+                stdin=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                bufsize=0
+            )
+        except FileNotFoundError:
+            logger.error("Không tìm thấy ffmpeg.exe")
+            self.cap.release()
+            return
+        except Exception as e:
+            logger.error(f"Lỗi khởi động FFmpeg: {e}")
+            self.cap.release()
+            return
+
+        self.running = True
+
+        # Start stderr reader
+        self.stderr_thread = threading.Thread(
+            target=self.read_ffmpeg_stderr,
+            daemon=True
+        )
+        self.stderr_thread.start()
+
+        logger.info("Bắt đầu stream RTSP (Ctrl+C để dừng)...")
+
+        frame_count = 0
+        start_time = time.time()
+
+        try:
+            while True:
+                # Check FFmpeg alive
+                if self.process.poll() is not None:
+                    logger.error(
+                        f"FFmpeg đã dừng với mã lỗi: {self.process.returncode}"
+                    )
+                    break
+
+                ret, frame = self.cap.read()
+
+                if not ret:
+                    logger.warning("Không đọc được frame từ camera")
+                    time.sleep(0.01)
+                    continue
+
+                try:
+                    self.process.stdin.write(frame.tobytes())
+                except BrokenPipeError:
+                    logger.error("FFmpeg pipe đã bị đóng")
+                    break
+                except OSError as e:
+                    logger.error(f"Lỗi ghi frame vào FFmpeg: {e}")
+                    break
+
+                frame_count += 1
+                elapsed = time.time() - start_time
+
+                if elapsed >= 5:
+                    fps = frame_count / elapsed
+                    logger.info(f"Streaming FPS: {fps:.2f}")
+
+                    frame_count = 0
+                    start_time = time.time()
+
+        except KeyboardInterrupt:
+            logger.info("Dừng bởi người dùng")
+
+        except Exception as e:
+            logger.error(f"Lỗi runtime: {e}")
+
+        finally:
+            self.cleanup()
+
+    def cleanup(self):
+        logger.info("Đang dọn dẹp tài nguyên...")
+        self.running = False
+
+        if self.cap:
+            try:
+                self.cap.release()
+            except:
+                pass
+
+        if self.process:
+            try:
+                if self.process.stdin:
+                    self.process.stdin.close()
+            except:
+                pass
+
+            try:
+                self.process.terminate()
+                self.process.wait(timeout=3)
+            except:
+                try:
+                    self.process.kill()
+                except:
+                    pass
+
+        logger.info("Đã đóng kết nối thành công.")
+
+
+if __name__ == "__main__":
+    streamer = SonyCameraStreamer()
+    streamer.start()
