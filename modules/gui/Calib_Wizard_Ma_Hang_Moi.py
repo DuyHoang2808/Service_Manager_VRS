@@ -78,7 +78,7 @@ for _p in (CALIB_DIR, GATEWAY_DIR):
         sys.path.insert(0, str(_p))
 
 from calib_2mat import fit_calib_model, read_excel_2mat  # noqa: E402
-from bu_lech_board import get_anchor_points  # noqa: E402
+from bu_lech_board import ANCHOR_SETS  # noqa: E402
 
 DEFAULT_BASE_URL = "http://localhost:8083"
 
@@ -125,11 +125,13 @@ class CalibWizard(QMainWindow):
     select_product_done = Signal(object)
     static_calib_done = Signal(object)
     offset_done = Signal(object)
+    axis_preview_done = Signal(object)
+    axis_run_done = Signal(object)
 
     def __init__(self) -> None:
         super().__init__()
         self.setWindowTitle("Công cụ hiệu chỉnh mã hàng mới (Calib Wizard)")
-        self.resize(680, 620)
+        self._size_to_screen()
 
         self._active_calib_dir: Optional[Path] = None
         self._busy = False
@@ -138,6 +140,8 @@ class CalibWizard(QMainWindow):
         self.select_product_done.connect(self._on_select_product_done)
         self.static_calib_done.connect(self._on_static_calib_done)
         self.offset_done.connect(self._on_offset_done)
+        self.axis_preview_done.connect(self._on_axis_preview_done)
+        self.axis_run_done.connect(self._on_axis_run_done)
 
         self._build_ui()
         self._update_anchor_points_label()
@@ -188,6 +192,9 @@ class CalibWizard(QMainWindow):
         excel_row = QHBoxLayout()
         self.excel_path_edit = QLineEdit()
         self.excel_path_edit.setPlaceholderText("Chọn file calib_2mat.xlsx...")
+        # Cap nhat lai toa do diem moc (Buoc 2) moi khi doi file Excel - vi toa do
+        # do lay THAT tu Excel nay, khong con la bang hard-code nua.
+        self.excel_path_edit.editingFinished.connect(self._update_anchor_points_label)
         browse_btn = QPushButton("...")
         browse_btn.setMaximumWidth(32)
         browse_btn.clicked.connect(self._browse_excel)
@@ -212,11 +219,14 @@ class CalibWizard(QMainWindow):
         calib_scroll = QScrollArea()
         calib_scroll.setWidgetResizable(True)
         calib_scroll.setWidget(self.calib_result_label)
-        calib_scroll.setMaximumHeight(220)
+        # KHONG fix cung max-height - de tu co gian theo cua so (xem stretch=1 luc
+        # them step1_group vao outer, va _size_to_screen() theo man hinh that). Chi
+        # dat min-height de khong bi bop qua nho khi cua so nho.
+        calib_scroll.setMinimumHeight(250)
         calib_scroll.setFrameShape(QScrollArea.NoFrame)
         step1_form.addRow(calib_scroll)
 
-        outer.addWidget(step1_group)
+        outer.addWidget(step1_group, 1)  # stretch=1: chiem het khoang trong con lai
 
         # --- Buoc 2: chay bu lech that ---
         step2_group = QGroupBox("Bước 2: Chạy bù lệch thật (offset_runtime_side_a/b.json)")
@@ -258,8 +268,68 @@ class CalibWizard(QMainWindow):
         self.offset_result_label.setTextInteractionFlags(Qt.TextSelectableByMouse)
         step2_form.addRow(self.offset_result_label)
 
-        outer.addWidget(step2_group)
-        outer.addStretch(1)
+        outer.addWidget(step2_group, 0)  # stretch=0: giu kich thuoc vua du, khong gianh cho step1
+
+        # --- Buoc 3 (tuy chon): hieu chinh truc camera (ma tran T) ---
+        step3_group = QGroupBox(
+            "Bước 3 (tuỳ chọn - chỉ làm 1 lần lúc setup máy/tháo lắp camera): "
+            "Hiệu chỉnh trục camera (ma trận T)"
+        )
+        step3_form = QFormLayout(step3_group)
+        step3_form.setContentsMargins(8, 8, 8, 8)
+        step3_form.setSpacing(4)
+
+        self.axis_anchor_edit = QLineEdit("A")
+        self.axis_anchor_edit.setPlaceholderText("Tên điểm mốc dùng làm gốc P0, vd A")
+        step3_form.addRow("Điểm mốc gốc (P0):", self.axis_anchor_edit)
+
+        self.axis_delta_edit = QLineEdit("5.0")
+        self.axis_delta_edit.setPlaceholderText("Bước dịch chuyển thử nghiệm (mm)")
+        step3_form.addRow("Delta (mm):", self.axis_delta_edit)
+
+        preview_row = QHBoxLayout()
+        self.axis_preview_btn = QPushButton("Xem trước toạ độ")
+        self.axis_preview_btn.clicked.connect(self._on_axis_preview_clicked)
+        preview_row.addWidget(self.axis_preview_btn)
+        preview_row.addStretch(1)
+        step3_form.addRow(self._wrap(preview_row))
+
+        self.axis_preview_label = QLabel("")
+        self.axis_preview_label.setWordWrap(True)
+        self.axis_preview_label.setTextInteractionFlags(Qt.TextSelectableByMouse)
+        step3_form.addRow(self.axis_preview_label)
+
+        self.run_axis_btn = QPushButton("Chạy hiệu chỉnh trục camera (di chuyển PLC 3 lần)")
+        self.run_axis_btn.setMinimumHeight(30)
+        self.run_axis_btn.setStyleSheet(
+            "QPushButton{background-color:#c62828;color:white;font-weight:bold;}"
+            "QPushButton:disabled{background-color:#90a4ae;color:#eceff1;}"
+        )
+        self.run_axis_btn.clicked.connect(self._on_run_axis_clicked)
+        step3_form.addRow(self.run_axis_btn)
+
+        self.axis_result_label = QLabel("")
+        self.axis_result_label.setWordWrap(True)
+        self.axis_result_label.setTextInteractionFlags(Qt.TextSelectableByMouse)
+        step3_form.addRow(self.axis_result_label)
+
+        outer.addWidget(step3_group, 0)
+
+    def _size_to_screen(self) -> None:
+        """Co gian theo kich thuoc man hinh THAT (khong fix cung px) - man hinh nho van
+        thay het noi dung quan trong nho QScrollArea + stretch factor trong _build_ui."""
+        screen = QApplication.primaryScreen()
+        if screen is None:
+            self.resize(720, 900)
+            return
+        avail = screen.availableGeometry()
+        width = min(int(avail.width() * 0.85), 900)
+        height = int(avail.height() * 0.9)
+        self.resize(width, height)
+        self.move(
+            avail.x() + (avail.width() - width) // 2,
+            avail.y() + (avail.height() - height) // 2,
+        )
 
     @staticmethod
     def _wrap(layout) -> QWidget:
@@ -381,6 +451,7 @@ class CalibWizard(QMainWindow):
         )
         if path:
             self.excel_path_edit.setText(path)
+            self._update_anchor_points_label()
 
     def _on_generate_calib_clicked(self) -> None:
         if self._busy:
@@ -395,6 +466,31 @@ class CalibWizard(QMainWindow):
                 "Không xác định được mã hàng đang active - không biết ghi calib vào đâu.\n"
                 "Hãy chọn mã hàng qua POST /api/products/select trước, rồi bấm 'Làm mới'.",
             )
+            return
+
+        # Xac nhan lai truoc khi GHI DE calib - tranh dung nham file Excel cua 1 ma hang
+        # khac (da tung xay ra thuc te: dung chung ten file calib_2mat.xlsx cho nhieu ma
+        # hang, de nham lan khi duyet file). Neu ten file Excel khong chua ma hang dang
+        # active, canh bao dam hon.
+        product_code = self.product_combo.currentText().strip()
+        excel_name = Path(excel_path).name
+        name_matches = product_code and product_code in excel_name
+        warning_line = (
+            "" if name_matches else
+            f"\n⚠️ Tên file Excel KHÔNG chứa mã hàng '{product_code}' - kiểm tra kỹ đây có "
+            "đúng là file Excel của mã hàng này không!\n"
+        )
+        confirm = QMessageBox.question(
+            self, "Xác nhận sinh calib tĩnh",
+            f"Mã hàng: {product_code}\n"
+            f"File Excel: {excel_name}\n"
+            f"Sẽ GHI ĐÈ (nếu đã có): {self._active_calib_dir}\\vrs_calib_side_a.json, "
+            f"vrs_calib_side_b.json"
+            f"{warning_line}\nTiếp tục?",
+            QMessageBox.Yes | QMessageBox.No,
+            QMessageBox.Yes if name_matches else QMessageBox.No,
+        )
+        if confirm != QMessageBox.Yes:
             return
 
         self._set_busy(True)
@@ -465,23 +561,58 @@ class CalibWizard(QMainWindow):
     # Buoc 2: chay bu lech that
     # ------------------------------------------------------------------
     def _update_anchor_points_label(self) -> None:
-        """Hien tam toa do Board (mm) cua cac diem moc se dung, theo che do 2/3 diem
-        dang chon - de nguoi dung tu kiem tra truoc khi chay bu lech that."""
+        """Hien toa do Board (mm) THAT cua cac diem moc se dung, doc truc tiep tu file
+        Excel dang chon o Buoc 1 (KHONG dung bang toa do tinh/hard-code) - vi moi ma
+        hang co toa do diem khac nhau. Chi ten diem (A/C hoac A/C/D theo che do 2/3
+        diem) la quy uoc co dinh (ANCHOR_SETS), con TOA DO phai lay tu Excel thuc te."""
         anchor_mode = self.anchor_combo.currentData()
         if anchor_mode is None:
             self.anchor_points_label.setText("")
             return
-        points = get_anchor_points(anchor_mode)
-        text = "  |  ".join(f"{name}: Board ({x:.1f}, {y:.1f}) mm" for name, (x, y) in points)
-        self.anchor_points_label.setText(text)
+        point_names = ANCHOR_SETS[anchor_mode]
+
+        excel_path = self.excel_path_edit.text().strip()
+        if not excel_path or not Path(excel_path).is_file():
+            self.anchor_points_label.setStyleSheet("color: #c62828;")
+            self.anchor_points_label.setText(
+                f"⚠ Chưa chọn file Excel hợp lệ - cần điểm {', '.join(point_names)} từ Excel."
+            )
+            return
+
+        try:
+            rows_a, rows_b = read_excel_2mat(excel_path)
+            board_xy_by_name = {r[0]: (r[1], r[2]) for r in (rows_a or rows_b)}
+        except Exception as e:
+            self.anchor_points_label.setStyleSheet("color: #c62828;")
+            self.anchor_points_label.setText(f"⚠ Không đọc được Excel: {e}")
+            return
+
+        parts = []
+        missing = []
+        for name in point_names:
+            if name in board_xy_by_name:
+                x, y = board_xy_by_name[name]
+                parts.append(f"{name}: Board ({x:.3f}, {y:.3f}) mm")
+            else:
+                missing.append(name)
+        if missing:
+            self.anchor_points_label.setStyleSheet("color: #c62828;")
+            self.anchor_points_label.setText(
+                f"⚠ Excel thiếu điểm {', '.join(missing)} (cần cho chế độ {anchor_mode} điểm)."
+            )
+            return
+
+        self.anchor_points_label.setStyleSheet("color: #555;")
+        self.anchor_points_label.setText("  |  ".join(parts))
 
     def _on_run_offset_clicked(self) -> None:
         if self._busy:
             return
-        if self._active_calib_dir is None:
+        product_code = self.product_combo.currentText().strip()
+        if not product_code:
             QMessageBox.critical(
-                self, "Chưa có mã hàng active",
-                "Không xác định được mã hàng đang active. Hãy chọn mã hàng trước.",
+                self, "Chưa có mã hàng",
+                "Hãy gõ hoặc chọn 1 mã hàng ở trên trước.",
             )
             return
 
@@ -491,8 +622,8 @@ class CalibWizard(QMainWindow):
 
         confirm = QMessageBox.question(
             self, "Xác nhận",
-            f"Sẽ di chuyển PLC + chụp ảnh THẬT để đo bù lệch cho mặt {side}.\n"
-            "Đảm bảo board mẫu đã được gá đúng vị trí trên máy.\n\nTiếp tục?",
+            f"Sẽ di chuyển PLC + chụp ảnh THẬT để đo bù lệch cho mặt {side}, mã hàng "
+            f"'{product_code}'.\nĐảm bảo board mẫu đã được gá đúng vị trí trên máy.\n\nTiếp tục?",
             QMessageBox.Yes | QMessageBox.No, QMessageBox.No,
         )
         if confirm != QMessageBox.Yes:
@@ -501,16 +632,41 @@ class CalibWizard(QMainWindow):
         base_url = self.base_url_edit.text().strip().rstrip("/")
         self._set_busy(True)
         self.offset_result_label.setStyleSheet("")
-        self.offset_result_label.setText("Đang đo bù lệch (di chuyển PLC + chụp ảnh)...")
+        self.offset_result_label.setText(f"Đang xác nhận mã hàng '{product_code}' với gateway...")
         threading.Thread(
             target=self._run_offset_worker,
-            args=(base_url, side, anchor_mode, board_id),
+            args=(base_url, product_code, side, anchor_mode, board_id),
             name="RunOffset", daemon=True,
         ).start()
 
     def _run_offset_worker(
-        self, base_url: str, side: str, anchor_mode: int, board_id: Optional[str],
+        self, base_url: str, product_code: str, side: str, anchor_mode: int,
+        board_id: Optional[str],
     ) -> None:
+        # Luon bao gateway chon LAI dung mã hang nay truoc, GIONG app Flutter lam moi
+        # khi operator xac nhan mot mã hang - tranh truong hop gateway (dung chung cho
+        # nhieu client: Flutter, GUI nay, CLI...) da bi doi sang mã hang khac giua luc
+        # minh dang xem GUI va luc bam nut, khien PLC di chuyen sai theo calib cua mã
+        # hang khac. Nếu chọn thất bại thì DUNG lai, KHONG goi auto-board-offset.
+        try:
+            select_resp = requests.post(
+                f"{base_url}/api/products/select",
+                json={"product_code": product_code}, timeout=40,
+            )
+            select_data = select_resp.json() if select_resp.status_code != 400 else {
+                "success": False, "message": select_resp.json().get("detail", "HTTP 400"),
+            }
+        except Exception as e:
+            select_data = {"success": False, "message": f"Không gọi được gateway: {e}"}
+
+        if not select_data.get("success"):
+            self.offset_done.emit({
+                "success": False, "side": side,
+                "error": f"Chọn mã hàng '{product_code}' thất bại, ĐÃ HUỶ đo bù lệch: "
+                         f"{select_data.get('message')}",
+            })
+            return
+
         payload = {"anchor_mode": anchor_mode, "board_side": side, "board_id": board_id}
         try:
             resp = requests.post(f"{base_url}/api/calib/auto-board-offset", json=payload, timeout=60)
@@ -550,11 +706,121 @@ class CalibWizard(QMainWindow):
         self.offset_result_label.setText(text)
 
     # ------------------------------------------------------------------
+    # Buoc 3: hieu chinh truc camera (ma tran T) - lam 1 lan luc setup may
+    # ------------------------------------------------------------------
+    def _on_axis_preview_clicked(self) -> None:
+        if self._busy:
+            return
+        anchor_name = self.axis_anchor_edit.text().strip() or "A"
+        side = self.side_combo.currentText()
+        base_url = self.base_url_edit.text().strip().rstrip("/")
+        self.axis_preview_label.setStyleSheet("")
+        self.axis_preview_label.setText("Đang tra cứu...")
+        threading.Thread(
+            target=self._axis_preview_worker, args=(base_url, anchor_name, side),
+            name="AxisPreview", daemon=True,
+        ).start()
+
+    def _axis_preview_worker(self, base_url: str, anchor_name: str, side: str) -> None:
+        try:
+            resp = requests.get(
+                f"{base_url}/api/calib/anchor-info",
+                params={"anchor_name": anchor_name, "board_side": side}, timeout=10,
+            )
+            result = {"success": resp.status_code == 200, "data": resp.json()}
+        except Exception as e:
+            result = {"success": False, "error": str(e)}
+        self.axis_preview_done.emit(result)
+
+    def _on_axis_preview_done(self, result: Dict[str, Any]) -> None:
+        if not result.get("success"):
+            self.axis_preview_label.setStyleSheet("color: #c62828;")
+            data = result.get("data") or {}
+            self.axis_preview_label.setText(f"❌ {data.get('detail') or result.get('error')}")
+            return
+        data = result["data"]
+        board_xy = data.get("board_xy")
+        plc_xy = data.get("plc_expected_xy")
+        text = f"Board=({board_xy[0]:.3f}, {board_xy[1]:.3f}) mm"
+        if plc_xy:
+            text += f"  ->  PLC kỳ vọng=({plc_xy[0]:.3f}, {plc_xy[1]:.3f})"
+        else:
+            text += f"  (không suy ra được PLC: {data.get('plc_expected_xy_error')})"
+        self.axis_preview_label.setStyleSheet("color: #555;")
+        self.axis_preview_label.setText(text)
+
+    def _on_run_axis_clicked(self) -> None:
+        if self._busy:
+            return
+        anchor_name = self.axis_anchor_edit.text().strip() or "A"
+        side = self.side_combo.currentText()
+        try:
+            delta_mm = float(self.axis_delta_edit.text().strip())
+            if delta_mm <= 0:
+                raise ValueError
+        except ValueError:
+            QMessageBox.warning(self, "Delta không hợp lệ", "Delta (mm) phải là số > 0.")
+            return
+
+        confirm = QMessageBox.question(
+            self, "Xác nhận",
+            f"Sẽ di chuyển PLC THẬT 3 lần (P0, P0+dX, P0+dY) quanh điểm mốc "
+            f"'{anchor_name}' (mặt {side}), delta={delta_mm}mm, để hiệu chỉnh ma trận "
+            "trục camera.\n\nChỉ làm việc này 1 lần lúc setup máy hoặc sau khi tháo/lắp "
+            "lại camera - KHÔNG làm mỗi khi đổi mã hàng.\n\nTiếp tục?",
+            QMessageBox.Yes | QMessageBox.No, QMessageBox.No,
+        )
+        if confirm != QMessageBox.Yes:
+            return
+
+        base_url = self.base_url_edit.text().strip().rstrip("/")
+        self._set_busy(True)
+        self.axis_result_label.setStyleSheet("")
+        self.axis_result_label.setText("Đang hiệu chỉnh trục camera (di chuyển PLC 3 lần)...")
+        threading.Thread(
+            target=self._run_axis_worker, args=(base_url, anchor_name, side, delta_mm),
+            name="RunAxisCalib", daemon=True,
+        ).start()
+
+    def _run_axis_worker(
+        self, base_url: str, anchor_name: str, side: str, delta_mm: float,
+    ) -> None:
+        payload = {"anchor_name": anchor_name, "delta_mm": delta_mm, "board_side": side}
+        try:
+            resp = requests.post(f"{base_url}/api/calib/camera-axis", json=payload, timeout=60)
+            result: Dict[str, Any] = {"success": True, "data": resp.json()}
+        except Exception as e:
+            result = {"success": False, "error": str(e)}
+        self.axis_run_done.emit(result)
+
+    def _on_axis_run_done(self, result: Dict[str, Any]) -> None:
+        self._set_busy(False)
+        if not result.get("success"):
+            self.axis_result_label.setStyleSheet("color: #c62828;")
+            self.axis_result_label.setText(f"❌ Không gọi được gateway: {result.get('error')}")
+            return
+
+        data = result["data"]
+        if not data.get("success"):
+            self.axis_result_label.setStyleSheet("color: #c62828;")
+            self.axis_result_label.setText(f"❌ Thất bại: {data.get('message')}")
+            return
+
+        self.axis_result_label.setStyleSheet("color: #2e7d32;")
+        self.axis_result_label.setText(
+            f"✅ {data.get('message')}\n"
+            f"camera_axis_matrix = {data.get('camera_axis_matrix')}\n"
+            f"{data.get('sanity_check') or ''}"
+        )
+
+    # ------------------------------------------------------------------
     def _set_busy(self, busy: bool) -> None:
         self._busy = busy
         self.select_product_btn.setEnabled(not busy)
         self.gen_calib_btn.setEnabled(not busy)
         self.run_offset_btn.setEnabled(not busy)
+        self.axis_preview_btn.setEnabled(not busy)
+        self.run_axis_btn.setEnabled(not busy)
 
 
 def main() -> None:

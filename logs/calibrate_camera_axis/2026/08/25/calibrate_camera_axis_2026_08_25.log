@@ -1,0 +1,277 @@
+[14:12:07] ==============================================================================
+[14:12:07] ### PHIEN MOI luc 2026-08-25 14:12:07
+[14:12:07] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py)
+[14:12:07] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py --anchor A --delta-mm 5.0 --yes
+[14:12:07] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\tools
+[14:12:07] ### PID = 38572
+[14:12:07] CLI tiện ích: hiệu chỉnh ma trận trục camera<->máy T (chạy 1 LẦN khi setup máy hoặc sau 
+[14:12:07] khi tháo/lắp lại camera - KHÔNG chạy lại mỗi khi đổi board).
+[14:12:07] Chỉ là 1 lớp mỏng gọi HTTP sang endpoint /api/calib/camera-axis của
+[14:12:07] `gateway/plc_offset_gateway.py` (toàn bộ logic thật nằm ở gateway, không lặp lại ở đây).
+[14:12:07] Yêu cầu trước khi chạy:
+[14:12:07] 1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8083)
+[14:12:07] 2. fiducial_detector/run_fiducial_service.py đang chạy VÀ đã có file .pt (mock mode sẽ báo lỗi)
+[14:12:07] 3. PLC + camera thật đã kết nối (script này sẽ DI CHUYỂN MÁY THẬT)
+[14:12:07] Cách chạy:
+[14:12:07] python calibrate_camera_axis.py --anchor A --delta-mm 5.0
+[14:12:09] 📍 anchor_name='A' -> Board=(9.900, 10.000) mm -> PLC kỳ vọng=(1.430, 0.524)
+[14:12:09] --> Gọi http://localhost:8083/api/calib/camera-axis với payload:
+[14:12:09] {
+[14:12:09]   "anchor_name": "A",
+[14:12:09]   "delta_mm": 5.0,
+[14:12:09]   "plc_pc_ip": "192.168.3.101",
+[14:12:09]   "plc_ip": "192.168.3.1",
+[14:12:09]   "plc_port": 9600
+[14:12:09] }
+[14:12:09] ⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). --yes đã bật, chạy ngay.
+[14:12:31] HTTP 200
+[14:12:31] {
+[14:12:31]   "success": true,
+[14:12:31]   "message": "Hiệu chỉnh ma trận trục T thành công (delta=5.0mm, anchor=A)",
+[14:12:31]   "anchor_board_xy": [
+[14:12:31]     9.9,
+[14:12:31]     10.0
+[14:12:31]   ],
+[14:12:31]   "anchor_plc_expected_xy": [
+[14:12:31]     1.4302364655389896,
+[14:12:31]     0.5244786808863233
+[14:12:31]   ],
+[14:12:31]   "camera_axis_matrix": [
+[14:12:31]     [
+[14:12:31]       -180.968409391041,
+[14:12:31]       -2.034914095461636
+[14:12:31]     ],
+[14:12:31]     [
+[14:12:31]       -0.9559408306843977,
+[14:12:31]       115.193183496002
+[14:12:31]     ]
+[14:12:31]   ],
+[14:12:31]   "samples_pixel_xy": {
+[14:12:31]     "P0": [
+[14:12:31]       1622.9620875210235,
+[14:12:31]       154.10722904492707
+[14:12:31]     ],
+[14:12:31]     "P1_dx": [
+[14:12:31]       718.1200405658185,
+[14:12:31]       149.32752489150508
+[14:12:31]     ],
+[14:12:31]     "P2_dy": [
+[14:12:31]       1612.7875170437153,
+[14:12:31]       730.0731465249371
+[14:12:31]     ]
+[14:12:31]   },
+[14:12:31]   "sanity_check": "⚠️ Tỉ lệ trục X đo được (180.971px/mm) lệch nhiều so với ước lượng FOV (5.881px/mm) - kiểm tra lại FOV/camera_image_*_px hoặc delta_mm. ⚠️ Tỉ lệ trục Y đo được (115.211px/mm) lệch nhiều so với ước lượng FOV (6.119px/mm) - kiểm tra lại FOV/camera_image_*_px hoặc delta_mm."
+[14:12:31] }
+[14:12:31] ✅ Đã hiệu chỉnh xong, ma trận T đã được lưu vào plc_offset_gateway_config.json
+[14:12:31]    camera_axis_matrix = [[-180.968409391041, -2.034914095461636], [-0.9559408306843977, 115.193183496002]]
+[14:12:31]    ⚠️ Tỉ lệ trục X đo được (180.971px/mm) lệch nhiều so với ước lượng FOV (5.881px/mm) - kiểm tra lại FOV/camera_image_*_px hoặc delta_mm. ⚠️ Tỉ lệ trục Y đo được (115.211px/mm) lệch nhiều so với ước lượng FOV (6.119px/mm) - kiểm tra lại FOV/camera_image_*_px hoặc delta_mm.
+[14:12:31] ### HOAN TAT (exit code 0)
+[14:13:38] ==============================================================================
+[14:13:38] ### PHIEN MOI luc 2026-08-25 14:13:38
+[14:13:38] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py)
+[14:13:38] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py --anchor A --delta-mm 2.0 --yes
+[14:13:38] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\tools
+[14:13:38] ### PID = 31640
+[14:13:38] CLI tiện ích: hiệu chỉnh ma trận trục camera<->máy T (chạy 1 LẦN khi setup máy hoặc sau 
+[14:13:38] khi tháo/lắp lại camera - KHÔNG chạy lại mỗi khi đổi board).
+[14:13:38] Chỉ là 1 lớp mỏng gọi HTTP sang endpoint /api/calib/camera-axis của
+[14:13:38] `gateway/plc_offset_gateway.py` (toàn bộ logic thật nằm ở gateway, không lặp lại ở đây).
+[14:13:38] Yêu cầu trước khi chạy:
+[14:13:38] 1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8083)
+[14:13:38] 2. fiducial_detector/run_fiducial_service.py đang chạy VÀ đã có file .pt (mock mode sẽ báo lỗi)
+[14:13:38] 3. PLC + camera thật đã kết nối (script này sẽ DI CHUYỂN MÁY THẬT)
+[14:13:38] Cách chạy:
+[14:13:38] python calibrate_camera_axis.py --anchor A --delta-mm 5.0
+[14:13:40] 📍 anchor_name='A' -> Board=(9.900, 10.000) mm -> PLC kỳ vọng=(1.430, 0.524)
+[14:13:40] --> Gọi http://localhost:8083/api/calib/camera-axis với payload:
+[14:13:40] {
+[14:13:40]   "anchor_name": "A",
+[14:13:40]   "delta_mm": 2.0,
+[14:13:40]   "plc_pc_ip": "192.168.3.101",
+[14:13:40]   "plc_ip": "192.168.3.1",
+[14:13:40]   "plc_port": 9600
+[14:13:40] }
+[14:13:40] ⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). --yes đã bật, chạy ngay.
+[14:13:57] HTTP 200
+[14:13:57] {
+[14:13:57]   "success": true,
+[14:13:57]   "message": "Hiệu chỉnh ma trận trục T thành công (delta=2.0mm, anchor=A)",
+[14:13:57]   "anchor_board_xy": [
+[14:13:57]     9.9,
+[14:13:57]     10.0
+[14:13:57]   ],
+[14:13:57]   "anchor_plc_expected_xy": [
+[14:13:57]     1.4302364655389896,
+[14:13:57]     0.5244786808863233
+[14:13:57]   ],
+[14:13:57]   "camera_axis_matrix": [
+[14:13:57]     [
+[14:13:57]       -184.28702727035443,
+[14:13:57]       1.1393906422135842
+[14:13:57]     ],
+[14:13:57]     [
+[14:13:57]       -0.39151656876968843,
+[14:13:57]       170.20383575551568
+[14:13:57]     ]
+[14:13:57]   ],
+[14:13:57]   "samples_pixel_xy": {
+[14:13:57]     "P0": [
+[14:13:57]       1625.7902774957197,
+[14:13:57]       149.78512615017823
+[14:13:57]     ],
+[14:13:57]     "P1_dx": [
+[14:13:57]       1257.2162229550108,
+[14:13:57]       149.00209301263885
+[14:13:57]     ],
+[14:13:57]     "P2_dy": [
+[14:13:57]       1628.0690587801469,
+[14:13:57]       490.1927976612096
+[14:13:57]     ]
+[14:13:57]   },
+[14:13:57]   "sanity_check": "⚠️ Tỉ lệ trục X đo được (184.287px/mm) lệch nhiều so với ước lượng FOV (5.881px/mm) - kiểm tra lại FOV/camera_image_*_px hoặc delta_mm. ⚠️ Tỉ lệ trục Y đo được (170.208px/mm) lệch nhiều so với ước lượng FOV (6.119px/mm) - kiểm tra lại FOV/camera_image_*_px hoặc delta_mm."
+[14:13:57] }
+[14:13:57] ✅ Đã hiệu chỉnh xong, ma trận T đã được lưu vào plc_offset_gateway_config.json
+[14:13:57]    camera_axis_matrix = [[-184.28702727035443, 1.1393906422135842], [-0.39151656876968843, 170.20383575551568]]
+[14:13:57]    ⚠️ Tỉ lệ trục X đo được (184.287px/mm) lệch nhiều so với ước lượng FOV (5.881px/mm) - kiểm tra lại FOV/camera_image_*_px hoặc delta_mm. ⚠️ Tỉ lệ trục Y đo được (170.208px/mm) lệch nhiều so với ước lượng FOV (6.119px/mm) - kiểm tra lại FOV/camera_image_*_px hoặc delta_mm.
+[14:13:58] ### HOAN TAT (exit code 0)
+[14:20:49] ==============================================================================
+[14:20:49] ### PHIEN MOI luc 2026-08-25 14:20:49
+[14:20:49] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py)
+[14:20:49] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py --anchor A --delta-mm 5.0 --yes
+[14:20:49] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\tools
+[14:20:49] ### PID = 27728
+[14:20:49] CLI tiện ích: hiệu chỉnh ma trận trục camera<->máy T (chạy 1 LẦN khi setup máy hoặc sau 
+[14:20:49] khi tháo/lắp lại camera - KHÔNG chạy lại mỗi khi đổi board).
+[14:20:49] Chỉ là 1 lớp mỏng gọi HTTP sang endpoint /api/calib/camera-axis của
+[14:20:49] `gateway/plc_offset_gateway.py` (toàn bộ logic thật nằm ở gateway, không lặp lại ở đây).
+[14:20:49] Yêu cầu trước khi chạy:
+[14:20:49] 1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8083)
+[14:20:49] 2. fiducial_detector/run_fiducial_service.py đang chạy VÀ đã có file .pt (mock mode sẽ báo lỗi)
+[14:20:49] 3. PLC + camera thật đã kết nối (script này sẽ DI CHUYỂN MÁY THẬT)
+[14:20:49] Cách chạy:
+[14:20:49] python calibrate_camera_axis.py --anchor A --delta-mm 5.0
+[14:20:51] 📍 anchor_name='A' -> Board=(9.900, 10.000) mm -> PLC kỳ vọng=(1.430, 0.524)
+[14:20:51] --> Gọi http://localhost:8083/api/calib/camera-axis với payload:
+[14:20:51] {
+[14:20:51]   "anchor_name": "A",
+[14:20:51]   "delta_mm": 5.0,
+[14:20:51]   "plc_pc_ip": "192.168.3.101",
+[14:20:51]   "plc_ip": "192.168.3.1",
+[14:20:51]   "plc_port": 9600
+[14:20:51] }
+[14:20:51] ⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). --yes đã bật, chạy ngay.
+[14:20:57] HTTP 200
+[14:20:57] {
+[14:20:57]   "success": false,
+[14:20:57]   "message": "Không phát hiện được marker tại P0: Không gọi được Fiducial Detector Service tại http://127.0.0.1:8191/api/detect-marker",
+[14:20:57]   "anchor_board_xy": [
+[14:20:57]     9.9,
+[14:20:57]     10.0
+[14:20:57]   ],
+[14:20:57]   "anchor_plc_expected_xy": [
+[14:20:57]     1.4302364655389896,
+[14:20:57]     0.5244786808863233
+[14:20:57]   ],
+[14:20:57]   "camera_axis_matrix": null,
+[14:20:57]   "samples_pixel_xy": null,
+[14:20:57]   "sanity_check": null
+[14:20:57] }
+[14:20:57] ❌ Hiệu chỉnh thất bại: Không phát hiện được marker tại P0: Không gọi được Fiducial Detector Service tại http://127.0.0.1:8191/api/detect-marker
+[14:20:57] ### THOAT BAT THUONG (exit code 1)
+[14:21:10] ==============================================================================
+[14:21:10] ### PHIEN MOI luc 2026-08-25 14:21:10
+[14:21:10] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py)
+[14:21:10] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py --anchor A --delta-mm 2.0 --yes
+[14:21:10] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\tools
+[14:21:10] ### PID = 14436
+[14:21:11] CLI tiện ích: hiệu chỉnh ma trận trục camera<->máy T (chạy 1 LẦN khi setup máy hoặc sau 
+[14:21:11] khi tháo/lắp lại camera - KHÔNG chạy lại mỗi khi đổi board).
+[14:21:11] Chỉ là 1 lớp mỏng gọi HTTP sang endpoint /api/calib/camera-axis của
+[14:21:11] `gateway/plc_offset_gateway.py` (toàn bộ logic thật nằm ở gateway, không lặp lại ở đây).
+[14:21:11] Yêu cầu trước khi chạy:
+[14:21:11] 1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8083)
+[14:21:11] 2. fiducial_detector/run_fiducial_service.py đang chạy VÀ đã có file .pt (mock mode sẽ báo lỗi)
+[14:21:11] 3. PLC + camera thật đã kết nối (script này sẽ DI CHUYỂN MÁY THẬT)
+[14:21:11] Cách chạy:
+[14:21:11] python calibrate_camera_axis.py --anchor A --delta-mm 5.0
+[14:21:13] 📍 anchor_name='A' -> Board=(9.900, 10.000) mm -> PLC kỳ vọng=(1.430, 0.524)
+[14:21:13] --> Gọi http://localhost:8083/api/calib/camera-axis với payload:
+[14:21:13] {
+[14:21:13]   "anchor_name": "A",
+[14:21:13]   "delta_mm": 2.0,
+[14:21:13]   "plc_pc_ip": "192.168.3.101",
+[14:21:13]   "plc_ip": "192.168.3.1",
+[14:21:13]   "plc_port": 9600
+[14:21:13] }
+[14:21:13] ⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). --yes đã bật, chạy ngay.
+[14:21:31] HTTP 200
+[14:21:31] {
+[14:21:31]   "success": true,
+[14:21:31]   "message": "Hiệu chỉnh ma trận trục T thành công (delta=2.0mm, anchor=A)",
+[14:21:31]   "anchor_board_xy": [
+[14:21:31]     9.9,
+[14:21:31]     10.0
+[14:21:31]   ],
+[14:21:31]   "anchor_plc_expected_xy": [
+[14:21:31]     1.4302364655389896,
+[14:21:31]     0.5244786808863233
+[14:21:31]   ],
+[14:21:31]   "camera_axis_matrix": [
+[14:21:31]     [
+[14:21:31]       -184.9051040602476,
+[14:21:31]       4.32979569988629
+[14:21:31]     ],
+[14:21:31]     [
+[14:21:31]       -0.271532018675785,
+[14:21:31]       171.6345791851101
+[14:21:31]     ]
+[14:21:31]   ],
+[14:21:31]   "samples_pixel_xy": {
+[14:21:31]     "P0": [
+[14:21:31]       1626.0532100875098,
+[14:21:31]       149.84758260572661
+[14:21:31]     ],
+[14:21:31]     "P1_dx": [
+[14:21:31]       1256.2430019670146,
+[14:21:31]       149.30451856837504
+[14:21:31]     ],
+[14:21:31]     "P2_dy": [
+[14:21:31]       1634.7128014872824,
+[14:21:31]       493.11674097594687
+[14:21:31]     ]
+[14:21:31]   },
+[14:21:31]   "sanity_check": "OK - khớp hợp lý với ước lượng từ FOV."
+[14:21:31] }
+[14:21:31] ✅ Đã hiệu chỉnh xong, ma trận T đã được lưu vào plc_offset_gateway_config.json
+[14:21:31]    camera_axis_matrix = [[-184.9051040602476, 4.32979569988629], [-0.271532018675785, 171.6345791851101]]
+[14:21:31]    OK - khớp hợp lý với ước lượng từ FOV.
+[14:21:31] ### HOAN TAT (exit code 0)
+[17:01:19] ==============================================================================
+[17:01:19] ### PHIEN MOI luc 2026-08-25 17:01:19
+[17:01:19] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py)
+[17:01:19] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py --anchor A --delta-mm 5.0 --yes
+[17:01:19] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\tools
+[17:01:19] ### PID = 39968
+[17:01:20] CLI tiện ích: hiệu chỉnh ma trận trục camera<->máy T (chạy 1 LẦN khi setup máy hoặc sau 
+[17:01:20] khi tháo/lắp lại camera - KHÔNG chạy lại mỗi khi đổi board).
+[17:01:20] Chỉ là 1 lớp mỏng gọi HTTP sang endpoint /api/calib/camera-axis của
+[17:01:20] `gateway/plc_offset_gateway.py` (toàn bộ logic thật nằm ở gateway, không lặp lại ở đây).
+[17:01:20] Yêu cầu trước khi chạy:
+[17:01:20] 1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8083)
+[17:01:20] 2. fiducial_detector/run_fiducial_service.py đang chạy VÀ đã có file .pt (mock mode sẽ báo lỗi)
+[17:01:20] 3. PLC + camera thật đã kết nối (script này sẽ DI CHUYỂN MÁY THẬT)
+[17:01:20] Cách chạy:
+[17:01:20] python calibrate_camera_axis.py --anchor A --delta-mm 5.0
+[17:01:21] ### Dang gui tin hieu dung...
+[17:01:22] 📍 anchor_name='A' -> Board=(9.900, 10.000) mm -> PLC kỳ vọng=(1.430, 0.524)
+[17:01:22] --> Gọi http://localhost:8083/api/calib/camera-axis với payload:
+[17:01:22] {
+[17:01:22]   "anchor_name": "A",
+[17:01:22]   "delta_mm": 5.0,
+[17:01:22]   "plc_pc_ip": "192.168.3.101",
+[17:01:22]   "plc_ip": "192.168.3.1",
+[17:01:22]   "plc_port": 9600
+[17:01:22] }
+[17:01:22] ⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). --yes đã bật, chạy ngay.
+[17:01:27] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[17:01:27] ### DA DUNG (exit code 1)

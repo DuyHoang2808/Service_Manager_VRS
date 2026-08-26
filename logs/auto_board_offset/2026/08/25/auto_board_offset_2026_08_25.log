@@ -1,0 +1,89 @@
+[11:14:09] ==============================================================================
+[11:14:09] ### PHIEN MOI luc 2026-08-25 11:14:09
+[11:14:09] ### run_mode = exe (target: D:\Camera\Dev\deploy\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset\run_auto_board_offset.exe)
+[11:14:09] ### KHOI DONG: D:\Camera\Dev\deploy\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset\run_auto_board_offset.exe --board-id BOARD-001 --board-side A --anchor-mode 2
+[11:14:09] ### Thu muc lam viec: D:\Camera\Dev\deploy\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset
+[11:14:09] ### PID = 26684
+[11:14:48] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[11:14:48] Cách chạy:
+[11:14:48]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[11:14:48]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[11:14:48]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[11:14:48] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt A) ...
+[11:14:48] HTTP 200
+[11:14:48] {
+[11:14:48]   "success": false,
+[11:14:48]   "message": "Chỉ đo được 1/2 điểm mốc hợp lệ (cần >= 2). Kiểm tra ánh sáng/marker/Fiducial Detector Service.",
+[11:14:48]   "anchor_mode": 2,
+[11:14:48]   "anchor_results": [
+[11:14:48]     {
+[11:14:48]       "name": "A",
+[11:14:48]       "board_xy": [
+[11:14:48]         9.9,
+[11:14:48]         10.0
+[11:14:48]       ],
+[11:14:48]       "expected_plc_xy": [
+[11:14:48]         2.2967342752597117,
+[11:14:48]         0.3970886285729076
+[11:14:48]       ],
+[11:14:48]       "detected_pixel_xy": [
+[11:14:48]         1515.686092653579,
+[11:14:48]         139.56646069224473
+[11:14:48]       ],
+[11:14:48]       "detection_confidence": 0.958415150642395,
+[11:14:48]       "detection_refined": true,
+[11:14:48]       "measured_plc_xy": [
+[11:14:48]         5.361740555404196,
+[11:14:48]         2.577445507038239
+[11:14:48]       ],
+[11:14:48]       "status": "ok",
+[11:14:48]       "detail": null
+[11:14:48]     },
+[11:14:48]     {
+[11:14:48]       "name": "C",
+[11:14:48]       "board_xy": [
+[11:14:48]         574.911,
+[11:14:48]         446.353
+[11:14:48]       ],
+[11:14:48]       "expected_plc_xy": [
+[11:14:48]         439.10874696343626,
+[11:14:48]         566.5708760702232
+[11:14:48]       ],
+[11:14:48]       "detected_pixel_xy": null,
+[11:14:48]       "detection_confidence": null,
+[11:14:48]       "detection_refined": null,
+[11:14:48]       "measured_plc_xy": null,
+[11:14:48]       "status": "not_found",
+[11:14:48]       "detail": "Khong phat hien duoc diem moc nao vuot nguong confidence"
+[11:14:48]     }
+[11:14:48]   ],
+[11:14:48]   "theta_deg": null,
+[11:14:48]   "tx": null,
+[11:14:48]   "ty": null,
+[11:14:48]   "rms_error_mm": null,
+[11:14:48]   "max_error_mm": null,
+[11:14:48]   "offset_saved_path": null,
+[11:14:48]   "warning": null,
+[11:14:48]   "timing": {
+[11:14:48]     "plc_connect": 0.04849100112915039,
+[11:14:48]     "measure_all_anchors": 23.30479860305786
+[11:14:48]   }
+[11:14:48] }
+[11:14:48] ❌ Thất bại: Chỉ đo được 1/2 điểm mốc hợp lệ (cần >= 2). Kiểm tra ánh sáng/marker/Fiducial Detector Service.
+[11:14:48] ### THOAT BAT THUONG (exit code 1)
+[17:42:10] ==============================================================================
+[17:42:10] ### PHIEN MOI luc 2026-08-25 17:42:10
+[17:42:10] ### run_mode = script (target: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py)
+[17:42:10] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py --board-id BOARD-001 --board-side A --anchor-mode 2
+[17:42:10] ### Thu muc lam viec: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools
+[17:42:10] ### PID = 31160
+[17:42:11] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[17:42:11] Cách chạy:
+[17:42:11]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[17:42:11]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[17:42:11]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[17:42:11] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt A) ...
+[17:42:13] ### Dang gui tin hieu dung...
+[17:42:16] ### Dang gui tin hieu dung...
+[17:42:19] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[17:42:19] ### DA DUNG (exit code 1)

@@ -9,8 +9,74 @@
     "d3": -2.6516188245118144e-07,
     "_diagnostics": {
         "n_points": 6,
+        "point_names_used": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+        ],
+        "model": "bilinear",
+        "n_params": 4,
         "condition_number": 10.382755884365565,
         "rms_residual_mm": 0.018379354149387406,
-        "max_residual_mm": 0.03241928672301431
+        "max_residual_mm": 0.03241928672301431,
+        "points": [
+            {
+                "name": "A",
+                "board_x": 9.9,
+                "board_y": 10.0,
+                "plc_x": 1.423664,
+                "plc_y": 0.527,
+                "residual_mm": 0.007039485303216362,
+                "is_outlier": false
+            },
+            {
+                "name": "B",
+                "board_x": 9.9,
+                "board_y": 394.0,
+                "plc_x": 385.753008,
+                "plc_y": 1.744448,
+                "residual_mm": 0.003418036274333372,
+                "is_outlier": false
+            },
+            {
+                "name": "C",
+                "board_x": 596.6,
+                "board_y": 393.0,
+                "plc_x": 384.583979,
+                "plc_y": 588.723895,
+                "residual_mm": 0.0292113646498712,
+                "is_outlier": false
+            },
+            {
+                "name": "D",
+                "board_x": 597.9,
+                "board_y": 10.0,
+                "plc_x": 1.262311,
+                "plc_y": 588.847182,
+                "residual_mm": 0.0006053534642682059,
+                "is_outlier": false
+            },
+            {
+                "name": "E",
+                "board_x": 69.0,
+                "board_y": 8.0,
+                "plc_x": -0.581,
+                "plc_y": 59.64779,
+                "residual_mm": 0.007802960927193544,
+                "is_outlier": false
+            },
+            {
+                "name": "F",
+                "board_x": 534.5,
+                "board_y": 396.0,
+                "plc_x": 387.640681,
+                "plc_y": 526.556657,
+                "residual_mm": 0.03241928672301431,
+                "is_outlier": false
+            }
+        ]
     }
 }

@@ -6,7 +6,7 @@ Chỉ là 1 lớp mỏng gọi HTTP sang endpoint /api/calib/camera-axis của
 `gateway/plc_offset_gateway.py` (toàn bộ logic thật nằm ở gateway, không lặp lại ở đây).
 
 Yêu cầu trước khi chạy:
-  1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8093)
+  1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8083)
   2. fiducial_detector/run_fiducial_service.py đang chạy VÀ đã có file .pt (mock mode sẽ báo lỗi)
   3. PLC + camera thật đã kết nối (script này sẽ DI CHUYỂN MÁY THẬT)
 
@@ -16,6 +16,11 @@ nếu chưa có, và vẫn override được qua cờ dòng lệnh.
 
 Cách chạy:
   python calibrate_camera_axis.py --anchor A --delta-mm 5.0
+  python calibrate_camera_axis.py --anchor A --delta-mm 5.0 --yes   # bo qua xac nhan Enter
+                                                                     # (bat buoc khi chay qua
+                                                                     # Service Manager - subprocess
+                                                                     # khong co stdin tuong tac,
+                                                                     # goi input() se crash ngay)
 """
 from __future__ import annotations
 
@@ -32,7 +37,7 @@ Text = "CLI tiện ích: hiệu chỉnh ma trận trục camera<->máy T (chạy
     "Chỉ là 1 lớp mỏng gọi HTTP sang endpoint /api/calib/camera-axis của\r\n" \
     "`gateway/plc_offset_gateway.py` (toàn bộ logic thật nằm ở gateway, không lặp lại ở đây).\r\n" \
     "Yêu cầu trước khi chạy:\r\n" \
-    "1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8093)\r\n" \
+    "1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8083)\r\n" \
     "2. fiducial_detector/run_fiducial_service.py đang chạy VÀ đã có file .pt (mock mode sẽ báo lỗi)\r\n" \
     "3. PLC + camera thật đã kết nối (script này sẽ DI CHUYỂN MÁY THẬT)\r\n" \
     "Cách chạy:\r\n" \
@@ -48,6 +53,9 @@ def main() -> None:
     parser.add_argument("--plc-pc-ip", default=CONFIG["plc_pc_ip"])
     parser.add_argument("--plc-ip", default=CONFIG["plc_ip"])
     parser.add_argument("--plc-port", type=int, default=CONFIG["plc_port"])
+    parser.add_argument("--yes", "-y", action="store_true",
+                         help="Bo qua xac nhan Enter, chay ngay (bat buoc khi chay qua "
+                              "Service Manager - khong co stdin tuong tac de goi input())")
     args = parser.parse_args()
 
     payload = {
@@ -76,8 +84,11 @@ def main() -> None:
 
     print(f"\n--> Gọi {args.base_url}/api/calib/camera-axis với payload:")
     print(json.dumps(payload, indent=2, ensure_ascii=False))
-    print("\n⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). Nhấn Enter để tiếp tục, Ctrl+C để huỷ.")
-    input()
+    if args.yes:
+        print("\n⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). --yes đã bật, chạy ngay.")
+    else:
+        print("\n⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). Nhấn Enter để tiếp tục, Ctrl+C để huỷ.")
+        input()
 
     try:
         resp = requests.post(f"{args.base_url}/api/calib/camera-axis", json=payload, timeout=60)

@@ -47,6 +47,14 @@ class ManagerWindow(QMainWindow):
             python_exe = sys.executable
         self.python_exe = python_exe
 
+        # "run_mode" toan cuc: "exe" (mac dinh, giu nguyen hanh vi cu - uu tien file
+        # .exe da build san neu co) hoac "script" (luon chay .py qua python_exe, ke ca
+        # khi co "exe" - dung khi dang sua code nguon va muon test ngay, khong phai
+        # rebuild exe). Tung service co the tu override rieng bang key "run_mode" cua
+        # no trong services.yaml, de len gia tri toan cuc nay.
+        run_mode = str(config.get("run_mode") or "exe").strip().lower()
+        self.default_run_mode = run_mode if run_mode in ("exe", "script") else "exe"
+
         log_dir = Path(config.get("log_dir", "logs"))
         if not log_dir.is_absolute():
             log_dir = THIS_DIR / log_dir
@@ -137,7 +145,8 @@ class ManagerWindow(QMainWindow):
         self.setStyleSheet(STYLESHEET)
 
     def _add_service(self, cfg: Dict[str, Any]) -> None:
-        svc = ServiceProcess(cfg, self.python_exe, self.log_dir, self.max_lines, parent=self)
+        svc = ServiceProcess(cfg, self.python_exe, self.log_dir, self.max_lines,
+                             default_run_mode=self.default_run_mode, parent=self)
         self.services[svc.name] = svc
 
         card = ServiceCard(svc)

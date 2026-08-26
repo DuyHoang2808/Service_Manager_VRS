@@ -1,7 +1,7 @@
 {
   "camera_snapshot_url": "http://127.0.0.1:8001/snapshot",
   "camera_snapshot_timeout_ms": 3000,
-  "ai_api_url": "http://192.84.106.75:8082/api/ai-detection",
+  "ai_api_url": "http://192.84.106.96:8082/api/ai-detection",
   "plc_axis_speed_mm_per_s": 60.0,
   "use_plc_position_feedback": false,
   "plc_done_mem_area": "D",
@@ -27,12 +27,12 @@
   "camera_image_height_px": 1080,
   "camera_axis_matrix": [
     [
-      -182.27433179719537,
-      1.3694450864694545
+      -180.72123879099655,
+      4.281286033758898
     ],
     [
-      0.9039789523720287,
-      182.38428858559888
+      0.4330137761602657,
+      109.92113553178754
     ]
   ],
   "camera_axis_calibrated": true,

@@ -1,0 +1,2116 @@
+[11:08:14] ==============================================================================
+[11:08:14] ### PHIEN MOI luc 2026-08-25 11:08:14
+[11:08:14] ### run_mode = exe (target: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe)
+[11:08:14] ### KHOI DONG: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe
+[11:08:14] ### Thu muc lam viec: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508
+[11:08:14] ### PID = 42204
+[11:08:14] ### Dang gui tin hieu dung...
+[11:08:16] 2026-08-25 11:08:16,374 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[11:08:16] 2026-08-25 11:08:16,374 [INFO] Đang mở camera Sony...
+[11:08:17] 2026-08-25 11:08:17,790 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[11:08:17] 2026-08-25 11:08:17,794 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[11:08:17] 2026-08-25 11:08:17,794 [INFO] GOP = 30 frame (1.0s/keyframe)
+[11:08:17] 2026-08-25 11:08:17,815 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[11:08:20] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:08:21] ### DA DUNG (exit code 1)
+[11:08:49] ==============================================================================
+[11:08:49] ### PHIEN MOI luc 2026-08-25 11:08:49
+[11:08:49] ### run_mode = exe (target: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe)
+[11:08:49] ### KHOI DONG: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe
+[11:08:49] ### Thu muc lam viec: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508
+[11:08:49] ### PID = 34436
+[11:08:49] ### Dang gui tin hieu dung...
+[11:08:51] 2026-08-25 11:08:51,191 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[11:08:51] 2026-08-25 11:08:51,193 [INFO] Đang mở camera Sony...
+[11:08:52] 2026-08-25 11:08:52,322 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[11:08:52] 2026-08-25 11:08:52,324 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[11:08:52] 2026-08-25 11:08:52,324 [INFO] GOP = 30 frame (1.0s/keyframe)
+[11:08:52] 2026-08-25 11:08:52,332 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[11:08:55] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:08:56] ### DA DUNG (exit code 1)
+[11:13:20] ==============================================================================
+[11:13:20] ### PHIEN MOI luc 2026-08-25 11:13:20
+[11:13:20] ### run_mode = exe (target: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe)
+[11:13:20] ### KHOI DONG: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe
+[11:13:20] ### Thu muc lam viec: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508
+[11:13:20] ### PID = 34736
+[11:13:22] 2026-08-25 11:13:22,621 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[11:13:22] 2026-08-25 11:13:22,621 [INFO] Đang mở camera Sony...
+[11:13:24] 2026-08-25 11:13:24,206 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[11:13:24] 2026-08-25 11:13:24,212 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[11:13:24] 2026-08-25 11:13:24,213 [INFO] GOP = 30 frame (1.0s/keyframe)
+[11:13:24] 2026-08-25 11:13:24,247 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[11:13:29] 2026-08-25 11:13:29,286 [INFO] Đang đẩy RTSP FPS: 25.00
+[11:13:34] 2026-08-25 11:13:34,311 [INFO] Đang đẩy RTSP FPS: 29.29
+[11:13:39] 2026-08-25 11:13:39,361 [INFO] Đang đẩy RTSP FPS: 22.07
+[11:13:44] 2026-08-25 11:13:44,378 [INFO] Đang đẩy RTSP FPS: 28.37
+[11:13:49] 2026-08-25 11:13:49,382 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:13:54] 2026-08-25 11:13:54,408 [INFO] Đang đẩy RTSP FPS: 27.06
+[11:13:59] 2026-08-25 11:13:59,439 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:14:04] 2026-08-25 11:14:04,471 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:14:09] 2026-08-25 11:14:09,501 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:14:14] 2026-08-25 11:14:14,529 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:14:19] 2026-08-25 11:14:19,566 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:14:24] 2026-08-25 11:14:24,578 [INFO] Đang đẩy RTSP FPS: 29.96
+[11:14:29] 2026-08-25 11:14:29,609 [INFO] Đang đẩy RTSP FPS: 28.86
+[11:14:34] 2026-08-25 11:14:34,626 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:14:39] 2026-08-25 11:14:39,636 [INFO] Đang đẩy RTSP FPS: 30.17
+[11:14:44] 2026-08-25 11:14:44,659 [INFO] Đang đẩy RTSP FPS: 30.09
+[11:14:49] 2026-08-25 11:14:49,718 [INFO] Đang đẩy RTSP FPS: 29.87
+[11:14:54] 2026-08-25 11:14:54,735 [INFO] Đang đẩy RTSP FPS: 30.12
+[11:14:59] 2026-08-25 11:14:59,766 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:15:04] 2026-08-25 11:15:04,772 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:15:09] 2026-08-25 11:15:09,809 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:15:14] 2026-08-25 11:15:14,818 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:15:19] 2026-08-25 11:15:19,834 [INFO] Đang đẩy RTSP FPS: 29.35
+[11:15:24] 2026-08-25 11:15:24,862 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:15:29] 2026-08-25 11:15:29,898 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:15:34] 2026-08-25 11:15:34,910 [INFO] Đang đẩy RTSP FPS: 29.93
+[11:15:39] 2026-08-25 11:15:39,926 [INFO] Đang đẩy RTSP FPS: 30.11
+[11:15:44] 2026-08-25 11:15:44,929 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:15:49] 2026-08-25 11:15:49,936 [INFO] Đang đẩy RTSP FPS: 29.97
+[11:15:54] 2026-08-25 11:15:54,975 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:16:00] 2026-08-25 11:16:00,010 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:16:05] 2026-08-25 11:16:05,040 [INFO] Đang đẩy RTSP FPS: 30.07
+[11:16:10] 2026-08-25 11:16:10,060 [INFO] Đang đẩy RTSP FPS: 30.10
+[11:16:15] 2026-08-25 11:16:15,076 [INFO] Đang đẩy RTSP FPS: 29.91
+[11:16:20] 2026-08-25 11:16:20,109 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:16:25] 2026-08-25 11:16:25,123 [INFO] Đang đẩy RTSP FPS: 30.14
+[11:16:30] 2026-08-25 11:16:30,161 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:16:35] 2026-08-25 11:16:35,195 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:16:40] 2026-08-25 11:16:40,203 [INFO] Đang đẩy RTSP FPS: 29.97
+[11:16:45] 2026-08-25 11:16:45,223 [INFO] Đang đẩy RTSP FPS: 30.11
+[11:16:50] 2026-08-25 11:16:50,228 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:16:55] 2026-08-25 11:16:55,254 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:17:00] 2026-08-25 11:17:00,267 [INFO] Đang đẩy RTSP FPS: 29.93
+[11:17:05] 2026-08-25 11:17:05,299 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:17:10] 2026-08-25 11:17:10,330 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:17:15] 2026-08-25 11:17:15,356 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:17:20] 2026-08-25 11:17:20,366 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:17:25] 2026-08-25 11:17:25,389 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:17:30] 2026-08-25 11:17:30,405 [INFO] Đang đẩy RTSP FPS: 29.93
+[11:17:35] 2026-08-25 11:17:35,422 [INFO] Đang đẩy RTSP FPS: 30.10
+[11:17:40] 2026-08-25 11:17:40,432 [INFO] Đang đẩy RTSP FPS: 29.96
+[11:17:45] 2026-08-25 11:17:45,475 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:17:50] 2026-08-25 11:17:50,493 [INFO] Đang đẩy RTSP FPS: 30.12
+[11:17:55] 2026-08-25 11:17:55,531 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:18:00] 2026-08-25 11:18:00,535 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:18:05] 2026-08-25 11:18:05,576 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:18:10] 2026-08-25 11:18:10,603 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:18:15] 2026-08-25 11:18:15,608 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:18:20] 2026-08-25 11:18:20,639 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:18:25] 2026-08-25 11:18:25,654 [INFO] Đang đẩy RTSP FPS: 30.17
+[11:18:30] 2026-08-25 11:18:30,687 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:18:35] 2026-08-25 11:18:35,722 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:18:40] 2026-08-25 11:18:40,726 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:18:45] 2026-08-25 11:18:45,752 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:18:50] 2026-08-25 11:18:50,760 [INFO] Đang đẩy RTSP FPS: 29.97
+[11:18:55] 2026-08-25 11:18:55,786 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:19:00] 2026-08-25 11:19:00,820 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:19:05] ### Dang gui tin hieu dung...
+[11:19:05] 2026-08-25 11:19:05,852 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:19:10] 2026-08-25 11:19:10,887 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:19:11] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:19:11] ### DA DUNG (exit code 1)
+[11:29:19] ==============================================================================
+[11:29:19] ### PHIEN MOI luc 2026-08-25 11:29:19
+[11:29:19] ### run_mode = exe (target: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe)
+[11:29:19] ### KHOI DONG: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe
+[11:29:19] ### Thu muc lam viec: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508
+[11:29:19] ### PID = 10476
+[11:29:21] 2026-08-25 11:29:21,170 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[11:29:21] 2026-08-25 11:29:21,170 [INFO] Đang mở camera Sony...
+[11:29:22] 2026-08-25 11:29:22,392 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[11:29:22] 2026-08-25 11:29:22,394 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[11:29:22] 2026-08-25 11:29:22,394 [INFO] GOP = 30 frame (1.0s/keyframe)
+[11:29:22] 2026-08-25 11:29:22,411 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[11:29:27] 2026-08-25 11:29:27,419 [INFO] Đang đẩy RTSP FPS: 29.75
+[11:29:32] 2026-08-25 11:29:32,435 [INFO] Đang đẩy RTSP FPS: 29.90
+[11:29:37] 2026-08-25 11:29:37,466 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:29:42] 2026-08-25 11:29:42,495 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:29:47] 2026-08-25 11:29:47,503 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:29:52] 2026-08-25 11:29:52,527 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:29:57] 2026-08-25 11:29:57,565 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:30:02] 2026-08-25 11:30:02,593 [INFO] Đang đẩy RTSP FPS: 30.07
+[11:30:07] 2026-08-25 11:30:07,623 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:30:12] 2026-08-25 11:30:12,661 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:30:17] 2026-08-25 11:30:17,669 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:30:22] 2026-08-25 11:30:22,695 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:30:27] 2026-08-25 11:30:27,703 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:30:32] 2026-08-25 11:30:32,728 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:30:37] 2026-08-25 11:30:37,735 [INFO] Đang đẩy RTSP FPS: 29.96
+[11:30:42] 2026-08-25 11:30:42,763 [INFO] Đang đẩy RTSP FPS: 30.03
+[11:30:47] 2026-08-25 11:30:47,794 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:30:52] 2026-08-25 11:30:52,818 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:30:57] 2026-08-25 11:30:57,852 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:31:02] 2026-08-25 11:31:02,870 [INFO] Đang đẩy RTSP FPS: 29.91
+[11:31:07] 2026-08-25 11:31:07,893 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:31:12] 2026-08-25 11:31:12,895 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:31:17] 2026-08-25 11:31:17,936 [INFO] Đang đẩy RTSP FPS: 29.58
+[11:31:22] 2026-08-25 11:31:22,959 [INFO] Đang đẩy RTSP FPS: 24.52
+[11:31:27] 2026-08-25 11:31:27,972 [INFO] Đang đẩy RTSP FPS: 28.12
+[11:31:32] 2026-08-25 11:31:32,984 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:31:37] 2026-08-25 11:31:37,987 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:31:43] 2026-08-25 11:31:43,018 [INFO] Đang đẩy RTSP FPS: 30.03
+[11:31:48] 2026-08-25 11:31:48,024 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:31:53] 2026-08-25 11:31:53,054 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:31:58] 2026-08-25 11:31:58,086 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:32:03] 2026-08-25 11:32:03,122 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:32:08] 2026-08-25 11:32:08,126 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:32:13] 2026-08-25 11:32:13,128 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:32:18] 2026-08-25 11:32:18,155 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:32:23] 2026-08-25 11:32:23,188 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:32:28] 2026-08-25 11:32:28,219 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:32:33] 2026-08-25 11:32:33,253 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:32:38] 2026-08-25 11:32:38,287 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:32:43] 2026-08-25 11:32:43,322 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:32:48] 2026-08-25 11:32:48,353 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:32:53] 2026-08-25 11:32:53,355 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:32:58] 2026-08-25 11:32:58,362 [INFO] Đang đẩy RTSP FPS: 29.96
+[11:33:03] 2026-08-25 11:33:03,391 [INFO] Đang đẩy RTSP FPS: 30.03
+[11:33:08] 2026-08-25 11:33:08,418 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:33:13] 2026-08-25 11:33:13,431 [INFO] Đang đẩy RTSP FPS: 29.93
+[11:33:18] 2026-08-25 11:33:18,454 [INFO] Đang đẩy RTSP FPS: 30.07
+[11:33:23] 2026-08-25 11:33:23,484 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:33:28] 2026-08-25 11:33:28,517 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:33:33] 2026-08-25 11:33:33,552 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:33:38] 2026-08-25 11:33:38,557 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:33:43] 2026-08-25 11:33:43,581 [INFO] Đang đẩy RTSP FPS: 29.88
+[11:33:48] 2026-08-25 11:33:48,598 [INFO] Đang đẩy RTSP FPS: 29.89
+[11:33:53] 2026-08-25 11:33:53,600 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:33:58] 2026-08-25 11:33:58,604 [INFO] Đang đẩy RTSP FPS: 29.97
+[11:34:03] 2026-08-25 11:34:03,633 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:34:08] 2026-08-25 11:34:08,667 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:34:13] 2026-08-25 11:34:13,672 [INFO] Đang đẩy RTSP FPS: 29.97
+[11:34:18] 2026-08-25 11:34:18,675 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:34:23] 2026-08-25 11:34:23,699 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:34:28] 2026-08-25 11:34:28,714 [INFO] Đang đẩy RTSP FPS: 29.16
+[11:34:33] 2026-08-25 11:34:33,743 [INFO] Đang đẩy RTSP FPS: 30.26
+[11:34:38] 2026-08-25 11:34:38,773 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:34:43] 2026-08-25 11:34:43,802 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:34:48] 2026-08-25 11:34:48,840 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:34:53] 2026-08-25 11:34:53,877 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:34:58] 2026-08-25 11:34:58,910 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:35:03] 2026-08-25 11:35:03,938 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:35:08] 2026-08-25 11:35:08,940 [INFO] Đang đẩy RTSP FPS: 29.79
+[11:35:13] 2026-08-25 11:35:13,944 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:35:18] 2026-08-25 11:35:18,968 [INFO] Đang đẩy RTSP FPS: 30.11
+[11:35:23] 2026-08-25 11:35:23,977 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:35:28] 2026-08-25 11:35:28,983 [INFO] Đang đẩy RTSP FPS: 29.96
+[11:35:33] 2026-08-25 11:35:33,991 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:35:39] 2026-08-25 11:35:39,000 [INFO] Đang đẩy RTSP FPS: 30.15
+[11:35:44] 2026-08-25 11:35:44,037 [INFO] Đang đẩy RTSP FPS: 29.85
+[11:35:49] 2026-08-25 11:35:49,054 [INFO] Đang đẩy RTSP FPS: 28.73
+[11:35:54] 2026-08-25 11:35:54,078 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:35:59] 2026-08-25 11:35:59,104 [INFO] Đang đẩy RTSP FPS: 29.90
+[11:36:04] 2026-08-25 11:36:04,134 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:36:09] 2026-08-25 11:36:09,137 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:36:14] 2026-08-25 11:36:14,175 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:36:19] 2026-08-25 11:36:19,187 [INFO] Đang đẩy RTSP FPS: 30.14
+[11:36:24] 2026-08-25 11:36:24,205 [INFO] Đang đẩy RTSP FPS: 29.96
+[11:36:29] 2026-08-25 11:36:29,229 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:36:34] 2026-08-25 11:36:34,271 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:36:39] 2026-08-25 11:36:39,310 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:36:44] 2026-08-25 11:36:44,337 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:36:49] 2026-08-25 11:36:49,347 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:36:54] 2026-08-25 11:36:54,367 [INFO] Đang đẩy RTSP FPS: 30.11
+[11:36:59] 2026-08-25 11:36:59,371 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:37:04] 2026-08-25 11:37:04,407 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:37:09] 2026-08-25 11:37:09,435 [INFO] Đang đẩy RTSP FPS: 30.07
+[11:37:14] 2026-08-25 11:37:14,473 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:37:19] 2026-08-25 11:37:19,504 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:37:24] 2026-08-25 11:37:24,537 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:37:29] 2026-08-25 11:37:29,557 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:37:34] 2026-08-25 11:37:34,572 [INFO] Đang đẩy RTSP FPS: 29.91
+[11:37:39] 2026-08-25 11:37:39,598 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:37:44] 2026-08-25 11:37:44,607 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:37:49] 2026-08-25 11:37:49,628 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:37:54] 2026-08-25 11:37:54,638 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:37:59] 2026-08-25 11:37:59,643 [INFO] Đang đẩy RTSP FPS: 29.97
+[11:38:04] 2026-08-25 11:38:04,673 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:38:09] 2026-08-25 11:38:09,702 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:38:14] 2026-08-25 11:38:14,715 [INFO] Đang đẩy RTSP FPS: 30.12
+[11:38:19] 2026-08-25 11:38:19,750 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:38:24] 2026-08-25 11:38:24,782 [INFO] Đang đẩy RTSP FPS: 30.03
+[11:38:29] 2026-08-25 11:38:29,817 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:38:34] 2026-08-25 11:38:34,853 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:38:39] 2026-08-25 11:38:39,886 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:38:44] 2026-08-25 11:38:44,888 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:38:49] 2026-08-25 11:38:49,890 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:38:54] 2026-08-25 11:38:54,915 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:38:54] ### Dang gui tin hieu dung...
+[11:38:59] 2026-08-25 11:38:59,921 [INFO] Đang đẩy RTSP FPS: 29.97
+[11:39:00] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:39:01] ### DA DUNG (exit code 1)
+[11:41:00] ==============================================================================
+[11:41:00] ### PHIEN MOI luc 2026-08-25 11:41:00
+[11:41:00] ### run_mode = exe (target: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe)
+[11:41:00] ### KHOI DONG: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe
+[11:41:00] ### Thu muc lam viec: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508
+[11:41:00] ### PID = 17808
+[11:41:02] 2026-08-25 11:41:02,834 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[11:41:02] 2026-08-25 11:41:02,834 [INFO] Đang mở camera Sony...
+[11:41:03] 2026-08-25 11:41:03,902 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[11:41:03] 2026-08-25 11:41:03,905 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[11:41:03] 2026-08-25 11:41:03,905 [INFO] GOP = 30 frame (1.0s/keyframe)
+[11:41:03] 2026-08-25 11:41:03,914 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[11:41:08] 2026-08-25 11:41:08,918 [INFO] Đang đẩy RTSP FPS: 29.78
+[11:41:13] 2026-08-25 11:41:13,953 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:41:18] 2026-08-25 11:41:18,984 [INFO] Đang đẩy RTSP FPS: 30.03
+[11:41:19] ### Dang gui tin hieu dung...
+[11:41:24] 2026-08-25 11:41:24,016 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:41:25] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:41:26] ### DA DUNG (exit code 1)
+[11:42:40] ==============================================================================
+[11:42:40] ### PHIEN MOI luc 2026-08-25 11:42:40
+[11:42:40] ### run_mode = exe (target: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe)
+[11:42:40] ### KHOI DONG: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe
+[11:42:40] ### Thu muc lam viec: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508
+[11:42:40] ### PID = 47736
+[11:42:41] 2026-08-25 11:42:41,744 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[11:42:41] 2026-08-25 11:42:41,744 [INFO] Đang mở camera Sony...
+[11:42:42] 2026-08-25 11:42:42,805 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[11:42:42] 2026-08-25 11:42:42,809 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[11:42:42] 2026-08-25 11:42:42,809 [INFO] GOP = 30 frame (1.0s/keyframe)
+[11:42:42] 2026-08-25 11:42:42,816 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[11:42:47] 2026-08-25 11:42:47,841 [INFO] Đang đẩy RTSP FPS: 29.85
+[11:42:49] ### Dang gui tin hieu dung...
+[11:42:52] ### Dang gui tin hieu dung...
+[11:42:52] 2026-08-25 11:42:52,871 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:42:55] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:42:56] ### DA DUNG (exit code 1)
+[11:55:01] ==============================================================================
+[11:55:01] ### PHIEN MOI luc 2026-08-25 11:55:01
+[11:55:01] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[11:55:01] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[11:55:01] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[11:55:01] ### PID = 3548
+[11:55:03] 2026-08-25 11:55:03,431 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[11:55:03] 2026-08-25 11:55:03,431 [INFO] Đang mở camera Sony...
+[11:55:04] 2026-08-25 11:55:04,521 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[11:55:04] 2026-08-25 11:55:04,534 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[11:55:04] 2026-08-25 11:55:04,534 [INFO] GOP = 30 frame (1.0s/keyframe)
+[11:55:04] 2026-08-25 11:55:04,541 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[11:55:09] 2026-08-25 11:55:09,568 [INFO] Đang đẩy RTSP FPS: 29.84
+[11:55:14] 2026-08-25 11:55:14,574 [INFO] Đang đẩy RTSP FPS: 29.97
+[11:55:19] 2026-08-25 11:55:19,577 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:55:24] 2026-08-25 11:55:24,582 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:55:29] 2026-08-25 11:55:29,590 [INFO] Đang đẩy RTSP FPS: 29.96
+[11:55:34] 2026-08-25 11:55:34,610 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:55:39] 2026-08-25 11:55:39,614 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:55:44] 2026-08-25 11:55:44,634 [INFO] Đang đẩy RTSP FPS: 30.08
+[11:55:49] 2026-08-25 11:55:49,648 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:55:54] 2026-08-25 11:55:54,666 [INFO] Đang đẩy RTSP FPS: 30.12
+[11:55:59] 2026-08-25 11:55:59,677 [INFO] Đang đẩy RTSP FPS: 29.95
+[11:56:04] 2026-08-25 11:56:04,679 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:56:09] 2026-08-25 11:56:09,712 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:56:14] 2026-08-25 11:56:14,716 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:56:19] 2026-08-25 11:56:19,739 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:56:24] 2026-08-25 11:56:24,764 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:56:29] 2026-08-25 11:56:29,792 [INFO] Đang đẩy RTSP FPS: 29.84
+[11:56:34] 2026-08-25 11:56:34,811 [INFO] Đang đẩy RTSP FPS: 30.13
+[11:56:39] 2026-08-25 11:56:39,843 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:56:44] 2026-08-25 11:56:44,850 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:56:49] 2026-08-25 11:56:49,881 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:56:54] 2026-08-25 11:56:54,895 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:56:59] 2026-08-25 11:56:59,929 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:57:04] 2026-08-25 11:57:04,942 [INFO] Đang đẩy RTSP FPS: 30.14
+[11:57:09] 2026-08-25 11:57:09,944 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:57:14] 2026-08-25 11:57:14,949 [INFO] Đang đẩy RTSP FPS: 29.97
+[11:57:19] 2026-08-25 11:57:19,978 [INFO] Đang đẩy RTSP FPS: 30.03
+[11:57:25] 2026-08-25 11:57:25,007 [INFO] Đang đẩy RTSP FPS: 30.05
+[11:57:30] 2026-08-25 11:57:30,040 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:57:35] 2026-08-25 11:57:35,046 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:57:40] 2026-08-25 11:57:40,087 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:57:45] 2026-08-25 11:57:45,126 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:57:50] 2026-08-25 11:57:50,141 [INFO] Đang đẩy RTSP FPS: 30.12
+[11:57:55] 2026-08-25 11:57:55,154 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:58:00] 2026-08-25 11:58:00,192 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:58:05] 2026-08-25 11:58:05,200 [INFO] Đang đẩy RTSP FPS: 30.15
+[11:58:10] 2026-08-25 11:58:10,204 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:58:15] 2026-08-25 11:58:15,236 [INFO] Đang đẩy RTSP FPS: 30.03
+[11:58:20] 2026-08-25 11:58:20,269 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:58:25] 2026-08-25 11:58:25,299 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:58:30] 2026-08-25 11:58:30,310 [INFO] Đang đẩy RTSP FPS: 29.94
+[11:58:35] 2026-08-25 11:58:35,331 [INFO] Đang đẩy RTSP FPS: 30.09
+[11:58:40] 2026-08-25 11:58:40,366 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:58:45] 2026-08-25 11:58:45,406 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:58:50] 2026-08-25 11:58:50,432 [INFO] Đang đẩy RTSP FPS: 30.06
+[11:58:55] 2026-08-25 11:58:55,464 [INFO] Đang đẩy RTSP FPS: 30.01
+[11:59:00] 2026-08-25 11:59:00,467 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:59:05] 2026-08-25 11:59:05,500 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:59:10] 2026-08-25 11:59:10,537 [INFO] Đang đẩy RTSP FPS: 29.99
+[11:59:15] 2026-08-25 11:59:15,563 [INFO] Đang đẩy RTSP FPS: 30.04
+[11:59:20] 2026-08-25 11:59:20,566 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:59:25] 2026-08-25 11:59:25,597 [INFO] Đang đẩy RTSP FPS: 30.02
+[11:59:30] 2026-08-25 11:59:30,602 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:59:35] 2026-08-25 11:59:35,603 [INFO] Đang đẩy RTSP FPS: 30.00
+[11:59:40] 2026-08-25 11:59:40,635 [INFO] Đang đẩy RTSP FPS: 30.03
+[11:59:45] 2026-08-25 11:59:45,671 [INFO] Đang đẩy RTSP FPS: 29.98
+[11:59:50] 2026-08-25 11:59:50,699 [INFO] Đang đẩy RTSP FPS: 30.03
+[11:59:55] 2026-08-25 11:59:55,704 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:00:00] 2026-08-25 12:00:00,705 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:00:05] 2026-08-25 12:00:05,717 [INFO] Đang đẩy RTSP FPS: 29.95
+[12:00:10] 2026-08-25 12:00:10,745 [INFO] Đang đẩy RTSP FPS: 30.07
+[12:00:15] 2026-08-25 12:00:15,781 [INFO] Đang đẩy RTSP FPS: 30.01
+[12:00:20] 2026-08-25 12:00:20,804 [INFO] Đang đẩy RTSP FPS: 30.07
+[12:00:25] 2026-08-25 12:00:25,832 [INFO] Đang đẩy RTSP FPS: 30.03
+[12:00:30] 2026-08-25 12:00:30,834 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:00:35] 2026-08-25 12:00:35,839 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:00:40] 2026-08-25 12:00:40,875 [INFO] Đang đẩy RTSP FPS: 30.01
+[12:00:45] 2026-08-25 12:00:45,904 [INFO] Đang đẩy RTSP FPS: 30.06
+[12:00:50] 2026-08-25 12:00:50,933 [INFO] Đang đẩy RTSP FPS: 30.04
+[12:00:55] 2026-08-25 12:00:55,946 [INFO] Đang đẩy RTSP FPS: 29.92
+[12:01:00] 2026-08-25 12:01:00,969 [INFO] Đang đẩy RTSP FPS: 30.10
+[12:01:06] 2026-08-25 12:01:06,001 [INFO] Đang đẩy RTSP FPS: 30.02
+[12:01:11] 2026-08-25 12:01:11,011 [INFO] Đang đẩy RTSP FPS: 29.94
+[12:01:16] 2026-08-25 12:01:16,015 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:01:21] 2026-08-25 12:01:21,050 [INFO] Đang đẩy RTSP FPS: 30.02
+[12:01:26] 2026-08-25 12:01:26,072 [INFO] Đang đẩy RTSP FPS: 30.09
+[12:01:31] 2026-08-25 12:01:31,081 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:01:36] 2026-08-25 12:01:36,112 [INFO] Đang đẩy RTSP FPS: 30.05
+[12:01:41] 2026-08-25 12:01:41,135 [INFO] Đang đẩy RTSP FPS: 30.07
+[12:01:46] 2026-08-25 12:01:46,146 [INFO] Đang đẩy RTSP FPS: 29.94
+[12:01:51] 2026-08-25 12:01:51,167 [INFO] Đang đẩy RTSP FPS: 30.08
+[12:01:56] 2026-08-25 12:01:56,172 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:02:01] 2026-08-25 12:02:01,205 [INFO] Đang đẩy RTSP FPS: 30.04
+[12:02:06] 2026-08-25 12:02:06,236 [INFO] Đang đẩy RTSP FPS: 30.02
+[12:02:11] 2026-08-25 12:02:11,242 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:02:16] 2026-08-25 12:02:16,269 [INFO] Đang đẩy RTSP FPS: 30.04
+[12:02:21] 2026-08-25 12:02:21,277 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:02:26] 2026-08-25 12:02:26,304 [INFO] Đang đẩy RTSP FPS: 30.04
+[12:02:31] 2026-08-25 12:02:31,306 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:02:36] 2026-08-25 12:02:36,312 [INFO] Đang đẩy RTSP FPS: 29.96
+[12:02:41] 2026-08-25 12:02:41,338 [INFO] Đang đẩy RTSP FPS: 30.04
+[12:02:46] 2026-08-25 12:02:46,380 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:02:51] 2026-08-25 12:02:51,406 [INFO] Đang đẩy RTSP FPS: 30.07
+[12:02:56] 2026-08-25 12:02:56,408 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:03:01] 2026-08-25 12:03:01,440 [INFO] Đang đẩy RTSP FPS: 30.04
+[12:03:06] 2026-08-25 12:03:06,469 [INFO] Đang đẩy RTSP FPS: 30.06
+[12:03:11] 2026-08-25 12:03:11,476 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:03:16] 2026-08-25 12:03:16,513 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:03:21] 2026-08-25 12:03:21,547 [INFO] Đang đẩy RTSP FPS: 30.03
+[12:03:26] 2026-08-25 12:03:26,572 [INFO] Đang đẩy RTSP FPS: 30.06
+[12:03:31] 2026-08-25 12:03:31,572 [INFO] Đang đẩy RTSP FPS: 30.00
+[12:03:36] 2026-08-25 12:03:36,597 [INFO] Đang đẩy RTSP FPS: 30.05
+[12:03:41] 2026-08-25 12:03:41,602 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:03:46] 2026-08-25 12:03:46,631 [INFO] Đang đẩy RTSP FPS: 30.05
+[12:03:51] 2026-08-25 12:03:51,662 [INFO] Đang đẩy RTSP FPS: 30.03
+[12:03:56] 2026-08-25 12:03:56,670 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:04:01] 2026-08-25 12:04:01,720 [INFO] Đang đẩy RTSP FPS: 29.92
+[12:04:06] 2026-08-25 12:04:06,737 [INFO] Đang đẩy RTSP FPS: 30.13
+[12:04:11] 2026-08-25 12:04:11,765 [INFO] Đang đẩy RTSP FPS: 30.05
+[12:04:16] 2026-08-25 12:04:16,767 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:04:21] 2026-08-25 12:04:21,802 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:04:26] 2026-08-25 12:04:26,807 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:04:31] 2026-08-25 12:04:31,815 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:04:36] 2026-08-25 12:04:36,849 [INFO] Đang đẩy RTSP FPS: 30.02
+[12:04:41] 2026-08-25 12:04:41,863 [INFO] Đang đẩy RTSP FPS: 30.12
+[12:04:46] 2026-08-25 12:04:46,867 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:04:51] 2026-08-25 12:04:51,900 [INFO] Đang đẩy RTSP FPS: 30.02
+[12:04:56] 2026-08-25 12:04:56,931 [INFO] Đang đẩy RTSP FPS: 30.03
+[12:05:01] 2026-08-25 12:05:01,964 [INFO] Đang đẩy RTSP FPS: 30.01
+[12:05:06] 2026-08-25 12:05:06,997 [INFO] Đang đẩy RTSP FPS: 30.00
+[12:05:12] 2026-08-25 12:05:12,030 [INFO] Đang đẩy RTSP FPS: 30.02
+[12:05:17] 2026-08-25 12:05:17,040 [INFO] Đang đẩy RTSP FPS: 29.95
+[12:05:22] 2026-08-25 12:05:22,064 [INFO] Đang đẩy RTSP FPS: 30.06
+[12:05:27] 2026-08-25 12:05:27,067 [INFO] Đang đẩy RTSP FPS: 30.00
+[12:05:32] 2026-08-25 12:05:32,070 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:05:37] 2026-08-25 12:05:37,096 [INFO] Đang đẩy RTSP FPS: 30.06
+[12:05:42] 2026-08-25 12:05:42,100 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:05:47] 2026-08-25 12:05:47,131 [INFO] Đang đẩy RTSP FPS: 30.03
+[12:05:52] 2026-08-25 12:05:52,164 [INFO] Đang đẩy RTSP FPS: 30.02
+[12:05:57] 2026-08-25 12:05:57,199 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:06:02] 2026-08-25 12:06:02,201 [INFO] Đang đẩy RTSP FPS: 30.00
+[12:06:07] 2026-08-25 12:06:07,230 [INFO] Đang đẩy RTSP FPS: 30.03
+[12:06:12] 2026-08-25 12:06:12,264 [INFO] Đang đẩy RTSP FPS: 30.02
+[12:06:17] 2026-08-25 12:06:17,267 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:06:22] 2026-08-25 12:06:22,297 [INFO] Đang đẩy RTSP FPS: 30.04
+[12:06:27] 2026-08-25 12:06:27,332 [INFO] Đang đẩy RTSP FPS: 30.02
+[12:06:32] 2026-08-25 12:06:32,367 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:06:37] 2026-08-25 12:06:37,400 [INFO] Đang đẩy RTSP FPS: 30.02
+[12:06:42] 2026-08-25 12:06:42,438 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:06:47] 2026-08-25 12:06:47,464 [INFO] Đang đẩy RTSP FPS: 30.07
+[12:06:52] 2026-08-25 12:06:52,468 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:06:57] 2026-08-25 12:06:57,509 [INFO] Đang đẩy RTSP FPS: 29.96
+[12:07:02] 2026-08-25 12:07:02,534 [INFO] Đang đẩy RTSP FPS: 30.05
+[12:07:03] ### Dang gui tin hieu dung...
+[12:07:07] 2026-08-25 12:07:07,561 [INFO] Đang đẩy RTSP FPS: 30.04
+[12:07:09] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[12:07:09] ### DA DUNG (exit code 1)
+[12:19:12] ==============================================================================
+[12:19:12] ### PHIEN MOI luc 2026-08-25 12:19:12
+[12:19:12] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[12:19:12] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[12:19:12] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[12:19:12] ### PID = 11400
+[12:19:13] 2026-08-25 12:19:13,972 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[12:19:13] 2026-08-25 12:19:13,973 [INFO] Đang mở camera Sony...
+[12:19:15] 2026-08-25 12:19:15,010 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[12:19:15] 2026-08-25 12:19:15,013 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[12:19:15] 2026-08-25 12:19:15,013 [INFO] GOP = 30 frame (1.0s/keyframe)
+[12:19:15] 2026-08-25 12:19:15,024 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[12:19:20] 2026-08-25 12:19:20,036 [INFO] Đang đẩy RTSP FPS: 29.73
+[12:19:25] 2026-08-25 12:19:25,061 [INFO] Đang đẩy RTSP FPS: 30.07
+[12:19:30] 2026-08-25 12:19:30,066 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:19:35] 2026-08-25 12:19:35,069 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:19:40] 2026-08-25 12:19:40,104 [INFO] Đang đẩy RTSP FPS: 29.99
+[12:19:45] 2026-08-25 12:19:45,107 [INFO] Đang đẩy RTSP FPS: 29.98
+[12:19:50] 2026-08-25 12:19:50,133 [INFO] Đang đẩy RTSP FPS: 30.04
+[12:19:55] 2026-08-25 12:19:55,174 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:20:00] 2026-08-25 12:20:00,206 [INFO] Đang đẩy RTSP FPS: 30.01
+[12:20:05] 2026-08-25 12:20:05,232 [INFO] Đang đẩy RTSP FPS: 30.09
+[12:20:10] 2026-08-25 12:20:10,240 [INFO] Đang đẩy RTSP FPS: 29.97
+[12:20:15] 2026-08-25 12:20:15,261 [INFO] Đang đẩy RTSP FPS: 30.09
+[12:20:17] ### Dang gui tin hieu dung...
+[12:20:20] 2026-08-25 12:20:20,296 [INFO] Đang đẩy RTSP FPS: 30.01
+[12:20:23] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[12:20:23] ### DA DUNG (exit code 1)
+[13:23:57] ==============================================================================
+[13:23:57] ### PHIEN MOI luc 2026-08-25 13:23:57
+[13:23:57] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[13:23:57] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[13:23:57] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[13:23:57] ### PID = 17488
+[13:23:59] 2026-08-25 13:23:59,242 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[13:23:59] 2026-08-25 13:23:59,242 [INFO] Đang mở camera Sony...
+[13:24:00] 2026-08-25 13:24:00,445 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[13:24:00] 2026-08-25 13:24:00,448 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[13:24:00] 2026-08-25 13:24:00,448 [INFO] GOP = 30 frame (1.0s/keyframe)
+[13:24:00] 2026-08-25 13:24:00,455 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[13:24:05] 2026-08-25 13:24:05,460 [INFO] Đang đẩy RTSP FPS: 29.77
+[13:24:10] 2026-08-25 13:24:10,467 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:24:15] 2026-08-25 13:24:15,488 [INFO] Đang đẩy RTSP FPS: 30.11
+[13:24:20] 2026-08-25 13:24:20,522 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:24:25] 2026-08-25 13:24:25,539 [INFO] Đang đẩy RTSP FPS: 29.90
+[13:24:30] 2026-08-25 13:24:30,545 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:24:35] 2026-08-25 13:24:35,553 [INFO] Đang đẩy RTSP FPS: 30.17
+[13:24:40] 2026-08-25 13:24:40,589 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:24:45] 2026-08-25 13:24:45,605 [INFO] Đang đẩy RTSP FPS: 29.92
+[13:24:50] 2026-08-25 13:24:50,612 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:24:55] 2026-08-25 13:24:55,619 [INFO] Đang đẩy RTSP FPS: 30.17
+[13:25:00] 2026-08-25 13:25:00,629 [INFO] Đang đẩy RTSP FPS: 29.94
+[13:25:05] 2026-08-25 13:25:05,638 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:25:10] 2026-08-25 13:25:10,639 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:25:15] 2026-08-25 13:25:15,673 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:25:20] 2026-08-25 13:25:20,706 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:25:25] 2026-08-25 13:25:25,742 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:25:30] 2026-08-25 13:25:30,774 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:25:35] 2026-08-25 13:25:35,775 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:25:40] 2026-08-25 13:25:40,811 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:25:45] 2026-08-25 13:25:45,811 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:25:50] 2026-08-25 13:25:50,845 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:25:55] 2026-08-25 13:25:55,846 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:26:00] 2026-08-25 13:26:00,882 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:26:05] 2026-08-25 13:26:05,882 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:26:10] 2026-08-25 13:26:10,906 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:26:15] 2026-08-25 13:26:15,949 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:26:20] 2026-08-25 13:26:20,975 [INFO] Đang đẩy RTSP FPS: 30.10
+[13:26:26] 2026-08-25 13:26:26,010 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:26:31] 2026-08-25 13:26:31,025 [INFO] Đang đẩy RTSP FPS: 30.14
+[13:26:36] 2026-08-25 13:26:36,025 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:26:41] 2026-08-25 13:26:41,052 [INFO] Đang đẩy RTSP FPS: 29.90
+[13:26:46] 2026-08-25 13:26:46,067 [INFO] Đang đẩy RTSP FPS: 30.13
+[13:26:51] 2026-08-25 13:26:51,087 [INFO] Đang đẩy RTSP FPS: 30.08
+[13:26:56] 2026-08-25 13:26:56,123 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:27:01] 2026-08-25 13:27:01,123 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:27:06] 2026-08-25 13:27:06,130 [INFO] Đang đẩy RTSP FPS: 29.78
+[13:27:11] 2026-08-25 13:27:11,160 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:27:16] 2026-08-25 13:27:16,186 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:27:21] 2026-08-25 13:27:21,229 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:27:26] 2026-08-25 13:27:26,260 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:27:31] 2026-08-25 13:27:31,290 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:27:36] 2026-08-25 13:27:36,322 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:27:41] 2026-08-25 13:27:41,352 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:27:46] 2026-08-25 13:27:46,354 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:27:51] 2026-08-25 13:27:51,355 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:27:56] 2026-08-25 13:27:56,356 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:28:01] 2026-08-25 13:28:01,389 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:28:06] 2026-08-25 13:28:06,391 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:28:11] 2026-08-25 13:28:11,420 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:28:16] 2026-08-25 13:28:16,427 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:28:21] 2026-08-25 13:28:21,462 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:28:26] 2026-08-25 13:28:26,489 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:28:31] 2026-08-25 13:28:31,524 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:28:36] 2026-08-25 13:28:36,528 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:28:41] 2026-08-25 13:28:41,553 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:28:46] 2026-08-25 13:28:46,558 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:28:51] 2026-08-25 13:28:51,586 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:28:56] 2026-08-25 13:28:56,620 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:29:01] 2026-08-25 13:29:01,654 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:29:06] 2026-08-25 13:29:06,659 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:29:11] 2026-08-25 13:29:11,688 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:29:16] 2026-08-25 13:29:16,723 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:29:21] 2026-08-25 13:29:21,735 [INFO] Đang đẩy RTSP FPS: 29.93
+[13:29:26] 2026-08-25 13:29:26,776 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:29:31] 2026-08-25 13:29:31,787 [INFO] Đang đẩy RTSP FPS: 30.13
+[13:29:36] 2026-08-25 13:29:36,790 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:29:41] 2026-08-25 13:29:41,819 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:29:46] 2026-08-25 13:29:46,828 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:29:51] 2026-08-25 13:29:51,831 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:29:56] 2026-08-25 13:29:56,858 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:30:01] 2026-08-25 13:30:01,890 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:30:06] 2026-08-25 13:30:06,899 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:30:11] 2026-08-25 13:30:11,938 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:30:16] 2026-08-25 13:30:16,959 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:30:22] 2026-08-25 13:30:22,003 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:30:27] 2026-08-25 13:30:27,028 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:30:32] 2026-08-25 13:30:32,056 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:30:37] 2026-08-25 13:30:37,059 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:30:42] 2026-08-25 13:30:42,088 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:30:47] 2026-08-25 13:30:47,120 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:30:52] 2026-08-25 13:30:52,157 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:30:57] 2026-08-25 13:30:57,179 [INFO] Đang đẩy RTSP FPS: 29.89
+[13:31:02] 2026-08-25 13:31:02,190 [INFO] Đang đẩy RTSP FPS: 30.17
+[13:31:07] 2026-08-25 13:31:07,220 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:31:12] 2026-08-25 13:31:12,224 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:31:17] 2026-08-25 13:31:17,256 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:31:22] 2026-08-25 13:31:22,295 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:31:27] 2026-08-25 13:31:27,323 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:31:32] 2026-08-25 13:31:32,354 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:31:37] 2026-08-25 13:31:37,364 [INFO] Đang đẩy RTSP FPS: 29.94
+[13:31:42] 2026-08-25 13:31:42,388 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:31:47] 2026-08-25 13:31:47,428 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:31:52] 2026-08-25 13:31:52,453 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:31:57] 2026-08-25 13:31:57,463 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:32:02] 2026-08-25 13:32:02,488 [INFO] Đang đẩy RTSP FPS: 30.08
+[13:32:07] 2026-08-25 13:32:07,520 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:32:12] 2026-08-25 13:32:12,553 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:32:17] 2026-08-25 13:32:17,566 [INFO] Đang đẩy RTSP FPS: 29.94
+[13:32:22] 2026-08-25 13:32:22,595 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:32:27] 2026-08-25 13:32:27,619 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:32:32] 2026-08-25 13:32:32,633 [INFO] Đang đẩy RTSP FPS: 29.91
+[13:32:37] 2026-08-25 13:32:37,654 [INFO] Đang đẩy RTSP FPS: 30.09
+[13:32:42] 2026-08-25 13:32:42,658 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:32:47] 2026-08-25 13:32:47,685 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:32:52] 2026-08-25 13:32:52,720 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:32:57] 2026-08-25 13:32:57,758 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:33:02] 2026-08-25 13:33:02,788 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:33:07] 2026-08-25 13:33:07,820 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:33:12] 2026-08-25 13:33:12,825 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:33:17] 2026-08-25 13:33:17,856 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:33:22] 2026-08-25 13:33:22,860 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:33:27] 2026-08-25 13:33:27,891 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:33:32] 2026-08-25 13:33:32,897 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:33:37] 2026-08-25 13:33:37,897 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:33:42] 2026-08-25 13:33:42,920 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:33:47] 2026-08-25 13:33:47,929 [INFO] Đang đẩy RTSP FPS: 29.95
+[13:33:52] 2026-08-25 13:33:52,960 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:33:58] 2026-08-25 13:33:58,001 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:34:03] 2026-08-25 13:34:03,021 [INFO] Đang đẩy RTSP FPS: 30.08
+[13:34:08] 2026-08-25 13:34:08,052 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:34:13] 2026-08-25 13:34:13,094 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:34:18] 2026-08-25 13:34:18,120 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:34:23] 2026-08-25 13:34:23,130 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:34:28] 2026-08-25 13:34:28,157 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:34:33] 2026-08-25 13:34:33,164 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:34:38] 2026-08-25 13:34:38,198 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:34:43] 2026-08-25 13:34:43,213 [INFO] Đang đẩy RTSP FPS: 29.91
+[13:34:48] 2026-08-25 13:34:48,225 [INFO] Đang đẩy RTSP FPS: 30.17
+[13:34:53] 2026-08-25 13:34:53,229 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:34:58] 2026-08-25 13:34:58,233 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:35:03] 2026-08-25 13:35:03,271 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:35:08] 2026-08-25 13:35:08,272 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:35:13] 2026-08-25 13:35:13,295 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:35:18] 2026-08-25 13:35:18,307 [INFO] Đang đẩy RTSP FPS: 29.95
+[13:35:23] 2026-08-25 13:35:23,346 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:35:28] 2026-08-25 13:35:28,370 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:35:33] 2026-08-25 13:35:33,395 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:35:38] 2026-08-25 13:35:38,396 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:35:43] 2026-08-25 13:35:43,403 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:35:48] 2026-08-25 13:35:48,425 [INFO] Đang đẩy RTSP FPS: 30.11
+[13:35:53] 2026-08-25 13:35:53,438 [INFO] Đang đẩy RTSP FPS: 29.93
+[13:35:58] 2026-08-25 13:35:58,471 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:36:03] 2026-08-25 13:36:03,496 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:36:08] 2026-08-25 13:36:08,530 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:36:13] 2026-08-25 13:36:13,536 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:36:18] 2026-08-25 13:36:18,557 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:36:23] 2026-08-25 13:36:23,563 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:36:28] 2026-08-25 13:36:28,569 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:36:33] 2026-08-25 13:36:33,601 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:36:38] 2026-08-25 13:36:38,632 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:36:43] 2026-08-25 13:36:43,664 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:36:48] 2026-08-25 13:36:48,703 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:36:53] 2026-08-25 13:36:53,727 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:36:58] 2026-08-25 13:36:58,731 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:37:03] 2026-08-25 13:37:03,761 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:37:08] 2026-08-25 13:37:08,767 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:37:13] 2026-08-25 13:37:13,801 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:37:18] 2026-08-25 13:37:18,828 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:37:23] 2026-08-25 13:37:23,833 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:37:28] 2026-08-25 13:37:28,871 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:37:33] 2026-08-25 13:37:33,893 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:37:38] 2026-08-25 13:37:38,912 [INFO] Đang đẩy RTSP FPS: 29.89
+[13:37:43] 2026-08-25 13:37:43,925 [INFO] Đang đẩy RTSP FPS: 30.12
+[13:37:48] 2026-08-25 13:37:48,929 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:37:53] 2026-08-25 13:37:53,959 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:37:58] 2026-08-25 13:37:58,965 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:38:04] 2026-08-25 13:38:04,000 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:38:09] 2026-08-25 13:38:09,037 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:38:14] 2026-08-25 13:38:14,063 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:38:19] 2026-08-25 13:38:19,099 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:38:24] 2026-08-25 13:38:24,137 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:38:29] 2026-08-25 13:38:29,171 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:38:34] 2026-08-25 13:38:34,179 [INFO] Đang đẩy RTSP FPS: 29.95
+[13:38:39] 2026-08-25 13:38:39,197 [INFO] Đang đẩy RTSP FPS: 30.11
+[13:38:44] 2026-08-25 13:38:44,229 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:38:49] 2026-08-25 13:38:49,269 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:38:54] 2026-08-25 13:38:54,302 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:38:59] 2026-08-25 13:38:59,311 [INFO] Đang đẩy RTSP FPS: 29.95
+[13:39:04] 2026-08-25 13:39:04,331 [INFO] Đang đẩy RTSP FPS: 30.09
+[13:39:09] 2026-08-25 13:39:09,333 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:39:14] 2026-08-25 13:39:14,366 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:39:19] 2026-08-25 13:39:19,377 [INFO] Đang đẩy RTSP FPS: 29.93
+[13:39:24] 2026-08-25 13:39:24,394 [INFO] Đang đẩy RTSP FPS: 30.13
+[13:39:29] 2026-08-25 13:39:29,395 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:39:34] 2026-08-25 13:39:34,430 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:39:39] 2026-08-25 13:39:39,460 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:39:44] 2026-08-25 13:39:44,460 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:39:49] 2026-08-25 13:39:49,493 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:39:54] 2026-08-25 13:39:54,500 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:39:59] 2026-08-25 13:39:59,524 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:40:04] 2026-08-25 13:40:04,559 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:40:09] 2026-08-25 13:40:09,576 [INFO] Đang đẩy RTSP FPS: 29.91
+[13:40:14] 2026-08-25 13:40:14,597 [INFO] Đang đẩy RTSP FPS: 30.11
+[13:40:19] 2026-08-25 13:40:19,599 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:40:24] 2026-08-25 13:40:24,612 [INFO] Đang đẩy RTSP FPS: 29.94
+[13:40:29] 2026-08-25 13:40:29,630 [INFO] Đang đẩy RTSP FPS: 30.10
+[13:40:34] 2026-08-25 13:40:34,662 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:40:39] 2026-08-25 13:40:39,667 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:40:44] 2026-08-25 13:40:44,696 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:40:49] 2026-08-25 13:40:49,698 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:40:54] 2026-08-25 13:40:54,735 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:40:59] 2026-08-25 13:40:59,738 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:41:04] 2026-08-25 13:41:04,770 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:41:09] 2026-08-25 13:41:09,781 [INFO] Đang đẩy RTSP FPS: 29.93
+[13:41:14] 2026-08-25 13:41:14,819 [INFO] Đang đẩy RTSP FPS: 30.22
+[13:41:19] 2026-08-25 13:41:19,833 [INFO] Đang đẩy RTSP FPS: 29.93
+[13:41:24] 2026-08-25 13:41:24,861 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:41:29] 2026-08-25 13:41:29,873 [INFO] Đang đẩy RTSP FPS: 29.94
+[13:41:34] 2026-08-25 13:41:34,896 [INFO] Đang đẩy RTSP FPS: 30.09
+[13:41:39] 2026-08-25 13:41:39,897 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:41:44] 2026-08-25 13:41:44,926 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:41:49] 2026-08-25 13:41:49,938 [INFO] Đang đẩy RTSP FPS: 29.93
+[13:41:54] 2026-08-25 13:41:54,970 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:42:00] 2026-08-25 13:42:00,004 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:42:05] 2026-08-25 13:42:05,039 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:42:10] 2026-08-25 13:42:10,065 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:42:15] 2026-08-25 13:42:15,070 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:42:20] 2026-08-25 13:42:20,094 [INFO] Đang đẩy RTSP FPS: 30.09
+[13:42:25] 2026-08-25 13:42:25,126 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:42:30] 2026-08-25 13:42:30,147 [INFO] Đang đẩy RTSP FPS: 29.88
+[13:42:35] 2026-08-25 13:42:35,157 [INFO] Đang đẩy RTSP FPS: 30.16
+[13:42:40] 2026-08-25 13:42:40,177 [INFO] Đang đẩy RTSP FPS: 29.90
+[13:42:45] 2026-08-25 13:42:45,191 [INFO] Đang đẩy RTSP FPS: 30.11
+[13:42:50] 2026-08-25 13:42:50,194 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:42:55] 2026-08-25 13:42:55,218 [INFO] Đang đẩy RTSP FPS: 30.08
+[13:43:00] 2026-08-25 13:43:00,243 [INFO] Đang đẩy RTSP FPS: 29.87
+[13:43:05] 2026-08-25 13:43:05,286 [INFO] Đang đẩy RTSP FPS: 29.95
+[13:43:10] 2026-08-25 13:43:10,297 [INFO] Đang đẩy RTSP FPS: 29.74
+[13:43:15] 2026-08-25 13:43:15,334 [INFO] Đang đẩy RTSP FPS: 30.20
+[13:43:20] 2026-08-25 13:43:20,374 [INFO] Đang đẩy RTSP FPS: 29.42
+[13:43:25] 2026-08-25 13:43:25,407 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:43:30] 2026-08-25 13:43:30,445 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:43:35] 2026-08-25 13:43:35,471 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:43:40] 2026-08-25 13:43:40,501 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:43:45] 2026-08-25 13:43:45,541 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:43:50] 2026-08-25 13:43:50,567 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:43:55] 2026-08-25 13:43:55,571 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:44:00] 2026-08-25 13:44:00,576 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:44:05] 2026-08-25 13:44:05,604 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:44:10] 2026-08-25 13:44:10,606 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:44:15] 2026-08-25 13:44:15,634 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:44:20] 2026-08-25 13:44:20,663 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:44:25] 2026-08-25 13:44:25,675 [INFO] Đang đẩy RTSP FPS: 29.94
+[13:44:30] 2026-08-25 13:44:30,704 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:44:35] 2026-08-25 13:44:35,737 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:44:40] 2026-08-25 13:44:40,764 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:44:45] 2026-08-25 13:44:45,771 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:44:50] 2026-08-25 13:44:50,786 [INFO] Đang đẩy RTSP FPS: 30.13
+[13:44:55] 2026-08-25 13:44:55,806 [INFO] Đang đẩy RTSP FPS: 29.91
+[13:45:00] 2026-08-25 13:45:00,834 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:45:05] 2026-08-25 13:45:05,859 [INFO] Đang đẩy RTSP FPS: 30.09
+[13:45:10] 2026-08-25 13:45:10,868 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:45:15] 2026-08-25 13:45:15,876 [INFO] Đang đẩy RTSP FPS: 29.95
+[13:45:20] 2026-08-25 13:45:20,894 [INFO] Đang đẩy RTSP FPS: 30.09
+[13:45:25] 2026-08-25 13:45:25,905 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:45:30] 2026-08-25 13:45:30,941 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:45:35] 2026-08-25 13:45:35,971 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:45:40] 2026-08-25 13:45:40,973 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:45:46] 2026-08-25 13:45:46,001 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:45:51] 2026-08-25 13:45:51,007 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:45:56] 2026-08-25 13:45:56,041 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:46:01] 2026-08-25 13:46:01,071 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:46:06] 2026-08-25 13:46:06,104 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:46:11] 2026-08-25 13:46:11,131 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:46:16] 2026-08-25 13:46:16,142 [INFO] Đang đẩy RTSP FPS: 29.95
+[13:46:21] 2026-08-25 13:46:21,173 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:46:26] 2026-08-25 13:46:26,209 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:46:31] 2026-08-25 13:46:31,224 [INFO] Đang đẩy RTSP FPS: 30.16
+[13:46:36] 2026-08-25 13:46:36,238 [INFO] Đang đẩy RTSP FPS: 29.95
+[13:46:41] 2026-08-25 13:46:41,254 [INFO] Đang đẩy RTSP FPS: 30.10
+[13:46:46] 2026-08-25 13:46:46,262 [INFO] Đang đẩy RTSP FPS: 29.95
+[13:46:51] 2026-08-25 13:46:51,274 [INFO] Đang đẩy RTSP FPS: 29.94
+[13:46:56] 2026-08-25 13:46:56,280 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:47:01] 2026-08-25 13:47:01,304 [INFO] Đang đẩy RTSP FPS: 30.11
+[13:47:06] 2026-08-25 13:47:06,307 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:47:11] 2026-08-25 13:47:11,331 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:47:16] 2026-08-25 13:47:16,343 [INFO] Đang đẩy RTSP FPS: 29.93
+[13:47:21] 2026-08-25 13:47:21,367 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:47:26] 2026-08-25 13:47:26,390 [INFO] Đang đẩy RTSP FPS: 30.12
+[13:47:31] 2026-08-25 13:47:31,407 [INFO] Đang đẩy RTSP FPS: 29.92
+[13:47:36] 2026-08-25 13:47:36,437 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:47:41] 2026-08-25 13:47:41,474 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:47:46] 2026-08-25 13:47:46,507 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:47:51] 2026-08-25 13:47:51,511 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:47:56] 2026-08-25 13:47:56,534 [INFO] Đang đẩy RTSP FPS: 30.09
+[13:48:01] 2026-08-25 13:48:01,576 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:48:06] 2026-08-25 13:48:06,609 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:48:11] 2026-08-25 13:48:11,639 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:48:16] 2026-08-25 13:48:16,670 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:48:21] 2026-08-25 13:48:21,676 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:48:26] 2026-08-25 13:48:26,708 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:48:31] 2026-08-25 13:48:31,740 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:48:36] 2026-08-25 13:48:36,800 [INFO] Đang đẩy RTSP FPS: 29.87
+[13:48:41] 2026-08-25 13:48:41,816 [INFO] Đang đẩy RTSP FPS: 29.75
+[13:48:46] 2026-08-25 13:48:46,834 [INFO] Đang đẩy RTSP FPS: 30.14
+[13:48:51] 2026-08-25 13:48:51,874 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:48:56] 2026-08-25 13:48:56,904 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:49:01] 2026-08-25 13:49:01,933 [INFO] Đang đẩy RTSP FPS: 30.09
+[13:49:06] 2026-08-25 13:49:06,941 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:49:11] 2026-08-25 13:49:11,976 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:49:17] 2026-08-25 13:49:17,005 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:49:22] 2026-08-25 13:49:22,039 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:49:27] 2026-08-25 13:49:27,078 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:49:32] 2026-08-25 13:49:32,098 [INFO] Đang đẩy RTSP FPS: 30.12
+[13:49:37] 2026-08-25 13:49:37,104 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:49:42] 2026-08-25 13:49:42,138 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:49:47] 2026-08-25 13:49:47,173 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:49:52] 2026-08-25 13:49:52,204 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:49:57] 2026-08-25 13:49:57,238 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:50:02] 2026-08-25 13:50:02,271 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:50:07] 2026-08-25 13:50:07,301 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:50:12] 2026-08-25 13:50:12,338 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:50:17] 2026-08-25 13:50:17,374 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:50:22] 2026-08-25 13:50:22,404 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:50:27] 2026-08-25 13:50:27,407 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:50:32] 2026-08-25 13:50:32,439 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:50:37] 2026-08-25 13:50:37,441 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:50:42] 2026-08-25 13:50:42,474 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:50:47] 2026-08-25 13:50:47,474 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:50:52] 2026-08-25 13:50:52,494 [INFO] Đang đẩy RTSP FPS: 30.12
+[13:50:57] 2026-08-25 13:50:57,525 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:51:02] 2026-08-25 13:51:02,541 [INFO] Đang đẩy RTSP FPS: 29.92
+[13:51:07] 2026-08-25 13:51:07,575 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:51:12] 2026-08-25 13:51:12,608 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:51:17] 2026-08-25 13:51:17,642 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:51:22] 2026-08-25 13:51:22,674 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:51:27] 2026-08-25 13:51:27,705 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:51:32] 2026-08-25 13:51:32,735 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:51:37] 2026-08-25 13:51:37,742 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:51:42] 2026-08-25 13:51:42,759 [INFO] Đang đẩy RTSP FPS: 29.74
+[13:51:47] 2026-08-25 13:51:47,788 [INFO] Đang đẩy RTSP FPS: 29.85
+[13:51:52] 2026-08-25 13:51:52,806 [INFO] Đang đẩy RTSP FPS: 29.89
+[13:51:57] 2026-08-25 13:51:57,849 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:52:02] 2026-08-25 13:52:02,879 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:52:07] 2026-08-25 13:52:07,909 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:52:12] 2026-08-25 13:52:12,945 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:52:17] 2026-08-25 13:52:17,971 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:52:23] 2026-08-25 13:52:23,001 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:52:28] 2026-08-25 13:52:28,034 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:52:33] 2026-08-25 13:52:33,071 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:52:38] 2026-08-25 13:52:38,094 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:52:43] 2026-08-25 13:52:43,104 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:52:48] 2026-08-25 13:52:48,137 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:52:53] 2026-08-25 13:52:53,174 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:52:58] 2026-08-25 13:52:58,190 [INFO] Đang đẩy RTSP FPS: 30.15
+[13:53:03] 2026-08-25 13:53:03,196 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:53:08] 2026-08-25 13:53:08,205 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:53:13] 2026-08-25 13:53:13,206 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:53:18] 2026-08-25 13:53:18,208 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:53:23] 2026-08-25 13:53:23,241 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:53:28] 2026-08-25 13:53:28,273 [INFO] Đang đẩy RTSP FPS: 30.04
+[13:53:33] 2026-08-25 13:53:33,303 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:53:38] 2026-08-25 13:53:38,304 [INFO] Đang đẩy RTSP FPS: 29.79
+[13:53:43] 2026-08-25 13:53:43,341 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:53:48] 2026-08-25 13:53:48,367 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:53:53] 2026-08-25 13:53:53,405 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:53:58] 2026-08-25 13:53:58,409 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:54:03] 2026-08-25 13:54:03,436 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:54:08] 2026-08-25 13:54:08,469 [INFO] Đang đẩy RTSP FPS: 30.00
+[13:54:13] 2026-08-25 13:54:13,473 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:54:18] 2026-08-25 13:54:18,504 [INFO] Đang đẩy RTSP FPS: 30.01
+[13:54:23] 2026-08-25 13:54:23,538 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:54:28] 2026-08-25 13:54:28,540 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:54:33] 2026-08-25 13:54:33,576 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:54:38] 2026-08-25 13:54:38,601 [INFO] Đang đẩy RTSP FPS: 30.08
+[13:54:43] 2026-08-25 13:54:43,612 [INFO] Đang đẩy RTSP FPS: 29.56
+[13:54:48] 2026-08-25 13:54:48,644 [INFO] Đang đẩy RTSP FPS: 29.06
+[13:54:53] 2026-08-25 13:54:53,654 [INFO] Đang đẩy RTSP FPS: 30.18
+[13:54:58] 2026-08-25 13:54:58,668 [INFO] Đang đẩy RTSP FPS: 29.91
+[13:55:03] 2026-08-25 13:55:03,699 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:55:08] 2026-08-25 13:55:08,724 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:55:13] 2026-08-25 13:55:13,738 [INFO] Đang đẩy RTSP FPS: 29.92
+[13:55:18] 2026-08-25 13:55:18,769 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:55:23] 2026-08-25 13:55:23,791 [INFO] Đang đẩy RTSP FPS: 30.07
+[13:55:28] 2026-08-25 13:55:28,805 [INFO] Đang đẩy RTSP FPS: 29.94
+[13:55:33] 2026-08-25 13:55:33,843 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:55:38] 2026-08-25 13:55:38,885 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:55:43] 2026-08-25 13:55:43,907 [INFO] Đang đẩy RTSP FPS: 30.11
+[13:55:48] 2026-08-25 13:55:48,919 [INFO] Đang đẩy RTSP FPS: 29.93
+[13:55:53] 2026-08-25 13:55:53,941 [INFO] Đang đẩy RTSP FPS: 30.10
+[13:55:58] 2026-08-25 13:55:58,965 [INFO] Đang đẩy RTSP FPS: 30.09
+[13:56:03] 2026-08-25 13:56:03,971 [INFO] Đang đẩy RTSP FPS: 29.99
+[13:56:09] 2026-08-25 13:56:09,004 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:56:14] 2026-08-25 13:56:14,039 [INFO] Đang đẩy RTSP FPS: 30.03
+[13:56:19] 2026-08-25 13:56:19,074 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:56:24] 2026-08-25 13:56:24,104 [INFO] Đang đẩy RTSP FPS: 30.08
+[13:56:29] 2026-08-25 13:56:29,107 [INFO] Đang đẩy RTSP FPS: 29.98
+[13:56:34] 2026-08-25 13:56:34,138 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:56:39] 2026-08-25 13:56:39,144 [INFO] Đang đẩy RTSP FPS: 29.96
+[13:56:44] 2026-08-25 13:56:44,171 [INFO] Đang đẩy RTSP FPS: 30.05
+[13:56:49] 2026-08-25 13:56:49,184 [INFO] Đang đẩy RTSP FPS: 30.15
+[13:56:54] 2026-08-25 13:56:54,202 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:56:59] 2026-08-25 13:56:59,235 [INFO] Đang đẩy RTSP FPS: 30.02
+[13:57:04] 2026-08-25 13:57:04,274 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:57:09] 2026-08-25 13:57:09,290 [INFO] Đang đẩy RTSP FPS: 30.13
+[13:57:14] 2026-08-25 13:57:14,304 [INFO] Đang đẩy RTSP FPS: 29.94
+[13:57:19] 2026-08-25 13:57:19,347 [INFO] Đang đẩy RTSP FPS: 29.95
+[13:57:24] 2026-08-25 13:57:24,354 [INFO] Đang đẩy RTSP FPS: 30.19
+[13:57:29] 2026-08-25 13:57:29,358 [INFO] Đang đẩy RTSP FPS: 29.97
+[13:57:31] ### Dang gui tin hieu dung...
+[13:57:34] 2026-08-25 13:57:34,381 [INFO] Đang đẩy RTSP FPS: 30.06
+[13:57:37] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[13:57:38] ### DA DUNG (exit code 1)
+[14:11:48] ==============================================================================
+[14:11:48] ### PHIEN MOI luc 2026-08-25 14:11:48
+[14:11:48] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[14:11:48] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[14:11:48] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[14:11:48] ### PID = 7600
+[14:11:50] 2026-08-25 14:11:50,110 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[14:11:50] 2026-08-25 14:11:50,110 [INFO] Đang mở camera Sony...
+[14:11:51] 2026-08-25 14:11:51,237 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[14:11:51] 2026-08-25 14:11:51,239 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[14:11:51] 2026-08-25 14:11:51,239 [INFO] GOP = 30 frame (1.0s/keyframe)
+[14:11:51] 2026-08-25 14:11:51,245 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[14:11:56] 2026-08-25 14:11:56,261 [INFO] Đang đẩy RTSP FPS: 29.70
+[14:12:01] 2026-08-25 14:12:01,293 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:12:06] 2026-08-25 14:12:06,295 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:12:11] 2026-08-25 14:12:11,302 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:12:16] 2026-08-25 14:12:16,331 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:12:21] 2026-08-25 14:12:21,370 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:12:26] 2026-08-25 14:12:26,400 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:12:31] 2026-08-25 14:12:31,406 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:12:36] 2026-08-25 14:12:36,428 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:12:41] 2026-08-25 14:12:41,431 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:12:46] 2026-08-25 14:12:46,463 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:12:51] 2026-08-25 14:12:51,494 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:12:56] 2026-08-25 14:12:56,526 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:13:01] 2026-08-25 14:13:01,526 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:13:06] 2026-08-25 14:13:06,527 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:13:11] 2026-08-25 14:13:11,560 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:13:16] 2026-08-25 14:13:16,560 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:13:21] 2026-08-25 14:13:21,595 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:13:26] 2026-08-25 14:13:26,628 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:13:31] 2026-08-25 14:13:31,660 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:13:36] 2026-08-25 14:13:36,692 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:13:41] 2026-08-25 14:13:41,711 [INFO] Đang đẩy RTSP FPS: 29.91
+[14:13:46] 2026-08-25 14:13:46,736 [INFO] Đang đẩy RTSP FPS: 30.05
+[14:13:51] 2026-08-25 14:13:51,770 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:13:56] 2026-08-25 14:13:56,801 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:14:01] 2026-08-25 14:14:01,827 [INFO] Đang đẩy RTSP FPS: 30.05
+[14:14:06] 2026-08-25 14:14:06,859 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:14:11] 2026-08-25 14:14:11,860 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:14:16] 2026-08-25 14:14:16,866 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:14:21] 2026-08-25 14:14:21,895 [INFO] Đang đẩy RTSP FPS: 29.63
+[14:14:26] 2026-08-25 14:14:26,901 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:14:31] 2026-08-25 14:14:31,925 [INFO] Đang đẩy RTSP FPS: 30.08
+[14:14:36] 2026-08-25 14:14:36,926 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:14:41] 2026-08-25 14:14:41,959 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:14:46] 2026-08-25 14:14:46,992 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:14:52] 2026-08-25 14:14:52,026 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:14:57] 2026-08-25 14:14:57,060 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:15:02] 2026-08-25 14:15:02,064 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:15:07] 2026-08-25 14:15:07,080 [INFO] Đang đẩy RTSP FPS: 29.93
+[14:15:12] 2026-08-25 14:15:12,117 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:15:17] 2026-08-25 14:15:17,152 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:15:22] 2026-08-25 14:15:22,162 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:15:27] 2026-08-25 14:15:27,182 [INFO] Đang đẩy RTSP FPS: 30.11
+[14:15:32] 2026-08-25 14:15:32,203 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:15:37] 2026-08-25 14:15:37,205 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:15:42] 2026-08-25 14:15:42,208 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:15:47] 2026-08-25 14:15:47,213 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:15:52] 2026-08-25 14:15:52,220 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:15:57] 2026-08-25 14:15:57,253 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:16:02] 2026-08-25 14:16:02,280 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:16:07] 2026-08-25 14:16:07,313 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:16:12] 2026-08-25 14:16:12,338 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:16:17] 2026-08-25 14:16:17,348 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:16:22] 2026-08-25 14:16:22,380 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:16:27] 2026-08-25 14:16:27,403 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:16:32] 2026-08-25 14:16:32,410 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:16:37] 2026-08-25 14:16:37,413 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:16:42] 2026-08-25 14:16:42,417 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:16:47] 2026-08-25 14:16:47,432 [INFO] Đang đẩy RTSP FPS: 30.12
+[14:16:52] 2026-08-25 14:16:52,441 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:16:57] 2026-08-25 14:16:57,451 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:17:02] 2026-08-25 14:17:02,470 [INFO] Đang đẩy RTSP FPS: 30.08
+[14:17:07] 2026-08-25 14:17:07,478 [INFO] Đang đẩy RTSP FPS: 29.95
+[14:17:12] 2026-08-25 14:17:12,517 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:17:17] 2026-08-25 14:17:17,542 [INFO] Đang đẩy RTSP FPS: 30.08
+[14:17:22] 2026-08-25 14:17:22,554 [INFO] Đang đẩy RTSP FPS: 29.93
+[14:17:27] 2026-08-25 14:17:27,589 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:17:32] 2026-08-25 14:17:32,621 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:17:37] 2026-08-25 14:17:37,648 [INFO] Đang đẩy RTSP FPS: 29.45
+[14:17:42] 2026-08-25 14:17:42,649 [INFO] Đang đẩy RTSP FPS: 28.60
+[14:17:47] 2026-08-25 14:17:47,682 [INFO] Đang đẩy RTSP FPS: 29.80
+[14:17:52] 2026-08-25 14:17:52,697 [INFO] Đang đẩy RTSP FPS: 29.95
+[14:17:57] 2026-08-25 14:17:57,715 [INFO] Đang đẩy RTSP FPS: 29.69
+[14:18:02] 2026-08-25 14:18:02,748 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:18:07] 2026-08-25 14:18:07,777 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:18:12] 2026-08-25 14:18:12,813 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:18:17] 2026-08-25 14:18:17,814 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:18:22] 2026-08-25 14:18:22,835 [INFO] Đang đẩy RTSP FPS: 30.08
+[14:18:27] 2026-08-25 14:18:27,867 [INFO] Đang đẩy RTSP FPS: 29.84
+[14:18:32] 2026-08-25 14:18:32,870 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:18:37] 2026-08-25 14:18:37,881 [INFO] Đang đẩy RTSP FPS: 29.94
+[14:18:42] 2026-08-25 14:18:42,884 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:18:47] 2026-08-25 14:18:47,912 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:18:52] 2026-08-25 14:18:52,936 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:18:57] 2026-08-25 14:18:57,953 [INFO] Đang đẩy RTSP FPS: 29.90
+[14:19:02] 2026-08-25 14:19:02,984 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:19:08] 2026-08-25 14:19:08,013 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:19:13] 2026-08-25 14:19:13,016 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:19:18] 2026-08-25 14:19:18,050 [INFO] Đang đẩy RTSP FPS: 29.82
+[14:19:23] 2026-08-25 14:19:23,062 [INFO] Đang đẩy RTSP FPS: 30.16
+[14:19:23] ### Dang gui tin hieu dung...
+[14:19:25] ### Dang gui tin hieu dung...
+[14:19:28] 2026-08-25 14:19:28,092 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:19:29] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[14:19:29] ### DA DUNG (exit code 1)
+[14:19:50] ==============================================================================
+[14:19:50] ### PHIEN MOI luc 2026-08-25 14:19:50
+[14:19:50] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[14:19:50] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[14:19:50] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[14:19:50] ### PID = 49488
+[14:19:51] 2026-08-25 14:19:51,839 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[14:19:51] 2026-08-25 14:19:51,839 [INFO] Đang mở camera Sony...
+[14:19:52] 2026-08-25 14:19:52,899 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[14:19:52] 2026-08-25 14:19:52,901 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[14:19:52] 2026-08-25 14:19:52,902 [INFO] GOP = 30 frame (1.0s/keyframe)
+[14:19:52] 2026-08-25 14:19:52,907 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[14:19:57] 2026-08-25 14:19:57,923 [INFO] Đang đẩy RTSP FPS: 29.70
+[14:20:02] 2026-08-25 14:20:02,936 [INFO] Đang đẩy RTSP FPS: 29.94
+[14:20:07] 2026-08-25 14:20:07,965 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:20:12] 2026-08-25 14:20:12,990 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:20:17] 2026-08-25 14:20:17,995 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:20:23] 2026-08-25 14:20:23,025 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:20:28] 2026-08-25 14:20:28,034 [INFO] Đang đẩy RTSP FPS: 29.94
+[14:20:33] 2026-08-25 14:20:33,057 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:20:38] 2026-08-25 14:20:38,061 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:20:43] 2026-08-25 14:20:43,092 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:20:48] 2026-08-25 14:20:48,123 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:20:53] 2026-08-25 14:20:53,157 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:20:58] 2026-08-25 14:20:58,190 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:21:03] 2026-08-25 14:21:03,224 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:21:08] 2026-08-25 14:21:08,225 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:21:13] 2026-08-25 14:21:13,257 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:21:18] 2026-08-25 14:21:18,290 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:21:23] 2026-08-25 14:21:23,293 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:21:28] 2026-08-25 14:21:28,324 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:21:33] 2026-08-25 14:21:33,357 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:21:38] 2026-08-25 14:21:38,390 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:21:43] 2026-08-25 14:21:43,405 [INFO] Đang đẩy RTSP FPS: 29.92
+[14:21:48] 2026-08-25 14:21:48,429 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:21:53] 2026-08-25 14:21:53,462 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:21:58] 2026-08-25 14:21:58,490 [INFO] Đang đẩy RTSP FPS: 30.05
+[14:22:03] 2026-08-25 14:22:03,495 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:22:08] 2026-08-25 14:22:08,502 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:22:13] 2026-08-25 14:22:13,538 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:22:18] 2026-08-25 14:22:18,557 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:22:23] 2026-08-25 14:22:23,559 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:22:28] 2026-08-25 14:22:28,591 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:22:33] 2026-08-25 14:22:33,625 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:22:38] 2026-08-25 14:22:38,667 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:22:43] 2026-08-25 14:22:43,694 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:22:48] 2026-08-25 14:22:48,730 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:22:53] 2026-08-25 14:22:53,757 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:22:58] 2026-08-25 14:22:58,799 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:23:03] 2026-08-25 14:23:03,824 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:23:08] 2026-08-25 14:23:08,873 [INFO] Đang đẩy RTSP FPS: 29.91
+[14:23:13] 2026-08-25 14:23:13,895 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:23:18] 2026-08-25 14:23:18,909 [INFO] Đang đẩy RTSP FPS: 29.91
+[14:23:23] 2026-08-25 14:23:23,913 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:23:28] 2026-08-25 14:23:28,929 [INFO] Đang đẩy RTSP FPS: 30.10
+[14:23:33] 2026-08-25 14:23:33,957 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:23:38] 2026-08-25 14:23:38,989 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:23:44] 2026-08-25 14:23:44,024 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:23:49] 2026-08-25 14:23:49,057 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:23:54] 2026-08-25 14:23:54,090 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:23:59] 2026-08-25 14:23:59,124 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:24:04] 2026-08-25 14:24:04,156 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:24:09] 2026-08-25 14:24:09,190 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:24:14] 2026-08-25 14:24:14,224 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:24:19] 2026-08-25 14:24:19,257 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:24:24] 2026-08-25 14:24:24,290 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:24:29] 2026-08-25 14:24:29,323 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:24:34] 2026-08-25 14:24:34,325 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:24:39] 2026-08-25 14:24:39,357 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:24:44] 2026-08-25 14:24:44,390 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:24:49] 2026-08-25 14:24:49,424 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:24:54] 2026-08-25 14:24:54,457 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:24:59] 2026-08-25 14:24:59,458 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:25:04] 2026-08-25 14:25:04,491 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:25:09] 2026-08-25 14:25:09,525 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:25:14] 2026-08-25 14:25:14,555 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:25:19] 2026-08-25 14:25:19,589 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:25:24] 2026-08-25 14:25:24,623 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:25:29] 2026-08-25 14:25:29,656 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:25:34] 2026-08-25 14:25:34,690 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:25:39] 2026-08-25 14:25:39,690 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:25:44] 2026-08-25 14:25:44,723 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:25:49] 2026-08-25 14:25:49,724 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:25:54] 2026-08-25 14:25:54,756 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:25:59] 2026-08-25 14:25:59,760 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:26:04] 2026-08-25 14:26:04,790 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:26:09] 2026-08-25 14:26:09,799 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:26:14] 2026-08-25 14:26:14,829 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:26:19] 2026-08-25 14:26:19,862 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:26:24] 2026-08-25 14:26:24,889 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:26:29] 2026-08-25 14:26:29,890 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:26:34] 2026-08-25 14:26:34,923 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:26:39] 2026-08-25 14:26:39,957 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:26:44] 2026-08-25 14:26:44,990 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:26:49] 2026-08-25 14:26:49,998 [INFO] Đang đẩy RTSP FPS: 29.95
+[14:26:55] 2026-08-25 14:26:55,033 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:27:00] 2026-08-25 14:27:00,066 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:27:05] 2026-08-25 14:27:05,066 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:27:10] 2026-08-25 14:27:10,069 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:27:15] 2026-08-25 14:27:15,094 [INFO] Đang đẩy RTSP FPS: 30.05
+[14:27:20] 2026-08-25 14:27:20,099 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:27:25] 2026-08-25 14:27:25,123 [INFO] Đang đẩy RTSP FPS: 30.10
+[14:27:30] 2026-08-25 14:27:30,142 [INFO] Đang đẩy RTSP FPS: 29.89
+[14:27:35] 2026-08-25 14:27:35,160 [INFO] Đang đẩy RTSP FPS: 30.11
+[14:27:40] 2026-08-25 14:27:40,164 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:27:45] 2026-08-25 14:27:45,193 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:27:50] 2026-08-25 14:27:50,208 [INFO] Đang đẩy RTSP FPS: 29.91
+[14:27:55] 2026-08-25 14:27:55,225 [INFO] Đang đẩy RTSP FPS: 30.12
+[14:28:00] 2026-08-25 14:28:00,266 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:28:05] 2026-08-25 14:28:05,291 [INFO] Đang đẩy RTSP FPS: 30.05
+[14:28:10] 2026-08-25 14:28:10,303 [INFO] Đang đẩy RTSP FPS: 29.93
+[14:28:15] 2026-08-25 14:28:15,323 [INFO] Đang đẩy RTSP FPS: 30.08
+[14:28:20] 2026-08-25 14:28:20,337 [INFO] Đang đẩy RTSP FPS: 29.93
+[14:28:25] 2026-08-25 14:28:25,370 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:28:30] 2026-08-25 14:28:30,396 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:28:35] 2026-08-25 14:28:35,397 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:28:40] 2026-08-25 14:28:40,429 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:28:45] 2026-08-25 14:28:45,456 [INFO] Đang đẩy RTSP FPS: 30.05
+[14:28:50] 2026-08-25 14:28:50,490 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:28:55] 2026-08-25 14:28:55,524 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:29:00] 2026-08-25 14:29:00,534 [INFO] Đang đẩy RTSP FPS: 29.95
+[14:29:05] 2026-08-25 14:29:05,560 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:29:10] 2026-08-25 14:29:10,588 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:29:15] 2026-08-25 14:29:15,624 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:29:20] 2026-08-25 14:29:20,661 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:29:25] 2026-08-25 14:29:25,693 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:29:30] 2026-08-25 14:29:30,724 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:29:35] 2026-08-25 14:29:35,761 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:29:40] 2026-08-25 14:29:40,765 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:29:45] 2026-08-25 14:29:45,793 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:29:50] 2026-08-25 14:29:50,830 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:29:55] 2026-08-25 14:29:55,859 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:30:00] 2026-08-25 14:30:00,865 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:30:05] 2026-08-25 14:30:05,891 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:30:10] 2026-08-25 14:30:10,923 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:30:15] 2026-08-25 14:30:15,925 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:30:20] 2026-08-25 14:30:20,961 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:30:25] 2026-08-25 14:30:25,997 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:30:31] 2026-08-25 14:30:31,027 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:30:36] 2026-08-25 14:30:36,056 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:30:41] 2026-08-25 14:30:41,063 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:30:46] 2026-08-25 14:30:46,094 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:30:51] 2026-08-25 14:30:51,125 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:30:56] 2026-08-25 14:30:56,157 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:31:01] 2026-08-25 14:31:01,161 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:31:06] 2026-08-25 14:31:06,191 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:31:11] 2026-08-25 14:31:11,193 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:31:16] 2026-08-25 14:31:16,225 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:31:21] 2026-08-25 14:31:21,258 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:31:26] 2026-08-25 14:31:26,296 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:31:31] 2026-08-25 14:31:31,324 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:31:36] 2026-08-25 14:31:36,330 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:31:41] 2026-08-25 14:31:41,362 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:31:46] 2026-08-25 14:31:46,400 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:31:51] 2026-08-25 14:31:51,445 [INFO] Đang đẩy RTSP FPS: 29.95
+[14:31:56] 2026-08-25 14:31:56,463 [INFO] Đang đẩy RTSP FPS: 30.15
+[14:32:01] 2026-08-25 14:32:01,496 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:32:06] 2026-08-25 14:32:06,524 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:32:11] 2026-08-25 14:32:11,538 [INFO] Đang đẩy RTSP FPS: 29.95
+[14:32:16] 2026-08-25 14:32:16,568 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:32:21] 2026-08-25 14:32:21,603 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:32:26] 2026-08-25 14:32:26,624 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:32:31] 2026-08-25 14:32:31,635 [INFO] Đang đẩy RTSP FPS: 29.94
+[14:32:36] 2026-08-25 14:32:36,644 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:32:41] 2026-08-25 14:32:41,668 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:32:46] 2026-08-25 14:32:46,677 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:32:51] 2026-08-25 14:32:51,702 [INFO] Đang đẩy RTSP FPS: 30.08
+[14:32:56] 2026-08-25 14:32:56,703 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:33:01] 2026-08-25 14:33:01,705 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:33:06] 2026-08-25 14:33:06,717 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:33:11] 2026-08-25 14:33:11,740 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:33:16] 2026-08-25 14:33:16,763 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:33:21] 2026-08-25 14:33:21,768 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:33:26] 2026-08-25 14:33:26,774 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:33:31] 2026-08-25 14:33:31,791 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:33:36] 2026-08-25 14:33:36,831 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:33:41] 2026-08-25 14:33:41,863 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:33:46] 2026-08-25 14:33:46,890 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:33:51] 2026-08-25 14:33:51,894 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:33:56] 2026-08-25 14:33:56,899 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:34:01] 2026-08-25 14:34:01,928 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:34:06] 2026-08-25 14:34:06,954 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:34:11] 2026-08-25 14:34:11,961 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:34:16] 2026-08-25 14:34:16,989 [INFO] Đang đẩy RTSP FPS: 30.05
+[14:34:21] 2026-08-25 14:34:21,999 [INFO] Đang đẩy RTSP FPS: 29.95
+[14:34:27] 2026-08-25 14:34:27,024 [INFO] Đang đẩy RTSP FPS: 30.05
+[14:34:32] 2026-08-25 14:34:32,036 [INFO] Đang đẩy RTSP FPS: 29.94
+[14:34:37] 2026-08-25 14:34:37,062 [INFO] Đang đẩy RTSP FPS: 30.05
+[14:34:42] 2026-08-25 14:34:42,063 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:34:47] 2026-08-25 14:34:47,098 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:34:52] 2026-08-25 14:34:52,121 [INFO] Đang đẩy RTSP FPS: 30.10
+[14:34:57] 2026-08-25 14:34:57,138 [INFO] Đang đẩy RTSP FPS: 29.91
+[14:35:02] 2026-08-25 14:35:02,154 [INFO] Đang đẩy RTSP FPS: 30.10
+[14:35:07] 2026-08-25 14:35:07,160 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:35:12] 2026-08-25 14:35:12,189 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:35:17] 2026-08-25 14:35:17,224 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:35:22] 2026-08-25 14:35:22,232 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:35:27] 2026-08-25 14:35:27,255 [INFO] Đang đẩy RTSP FPS: 30.08
+[14:35:32] 2026-08-25 14:35:32,259 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:35:37] 2026-08-25 14:35:37,270 [INFO] Đang đẩy RTSP FPS: 29.93
+[14:35:42] 2026-08-25 14:35:42,273 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:35:47] 2026-08-25 14:35:47,309 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:35:52] 2026-08-25 14:35:52,331 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:35:57] 2026-08-25 14:35:57,357 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:36:02] 2026-08-25 14:36:02,362 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:36:07] 2026-08-25 14:36:07,365 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:36:12] 2026-08-25 14:36:12,388 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:36:17] 2026-08-25 14:36:17,426 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:36:22] 2026-08-25 14:36:22,428 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:36:27] 2026-08-25 14:36:27,459 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:36:32] 2026-08-25 14:36:32,500 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:36:37] 2026-08-25 14:36:37,530 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:36:42] 2026-08-25 14:36:42,561 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:36:47] 2026-08-25 14:36:47,599 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:36:52] 2026-08-25 14:36:52,621 [INFO] Đang đẩy RTSP FPS: 30.08
+[14:36:57] 2026-08-25 14:36:57,629 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:37:02] 2026-08-25 14:37:02,637 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:37:07] 2026-08-25 14:37:07,670 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:37:12] 2026-08-25 14:37:12,700 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:37:17] 2026-08-25 14:37:17,724 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:37:22] 2026-08-25 14:37:22,761 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:37:27] 2026-08-25 14:37:27,791 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:37:32] 2026-08-25 14:37:32,824 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:37:37] 2026-08-25 14:37:37,827 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:37:42] 2026-08-25 14:37:42,857 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:37:47] 2026-08-25 14:37:47,863 [INFO] Đang đẩy RTSP FPS: 29.79
+[14:37:52] 2026-08-25 14:37:52,873 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:37:57] 2026-08-25 14:37:57,887 [INFO] Đang đẩy RTSP FPS: 30.14
+[14:38:02] 2026-08-25 14:38:02,903 [INFO] Đang đẩy RTSP FPS: 29.92
+[14:38:07] 2026-08-25 14:38:07,905 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:38:12] 2026-08-25 14:38:12,936 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:38:17] 2026-08-25 14:38:17,967 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:38:23] 2026-08-25 14:38:23,000 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:38:28] 2026-08-25 14:38:28,021 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:38:33] 2026-08-25 14:38:33,067 [INFO] Đang đẩy RTSP FPS: 29.94
+[14:38:38] 2026-08-25 14:38:38,104 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:38:43] 2026-08-25 14:38:43,126 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:38:48] 2026-08-25 14:38:48,136 [INFO] Đang đẩy RTSP FPS: 29.95
+[14:38:53] 2026-08-25 14:38:53,164 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:38:58] 2026-08-25 14:38:58,178 [INFO] Đang đẩy RTSP FPS: 29.94
+[14:39:03] 2026-08-25 14:39:03,195 [INFO] Đang đẩy RTSP FPS: 30.15
+[14:39:08] 2026-08-25 14:39:08,198 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:39:13] 2026-08-25 14:39:13,200 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:39:18] 2026-08-25 14:39:18,230 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:39:23] 2026-08-25 14:39:23,254 [INFO] Đang đẩy RTSP FPS: 30.10
+[14:39:28] 2026-08-25 14:39:28,270 [INFO] Đang đẩy RTSP FPS: 29.90
+[14:39:33] 2026-08-25 14:39:33,286 [INFO] Đang đẩy RTSP FPS: 30.12
+[14:39:38] 2026-08-25 14:39:38,304 [INFO] Đang đẩy RTSP FPS: 29.91
+[14:39:43] 2026-08-25 14:39:43,318 [INFO] Đang đẩy RTSP FPS: 29.93
+[14:39:48] 2026-08-25 14:39:48,328 [INFO] Đang đẩy RTSP FPS: 30.14
+[14:39:53] 2026-08-25 14:39:53,345 [INFO] Đang đẩy RTSP FPS: 29.89
+[14:39:58] 2026-08-25 14:39:58,355 [INFO] Đang đẩy RTSP FPS: 30.14
+[14:40:03] 2026-08-25 14:40:03,388 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:40:08] 2026-08-25 14:40:08,392 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:40:13] 2026-08-25 14:40:13,410 [INFO] Đang đẩy RTSP FPS: 29.91
+[14:40:18] 2026-08-25 14:40:18,428 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:40:23] 2026-08-25 14:40:23,453 [INFO] Đang đẩy RTSP FPS: 29.88
+[14:40:28] 2026-08-25 14:40:28,467 [INFO] Đang đẩy RTSP FPS: 30.12
+[14:40:33] 2026-08-25 14:40:33,490 [INFO] Đang đẩy RTSP FPS: 30.10
+[14:40:38] 2026-08-25 14:40:38,515 [INFO] Đang đẩy RTSP FPS: 29.87
+[14:40:43] 2026-08-25 14:40:43,522 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:40:48] 2026-08-25 14:40:48,539 [INFO] Đang đẩy RTSP FPS: 30.16
+[14:40:53] 2026-08-25 14:40:53,556 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:40:58] 2026-08-25 14:40:58,590 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:41:00] ### Dang gui tin hieu dung...
+[14:41:03] 2026-08-25 14:41:03,622 [INFO] Đang đẩy RTSP FPS: 30.01
+[14:41:06] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[14:41:07] ### DA DUNG (exit code 1)
+[14:41:33] ==============================================================================
+[14:41:33] ### PHIEN MOI luc 2026-08-25 14:41:33
+[14:41:33] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[14:41:33] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[14:41:33] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[14:41:33] ### PID = 49352
+[14:41:34] 2026-08-25 14:41:34,797 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[14:41:34] 2026-08-25 14:41:34,797 [INFO] Đang mở camera Sony...
+[14:41:36] 2026-08-25 14:41:36,114 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[14:41:36] 2026-08-25 14:41:36,117 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[14:41:36] 2026-08-25 14:41:36,117 [INFO] GOP = 30 frame (1.0s/keyframe)
+[14:41:36] 2026-08-25 14:41:36,124 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[14:41:41] 2026-08-25 14:41:41,124 [INFO] Đang đẩy RTSP FPS: 29.80
+[14:41:46] 2026-08-25 14:41:46,144 [INFO] Đang đẩy RTSP FPS: 29.88
+[14:41:51] 2026-08-25 14:41:51,164 [INFO] Đang đẩy RTSP FPS: 30.10
+[14:41:56] 2026-08-25 14:41:56,168 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:42:01] 2026-08-25 14:42:01,201 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:42:06] 2026-08-25 14:42:06,223 [INFO] Đang đẩy RTSP FPS: 30.09
+[14:42:11] 2026-08-25 14:42:11,226 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:42:16] 2026-08-25 14:42:16,253 [INFO] Đang đẩy RTSP FPS: 30.07
+[14:42:21] 2026-08-25 14:42:21,258 [INFO] Đang đẩy RTSP FPS: 29.98
+[14:42:26] 2026-08-25 14:42:26,284 [INFO] Đang đẩy RTSP FPS: 29.85
+[14:42:31] 2026-08-25 14:42:31,317 [INFO] Đang đẩy RTSP FPS: 30.23
+[14:42:36] 2026-08-25 14:42:36,325 [INFO] Đang đẩy RTSP FPS: 29.97
+[14:42:41] 2026-08-25 14:42:41,365 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:42:46] 2026-08-25 14:42:46,392 [INFO] Đang đẩy RTSP FPS: 30.04
+[14:42:51] 2026-08-25 14:42:51,423 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:42:56] 2026-08-25 14:42:56,428 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:43:01] 2026-08-25 14:43:01,458 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:43:06] 2026-08-25 14:43:06,465 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:43:11] 2026-08-25 14:43:11,495 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:43:16] 2026-08-25 14:43:16,524 [INFO] Đang đẩy RTSP FPS: 30.05
+[14:43:21] 2026-08-25 14:43:21,555 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:43:26] 2026-08-25 14:43:26,589 [INFO] Đang đẩy RTSP FPS: 30.00
+[14:43:31] 2026-08-25 14:43:31,622 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:43:36] 2026-08-25 14:43:36,636 [INFO] Đang đẩy RTSP FPS: 29.92
+[14:43:41] 2026-08-25 14:43:41,664 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:43:46] 2026-08-25 14:43:46,692 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:43:51] 2026-08-25 14:43:51,723 [INFO] Đang đẩy RTSP FPS: 30.03
+[14:43:56] 2026-08-25 14:43:56,733 [INFO] Đang đẩy RTSP FPS: 29.96
+[14:44:01] 2026-08-25 14:44:01,735 [INFO] Đang đẩy RTSP FPS: 29.99
+[14:44:06] 2026-08-25 14:44:06,755 [INFO] Đang đẩy RTSP FPS: 29.92
+[14:44:11] ### Dang gui tin hieu dung...
+[14:44:11] 2026-08-25 14:44:11,786 [INFO] Đang đẩy RTSP FPS: 30.06
+[14:44:16] 2026-08-25 14:44:16,802 [INFO] Đang đẩy RTSP FPS: 29.92
+[14:44:17] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[14:44:18] ### DA DUNG (exit code 1)
+[14:58:27] ==============================================================================
+[14:58:27] ### PHIEN MOI luc 2026-08-25 14:58:27
+[14:58:27] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[14:58:27] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[14:58:27] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[14:58:27] ### PID = 43772
+[14:58:29] 2026-08-25 14:58:29,534 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[14:58:29] 2026-08-25 14:58:29,534 [INFO] Đang mở camera Sony...
+[14:58:30] 2026-08-25 14:58:30,687 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[14:58:30] 2026-08-25 14:58:30,689 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[14:58:30] 2026-08-25 14:58:30,689 [INFO] GOP = 30 frame (1.0s/keyframe)
+[14:58:30] 2026-08-25 14:58:30,697 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[14:58:35] ### Dang gui tin hieu dung...
+[14:58:35] 2026-08-25 14:58:35,704 [INFO] Đang đẩy RTSP FPS: 29.76
+[14:58:40] 2026-08-25 14:58:40,738 [INFO] Đang đẩy RTSP FPS: 30.02
+[14:58:41] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[14:58:41] ### DA DUNG (exit code 1)
+[16:39:33] ==============================================================================
+[16:39:33] ### PHIEN MOI luc 2026-08-25 16:39:33
+[16:39:33] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[16:39:33] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[16:39:33] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[16:39:33] ### PID = 38908
+[16:39:35] 2026-08-25 16:39:35,438 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[16:39:35] 2026-08-25 16:39:35,438 [INFO] Đang mở camera Sony...
+[16:39:36] 2026-08-25 16:39:36,524 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[16:39:36] 2026-08-25 16:39:36,526 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[16:39:36] 2026-08-25 16:39:36,526 [INFO] GOP = 30 frame (1.0s/keyframe)
+[16:39:36] 2026-08-25 16:39:36,538 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[16:39:41] 2026-08-25 16:39:41,541 [INFO] Đang đẩy RTSP FPS: 29.78
+[16:39:46] 2026-08-25 16:39:46,548 [INFO] Đang đẩy RTSP FPS: 29.97
+[16:39:51] 2026-08-25 16:39:51,564 [INFO] Đang đẩy RTSP FPS: 29.91
+[16:39:56] 2026-08-25 16:39:56,583 [INFO] Đang đẩy RTSP FPS: 30.11
+[16:40:01] 2026-08-25 16:40:01,615 [INFO] Đang đẩy RTSP FPS: 30.04
+[16:40:06] 2026-08-25 16:40:06,638 [INFO] Đang đẩy RTSP FPS: 30.06
+[16:40:11] 2026-08-25 16:40:11,650 [INFO] Đang đẩy RTSP FPS: 29.94
+[16:40:16] 2026-08-25 16:40:16,684 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:40:21] 2026-08-25 16:40:21,708 [INFO] Đang đẩy RTSP FPS: 30.08
+[16:40:26] 2026-08-25 16:40:26,739 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:40:31] 2026-08-25 16:40:31,748 [INFO] Đang đẩy RTSP FPS: 29.96
+[16:40:36] 2026-08-25 16:40:36,750 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:40:41] 2026-08-25 16:40:41,753 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:40:46] 2026-08-25 16:40:46,781 [INFO] Đang đẩy RTSP FPS: 30.06
+[16:40:51] 2026-08-25 16:40:51,784 [INFO] Đang đẩy RTSP FPS: 29.98
+[16:40:56] 2026-08-25 16:40:56,808 [INFO] Đang đẩy RTSP FPS: 30.08
+[16:41:01] 2026-08-25 16:41:01,808 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:41:06] 2026-08-25 16:41:06,830 [INFO] Đang đẩy RTSP FPS: 30.11
+[16:41:11] 2026-08-25 16:41:11,862 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:41:16] 2026-08-25 16:41:16,895 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:41:21] 2026-08-25 16:41:21,928 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:41:26] 2026-08-25 16:41:26,960 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:41:31] 2026-08-25 16:41:31,964 [INFO] Đang đẩy RTSP FPS: 29.98
+[16:41:36] 2026-08-25 16:41:36,995 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:41:41] 2026-08-25 16:41:41,995 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:41:46] 2026-08-25 16:41:46,996 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:41:52] 2026-08-25 16:41:52,029 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:41:57] 2026-08-25 16:41:57,063 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:42:02] 2026-08-25 16:42:02,096 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:42:07] 2026-08-25 16:42:07,132 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:42:12] 2026-08-25 16:42:12,163 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:42:17] 2026-08-25 16:42:17,193 [INFO] Đang đẩy RTSP FPS: 30.04
+[16:42:22] 2026-08-25 16:42:22,227 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:42:27] 2026-08-25 16:42:27,228 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:42:32] 2026-08-25 16:42:32,229 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:42:37] 2026-08-25 16:42:37,261 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:42:42] 2026-08-25 16:42:42,293 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:42:47] 2026-08-25 16:42:47,295 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:42:52] 2026-08-25 16:42:52,327 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:42:57] 2026-08-25 16:42:57,361 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:43:02] 2026-08-25 16:43:02,393 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:43:07] 2026-08-25 16:43:07,428 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:43:12] 2026-08-25 16:43:12,462 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:43:17] 2026-08-25 16:43:17,495 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:43:22] 2026-08-25 16:43:22,526 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:43:27] 2026-08-25 16:43:27,561 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:43:32] 2026-08-25 16:43:32,593 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:43:37] 2026-08-25 16:43:37,593 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:43:42] 2026-08-25 16:43:42,627 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:43:47] 2026-08-25 16:43:47,660 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:43:52] 2026-08-25 16:43:52,693 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:43:57] 2026-08-25 16:43:57,696 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:44:02] 2026-08-25 16:44:02,727 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:44:07] 2026-08-25 16:44:07,760 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:44:12] 2026-08-25 16:44:12,794 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:44:17] 2026-08-25 16:44:17,826 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:44:22] 2026-08-25 16:44:22,861 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:44:27] 2026-08-25 16:44:27,863 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:44:32] 2026-08-25 16:44:32,898 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:44:37] 2026-08-25 16:44:37,928 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:44:42] 2026-08-25 16:44:42,960 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:44:47] 2026-08-25 16:44:47,995 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:44:53] 2026-08-25 16:44:53,028 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:44:58] 2026-08-25 16:44:58,029 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:45:03] 2026-08-25 16:45:03,063 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:45:08] 2026-08-25 16:45:08,096 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:45:13] 2026-08-25 16:45:13,128 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:45:18] 2026-08-25 16:45:18,162 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:45:23] 2026-08-25 16:45:23,193 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:45:28] 2026-08-25 16:45:28,228 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:45:33] 2026-08-25 16:45:33,261 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:45:38] 2026-08-25 16:45:38,300 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:45:43] 2026-08-25 16:45:43,325 [INFO] Đang đẩy RTSP FPS: 29.05
+[16:45:48] 2026-08-25 16:45:48,327 [INFO] Đang đẩy RTSP FPS: 29.78
+[16:45:53] 2026-08-25 16:45:53,338 [INFO] Đang đẩy RTSP FPS: 29.97
+[16:45:58] 2026-08-25 16:45:58,368 [INFO] Đang đẩy RTSP FPS: 29.42
+[16:46:03] 2026-08-25 16:46:03,394 [INFO] Đang đẩy RTSP FPS: 27.31
+[16:46:08] 2026-08-25 16:46:08,424 [INFO] Đang đẩy RTSP FPS: 30.06
+[16:46:13] 2026-08-25 16:46:13,456 [INFO] Đang đẩy RTSP FPS: 30.06
+[16:46:18] 2026-08-25 16:46:18,493 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:46:23] 2026-08-25 16:46:23,518 [INFO] Đang đẩy RTSP FPS: 30.05
+[16:46:28] 2026-08-25 16:46:28,554 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:46:33] 2026-08-25 16:46:33,560 [INFO] Đang đẩy RTSP FPS: 29.97
+[16:46:38] 2026-08-25 16:46:38,595 [INFO] Đang đẩy RTSP FPS: 30.22
+[16:46:43] 2026-08-25 16:46:43,600 [INFO] Đang đẩy RTSP FPS: 29.98
+[16:46:48] 2026-08-25 16:46:48,630 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:46:53] 2026-08-25 16:46:53,661 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:46:58] 2026-08-25 16:46:58,695 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:47:03] 2026-08-25 16:47:03,729 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:47:04] ### Dang gui tin hieu dung...
+[16:47:08] 2026-08-25 16:47:08,762 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:47:10] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[16:47:10] ### DA DUNG (exit code 1)
+[16:48:43] ==============================================================================
+[16:48:43] ### PHIEN MOI luc 2026-08-25 16:48:43
+[16:48:43] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[16:48:43] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[16:48:43] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[16:48:43] ### PID = 16080
+[16:48:45] 2026-08-25 16:48:44,955 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[16:48:45] 2026-08-25 16:48:44,957 [INFO] Đang mở camera Sony...
+[16:48:46] 2026-08-25 16:48:46,104 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[16:48:46] 2026-08-25 16:48:46,106 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[16:48:46] 2026-08-25 16:48:46,106 [INFO] GOP = 30 frame (1.0s/keyframe)
+[16:48:46] 2026-08-25 16:48:46,116 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[16:48:51] 2026-08-25 16:48:51,140 [INFO] Đang đẩy RTSP FPS: 29.66
+[16:48:56] 2026-08-25 16:48:56,143 [INFO] Đang đẩy RTSP FPS: 29.98
+[16:49:01] 2026-08-25 16:49:01,143 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:49:06] 2026-08-25 16:49:06,175 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:49:11] 2026-08-25 16:49:11,176 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:49:16] 2026-08-25 16:49:16,208 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:49:21] 2026-08-25 16:49:21,245 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:49:26] 2026-08-25 16:49:26,274 [INFO] Đang đẩy RTSP FPS: 30.05
+[16:49:31] 2026-08-25 16:49:31,308 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:49:36] 2026-08-25 16:49:36,342 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:49:41] 2026-08-25 16:49:41,376 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:49:46] 2026-08-25 16:49:46,409 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:49:51] 2026-08-25 16:49:51,441 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:49:56] 2026-08-25 16:49:56,479 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:50:01] 2026-08-25 16:50:01,508 [INFO] Đang đẩy RTSP FPS: 30.04
+[16:50:06] 2026-08-25 16:50:06,541 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:50:11] 2026-08-25 16:50:11,577 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:50:16] 2026-08-25 16:50:16,608 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:50:21] 2026-08-25 16:50:21,641 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:50:26] 2026-08-25 16:50:26,645 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:50:31] 2026-08-25 16:50:31,674 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:50:36] 2026-08-25 16:50:36,707 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:50:41] 2026-08-25 16:50:41,741 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:50:46] 2026-08-25 16:50:46,776 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:50:51] 2026-08-25 16:50:51,807 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:50:56] 2026-08-25 16:50:56,840 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:51:01] 2026-08-25 16:51:01,872 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:51:06] 2026-08-25 16:51:06,906 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:51:11] 2026-08-25 16:51:11,941 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:51:16] 2026-08-25 16:51:16,972 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:51:21] 2026-08-25 16:51:21,974 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:51:27] 2026-08-25 16:51:27,006 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:51:32] 2026-08-25 16:51:32,008 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:51:37] 2026-08-25 16:51:37,010 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:51:42] 2026-08-25 16:51:42,040 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:51:47] 2026-08-25 16:51:47,073 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:51:52] 2026-08-25 16:51:52,105 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:51:57] 2026-08-25 16:51:57,106 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:52:02] 2026-08-25 16:52:02,109 [INFO] Đang đẩy RTSP FPS: 29.98
+[16:52:07] 2026-08-25 16:52:07,142 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:52:12] 2026-08-25 16:52:12,189 [INFO] Đang đẩy RTSP FPS: 29.93
+[16:52:17] 2026-08-25 16:52:17,207 [INFO] Đang đẩy RTSP FPS: 30.09
+[16:52:22] 2026-08-25 16:52:22,240 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:52:27] 2026-08-25 16:52:27,274 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:52:32] 2026-08-25 16:52:32,278 [INFO] Đang đẩy RTSP FPS: 29.98
+[16:52:37] 2026-08-25 16:52:37,309 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:52:42] 2026-08-25 16:52:42,339 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:52:47] 2026-08-25 16:52:47,343 [INFO] Đang đẩy RTSP FPS: 29.97
+[16:52:52] 2026-08-25 16:52:52,376 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:52:57] 2026-08-25 16:52:57,406 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:53:02] 2026-08-25 16:53:02,439 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:53:07] 2026-08-25 16:53:07,443 [INFO] Đang đẩy RTSP FPS: 29.98
+[16:53:12] 2026-08-25 16:53:12,478 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:53:17] 2026-08-25 16:53:17,505 [INFO] Đang đẩy RTSP FPS: 30.04
+[16:53:22] 2026-08-25 16:53:22,544 [INFO] Đang đẩy RTSP FPS: 29.97
+[16:53:27] 2026-08-25 16:53:27,574 [INFO] Đang đẩy RTSP FPS: 28.63
+[16:53:32] 2026-08-25 16:53:32,589 [INFO] Đang đẩy RTSP FPS: 27.76
+[16:53:37] 2026-08-25 16:53:37,599 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:53:42] 2026-08-25 16:53:42,637 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:53:47] 2026-08-25 16:53:47,668 [INFO] Đang đẩy RTSP FPS: 30.06
+[16:53:52] 2026-08-25 16:53:52,707 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:53:57] 2026-08-25 16:53:57,735 [INFO] Đang đẩy RTSP FPS: 30.07
+[16:54:02] 2026-08-25 16:54:02,770 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:54:07] 2026-08-25 16:54:07,798 [INFO] Đang đẩy RTSP FPS: 30.07
+[16:54:12] 2026-08-25 16:54:12,831 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:54:17] 2026-08-25 16:54:17,838 [INFO] Đang đẩy RTSP FPS: 29.98
+[16:54:22] 2026-08-25 16:54:22,868 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:54:27] 2026-08-25 16:54:27,891 [INFO] Đang đẩy RTSP FPS: 29.86
+[16:54:32] 2026-08-25 16:54:32,925 [INFO] Đang đẩy RTSP FPS: 29.03
+[16:54:37] 2026-08-25 16:54:37,965 [INFO] Đang đẩy RTSP FPS: 29.41
+[16:54:42] 2026-08-25 16:54:42,982 [INFO] Đang đẩy RTSP FPS: 28.91
+[16:54:48] 2026-08-25 16:54:47,999 [INFO] Đang đẩy RTSP FPS: 30.15
+[16:54:53] 2026-08-25 16:54:53,001 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:54:58] 2026-08-25 16:54:58,035 [INFO] Đang đẩy RTSP FPS: 30.04
+[16:55:03] 2026-08-25 16:55:03,061 [INFO] Đang đẩy RTSP FPS: 29.65
+[16:55:08] 2026-08-25 16:55:08,100 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:55:13] 2026-08-25 16:55:13,108 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:55:18] 2026-08-25 16:55:18,129 [INFO] Đang đẩy RTSP FPS: 30.12
+[16:55:23] 2026-08-25 16:55:23,159 [INFO] Đang đẩy RTSP FPS: 30.05
+[16:55:28] 2026-08-25 16:55:28,161 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:55:33] 2026-08-25 16:55:33,197 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:55:38] 2026-08-25 16:55:38,204 [INFO] Đang đẩy RTSP FPS: 29.96
+[16:55:43] 2026-08-25 16:55:43,239 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:55:48] 2026-08-25 16:55:48,271 [INFO] Đang đẩy RTSP FPS: 30.04
+[16:55:53] 2026-08-25 16:55:53,294 [INFO] Đang đẩy RTSP FPS: 30.11
+[16:55:58] 2026-08-25 16:55:58,336 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:56:03] 2026-08-25 16:56:03,367 [INFO] Đang đẩy RTSP FPS: 30.05
+[16:56:08] 2026-08-25 16:56:08,407 [INFO] Đang đẩy RTSP FPS: 29.96
+[16:56:13] 2026-08-25 16:56:13,421 [INFO] Đang đẩy RTSP FPS: 30.16
+[16:56:18] 2026-08-25 16:56:18,434 [INFO] Đang đẩy RTSP FPS: 29.96
+[16:56:23] 2026-08-25 16:56:23,464 [INFO] Đang đẩy RTSP FPS: 30.05
+[16:56:28] 2026-08-25 16:56:28,499 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:56:33] 2026-08-25 16:56:33,505 [INFO] Đang đẩy RTSP FPS: 30.17
+[16:56:38] 2026-08-25 16:56:38,506 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:56:43] 2026-08-25 16:56:43,538 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:56:48] 2026-08-25 16:56:48,539 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:56:53] 2026-08-25 16:56:53,541 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:56:58] 2026-08-25 16:56:58,572 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:57:03] 2026-08-25 16:57:03,604 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:57:08] 2026-08-25 16:57:08,638 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:57:13] 2026-08-25 16:57:13,653 [INFO] Đang đẩy RTSP FPS: 29.93
+[16:57:18] 2026-08-25 16:57:18,672 [INFO] Đang đẩy RTSP FPS: 30.08
+[16:57:23] 2026-08-25 16:57:23,704 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:57:28] 2026-08-25 16:57:28,738 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:57:33] 2026-08-25 16:57:33,772 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:57:38] 2026-08-25 16:57:38,805 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:57:43] 2026-08-25 16:57:43,819 [INFO] Đang đẩy RTSP FPS: 29.73
+[16:57:48] 2026-08-25 16:57:48,858 [INFO] Đang đẩy RTSP FPS: 29.96
+[16:57:53] 2026-08-25 16:57:53,865 [INFO] Đang đẩy RTSP FPS: 29.96
+[16:57:58] 2026-08-25 16:57:58,886 [INFO] Đang đẩy RTSP FPS: 30.07
+[16:58:03] 2026-08-25 16:58:03,921 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:58:08] 2026-08-25 16:58:08,953 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:58:13] 2026-08-25 16:58:13,984 [INFO] Đang đẩy RTSP FPS: 30.02
+[16:58:19] 2026-08-25 16:58:19,019 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:58:24] 2026-08-25 16:58:24,050 [INFO] Đang đẩy RTSP FPS: 30.05
+[16:58:29] 2026-08-25 16:58:29,078 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:58:34] 2026-08-25 16:58:34,091 [INFO] Đang đẩy RTSP FPS: 29.96
+[16:58:39] 2026-08-25 16:58:39,111 [INFO] Đang đẩy RTSP FPS: 30.08
+[16:58:44] 2026-08-25 16:58:44,145 [INFO] Đang đẩy RTSP FPS: 30.01
+[16:58:49] 2026-08-25 16:58:49,187 [INFO] Đang đẩy RTSP FPS: 29.96
+[16:58:54] 2026-08-25 16:58:54,211 [INFO] Đang đẩy RTSP FPS: 30.09
+[16:58:59] 2026-08-25 16:58:59,212 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:59:04] 2026-08-25 16:59:04,245 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:59:09] 2026-08-25 16:59:09,251 [INFO] Đang đẩy RTSP FPS: 29.96
+[16:59:14] 2026-08-25 16:59:14,276 [INFO] Đang đẩy RTSP FPS: 30.07
+[16:59:19] 2026-08-25 16:59:19,279 [INFO] Đang đẩy RTSP FPS: 29.99
+[16:59:24] 2026-08-25 16:59:24,320 [INFO] Đang đẩy RTSP FPS: 29.98
+[16:59:29] 2026-08-25 16:59:29,353 [INFO] Đang đẩy RTSP FPS: 30.03
+[16:59:34] 2026-08-25 16:59:34,371 [INFO] Đang đẩy RTSP FPS: 30.09
+[16:59:39] 2026-08-25 16:59:39,377 [INFO] Đang đẩy RTSP FPS: 29.97
+[16:59:44] 2026-08-25 16:59:44,404 [INFO] Đang đẩy RTSP FPS: 30.06
+[16:59:49] 2026-08-25 16:59:49,438 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:59:54] 2026-08-25 16:59:54,441 [INFO] Đang đẩy RTSP FPS: 30.00
+[16:59:59] 2026-08-25 16:59:59,482 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:00:04] 2026-08-25 17:00:04,507 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:00:09] 2026-08-25 17:00:09,511 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:00:14] 2026-08-25 17:00:14,550 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:00:19] 2026-08-25 17:00:19,587 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:00:24] 2026-08-25 17:00:24,602 [INFO] Đang đẩy RTSP FPS: 30.13
+[17:00:29] 2026-08-25 17:00:29,608 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:00:34] 2026-08-25 17:00:34,636 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:00:39] 2026-08-25 17:00:39,670 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:00:44] 2026-08-25 17:00:44,703 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:00:49] 2026-08-25 17:00:49,703 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:00:54] 2026-08-25 17:00:54,736 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:00:55] ### Dang gui tin hieu dung...
+[17:00:59] 2026-08-25 17:00:59,769 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:01:01] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[17:01:01] ### DA DUNG (exit code 1)
+[17:01:14] ==============================================================================
+[17:01:14] ### PHIEN MOI luc 2026-08-25 17:01:14
+[17:01:14] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[17:01:14] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[17:01:14] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[17:01:14] ### PID = 3904
+[17:01:15] 2026-08-25 17:01:15,927 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[17:01:15] 2026-08-25 17:01:15,927 [INFO] Đang mở camera Sony...
+[17:01:17] 2026-08-25 17:01:17,019 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[17:01:17] 2026-08-25 17:01:17,020 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[17:01:17] 2026-08-25 17:01:17,020 [INFO] GOP = 30 frame (1.0s/keyframe)
+[17:01:17] 2026-08-25 17:01:17,026 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[17:01:22] 2026-08-25 17:01:22,042 [INFO] Đang đẩy RTSP FPS: 29.71
+[17:01:27] 2026-08-25 17:01:27,074 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:01:32] 2026-08-25 17:01:32,075 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:01:37] 2026-08-25 17:01:37,078 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:01:42] 2026-08-25 17:01:42,081 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:01:47] 2026-08-25 17:01:47,112 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:01:52] 2026-08-25 17:01:52,146 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:01:57] 2026-08-25 17:01:57,177 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:02:02] 2026-08-25 17:02:02,208 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:02:07] 2026-08-25 17:02:07,211 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:02:12] 2026-08-25 17:02:12,244 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:02:17] 2026-08-25 17:02:17,244 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:02:22] 2026-08-25 17:02:22,276 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:02:27] 2026-08-25 17:02:27,307 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:02:32] 2026-08-25 17:02:32,342 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:02:37] 2026-08-25 17:02:37,374 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:02:42] 2026-08-25 17:02:42,407 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:02:47] 2026-08-25 17:02:47,408 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:02:52] 2026-08-25 17:02:52,442 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:02:57] 2026-08-25 17:02:57,473 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:03:02] 2026-08-25 17:03:02,508 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:03:07] 2026-08-25 17:03:07,515 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:03:12] 2026-08-25 17:03:12,520 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:03:17] 2026-08-25 17:03:17,552 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:03:22] 2026-08-25 17:03:22,577 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:03:27] 2026-08-25 17:03:27,588 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:03:32] 2026-08-25 17:03:32,622 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:03:37] 2026-08-25 17:03:37,637 [INFO] Đang đẩy RTSP FPS: 29.91
+[17:03:42] 2026-08-25 17:03:42,658 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:03:47] 2026-08-25 17:03:47,695 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:03:52] 2026-08-25 17:03:52,723 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:03:57] 2026-08-25 17:03:57,729 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:04:02] 2026-08-25 17:04:02,755 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:04:07] 2026-08-25 17:04:07,789 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:04:12] 2026-08-25 17:04:12,815 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:04:17] 2026-08-25 17:04:17,848 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:04:22] 2026-08-25 17:04:22,849 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:04:27] 2026-08-25 17:04:27,884 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:04:32] 2026-08-25 17:04:32,897 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:04:37] 2026-08-25 17:04:37,928 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:04:42] 2026-08-25 17:04:42,949 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:04:47] 2026-08-25 17:04:47,978 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:04:52] 2026-08-25 17:04:52,983 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:04:57] 2026-08-25 17:04:57,997 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:05:03] 2026-08-25 17:05:03,008 [INFO] Đang đẩy RTSP FPS: 30.13
+[17:05:08] 2026-08-25 17:05:08,012 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:05:13] 2026-08-25 17:05:13,034 [INFO] Đang đẩy RTSP FPS: 29.87
+[17:05:18] 2026-08-25 17:05:18,073 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:05:23] 2026-08-25 17:05:23,096 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:05:28] 2026-08-25 17:05:28,099 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:05:33] 2026-08-25 17:05:33,124 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:05:38] 2026-08-25 17:05:38,130 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:05:43] 2026-08-25 17:05:43,162 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:05:48] 2026-08-25 17:05:48,188 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:05:53] 2026-08-25 17:05:53,198 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:05:58] 2026-08-25 17:05:58,224 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:06:03] 2026-08-25 17:06:03,228 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:06:08] 2026-08-25 17:06:08,257 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:06:13] 2026-08-25 17:06:13,257 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:06:18] 2026-08-25 17:06:18,297 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:06:23] 2026-08-25 17:06:23,327 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:06:28] 2026-08-25 17:06:28,339 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:06:33] 2026-08-25 17:06:33,364 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:06:38] 2026-08-25 17:06:38,390 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:06:43] 2026-08-25 17:06:43,400 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:06:48] 2026-08-25 17:06:48,427 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:06:53] 2026-08-25 17:06:53,457 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:06:58] 2026-08-25 17:06:58,492 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:07:03] 2026-08-25 17:07:03,517 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:07:08] 2026-08-25 17:07:08,524 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:07:13] 2026-08-25 17:07:13,529 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:07:18] 2026-08-25 17:07:18,557 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:07:23] 2026-08-25 17:07:23,567 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:07:28] 2026-08-25 17:07:28,594 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:07:33] 2026-08-25 17:07:33,624 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:07:38] 2026-08-25 17:07:38,627 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:07:43] 2026-08-25 17:07:43,630 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:07:48] 2026-08-25 17:07:48,659 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:07:53] 2026-08-25 17:07:53,670 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:07:58] 2026-08-25 17:07:58,694 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:08:03] 2026-08-25 17:08:03,712 [INFO] Đang đẩy RTSP FPS: 30.11
+[17:08:08] 2026-08-25 17:08:08,731 [INFO] Đang đẩy RTSP FPS: 29.91
+[17:08:13] 2026-08-25 17:08:13,757 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:08:18] 2026-08-25 17:08:18,760 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:08:23] 2026-08-25 17:08:23,765 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:08:28] 2026-08-25 17:08:28,787 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:08:33] 2026-08-25 17:08:33,794 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:08:38] 2026-08-25 17:08:38,795 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:08:43] 2026-08-25 17:08:43,800 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:08:48] 2026-08-25 17:08:48,832 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:08:53] 2026-08-25 17:08:53,870 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:08:58] 2026-08-25 17:08:58,905 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:09:03] 2026-08-25 17:09:03,927 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:09:08] 2026-08-25 17:09:08,927 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:09:13] 2026-08-25 17:09:13,962 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:09:18] 2026-08-25 17:09:18,994 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:09:24] 2026-08-25 17:09:24,034 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:09:29] 2026-08-25 17:09:29,057 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:09:34] 2026-08-25 17:09:34,097 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:09:39] 2026-08-25 17:09:39,127 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:09:44] 2026-08-25 17:09:44,169 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:09:49] 2026-08-25 17:09:49,205 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:09:54] 2026-08-25 17:09:54,227 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:09:59] 2026-08-25 17:09:59,252 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:10:04] 2026-08-25 17:10:04,260 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:10:09] 2026-08-25 17:10:09,277 [INFO] Đang đẩy RTSP FPS: 30.12
+[17:10:14] 2026-08-25 17:10:14,290 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:10:19] 2026-08-25 17:10:19,308 [INFO] Đang đẩy RTSP FPS: 30.09
+[17:10:24] 2026-08-25 17:10:24,329 [INFO] Đang đẩy RTSP FPS: 29.93
+[17:10:29] 2026-08-25 17:10:29,356 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:10:34] 2026-08-25 17:10:34,362 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:10:39] 2026-08-25 17:10:39,397 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:10:44] 2026-08-25 17:10:44,428 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:10:49] 2026-08-25 17:10:49,448 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:10:54] 2026-08-25 17:10:54,457 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:10:59] 2026-08-25 17:10:59,462 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:11:04] 2026-08-25 17:11:04,492 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:11:09] 2026-08-25 17:11:09,497 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:11:14] 2026-08-25 17:11:14,527 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:11:19] 2026-08-25 17:11:19,554 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:11:24] 2026-08-25 17:11:24,584 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:11:29] 2026-08-25 17:11:29,599 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:11:34] 2026-08-25 17:11:34,611 [INFO] Đang đẩy RTSP FPS: 30.15
+[17:11:39] 2026-08-25 17:11:39,624 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:11:44] 2026-08-25 17:11:44,661 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:11:49] 2026-08-25 17:11:49,682 [INFO] Đang đẩy RTSP FPS: 30.09
+[17:11:54] 2026-08-25 17:11:54,694 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:11:59] 2026-08-25 17:11:59,714 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:12:04] 2026-08-25 17:12:04,737 [INFO] Đang đẩy RTSP FPS: 29.88
+[17:12:09] 2026-08-25 17:12:09,767 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:12:14] 2026-08-25 17:12:14,797 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:12:19] 2026-08-25 17:12:19,820 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:12:24] 2026-08-25 17:12:24,857 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:12:29] 2026-08-25 17:12:29,888 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:12:34] 2026-08-25 17:12:34,900 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:12:39] 2026-08-25 17:12:39,919 [INFO] Đang đẩy RTSP FPS: 30.12
+[17:12:44] 2026-08-25 17:12:44,949 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:12:49] 2026-08-25 17:12:49,984 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:12:55] 2026-08-25 17:12:55,029 [INFO] Đang đẩy RTSP FPS: 29.93
+[17:13:00] 2026-08-25 17:13:00,047 [INFO] Đang đẩy RTSP FPS: 30.09
+[17:13:05] 2026-08-25 17:13:05,080 [INFO] Đang đẩy RTSP FPS: 29.67
+[17:13:10] 2026-08-25 17:13:10,084 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:13:15] 2026-08-25 17:13:15,101 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:13:20] 2026-08-25 17:13:20,131 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:13:25] 2026-08-25 17:13:25,154 [INFO] Đang đẩy RTSP FPS: 29.11
+[17:13:30] 2026-08-25 17:13:30,168 [INFO] Đang đẩy RTSP FPS: 29.52
+[17:13:35] 2026-08-25 17:13:35,197 [INFO] Đang đẩy RTSP FPS: 29.84
+[17:13:40] 2026-08-25 17:13:40,214 [INFO] Đang đẩy RTSP FPS: 30.13
+[17:13:45] 2026-08-25 17:13:45,228 [INFO] Đang đẩy RTSP FPS: 29.93
+[17:13:50] 2026-08-25 17:13:50,252 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:13:55] 2026-08-25 17:13:55,258 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:14:00] 2026-08-25 17:14:00,304 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:14:05] 2026-08-25 17:14:05,327 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:14:10] 2026-08-25 17:14:10,364 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:14:15] 2026-08-25 17:14:15,368 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:14:20] 2026-08-25 17:14:20,382 [INFO] Đang đẩy RTSP FPS: 30.14
+[17:14:25] 2026-08-25 17:14:25,397 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:14:30] 2026-08-25 17:14:30,427 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:14:35] 2026-08-25 17:14:35,462 [INFO] Đang đẩy RTSP FPS: 29.83
+[17:14:40] 2026-08-25 17:14:40,494 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:14:45] 2026-08-25 17:14:45,507 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:14:50] 2026-08-25 17:14:50,520 [INFO] Đang đẩy RTSP FPS: 30.17
+[17:14:55] 2026-08-25 17:14:55,531 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:15:00] 2026-08-25 17:15:00,557 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:15:05] 2026-08-25 17:15:05,587 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:15:10] 2026-08-25 17:15:10,626 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:15:15] 2026-08-25 17:15:15,661 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:15:20] 2026-08-25 17:15:20,668 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:15:25] 2026-08-25 17:15:25,697 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:15:30] 2026-08-25 17:15:30,727 [INFO] Đang đẩy RTSP FPS: 29.85
+[17:15:35] 2026-08-25 17:15:35,750 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:15:40] 2026-08-25 17:15:40,762 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:15:45] 2026-08-25 17:15:45,800 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:15:50] 2026-08-25 17:15:50,830 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:15:55] 2026-08-25 17:15:55,830 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:16:00] 2026-08-25 17:16:00,874 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:16:05] 2026-08-25 17:16:05,907 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:16:10] 2026-08-25 17:16:10,941 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:16:16] 2026-08-25 17:16:16,005 [INFO] Đang đẩy RTSP FPS: 28.27
+[17:16:21] 2026-08-25 17:16:21,084 [INFO] Đang đẩy RTSP FPS: 29.50
+[17:16:26] 2026-08-25 17:16:26,107 [INFO] Đang đẩy RTSP FPS: 29.68
+[17:16:31] 2026-08-25 17:16:31,114 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:16:36] 2026-08-25 17:16:36,134 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:16:41] 2026-08-25 17:16:41,152 [INFO] Đang đẩy RTSP FPS: 29.89
+[17:16:46] 2026-08-25 17:16:46,188 [INFO] Đang đẩy RTSP FPS: 29.81
+[17:16:51] 2026-08-25 17:16:51,194 [INFO] Đang đẩy RTSP FPS: 30.16
+[17:16:56] 2026-08-25 17:16:56,213 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:17:01] 2026-08-25 17:17:01,216 [INFO] Đang đẩy RTSP FPS: 29.78
+[17:17:06] 2026-08-25 17:17:06,234 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:17:11] 2026-08-25 17:17:11,244 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:17:16] 2026-08-25 17:17:16,277 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:17:21] 2026-08-25 17:17:21,316 [INFO] Đang đẩy RTSP FPS: 29.81
+[17:17:26] 2026-08-25 17:17:26,317 [INFO] Đang đẩy RTSP FPS: 30.20
+[17:17:31] 2026-08-25 17:17:31,321 [INFO] Đang đẩy RTSP FPS: 29.80
+[17:17:36] 2026-08-25 17:17:36,337 [INFO] Đang đẩy RTSP FPS: 29.70
+[17:17:41] 2026-08-25 17:17:41,364 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:17:46] 2026-08-25 17:17:46,401 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:17:51] 2026-08-25 17:17:51,428 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:17:56] 2026-08-25 17:17:56,457 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:18:01] 2026-08-25 17:18:01,468 [INFO] Đang đẩy RTSP FPS: 29.93
+[17:18:06] 2026-08-25 17:18:06,504 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:18:11] 2026-08-25 17:18:11,527 [INFO] Đang đẩy RTSP FPS: 29.66
+[17:18:16] 2026-08-25 17:18:16,537 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:18:21] 2026-08-25 17:18:21,547 [INFO] Đang đẩy RTSP FPS: 30.20
+[17:18:26] 2026-08-25 17:18:26,566 [INFO] Đang đẩy RTSP FPS: 29.88
+[17:18:31] 2026-08-25 17:18:31,587 [INFO] Đang đẩy RTSP FPS: 30.11
+[17:18:36] 2026-08-25 17:18:36,624 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:18:41] 2026-08-25 17:18:41,633 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:18:46] 2026-08-25 17:18:46,656 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:18:51] 2026-08-25 17:18:51,676 [INFO] Đang đẩy RTSP FPS: 29.90
+[17:18:56] 2026-08-25 17:18:56,697 [INFO] Đang đẩy RTSP FPS: 29.87
+[17:19:01] 2026-08-25 17:19:01,719 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:19:06] 2026-08-25 17:19:06,732 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:19:11] 2026-08-25 17:19:11,737 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:19:16] 2026-08-25 17:19:16,760 [INFO] Đang đẩy RTSP FPS: 30.09
+[17:19:21] 2026-08-25 17:19:21,777 [INFO] Đang đẩy RTSP FPS: 30.14
+[17:19:26] 2026-08-25 17:19:26,797 [INFO] Đang đẩy RTSP FPS: 29.88
+[17:19:31] 2026-08-25 17:19:31,799 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:19:36] 2026-08-25 17:19:36,817 [INFO] Đang đẩy RTSP FPS: 30.11
+[17:19:41] 2026-08-25 17:19:41,830 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:19:46] 2026-08-25 17:19:46,859 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:19:51] 2026-08-25 17:19:51,899 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:19:56] 2026-08-25 17:19:56,905 [INFO] Đang đẩy RTSP FPS: 30.19
+[17:20:01] 2026-08-25 17:20:01,939 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:20:06] 2026-08-25 17:20:06,972 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:20:12] 2026-08-25 17:20:12,006 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:20:17] 2026-08-25 17:20:17,038 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:20:22] 2026-08-25 17:20:22,072 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:20:27] 2026-08-25 17:20:27,103 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:20:32] 2026-08-25 17:20:32,137 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:20:37] 2026-08-25 17:20:37,138 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:20:42] 2026-08-25 17:20:42,168 [INFO] Đang đẩy RTSP FPS: 29.83
+[17:20:47] 2026-08-25 17:20:47,196 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:20:52] 2026-08-25 17:20:52,205 [INFO] Đang đẩy RTSP FPS: 30.15
+[17:20:57] 2026-08-25 17:20:57,237 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:20:57] ### Dang gui tin hieu dung...
+[17:21:02] 2026-08-25 17:21:02,237 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:21:03] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[17:21:04] ### DA DUNG (exit code 1)
+[17:21:20] ==============================================================================
+[17:21:20] ### PHIEN MOI luc 2026-08-25 17:21:20
+[17:21:20] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[17:21:20] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[17:21:20] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[17:21:20] ### PID = 14204
+[17:21:22] 2026-08-25 17:21:22,137 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[17:21:22] 2026-08-25 17:21:22,137 [INFO] Đang mở camera Sony...
+[17:21:23] 2026-08-25 17:21:23,159 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[17:21:23] 2026-08-25 17:21:23,161 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[17:21:23] 2026-08-25 17:21:23,161 [INFO] GOP = 30 frame (1.0s/keyframe)
+[17:21:23] 2026-08-25 17:21:23,167 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[17:21:28] 2026-08-25 17:21:28,172 [INFO] Đang đẩy RTSP FPS: 29.77
+[17:21:33] 2026-08-25 17:21:33,178 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:21:38] 2026-08-25 17:21:38,209 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:21:43] 2026-08-25 17:21:43,220 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:21:48] 2026-08-25 17:21:48,241 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:21:53] 2026-08-25 17:21:53,274 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:21:58] 2026-08-25 17:21:58,276 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:22:03] 2026-08-25 17:22:03,310 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:22:08] 2026-08-25 17:22:08,352 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:22:13] 2026-08-25 17:22:13,379 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:22:18] 2026-08-25 17:22:18,408 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:22:23] 2026-08-25 17:22:23,452 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:22:28] 2026-08-25 17:22:28,459 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:22:33] 2026-08-25 17:22:33,484 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:22:38] 2026-08-25 17:22:38,508 [INFO] Đang đẩy RTSP FPS: 30.09
+[17:22:43] 2026-08-25 17:22:43,518 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:22:48] 2026-08-25 17:22:48,554 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:22:53] 2026-08-25 17:22:53,589 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:22:58] 2026-08-25 17:22:58,606 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:23:03] 2026-08-25 17:23:03,644 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:23:08] 2026-08-25 17:23:08,672 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:23:13] 2026-08-25 17:23:13,676 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:23:18] 2026-08-25 17:23:18,694 [INFO] Đang đẩy RTSP FPS: 29.89
+[17:23:23] 2026-08-25 17:23:23,708 [INFO] Đang đẩy RTSP FPS: 30.15
+[17:23:28] 2026-08-25 17:23:28,740 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:23:33] 2026-08-25 17:23:33,776 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:23:38] 2026-08-25 17:23:38,787 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:23:43] 2026-08-25 17:23:43,810 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:23:48] 2026-08-25 17:23:48,851 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:23:53] 2026-08-25 17:23:53,857 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:23:58] 2026-08-25 17:23:58,864 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:24:03] 2026-08-25 17:24:03,881 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:24:08] 2026-08-25 17:24:08,888 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:24:13] 2026-08-25 17:24:13,908 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:24:18] 2026-08-25 17:24:18,912 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:24:23] 2026-08-25 17:24:23,918 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:24:28] 2026-08-25 17:24:28,934 [INFO] Đang đẩy RTSP FPS: 29.91
+[17:24:33] 2026-08-25 17:24:33,950 [INFO] Đang đẩy RTSP FPS: 30.11
+[17:24:38] 2026-08-25 17:24:38,961 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:24:43] 2026-08-25 17:24:43,978 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:24:48] 2026-08-25 17:24:48,989 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:24:54] 2026-08-25 17:24:54,007 [INFO] Đang đẩy RTSP FPS: 30.12
+[17:24:59] 2026-08-25 17:24:59,011 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:25:04] 2026-08-25 17:25:04,029 [INFO] Đang đẩy RTSP FPS: 29.91
+[17:25:09] 2026-08-25 17:25:09,049 [INFO] Đang đẩy RTSP FPS: 30.14
+[17:25:14] 2026-08-25 17:25:14,052 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:25:19] 2026-08-25 17:25:19,052 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:25:24] 2026-08-25 17:25:24,064 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:25:29] 2026-08-25 17:25:29,087 [INFO] Đang đẩy RTSP FPS: 30.09
+[17:25:34] 2026-08-25 17:25:34,097 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:25:39] 2026-08-25 17:25:39,127 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:25:44] 2026-08-25 17:25:44,164 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:25:49] 2026-08-25 17:25:49,187 [INFO] Đang đẩy RTSP FPS: 30.09
+[17:25:54] 2026-08-25 17:25:54,197 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:25:59] 2026-08-25 17:25:59,214 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:26:04] 2026-08-25 17:26:04,232 [INFO] Đang đẩy RTSP FPS: 29.91
+[17:26:09] 2026-08-25 17:26:09,262 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:26:14] 2026-08-25 17:26:14,292 [INFO] Đang đẩy RTSP FPS: 29.86
+[17:26:19] 2026-08-25 17:26:19,326 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:26:24] 2026-08-25 17:26:24,367 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:26:29] 2026-08-25 17:26:29,381 [INFO] Đang đẩy RTSP FPS: 30.15
+[17:26:34] 2026-08-25 17:26:34,431 [INFO] Đang đẩy RTSP FPS: 29.93
+[17:26:39] 2026-08-25 17:26:39,465 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:26:44] 2026-08-25 17:26:44,502 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:26:49] 2026-08-25 17:26:49,527 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:26:54] 2026-08-25 17:26:54,544 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:26:59] 2026-08-25 17:26:59,554 [INFO] Đang đẩy RTSP FPS: 29.79
+[17:27:04] 2026-08-25 17:27:04,572 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:27:09] 2026-08-25 17:27:09,579 [INFO] Đang đẩy RTSP FPS: 30.19
+[17:27:14] 2026-08-25 17:27:14,608 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:27:19] 2026-08-25 17:27:19,642 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:27:24] 2026-08-25 17:27:24,673 [INFO] Đang đẩy RTSP FPS: 29.83
+[17:27:29] 2026-08-25 17:27:29,694 [INFO] Đang đẩy RTSP FPS: 29.91
+[17:27:34] 2026-08-25 17:27:34,737 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:27:39] 2026-08-25 17:27:39,752 [INFO] Đang đẩy RTSP FPS: 30.11
+[17:27:44] 2026-08-25 17:27:44,773 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:27:49] 2026-08-25 17:27:49,780 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:27:54] 2026-08-25 17:27:54,807 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:27:59] 2026-08-25 17:27:59,840 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:28:04] 2026-08-25 17:28:04,876 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:28:09] 2026-08-25 17:28:09,877 [INFO] Đang đẩy RTSP FPS: 29.80
+[17:28:14] 2026-08-25 17:28:14,903 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:28:19] 2026-08-25 17:28:19,919 [INFO] Đang đẩy RTSP FPS: 30.13
+[17:28:24] 2026-08-25 17:28:24,925 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:28:29] 2026-08-25 17:28:29,951 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:28:34] 2026-08-25 17:28:34,987 [INFO] Đang đẩy RTSP FPS: 29.82
+[17:28:39] 2026-08-25 17:28:39,987 [INFO] Đang đẩy RTSP FPS: 29.80
+[17:28:45] 2026-08-25 17:28:45,027 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:28:50] 2026-08-25 17:28:50,030 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:28:55] 2026-08-25 17:28:55,074 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:29:00] 2026-08-25 17:29:00,086 [INFO] Đang đẩy RTSP FPS: 30.17
+[17:29:05] 2026-08-25 17:29:05,104 [INFO] Đang đẩy RTSP FPS: 29.90
+[17:29:10] 2026-08-25 17:29:10,104 [INFO] Đang đẩy RTSP FPS: 29.80
+[17:29:15] 2026-08-25 17:29:15,126 [INFO] Đang đẩy RTSP FPS: 30.12
+[17:29:20] 2026-08-25 17:29:20,159 [INFO] Đang đẩy RTSP FPS: 29.81
+[17:29:25] 2026-08-25 17:29:25,197 [INFO] Đang đẩy RTSP FPS: 29.82
+[17:29:30] 2026-08-25 17:29:30,228 [INFO] Đang đẩy RTSP FPS: 29.66
+[17:29:35] 2026-08-25 17:29:35,259 [INFO] Đang đẩy RTSP FPS: 29.81
+[17:29:40] 2026-08-25 17:29:40,267 [INFO] Đang đẩy RTSP FPS: 30.15
+[17:29:45] 2026-08-25 17:29:45,274 [INFO] Đang đẩy RTSP FPS: 30.17
+[17:29:50] 2026-08-25 17:29:50,276 [INFO] Đang đẩy RTSP FPS: 29.79
+[17:29:55] 2026-08-25 17:29:55,313 [INFO] Đang đẩy RTSP FPS: 30.21
+[17:30:00] 2026-08-25 17:30:00,333 [INFO] Đang đẩy RTSP FPS: 29.90
+[17:30:05] 2026-08-25 17:30:05,362 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:30:10] 2026-08-25 17:30:10,391 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:30:15] 2026-08-25 17:30:15,424 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:30:20] 2026-08-25 17:30:20,447 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:30:25] 2026-08-25 17:30:25,454 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:30:30] 2026-08-25 17:30:30,479 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:30:35] 2026-08-25 17:30:35,506 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:30:40] 2026-08-25 17:30:40,519 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:30:45] 2026-08-25 17:30:45,527 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:30:50] 2026-08-25 17:30:50,567 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:30:55] 2026-08-25 17:30:55,594 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:31:00] 2026-08-25 17:31:00,619 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:31:05] 2026-08-25 17:31:05,652 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:31:10] 2026-08-25 17:31:10,676 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:31:15] 2026-08-25 17:31:15,686 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:31:20] 2026-08-25 17:31:20,693 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:31:25] 2026-08-25 17:31:25,715 [INFO] Đang đẩy RTSP FPS: 30.09
+[17:31:30] 2026-08-25 17:31:30,757 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:31:35] 2026-08-25 17:31:35,760 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:31:40] 2026-08-25 17:31:40,777 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:31:45] 2026-08-25 17:31:45,807 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:31:50] 2026-08-25 17:31:50,824 [INFO] Đang đẩy RTSP FPS: 29.91
+[17:31:55] 2026-08-25 17:31:55,850 [INFO] Đang đẩy RTSP FPS: 30.07
+[17:32:00] 2026-08-25 17:32:00,886 [INFO] Đang đẩy RTSP FPS: 29.98
+[17:32:05] 2026-08-25 17:32:05,907 [INFO] Đang đẩy RTSP FPS: 29.92
+[17:32:10] 2026-08-25 17:32:10,911 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:32:15] 2026-08-25 17:32:15,944 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:32:20] 2026-08-25 17:32:20,974 [INFO] Đang đẩy RTSP FPS: 30.26
+[17:32:26] 2026-08-25 17:32:26,009 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:32:31] 2026-08-25 17:32:31,042 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:32:36] 2026-08-25 17:32:36,072 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:32:41] 2026-08-25 17:32:41,078 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:32:46] 2026-08-25 17:32:46,107 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:32:51] 2026-08-25 17:32:51,108 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:32:56] 2026-08-25 17:32:56,139 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:33:01] 2026-08-25 17:33:01,173 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:33:06] 2026-08-25 17:33:06,208 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:33:11] 2026-08-25 17:33:11,225 [INFO] Đang đẩy RTSP FPS: 29.91
+[17:33:16] 2026-08-25 17:33:16,254 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:33:21] 2026-08-25 17:33:21,282 [INFO] Đang đẩy RTSP FPS: 29.43
+[17:33:26] 2026-08-25 17:33:26,318 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:33:31] 2026-08-25 17:33:31,350 [INFO] Đang đẩy RTSP FPS: 30.22
+[17:33:36] 2026-08-25 17:33:36,366 [INFO] Đang đẩy RTSP FPS: 29.90
+[17:33:41] 2026-08-25 17:33:41,392 [INFO] Đang đẩy RTSP FPS: 29.89
+[17:33:46] 2026-08-25 17:33:46,419 [INFO] Đang đẩy RTSP FPS: 29.87
+[17:33:51] 2026-08-25 17:33:51,465 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:33:56] 2026-08-25 17:33:56,489 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:34:01] 2026-08-25 17:34:01,506 [INFO] Đang đẩy RTSP FPS: 30.11
+[17:34:06] 2026-08-25 17:34:06,507 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:34:11] 2026-08-25 17:34:11,539 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:34:16] 2026-08-25 17:34:16,572 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:34:21] 2026-08-25 17:34:21,607 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:34:26] 2026-08-25 17:34:26,608 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:34:31] 2026-08-25 17:34:31,640 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:34:36] 2026-08-25 17:34:36,674 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:34:41] 2026-08-25 17:34:41,706 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:34:46] 2026-08-25 17:34:46,739 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:34:51] 2026-08-25 17:34:51,774 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:34:56] 2026-08-25 17:34:56,809 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:35:01] 2026-08-25 17:35:01,839 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:35:06] 2026-08-25 17:35:06,839 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:35:11] 2026-08-25 17:35:11,840 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:35:16] 2026-08-25 17:35:16,840 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:35:21] 2026-08-25 17:35:21,842 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:35:26] 2026-08-25 17:35:26,872 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:35:31] 2026-08-25 17:35:31,907 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:35:36] 2026-08-25 17:35:36,940 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:35:41] 2026-08-25 17:35:41,973 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:35:47] 2026-08-25 17:35:47,006 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:35:52] 2026-08-25 17:35:52,014 [INFO] Đang đẩy RTSP FPS: 29.95
+[17:35:57] 2026-08-25 17:35:57,039 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:36:02] 2026-08-25 17:36:02,073 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:36:07] 2026-08-25 17:36:07,104 [INFO] Đang đẩy RTSP FPS: 29.82
+[17:36:12] 2026-08-25 17:36:12,128 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:36:17] 2026-08-25 17:36:17,149 [INFO] Đang đẩy RTSP FPS: 30.08
+[17:36:22] 2026-08-25 17:36:22,157 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:36:27] 2026-08-25 17:36:27,192 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:36:32] 2026-08-25 17:36:32,215 [INFO] Đang đẩy RTSP FPS: 30.10
+[17:36:37] 2026-08-25 17:36:37,245 [INFO] Đang đẩy RTSP FPS: 30.09
+[17:36:42] 2026-08-25 17:36:42,270 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:36:47] 2026-08-25 17:36:47,271 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:36:52] 2026-08-25 17:36:52,307 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:36:57] 2026-08-25 17:36:57,322 [INFO] Đang đẩy RTSP FPS: 29.91
+[17:37:02] 2026-08-25 17:37:02,328 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:37:07] 2026-08-25 17:37:07,360 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:37:12] 2026-08-25 17:37:12,368 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:37:17] 2026-08-25 17:37:17,400 [INFO] Đang đẩy RTSP FPS: 29.83
+[17:37:22] 2026-08-25 17:37:22,429 [INFO] Đang đẩy RTSP FPS: 29.86
+[17:37:27] 2026-08-25 17:37:27,446 [INFO] Đang đẩy RTSP FPS: 29.90
+[17:37:32] 2026-08-25 17:37:32,480 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:37:37] 2026-08-25 17:37:37,514 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:37:42] 2026-08-25 17:37:42,548 [INFO] Đang đẩy RTSP FPS: 29.81
+[17:37:47] 2026-08-25 17:37:47,550 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:37:52] 2026-08-25 17:37:52,571 [INFO] Đang đẩy RTSP FPS: 29.91
+[17:37:57] 2026-08-25 17:37:57,592 [INFO] Đang đẩy RTSP FPS: 30.11
+[17:38:02] 2026-08-25 17:38:02,609 [INFO] Đang đẩy RTSP FPS: 30.15
+[17:38:07] 2026-08-25 17:38:07,639 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:38:12] 2026-08-25 17:38:12,670 [INFO] Đang đẩy RTSP FPS: 29.44
+[17:38:17] 2026-08-25 17:38:17,683 [INFO] Đang đẩy RTSP FPS: 29.97
+[17:38:22] 2026-08-25 17:38:22,713 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:38:27] 2026-08-25 17:38:27,736 [INFO] Đang đẩy RTSP FPS: 30.11
+[17:38:32] 2026-08-25 17:38:32,743 [INFO] Đang đẩy RTSP FPS: 29.96
+[17:38:37] 2026-08-25 17:38:37,767 [INFO] Đang đẩy RTSP FPS: 30.06
+[17:38:42] 2026-08-25 17:38:42,767 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:38:47] 2026-08-25 17:38:47,801 [INFO] Đang đẩy RTSP FPS: 29.83
+[17:38:52] 2026-08-25 17:38:52,819 [INFO] Đang đẩy RTSP FPS: 30.13
+[17:38:57] 2026-08-25 17:38:57,828 [INFO] Đang đẩy RTSP FPS: 29.94
+[17:39:02] 2026-08-25 17:39:02,844 [INFO] Đang đẩy RTSP FPS: 29.71
+[17:39:07] 2026-08-25 17:39:07,882 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:39:12] 2026-08-25 17:39:12,922 [INFO] Đang đẩy RTSP FPS: 29.81
+[17:39:17] 2026-08-25 17:39:17,946 [INFO] Đang đẩy RTSP FPS: 29.28
+[17:39:22] 2026-08-25 17:39:22,979 [INFO] Đang đẩy RTSP FPS: 29.85
+[17:39:28] 2026-08-25 17:39:28,006 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:39:33] 2026-08-25 17:39:33,036 [INFO] Đang đẩy RTSP FPS: 30.03
+[17:39:38] 2026-08-25 17:39:38,073 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:39:42] ### Dang gui tin hieu dung...
+[17:39:43] 2026-08-25 17:39:43,092 [INFO] Đang đẩy RTSP FPS: 29.69
+[17:39:48] 2026-08-25 17:39:48,110 [INFO] Đang đẩy RTSP FPS: 30.12
+[17:39:48] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[17:39:49] ### DA DUNG (exit code 1)
+[17:42:06] ==============================================================================
+[17:42:06] ### PHIEN MOI luc 2026-08-25 17:42:06
+[17:42:06] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[17:42:06] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[17:42:06] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[17:42:06] ### PID = 27676
+[17:42:07] 2026-08-25 17:42:07,871 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[17:42:07] 2026-08-25 17:42:07,871 [INFO] Đang mở camera Sony...
+[17:42:08] 2026-08-25 17:42:08,866 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[17:42:08] 2026-08-25 17:42:08,868 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[17:42:08] 2026-08-25 17:42:08,868 [INFO] GOP = 30 frame (1.0s/keyframe)
+[17:42:08] 2026-08-25 17:42:08,874 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[17:42:13] 2026-08-25 17:42:13,879 [INFO] Đang đẩy RTSP FPS: 29.77
+[17:42:18] 2026-08-25 17:42:18,911 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:42:23] 2026-08-25 17:42:23,945 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:42:28] 2026-08-25 17:42:28,980 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:42:34] 2026-08-25 17:42:34,012 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:42:39] 2026-08-25 17:42:39,015 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:42:44] 2026-08-25 17:42:44,049 [INFO] Đang đẩy RTSP FPS: 30.02
+[17:42:49] 2026-08-25 17:42:49,079 [INFO] Đang đẩy RTSP FPS: 30.04
+[17:42:54] 2026-08-25 17:42:54,110 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:42:59] 2026-08-25 17:42:59,145 [INFO] Đang đẩy RTSP FPS: 30.01
+[17:43:04] 2026-08-25 17:43:04,178 [INFO] Đang đẩy RTSP FPS: 30.00
+[17:43:09] 2026-08-25 17:43:09,216 [INFO] Đang đẩy RTSP FPS: 29.99
+[17:43:14] 2026-08-25 17:43:14,244 [INFO] Đang đẩy RTSP FPS: 30.05
+[17:43:19] 2026-08-25 17:43:19,268 [INFO] Đang đẩy RTSP FPS: 29.88
+[17:43:22] ### Dang gui tin hieu dung...
+[17:43:24] 2026-08-25 17:43:24,279 [INFO] Đang đẩy RTSP FPS: 30.18
+[17:43:28] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[17:43:28] ### DA DUNG (exit code 1)
+[18:18:29] ==============================================================================
+[18:18:29] ### PHIEN MOI luc 2026-08-25 18:18:29
+[18:18:29] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[18:18:29] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[18:18:29] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[18:18:29] ### PID = 22596
+[18:18:30] ### Dang gui tin hieu dung...
+[18:18:35] 2026-08-25 18:18:34,475 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[18:18:35] 2026-08-25 18:18:34,475 [INFO] Đang mở camera Sony...
+[18:18:36] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[18:18:37] ### DA DUNG (exit code 1)

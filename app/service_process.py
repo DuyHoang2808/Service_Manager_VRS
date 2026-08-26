@@ -35,19 +35,34 @@ class ServiceProcess(QObject):
     state_changed = Signal(str)      # (ten module)
 
     def __init__(self, cfg: Dict[str, Any], python_exe: str, log_dir: Path,
-                 max_lines: int, parent: Optional[QObject] = None) -> None:
+                 max_lines: int, default_run_mode: str = "exe",
+                 parent: Optional[QObject] = None) -> None:
         super().__init__(parent)
         self.cfg = cfg
         self.name: str = cfg["name"]
         self.label: str = cfg.get("label", self.name)
         self.kind: str = cfg.get("type", "service")
         self.python_exe = python_exe
-        # "exe": duong dan file .exe da build san (PyInstaller) - neu co, chay
-        # thang exe nay, khong qua python_exe nua. "script" van khai bao de
-        # doc/debug, nhung bi bo qua khi da co "exe".
+        # "exe": duong dan file .exe da build san (PyInstaller).
+        # "run_mode": "exe" hoac "script" - quyet dinh dung file nao khi CA HAI cung
+        # khai bao. Khai bao rieng cho service nay (cfg["run_mode"]) se de len
+        # default_run_mode toan cuc (services.yaml, key "run_mode" o dau file) - truoc
+        # day luon uu tien exe neu co, khong co cach nao chay lai .py de test code moi
+        # ma khong phai rebuild exe (bug thuc te da gap).
         self.exe: Optional[str] = str(cfg["exe"]) if cfg.get("exe") else None
         self.script = str(cfg.get("script") or "")
-        self.cwd = str(cfg.get("cwd") or Path(self.exe or self.script).parent)
+        run_mode = str(cfg.get("run_mode") or default_run_mode).strip().lower()
+        self.run_mode: str = run_mode if run_mode in ("exe", "script") else "exe"
+        # cwd PHAI khac nhau giua 2 mode: "exe" can dung dung thu muc deploy (config/DLL
+        # nam canh file .exe) - gia tri "cwd" hien co trong services.yaml la cho truong
+        # hop nay. "script" thi uvicorn nap module theo ten tran ("plc_offset_gateway:app")
+        # nen PHAI dung dung thu muc chua file .py (khong phai thu muc deploy, thuong
+        # khong co san file .py o do) - dung "script_cwd" rieng neu co khai bao, khong thi
+        # tu suy ra tu vi tri script.
+        if self.run_mode == "script":
+            self.cwd = str(cfg.get("script_cwd") or Path(self.script).parent)
+        else:
+            self.cwd = str(cfg.get("cwd") or Path(self._target()).parent)
         self.args: str = str(cfg.get("args", "") or "")
         self.health_url: Optional[str] = cfg.get("health_url")
         self.note: str = cfg.get("note", "")
@@ -73,6 +88,14 @@ class ServiceProcess(QObject):
         self.log_path = self.log_path_for(datetime.now())
 
     # --- tien ich -----------------------------------------------------
+    def _target(self) -> str:
+        """File se thuc su duoc chay, theo self.run_mode. Neu run_mode="exe" nhung
+        chua khai bao/chua build exe (self.exe rong) thi tu dong roi ve script, tranh
+        bao loi vo ly "khong tim thay file" chi vi thieu 1 field khong lien quan."""
+        if self.run_mode == "exe" and self.exe:
+            return self.exe
+        return self.script
+
     @property
     def is_tool(self) -> bool:
         return self.kind == "tool"
@@ -143,7 +166,7 @@ class ServiceProcess(QObject):
         if self.is_alive:
             return
 
-        target = self.exe or self.script
+        target = self._target()
         if not target or not Path(target).exists():
             self._emit(f"### KHONG TIM THAY FILE: {target}")
             self._set_state(CRASHED)
@@ -151,7 +174,7 @@ class ServiceProcess(QObject):
 
         args = args_override if args_override is not None else self.args
         extra_args = args.split() if args.strip() else []
-        if self.exe:
+        if target == self.exe:
             cmd = [self.exe] + extra_args
         else:
             cmd = [self.python_exe, "-u", self.script] + extra_args
@@ -171,6 +194,7 @@ class ServiceProcess(QObject):
         # Moc phan tach phien: trong 1 file ngay co the co nhieu lan bat lai
         self._emit("=" * 78)
         self._emit(f"### PHIEN MOI luc {datetime.now():%Y-%m-%d %H:%M:%S}")
+        self._emit(f"### run_mode = {self.run_mode} (target: {target})")
         self._emit(f"### KHOI DONG: {' '.join(cmd)}")
         self._emit(f"### Thu muc lam viec: {self.cwd}")
 

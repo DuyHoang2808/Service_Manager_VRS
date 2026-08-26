@@ -13,8 +13,10 @@ Workflow gốc (giữ nguyên, không đổi):
 
 Phần MỚI thêm trong bản clone này (theo kế hoạch `docs/Ke_hoach_tu_dong_bu_lech_board.md`):
 - Import lại các hàm THUẦN (không đổi) từ `bu_lech_board.py` cùng thư mục:
-  ANCHOR_POINTS_POOL, ANCHOR_SETS, board_to_plc, kabsch_2d, apply_rigid_offset,
-  load_calibration_matrix.
+  ANCHOR_SETS, board_to_plc, kabsch_2d, apply_rigid_offset, load_calibration_matrix.
+  (KHÔNG còn dùng ANCHOR_POINTS_POOL - toạ độ điểm mốc giờ đọc từ _diagnostics.points
+  trong file calib của mã hàng đang active, xem load_anchor_board_xy_map(), không phải
+  bảng hard-code chung cho mọi mã hàng nữa.)
 - `FiducialClient`: gọi sang Fiducial Detector Service (YOLO riêng biệt, service khác,
   xem `fiducial_detector/fiducial_service.py`) để tìm tâm vòng tròn mốc trong ảnh.
 - `pixel_offset_to_plc_mm()`: quy đổi độ lệch pixel (so với tâm ảnh) sang độ lệch mm
@@ -73,7 +75,6 @@ if THIS_DIR not in sys.path:
     sys.path.insert(0, THIS_DIR)
 
 from bu_lech_board import (  # noqa: E402
-    ANCHOR_POINTS_POOL,
     ANCHOR_SETS,
     apply_rigid_offset,
     board_to_plc,
@@ -288,16 +289,42 @@ def load_products_registry() -> Dict[str, Any]:
         return DEFAULT_PRODUCTS_REGISTRY.copy()
 
 
-PRODUCTS_REGISTRY: Dict[str, Any] = load_products_registry()
-ACTIVE_PRODUCT_CODE: Optional[str] = None
+def get_products_registry() -> Dict[str, Any]:
+    """Danh mục mã hàng, LUÔN đọc lại từ đĩa (không cache trong biến module-level).
+
+    File này chỉ vài KB, chi phí đọc lại mỗi lần không đáng kể - đổi lại là gateway
+    LUÔN phản ánh đúng nội dung thật trên đĩa, kể cả khi ai đó sửa trực tiếp
+    products_registry.yaml (không qua POST /api/products/select) trong lúc gateway
+    đang chạy. Trước đây cache 1 lần lúc import module - nếu ai sửa file sau đó, gateway
+    tiếp tục dùng dữ liệu CŨ cho tới khi restart, khiến PLC bị điều khiển sai theo mã
+    hàng/calib của lần chọn trước - đã xảy ra thật, sửa lại theo hướng này."""
+    return load_products_registry()
+
+
+def get_active_product_code() -> Optional[str]:
+    """Mã hàng đang active, LUÔN đọc lại active_product_state.json + products_registry.yaml
+    từ đĩa (không dùng biến cache) - cùng lý do như get_products_registry()."""
+    registry = get_products_registry()
+    products = registry.get("products", {})
+
+    code = None
+    if ACTIVE_PRODUCT_STATE_FILE.exists():
+        try:
+            code = json.loads(ACTIVE_PRODUCT_STATE_FILE.read_text(encoding="utf-8")).get("product_code")
+        except Exception as e:
+            logger.warning(f"⚠️  Không đọc được {ACTIVE_PRODUCT_STATE_FILE}: {e}")
+    if not code or code not in products:
+        code = registry.get("default_product")
+    return code if code in products else None
 
 
 def get_active_product() -> Optional[Dict[str, Any]]:
     """Config (dict) của mã hàng đang active, hoặc None nếu products_registry.yaml rỗng/lỗi
     (chưa từng khởi tạo được mã hàng nào - resolve_calib_path/resolve_offset_path sẽ raise)."""
-    if not ACTIVE_PRODUCT_CODE:
+    code = get_active_product_code()
+    if not code:
         return None
-    return PRODUCTS_REGISTRY.get("products", {}).get(ACTIVE_PRODUCT_CODE)
+    return get_products_registry().get("products", {}).get(code)
 
 
 def resolve_fiducial_service_base_url() -> str:
@@ -313,30 +340,11 @@ def resolve_fiducial_service_base_url() -> str:
     return f"{parts.scheme}://{parts.netloc}"
 
 
-def _save_active_product_state() -> None:
+def _save_active_product_state(product_code: str) -> None:
     ACTIVE_PRODUCT_STATE_FILE.write_text(
-        json.dumps({"product_code": ACTIVE_PRODUCT_CODE}, indent=2, ensure_ascii=False),
+        json.dumps({"product_code": product_code}, indent=2, ensure_ascii=False),
         encoding="utf-8",
     )
-
-
-def _load_startup_active_product() -> None:
-    """Lúc khởi động: khôi phục mã hàng đã chọn gần nhất (qua lần restart gateway), nếu
-    chưa từng chọn thì dùng default_product trong registry."""
-    global ACTIVE_PRODUCT_CODE
-    code = None
-    if ACTIVE_PRODUCT_STATE_FILE.exists():
-        try:
-            code = json.loads(ACTIVE_PRODUCT_STATE_FILE.read_text(encoding="utf-8")).get("product_code")
-        except Exception as e:
-            logger.warning(f"⚠️  Không đọc được {ACTIVE_PRODUCT_STATE_FILE}: {e}")
-    if not code or code not in PRODUCTS_REGISTRY.get("products", {}):
-        code = PRODUCTS_REGISTRY.get("default_product")
-    if code and code in PRODUCTS_REGISTRY.get("products", {}):
-        ACTIVE_PRODUCT_CODE = code
-
-
-_load_startup_active_product()
 
 
 # ===============================
@@ -1257,7 +1265,7 @@ async def lifespan(_: FastAPI):
     logger.info(f"💾 Config file: {CONFIG_FILE}")
     logger.info(f"📷 Snapshot URL default: {GATEWAY_CONFIG['camera_snapshot_url']}")
     logger.info(f"🎯 Fiducial Detector URL: {GATEWAY_CONFIG['fiducial_api_url']}")
-    logger.info(f"📦 Mã hàng đang active: {ACTIVE_PRODUCT_CODE} (xem {PRODUCTS_REGISTRY_FILE})")
+    logger.info(f"📦 Mã hàng đang active: {get_active_product_code()} (xem {PRODUCTS_REGISTRY_FILE})")
     logger.info(
         f"📐 camera_axis_matrix calibrated: {GATEWAY_CONFIG['camera_axis_calibrated']} "
         f"(False = đang dùng ước lượng thô từ FOV, hãy chạy /api/calib/camera-axis)"
@@ -1284,6 +1292,50 @@ def _get_anchor_names(anchor_mode: int) -> List[str]:
     if anchor_mode not in ANCHOR_SETS:
         raise HTTPException(status_code=400, detail=f"anchor_mode phải là 2 hoặc 3, nhận được {anchor_mode}")
     return ANCHOR_SETS[anchor_mode]
+
+
+def load_anchor_board_xy_map(calib_path: str) -> Dict[str, Tuple[float, float]]:
+    """Đọc toạ độ Board (mm) THẬT của từng điểm mốc (A/B/C/D/E/F...) từ chính file
+    calib JSON của mã hàng đang active (_diagnostics.points, được calib_2mat.py/GUI
+    Calib Wizard sinh ra từ file Excel thật lúc chạy Bước 1) - KHÔNG dùng
+    ANCHOR_POINTS_POOL (bảng hard-code CHUNG cho mọi mã hàng) nữa.
+
+    Bug thực tế đã gặp: mã hàng khác nhau có toạ độ điểm mốc khác nhau (vd điểm C của
+    mã hàng "outerthanh" là (574.911, 446.353), không phải (596.6, 393) trong bảng cũ) -
+    dùng bảng chung khiến PLC di chuyển tới toạ độ SAI của một mã hàng khác.
+    """
+    try:
+        with open(calib_path, "r", encoding="utf-8") as f:
+            calib_data = json.load(f)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Không đọc được file calib '{calib_path}': {e}")
+
+    points = (calib_data.get("_diagnostics") or {}).get("points")
+    if not points:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"File calib '{calib_path}' không có dữ liệu toạ độ từng điểm mốc "
+                "(_diagnostics.points) - đây là file calib cũ, sinh trước khi có tính năng "
+                "này. Hãy chạy lại Bước 1 (Sinh calib tĩnh, calib_2mat.py hoặc GUI Calib "
+                "Wizard) để sinh lại file calib mới có đủ dữ liệu này."
+            ),
+        )
+    return {p["name"]: (float(p["board_x"]), float(p["board_y"])) for p in points}
+
+
+def resolve_anchor_board_xy(
+    anchor_map: Dict[str, Tuple[float, float]], name: str,
+) -> Tuple[float, float]:
+    if name not in anchor_map:
+        raise HTTPException(
+            status_code=400,
+            detail=(
+                f"Điểm mốc '{name}' không có trong file calib của mã hàng đang active - "
+                f"các điểm có sẵn: {list(anchor_map.keys())}"
+            ),
+        )
+    return anchor_map[name]
 
 
 def _require_active_product() -> Dict[str, Any]:
@@ -1457,19 +1509,22 @@ async def root():
         "fiducial_api_url": GATEWAY_CONFIG["fiducial_api_url"],
         "camera_axis_calibrated": GATEWAY_CONFIG["camera_axis_calibrated"],
         "config_file": str(CONFIG_FILE),
-        "active_product": ACTIVE_PRODUCT_CODE,
+        "active_product": get_active_product_code(),
         "products_registry_file": str(PRODUCTS_REGISTRY_FILE),
     }
 
 
 @app.get("/api/products")
 async def list_products():
-    """Danh sách mã hàng có trong products_registry.yaml - app Flutter dùng để hiện dropdown."""
-    products = PRODUCTS_REGISTRY.get("products", {})
+    """Danh sách mã hàng có trong products_registry.yaml - app Flutter dùng để hiện dropdown.
+    Đọc lại registry mỗi lần gọi (get_products_registry) nên luôn phản ánh đúng file thật,
+    kể cả khi vừa được sửa tay trong lúc gateway đang chạy."""
+    registry = get_products_registry()
+    products = registry.get("products", {})
     return {
         "products": list(products.keys()),
-        "default_product": PRODUCTS_REGISTRY.get("default_product"),
-        "active_product": ACTIVE_PRODUCT_CODE,
+        "default_product": registry.get("default_product"),
+        "active_product": get_active_product_code(),
         "registry_file": str(PRODUCTS_REGISTRY_FILE),
     }
 
@@ -1480,7 +1535,7 @@ async def get_active_product_info():
     nhận lại sau khi chọn, hoặc hiện thị lúc khởi động app."""
     product = get_active_product()
     return {
-        "active_product": ACTIVE_PRODUCT_CODE,
+        "active_product": get_active_product_code(),
         "config": product,
         "calib_path_side_a": resolve_calib_path("A") if product else None,
         "calib_path_side_b": resolve_calib_path("B") if product else None,
@@ -1500,17 +1555,18 @@ async def select_product(request: ProductSelectRequest):
     đang active HIỆN TẠI vẫn giữ nguyên - không đổi dây chuyền đang chạy tốt sang trạng thái
     lỗi chỉ vì chọn nhầm 1 mã hàng có cấu hình sai.
     """
-    global ACTIVE_PRODUCT_CODE
+    previous_product_code = get_active_product_code()
 
-    previous_product_code = ACTIVE_PRODUCT_CODE
-
-    product = PRODUCTS_REGISTRY.get("products", {}).get(request.product_code)
+    # Doc lai registry TU DIA (khong dung bien cache) - de nhan ra ngay ma hang vua
+    # duoc them tay vao products_registry.yaml, khong can restart gateway.
+    registry = get_products_registry()
+    product = registry.get("products", {}).get(request.product_code)
     if product is None:
         raise HTTPException(
             status_code=400,
             detail=(
                 f"Mã hàng '{request.product_code}' chưa có trong {PRODUCTS_REGISTRY_FILE}. "
-                f"Các mã hàng hiện có: {list(PRODUCTS_REGISTRY.get('products', {}).keys())}"
+                f"Các mã hàng hiện có: {list(registry.get('products', {}).keys())}"
             ),
         )
 
@@ -1533,8 +1589,7 @@ async def select_product(request: ProductSelectRequest):
         )
         return ProductSelectResponse(success=False, product_code=request.product_code, message=message)
 
-    ACTIVE_PRODUCT_CODE = request.product_code
-    _save_active_product_state()
+    _save_active_product_state(request.product_code)
     calib_dir = Path(product["calib_dir"])
     calib_dir.mkdir(parents=True, exist_ok=True)
 
@@ -1941,6 +1996,7 @@ async def auto_board_offset(request: AutoBoardOffsetRequest):
                                         anchor_mode=request.anchor_mode)
 
     anchor_names = _get_anchor_names(request.anchor_mode)
+    anchor_map = load_anchor_board_xy_map(calib_path)  # toa do THAT cua ma hang dang active
 
     plc = PLCService()
     results: List[AnchorPointResult] = []
@@ -1955,7 +2011,7 @@ async def auto_board_offset(request: AutoBoardOffsetRequest):
         timing["plc_connect"] = time.time() - step_start
 
         for name in anchor_names:
-            bx, by = ANCHOR_POINTS_POOL[name]
+            bx, by = resolve_anchor_board_xy(anchor_map, name)
             ex, ey = board_to_plc(bx, by, coeffs)
             logger.info(
                 f"🔎 Điểm mốc {name} (mặt {board_side}): "
@@ -2040,7 +2096,7 @@ async def auto_board_offset(request: AutoBoardOffsetRequest):
             "rms_error_mm": rms_error,
             "max_error_mm": max_error,
             "anchor_points_board": [
-                (name, list(ANCHOR_POINTS_POOL[name]))
+                (name, list(resolve_anchor_board_xy(anchor_map, name)))
                 for name in anchor_names
             ],
             "anchor_points_expected_plc": expected_pts,
@@ -2091,11 +2147,9 @@ async def anchor_info(anchor_name: str = "A", board_side: str = "A"):
     """Trả toạ độ Board (mm) và toạ độ PLC kỳ vọng của 1 điểm mốc, dùng để xem trước
     trước khi chạy /api/calib/camera-axis (không di chuyển máy, không chụp ảnh)."""
     side = (board_side or "A").upper()
-    if anchor_name not in ANCHOR_POINTS_POOL:
-        raise HTTPException(status_code=400, detail=f"anchor_name '{anchor_name}' không có trong ANCHOR_POINTS_POOL")
     validate_board_side(side)
-
-    bx, by = ANCHOR_POINTS_POOL[anchor_name]
+    anchor_map = load_anchor_board_xy_map(resolve_calib_path(side))
+    bx, by = resolve_anchor_board_xy(anchor_map, anchor_name)
 
     result = {
         "anchor_name": anchor_name,
@@ -2132,8 +2186,6 @@ async def calibrate_camera_axis(request: CameraAxisCalibRequest):
     global GATEWAY_CONFIG
 
     board_side = (request.board_side or "A").upper()
-    if request.anchor_name not in ANCHOR_POINTS_POOL:
-        raise HTTPException(status_code=400, detail=f"anchor_name '{request.anchor_name}' không có trong ANCHOR_POINTS_POOL")
     if request.delta_mm <= 0:
         raise HTTPException(status_code=400, detail="delta_mm phải > 0")
     validate_board_side(board_side)
@@ -2144,7 +2196,8 @@ async def calibrate_camera_axis(request: CameraAxisCalibRequest):
     except Exception as e:
         return CameraAxisCalibResponse(success=False, message=f"Lỗi nạp ma trận calib mặt {board_side}: {e}")
 
-    bx, by = ANCHOR_POINTS_POOL[request.anchor_name]
+    anchor_map = load_anchor_board_xy_map(calib_path)
+    bx, by = resolve_anchor_board_xy(anchor_map, request.anchor_name)
     p0_plc = board_to_plc(bx, by, coeffs)
     delta = request.delta_mm
     targets = {
@@ -2293,8 +2346,8 @@ if __name__ == "__main__":
     print("=" * 60)
     print("🚀 Starting PLC Offset Gateway (AutoBoardOffset_YOLO_2Mat)")
     print("=" * 60)
-    print("📡 URL: http://localhost:8093")
+    print("📡 URL: http://localhost:8083")
     print("📚 Docs: http://localhost:8093/docs")
     print("=" * 60)
 
-    uvicorn.run(app, host="0.0.0.0", port=8093, log_level="info")
+    uvicorn.run(app, host="0.0.0.0", port=8083, log_level="info")

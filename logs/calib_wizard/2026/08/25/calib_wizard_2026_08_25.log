@@ -1,0 +1,372 @@
+[11:15:19] ==============================================================================
+[11:15:19] ### PHIEN MOI luc 2026-08-25 11:15:19
+[11:15:19] ### run_mode = exe (target: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi\Calib_Wizard_Ma_Hang_Moi.exe)
+[11:15:19] ### KHOI DONG: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi\Calib_Wizard_Ma_Hang_Moi.exe
+[11:15:19] ### Thu muc lam viec: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi
+[11:15:19] ### PID = 43560
+[11:19:05] ### Dang gui tin hieu dung...
+[11:19:11] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:19:11] ### DA DUNG (exit code 1)
+[11:29:29] ==============================================================================
+[11:29:29] ### PHIEN MOI luc 2026-08-25 11:29:29
+[11:29:29] ### run_mode = exe (target: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi\Calib_Wizard_Ma_Hang_Moi.exe)
+[11:29:29] ### KHOI DONG: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi\Calib_Wizard_Ma_Hang_Moi.exe
+[11:29:29] ### Thu muc lam viec: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi
+[11:29:29] ### PID = 47980
+[11:32:37]   Condition number = 10.4 — OK.
+[11:32:37]   Model: bilinear (4 params)
+[11:32:37]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[11:32:37]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[11:32:37]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[11:32:37]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[11:32:37]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[11:32:37]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[11:32:37]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[11:32:37]   Condition number = 10.4 — OK.
+[11:32:37]   Model: bilinear (4 params)
+[11:32:37]   Residual: RMS = 0.0046 mm, Max = 0.0060 mm
+[11:32:37]     Điểm A (Board 9.900, 10.000): 0.0052 mm
+[11:32:37]     Điểm B (Board 9.900, 394.000): 0.0006 mm
+[11:32:37]     Điểm C (Board 596.600, 393.000): 0.0054 mm
+[11:32:37]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[11:32:37]     Điểm E (Board 69.000, 8.000): 0.0057 mm
+[11:32:37]     Điểm F (Board 534.500, 396.000): 0.0060 mm
+[11:32:37] ### TIEN TRINH TU THOAT (exit code 0)
+[11:41:08] ==============================================================================
+[11:41:08] ### PHIEN MOI luc 2026-08-25 11:41:08
+[11:41:08] ### run_mode = exe (target: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi\Calib_Wizard_Ma_Hang_Moi.exe)
+[11:41:08] ### KHOI DONG: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi\Calib_Wizard_Ma_Hang_Moi.exe
+[11:41:08] ### Thu muc lam viec: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi
+[11:41:08] ### PID = 34976
+[11:41:14] ### TIEN TRINH TU THOAT (exit code 0)
+[11:42:44] ==============================================================================
+[11:42:44] ### PHIEN MOI luc 2026-08-25 11:42:44
+[11:42:44] ### run_mode = exe (target: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi\Calib_Wizard_Ma_Hang_Moi.exe)
+[11:42:44] ### KHOI DONG: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi\Calib_Wizard_Ma_Hang_Moi.exe
+[11:42:44] ### Thu muc lam viec: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi
+[11:42:44] ### PID = 3772
+[11:42:48] ### TIEN TRINH TU THOAT (exit code 0)
+[11:50:39] ==============================================================================
+[11:50:39] ### PHIEN MOI luc 2026-08-25 11:50:39
+[11:50:39] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[11:50:39] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[11:50:39] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[11:50:39] ### PID = 31108
+[11:50:55] ### TIEN TRINH TU THOAT (exit code 0)
+[11:55:08] ==============================================================================
+[11:55:08] ### PHIEN MOI luc 2026-08-25 11:55:08
+[11:55:08] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[11:55:08] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[11:55:08] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[11:55:08] ### PID = 1400
+[12:06:43] ### TIEN TRINH TU THOAT (exit code 0)
+[12:15:17] ==============================================================================
+[12:15:17] ### PHIEN MOI luc 2026-08-25 12:15:17
+[12:15:17] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[12:15:17] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[12:15:17] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[12:15:17] ### PID = 9744
+[12:15:48]   Condition number = 10.4 — OK.
+[12:15:48]   Model: bilinear (4 params)
+[12:15:48]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[12:15:48]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[12:15:48]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[12:15:48]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[12:15:48]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[12:15:48]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[12:15:48]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[12:15:48]   Condition number = 10.4 — OK.
+[12:15:48]   Model: bilinear (4 params)
+[12:15:48]   Residual: RMS = 0.0046 mm, Max = 0.0060 mm
+[12:15:48]     Điểm A (Board 9.900, 10.000): 0.0052 mm
+[12:15:48]     Điểm B (Board 9.900, 394.000): 0.0006 mm
+[12:15:48]     Điểm C (Board 596.600, 393.000): 0.0054 mm
+[12:15:48]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[12:15:48]     Điểm E (Board 69.000, 8.000): 0.0057 mm
+[12:15:48]     Điểm F (Board 534.500, 396.000): 0.0060 mm
+[13:29:27] ### TIEN TRINH TU THOAT (exit code 0)
+[13:41:15] ==============================================================================
+[13:41:15] ### PHIEN MOI luc 2026-08-25 13:41:15
+[13:41:15] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[13:41:15] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[13:41:15] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[13:41:15] ### PID = 45964
+[13:41:58]   Condition number = 10.4 — OK.
+[13:41:58]   Model: bilinear (4 params)
+[13:41:58]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[13:41:58]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[13:41:58]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[13:41:58]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[13:41:58]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[13:41:58]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[13:41:58]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[13:41:58]   Condition number = 10.4 — OK.
+[13:41:58]   Model: bilinear (4 params)
+[13:41:58]   Residual: RMS = 0.0046 mm, Max = 0.0060 mm
+[13:41:58]     Điểm A (Board 9.900, 10.000): 0.0052 mm
+[13:41:58]     Điểm B (Board 9.900, 394.000): 0.0006 mm
+[13:41:58]     Điểm C (Board 596.600, 393.000): 0.0054 mm
+[13:41:58]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[13:41:58]     Điểm E (Board 69.000, 8.000): 0.0057 mm
+[13:41:58]     Điểm F (Board 534.500, 396.000): 0.0060 mm
+[13:57:22] ### TIEN TRINH TU THOAT (exit code 0)
+[14:03:11] ==============================================================================
+[14:03:11] ### PHIEN MOI luc 2026-08-25 14:03:11
+[14:03:11] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[14:03:11] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[14:03:11] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[14:03:11] ### PID = 7424
+[14:04:05] ### TIEN TRINH TU THOAT (exit code 0)
+[14:26:41] ==============================================================================
+[14:26:41] ### PHIEN MOI luc 2026-08-25 14:26:41
+[14:26:41] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[14:26:41] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[14:26:41] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[14:26:41] ### PID = 43976
+[14:27:40]   Condition number = 10.4 — OK.
+[14:27:40]   Model: bilinear (4 params)
+[14:27:40]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[14:27:40]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[14:27:40]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[14:27:40]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[14:27:40]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[14:27:40]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[14:27:40]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[14:27:40]   Condition number = 10.4 — OK.
+[14:27:40]   Model: bilinear (4 params)
+[14:27:40]   Residual: RMS = 0.0046 mm, Max = 0.0060 mm
+[14:27:40]     Điểm A (Board 9.900, 10.000): 0.0052 mm
+[14:27:40]     Điểm B (Board 9.900, 394.000): 0.0006 mm
+[14:27:40]     Điểm C (Board 596.600, 393.000): 0.0054 mm
+[14:27:40]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[14:27:40]     Điểm E (Board 69.000, 8.000): 0.0057 mm
+[14:27:40]     Điểm F (Board 534.500, 396.000): 0.0060 mm
+[14:44:49] ### Dang gui tin hieu dung...
+[14:44:55] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[14:44:56] ### DA DUNG (exit code 1)
+[14:46:33] ==============================================================================
+[14:46:33] ### PHIEN MOI luc 2026-08-25 14:46:33
+[14:46:33] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[14:46:33] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[14:46:33] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[14:46:33] ### PID = 46512
+[14:58:08] ### TIEN TRINH TU THOAT (exit code 0)
+[15:00:59] ==============================================================================
+[15:00:59] ### PHIEN MOI luc 2026-08-25 15:00:59
+[15:00:59] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[15:00:59] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[15:00:59] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[15:00:59] ### PID = 21080
+[15:01:39]   Condition number = 10.4 — OK.
+[15:01:39]   Model: bilinear (4 params)
+[15:01:39]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[15:01:39]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[15:01:39]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[15:01:39]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[15:01:39]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[15:01:39]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[15:01:39]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[15:01:39]   Condition number = 10.4 — OK.
+[15:01:39]   Model: bilinear (4 params)
+[15:01:39]   Residual: RMS = 0.0046 mm, Max = 0.0060 mm
+[15:01:39]     Điểm A (Board 9.900, 10.000): 0.0052 mm
+[15:01:39]     Điểm B (Board 9.900, 394.000): 0.0006 mm
+[15:01:39]     Điểm C (Board 596.600, 393.000): 0.0054 mm
+[15:01:39]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[15:01:39]     Điểm E (Board 69.000, 8.000): 0.0057 mm
+[15:01:39]     Điểm F (Board 534.500, 396.000): 0.0060 mm
+[15:08:11]   Condition number = 10.4 — OK.
+[15:08:11]   Model: bilinear (4 params)
+[15:08:11]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[15:08:11]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[15:08:11]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[15:08:11]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[15:08:11]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[15:08:11]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[15:08:11]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[15:08:11]   Condition number = 10.4 — OK.
+[15:08:11]   Model: bilinear (4 params)
+[15:08:11]   Residual: RMS = 0.0046 mm, Max = 0.0060 mm
+[15:08:11]     Điểm A (Board 9.900, 10.000): 0.0052 mm
+[15:08:11]     Điểm B (Board 9.900, 394.000): 0.0006 mm
+[15:08:11]     Điểm C (Board 596.600, 393.000): 0.0054 mm
+[15:08:11]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[15:08:11]     Điểm E (Board 69.000, 8.000): 0.0057 mm
+[15:08:11]     Điểm F (Board 534.500, 396.000): 0.0060 mm
+[15:32:22]   Condition number = 10.4 — OK.
+[15:32:22]   Model: bilinear (4 params)
+[15:32:22]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[15:32:22]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[15:32:22]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[15:32:22]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[15:32:22]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[15:32:22]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[15:32:22]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[15:32:22]   Bilinear RMS = 32.94 mm > 1.0 mm — thử nâng lên biquadratic (6 params)...
+[15:32:22]   Biquadratic RMS = 0.0000 mm — tốt hơn, dùng biquadratic.
+[15:32:22]   CẢNH BÁO: Condition number = 9124.4 — điểm gần thẳng hàng!
+[15:32:22]   Model: biquadratic (6 params)
+[15:32:22]   Residual: RMS = 0.0000 mm, Max = 0.0000 mm
+[15:32:22]     Điểm A (Board 9.900, 10.000): 0.0000 mm
+[15:32:22]     Điểm B (Board 9.900, 394.000): 0.0000 mm
+[15:32:22]     Điểm C (Board 596.600, 393.000): 0.0000 mm
+[15:32:22]     Điểm D (Board 597.900, 10.000): 0.0000 mm
+[15:32:22]     Điểm E (Board 69.000, 8.000): 0.0000 mm
+[15:32:22]     Điểm F (Board 534.500, 396.000): 0.0000 mm
+[15:33:03]   Condition number = 10.4 — OK.
+[15:33:03]   Model: bilinear (4 params)
+[15:33:03]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[15:33:03]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[15:33:03]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[15:33:03]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[15:33:03]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[15:33:03]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[15:33:03]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[15:33:03]   Bilinear RMS = 32.94 mm > 1.0 mm — thử nâng lên biquadratic (6 params)...
+[15:33:03]   Biquadratic RMS = 0.0000 mm — tốt hơn, dùng biquadratic.
+[15:33:03]   CẢNH BÁO: Condition number = 9124.4 — điểm gần thẳng hàng!
+[15:33:03]   Model: biquadratic (6 params)
+[15:33:03]   Residual: RMS = 0.0000 mm, Max = 0.0000 mm
+[15:33:03]     Điểm A (Board 9.900, 10.000): 0.0000 mm
+[15:33:03]     Điểm B (Board 9.900, 394.000): 0.0000 mm
+[15:33:03]     Điểm C (Board 596.600, 393.000): 0.0000 mm
+[15:33:03]     Điểm D (Board 597.900, 10.000): 0.0000 mm
+[15:33:03]     Điểm E (Board 69.000, 8.000): 0.0000 mm
+[15:33:03]     Điểm F (Board 534.500, 396.000): 0.0000 mm
+[16:47:04] ### Dang gui tin hieu dung...
+[16:47:10] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[16:47:10] ### DA DUNG (exit code 1)
+[16:57:37] ==============================================================================
+[16:57:37] ### PHIEN MOI luc 2026-08-25 16:57:37
+[16:57:37] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[16:57:37] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[16:57:37] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[16:57:37] ### PID = 25020
+[16:58:09]   Condition number = 10.4 — OK.
+[16:58:09]   Model: bilinear (4 params)
+[16:58:09]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[16:58:09]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[16:58:09]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[16:58:09]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[16:58:09]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[16:58:09]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[16:58:09]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[16:58:09]   Bilinear RMS = 32.94 mm > 1.0 mm — thử nâng lên biquadratic (6 params)...
+[16:58:09]   Biquadratic RMS = 0.0000 mm — tốt hơn, dùng biquadratic.
+[16:58:09]   CẢNH BÁO: Condition number = 9124.4 — điểm gần thẳng hàng!
+[16:58:09]   Model: biquadratic (6 params)
+[16:58:09]   Residual: RMS = 0.0000 mm, Max = 0.0000 mm
+[16:58:09]     Điểm A (Board 9.900, 10.000): 0.0000 mm
+[16:58:09]     Điểm B (Board 9.900, 394.000): 0.0000 mm
+[16:58:09]     Điểm C (Board 596.600, 393.000): 0.0000 mm
+[16:58:09]     Điểm D (Board 597.900, 10.000): 0.0000 mm
+[16:58:09]     Điểm E (Board 69.000, 8.000): 0.0000 mm
+[16:58:09]     Điểm F (Board 534.500, 396.000): 0.0000 mm
+[17:00:03]   Condition number = 10.4 — OK.
+[17:00:03]   Model: bilinear (4 params)
+[17:00:03]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[17:00:03]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[17:00:03]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[17:00:03]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[17:00:03]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[17:00:03]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[17:00:03]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[17:00:03]   Bilinear RMS = 32.94 mm > 1.0 mm — thử nâng lên biquadratic (6 params)...
+[17:00:03]   Biquadratic RMS = 0.0000 mm — tốt hơn, dùng biquadratic.
+[17:00:03]   CẢNH BÁO: Condition number = 9124.4 — điểm gần thẳng hàng!
+[17:00:03]   Model: biquadratic (6 params)
+[17:00:03]   Residual: RMS = 0.0000 mm, Max = 0.0000 mm
+[17:00:03]     Điểm A (Board 9.900, 10.000): 0.0000 mm
+[17:00:03]     Điểm B (Board 9.900, 394.000): 0.0000 mm
+[17:00:03]     Điểm C (Board 596.600, 393.000): 0.0000 mm
+[17:00:03]     Điểm D (Board 597.900, 10.000): 0.0000 mm
+[17:00:03]     Điểm E (Board 69.000, 8.000): 0.0000 mm
+[17:00:03]     Điểm F (Board 534.500, 396.000): 0.0000 mm
+[17:00:55] ### Dang gui tin hieu dung...
+[17:01:01] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[17:01:01] ### DA DUNG (exit code 1)
+[17:01:36] ==============================================================================
+[17:01:36] ### PHIEN MOI luc 2026-08-25 17:01:36
+[17:01:36] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[17:01:36] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[17:01:36] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[17:01:36] ### PID = 17756
+[17:01:55]   Condition number = 10.4 — OK.
+[17:01:55]   Model: bilinear (4 params)
+[17:01:55]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[17:01:55]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[17:01:55]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[17:01:55]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[17:01:55]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[17:01:55]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[17:01:55]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[17:01:55]   Bilinear RMS = 32.94 mm > 1.0 mm — thử nâng lên biquadratic (6 params)...
+[17:01:55]   Biquadratic RMS = 0.0000 mm — tốt hơn, dùng biquadratic.
+[17:01:55]   CẢNH BÁO: Condition number = 9124.4 — điểm gần thẳng hàng!
+[17:01:55]   Model: biquadratic (6 params)
+[17:01:55]   Residual: RMS = 0.0000 mm, Max = 0.0000 mm
+[17:01:55]     Điểm A (Board 9.900, 10.000): 0.0000 mm
+[17:01:55]     Điểm B (Board 9.900, 394.000): 0.0000 mm
+[17:01:55]     Điểm C (Board 596.600, 393.000): 0.0000 mm
+[17:01:55]     Điểm D (Board 597.900, 10.000): 0.0000 mm
+[17:01:55]     Điểm E (Board 69.000, 8.000): 0.0000 mm
+[17:01:55]     Điểm F (Board 534.500, 396.000): 0.0000 mm
+[17:20:57] ### Dang gui tin hieu dung...
+[17:21:03] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[17:21:04] ### DA DUNG (exit code 1)
+[17:21:28] ==============================================================================
+[17:21:28] ### PHIEN MOI luc 2026-08-25 17:21:28
+[17:21:28] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[17:21:28] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[17:21:28] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[17:21:28] ### PID = 49404
+[17:22:32]   Condition number = 10.4 — OK.
+[17:22:32]   Model: bilinear (4 params)
+[17:22:32]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[17:22:32]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[17:22:32]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[17:22:32]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[17:22:32]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[17:22:32]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[17:22:32]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[17:22:32]   Bilinear RMS = 32.94 mm > 1.0 mm — thử nâng lên biquadratic (6 params)...
+[17:22:32]   Biquadratic RMS = 0.0000 mm — tốt hơn, dùng biquadratic.
+[17:22:32]   CẢNH BÁO: Condition number = 9124.4 — điểm gần thẳng hàng!
+[17:22:32]   Model: biquadratic (6 params)
+[17:22:32]   Residual: RMS = 0.0000 mm, Max = 0.0000 mm
+[17:22:32]     Điểm A (Board 9.900, 10.000): 0.0000 mm
+[17:22:32]     Điểm B (Board 9.900, 394.000): 0.0000 mm
+[17:22:32]     Điểm C (Board 596.600, 393.000): 0.0000 mm
+[17:22:32]     Điểm D (Board 597.900, 10.000): 0.0000 mm
+[17:22:32]     Điểm E (Board 69.000, 8.000): 0.0000 mm
+[17:22:32]     Điểm F (Board 534.500, 396.000): 0.0000 mm
+[17:39:42] ### Dang gui tin hieu dung...
+[17:39:48] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[17:39:49] ### DA DUNG (exit code 1)
+[17:49:27] ==============================================================================
+[17:49:27] ### PHIEN MOI luc 2026-08-25 17:49:27
+[17:49:27] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[17:49:27] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[17:49:27] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[17:49:27] ### PID = 29612
+[17:49:45]   Condition number = 10.4 — OK.
+[17:49:45]   Model: bilinear (4 params)
+[17:49:45]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[17:49:45]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[17:49:45]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[17:49:45]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[17:49:45]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[17:49:45]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[17:49:45]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[17:49:45]   Bilinear RMS = 32.94 mm > 1.0 mm — thử nâng lên biquadratic (6 params)...
+[17:49:45]   Biquadratic RMS = 0.0000 mm — tốt hơn, dùng biquadratic.
+[17:49:45]   CẢNH BÁO: Condition number = 9124.4 — điểm gần thẳng hàng!
+[17:49:45]   Model: biquadratic (6 params)
+[17:49:45]   Residual: RMS = 0.0000 mm, Max = 0.0000 mm
+[17:49:45]     Điểm A (Board 9.900, 10.000): 0.0000 mm
+[17:49:45]     Điểm B (Board 9.900, 394.000): 0.0000 mm
+[17:49:45]     Điểm C (Board 596.600, 393.000): 0.0000 mm
+[17:49:45]     Điểm D (Board 597.900, 10.000): 0.0000 mm
+[17:49:45]     Điểm E (Board 69.000, 8.000): 0.0000 mm
+[17:49:45]     Điểm F (Board 534.500, 396.000): 0.0000 mm
+[18:15:34] ### THOAT BAT THUONG (exit code 1073807364)

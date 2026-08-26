@@ -9,12 +9,19 @@
 # cwd     : BAT BUOC dung neu script import module cung thu muc
 # args    : tham so dong lenh mac dinh (voi tool, sua duoc trong GUI)
 # health_url : neu co, Manager se ping dinh ky de bao Healthy / Down
-# exe     : duong dan file .exe da build san (PyInstaller). Neu co, Manager
-#           chay THANG file exe nay (khong qua python_exe), bo qua "script".
-#           Dung khi deploy sang may khac khong co Python/dev env.
+# exe        : duong dan file .exe da build san (PyInstaller).
+# run_mode   : "exe" (mac dinh) hoac "script" - chon dung "exe" hay "script" (.py qua
+#              python_exe) khi 1 module co CA HAI. Khai bao o tung service se de len
+#              gia tri toan cuc (key run_mode duoi day). Dat "script" cho 1 module
+#              dang sua code nguon va can test ngay, khong doi rebuild lai exe.
+# script_cwd : cwd rieng khi run_mode=script (mac dinh: thu muc chua file script) -
+#              "cwd" thuong (o duoi) la cho exe (thu muc deploy, co config/DLL canh
+#              exe) - KHONG dung duoc cho script (uvicorn nap module theo ten tran,
+#              can dung thu muc co file .py, thuong khac thu muc deploy).
 # =====================================================================
 
 python: D:\Camera\Dev\Camera_venv\Scripts\python.exe
+run_mode: script                # doi thanh "c" o day de TAT CA module chay .py
 log_dir: logs
 max_log_lines: 4000          # so dong log giu trong bo nho moi module
 health_interval_sec: 5
@@ -40,6 +47,10 @@ services:
     # vat ly, sua o dau cung nhu nhau) - dung duong dan modules/ cho dong nhat.
     script: D:\Camera\Dev\Service_Manager\modules\gateway\run_gateway.py
     exe: D:\Camera\Dev\deploy\Service_Manager\modules\gateway\run_gateway\run_gateway.exe
+    # TAM thoi chay .py de test fix ANCHOR_POINTS_POOL/anchor theo tung ma hang (xem
+    # commit lien quan) - exe cu chua co fix nay. Doi lai "exe" (hoac xoa dong nay) sau
+    # khi rebuild lai run_gateway.exe voi code moi.
+    run_mode: script
     cwd: D:\Camera\Dev\deploy\Service_Manager\modules\gateway\run_gateway
     type: service
     health_url: http://127.0.0.1:8083/docs
@@ -78,6 +89,20 @@ services:
     type: tool
     args: --board-id BOARD-001 --board-side A --anchor-mode 2
     note: Chay 1 lan - can Gateway + Fiducial + Stream camera dang chay. Da build exe (xem key "exe").
+
+  - name: calibrate_camera_axis
+    label: Hieu chinh truc camera - T matrix (CLI)
+    # modules/tools la junction -> AutoBoardOffset_YOLO_2Mat/tools (cung 1 file vat ly)
+    script: D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py
+    cwd: D:\Camera\Dev\Service_Manager\modules\tools
+    type: tool
+    args: --anchor A --delta-mm 5.0 --yes
+    note: >-
+      Chay 1 LAN khi setup may hoac sau khi thao/lap lai camera - KHONG phai moi khi
+      doi ma hang. --yes BAT BUOC (Service Manager chay subprocess khong co stdin
+      tuong tac, thieu co nay se crash EOFError). Can Gateway + Fiducial + PLC/camera
+      that dang ket noi - se DI CHUYEN MAY THAT 3 lan (P0, P0+dX, P0+dY). Chua co exe
+      build san - luon chay .py du run_mode toan cuc la gi.
 
   - name: calib_wizard
     label: Calib Wizard - Them ma hang moi (GUI)
