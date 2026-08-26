@@ -14,7 +14,7 @@
 #           Dung khi deploy sang may khac khong co Python/dev env.
 # =====================================================================
 
-python: D:\Camera\Dev\Camera_venv\Scripts\python.exe
+python: D:\Ps_Duy\Project\Auto_VRS\Auto_VRS_venv\Scripts\python.exe
 log_dir: logs
 max_log_lines: 4000          # so dong log giu trong bo nho moi module
 health_interval_sec: 5
@@ -26,9 +26,9 @@ services:
     # Luu y: script nay sinh process con ffmpeg -> Manager kill ca cay process
     # Da gom vao Service_Manager/modules/stream_camera (khong nam trong git) -
     # ban goc van con o Stream_camera/Stream_camera_rtsp, khong con duoc dung nua.
-    script: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
-    exe: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe
-    cwd: D:\Camera\Dev\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508
+    script: D:\Ps_Duy\Project\Auto_VRS\Service_Manager_VRS\modules\stream_camera\Stream_camera_Sony_20260508.py
+    exe: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe
+    cwd: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508
     type: service
     health_url: http://127.0.0.1:8001/
     note: RTSP rtsp://localhost:8554/mystream - Snapshot HTTP :8001
@@ -38,9 +38,9 @@ services:
     # cwd bat buoc: uvicorn nap "plc_offset_gateway:app" theo ten tran
     # modules/gateway la junction -> AutoBoardOffset_YOLO_2Mat/gateway (cung 1 file
     # vat ly, sua o dau cung nhu nhau) - dung duong dan modules/ cho dong nhat.
-    script: D:\Camera\Dev\Service_Manager\modules\gateway\run_gateway.py
-    exe: D:\Camera\Dev\deploy\Service_Manager\modules\gateway\run_gateway\run_gateway.exe
-    cwd: D:\Camera\Dev\deploy\Service_Manager\modules\gateway\run_gateway
+    script: D:\Ps_Duy\Project\Auto_VRS\Service_Manager_VRS\modules\gateway\run_gateway.py
+    exe: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\gateway\run_gateway\run_gateway.exe
+    cwd: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\gateway\run_gateway
     type: service
     health_url: http://127.0.0.1:8083/docs
     note: API :8083 - http://localhost:8083/docs
@@ -49,9 +49,9 @@ services:
     label: Fiducial Detector (YOLO)
     # cwd bat buoc: uvicorn nap "fiducial_service:app" theo ten tran
     # modules/fiducial la junction -> AutoBoardOffset_YOLO_2Mat/fiducial_detector
-    script: D:\Camera\Dev\Service_Manager\modules\fiducial\run_fiducial_service.py
-    exe: D:\Camera\Dev\deploy\Service_Manager\modules\fiducial\run_fiducial_service\run_fiducial_service.exe
-    cwd: D:\Camera\Dev\deploy\Service_Manager\modules\fiducial\run_fiducial_service
+    script: D:\Ps_Duy\Project\Auto_VRS\Service_Manager_VRS\modules\fiducial\run_fiducial_service.py
+    exe: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\fiducial\run_fiducial_service\run_fiducial_service.exe
+    cwd: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\fiducial\run_fiducial_service
     type: service
     health_url: http://127.0.0.1:8191/docs
     note: API :8191 - lan dau khoi dong hoi lau vi phai nap model YOLO
@@ -59,9 +59,9 @@ services:
   - name: do_khoang_cach
     label: Do khoang cach + Camera (GUI v7)
     # modules/gui la junction -> AutoBoardOffset_YOLO_2Mat/gui
-    script: D:\Camera\Dev\Service_Manager\modules\gui\Do_khoang_cach_kem_camera_v7.py
-    exe: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Do_khoang_cach_kem_camera_v7\Do_khoang_cach_kem_camera_v7.exe
-    cwd: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Do_khoang_cach_kem_camera_v7
+    script: D:\Ps_Duy\Project\Auto_VRS\Service_Manager_VRS\modules\gui\Do_khoang_cach_kem_camera_v7.py
+    exe: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\gui\Do_khoang_cach_kem_camera_v7\Do_khoang_cach_kem_camera_v7.exe
+    cwd: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\gui\Do_khoang_cach_kem_camera_v7
     type: gui
     note: >-
       Mo cua so PySide6 rieng - can Gateway chay truoc. Da build exe (xem key "exe").
@@ -72,9 +72,9 @@ services:
 
   - name: auto_board_offset
     label: Auto Board Offset (CLI)
-    script: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py
-    exe: D:\Camera\Dev\deploy\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset\run_auto_board_offset.exe
-    cwd: D:\Camera\Dev\deploy\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset
+    script: D:\Ps_Duy\Project\Auto_VRS\Auto_calib\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py
+    exe: D:\Ps_Duy\Project\Auto_VRS\deploy\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset\run_auto_board_offset.exe
+    cwd: D:\Ps_Duy\Project\Auto_VRS\deploy\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset
     type: tool
     args: --board-id BOARD-001 --board-side A --anchor-mode 2
     note: Chay 1 lan - can Gateway + Fiducial + Stream camera dang chay. Da build exe (xem key "exe").
@@ -82,9 +82,9 @@ services:
   - name: calib_wizard
     label: Calib Wizard - Them ma hang moi (GUI)
     # modules/gui la junction -> AutoBoardOffset_YOLO_2Mat/gui
-    script: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
-    exe: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi\Calib_Wizard_Ma_Hang_Moi.exe
-    cwd: D:\Camera\Dev\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi
+    script: D:\Ps_Duy\Project\Auto_VRS\Service_Manager_VRS\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+    exe: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi\Calib_Wizard_Ma_Hang_Moi.exe
+    cwd: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi
     type: gui
     note: >-
       Sinh calib tinh tu Excel + chay bu lech that de sinh offset runtime cho 1 ma
@@ -95,9 +95,9 @@ services:
     label: AOI Ingest (folder watcher)
     # Da gom vao Service_Manager/modules/aoi_ingest (khong nam trong git) -
     # ban goc van con o AOI_ingest/, khong con duoc dung nua.
-    script: D:\Camera\Dev\Service_Manager\modules\aoi_ingest\aoi_ingest_service.py
-    exe: D:\Camera\Dev\deploy\AOI_ingest\aoi_ingest_service\aoi_ingest_service.exe
-    cwd: D:\Camera\Dev\deploy\AOI_ingest\aoi_ingest_service
+    script: D:\Ps_Duy\Project\Auto_VRS\Service_Manager_VRS\modules\aoi_ingest\aoi_ingest_service.py
+    exe: D:\Ps_Duy\Project\Auto_VRS\deploy\AOI_ingest\aoi_ingest_service\aoi_ingest_service.exe
+    cwd: D:\Ps_Duy\Project\Auto_VRS\deploy\AOI_ingest\aoi_ingest_service
     type: service
     note: >-
       Khong co health_url (khong phai HTTP service, chi la vong lap poll folder).
