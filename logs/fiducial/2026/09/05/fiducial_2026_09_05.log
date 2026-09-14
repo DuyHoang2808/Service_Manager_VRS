@@ -1,0 +1,228 @@
+[11:09:58] ==============================================================================
+[11:09:58] ### PHIEN MOI luc 2026-09-05 11:09:58
+[11:09:58] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\fiducial\run_fiducial_service.py)
+[11:09:58] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\fiducial\run_fiducial_service.py
+[11:09:58] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\fiducial
+[11:09:58] ### PID = 13508
+[11:10:14] 2026-09-05 11:10:14,138 [INFO] Da khoi phuc model dang active gan nhat: D:\Camera\Weight\VRS_yolo11n_640x640\weights\best.pt (classes={0: '0', 1: '1', 2: '2', 3: '3', 4: '4', 5: '5'})
+[11:10:14] 🎯 Starting Fiducial Detector Service...
+[11:10:14] 📋 Port: 8191
+[11:10:14] 📚 API Docs: http://localhost:8191/docs
+[11:10:14] 🔧 Press Ctrl+C to stop
+[11:10:14] INFO:     Started server process [22924]
+[11:10:14] INFO:     Waiting for application startup.
+[11:10:14] INFO:     Application startup complete.
+[11:10:14] INFO:     Uvicorn running on http://0.0.0.0:8191 (Press CTRL+C to quit)
+[11:10:16] INFO:     127.0.0.1:64519 - "GET /docs HTTP/1.1" 200 OK
+[11:10:21] INFO:     127.0.0.1:64524 - "GET /docs HTTP/1.1" 200 OK
+[11:10:26] INFO:     127.0.0.1:64530 - "GET /docs HTTP/1.1" 200 OK
+[11:10:31] INFO:     127.0.0.1:64540 - "GET /docs HTTP/1.1" 200 OK
+[11:10:36] INFO:     127.0.0.1:64546 - "GET /docs HTTP/1.1" 200 OK
+[11:10:41] INFO:     127.0.0.1:64554 - "GET /docs HTTP/1.1" 200 OK
+[11:10:46] INFO:     127.0.0.1:64562 - "GET /docs HTTP/1.1" 200 OK
+[11:10:51] INFO:     127.0.0.1:64566 - "GET /docs HTTP/1.1" 200 OK
+[11:10:56] INFO:     127.0.0.1:64569 - "GET /docs HTTP/1.1" 200 OK
+[11:11:01] INFO:     127.0.0.1:64579 - "GET /docs HTTP/1.1" 200 OK
+[11:11:06] INFO:     127.0.0.1:64594 - "GET /docs HTTP/1.1" 200 OK
+[11:11:20] 2026-09-05 11:11:20,641 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111120_587084.jpg
+[11:11:20] INFO:     127.0.0.1:64597 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:11:20] INFO:     127.0.0.1:64599 - "GET /docs HTTP/1.1" 200 OK
+[11:11:20] INFO:     127.0.0.1:64602 - "GET /docs HTTP/1.1" 200 OK
+[11:11:21] INFO:     127.0.0.1:64609 - "GET /docs HTTP/1.1" 200 OK
+[11:11:26] INFO:     127.0.0.1:64627 - "GET /docs HTTP/1.1" 200 OK
+[11:11:31] 2026-09-05 11:11:31,549 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111131_516619.jpg
+[11:11:31] INFO:     127.0.0.1:64630 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:11:31] INFO:     127.0.0.1:64632 - "GET /docs HTTP/1.1" 200 OK
+[11:11:36] INFO:     127.0.0.1:64636 - "GET /docs HTTP/1.1" 200 OK
+[11:11:41] INFO:     127.0.0.1:64641 - "GET /docs HTTP/1.1" 200 OK
+[11:11:46] INFO:     127.0.0.1:64645 - "GET /docs HTTP/1.1" 200 OK
+[11:11:51] INFO:     127.0.0.1:64650 - "GET /docs HTTP/1.1" 200 OK
+[11:11:57] 2026-09-05 11:11:57,019 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111156_988521.jpg
+[11:11:57] INFO:     127.0.0.1:64656 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:11:57] INFO:     127.0.0.1:64659 - "GET /docs HTTP/1.1" 200 OK
+[11:12:01] INFO:     127.0.0.1:64664 - "GET /docs HTTP/1.1" 200 OK
+[11:12:06] INFO:     127.0.0.1:64667 - "GET /docs HTTP/1.1" 200 OK
+[11:12:08] 2026-09-05 11:12:08,315 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111208_278241.jpg
+[11:12:08] INFO:     127.0.0.1:64669 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:12:11] INFO:     127.0.0.1:64673 - "GET /docs HTTP/1.1" 200 OK
+[11:12:16] INFO:     127.0.0.1:64679 - "GET /docs HTTP/1.1" 200 OK
+[11:12:21] INFO:     127.0.0.1:64683 - "GET /docs HTTP/1.1" 200 OK
+[11:12:26] INFO:     127.0.0.1:64690 - "GET /docs HTTP/1.1" 200 OK
+[11:12:31] INFO:     127.0.0.1:64694 - "GET /docs HTTP/1.1" 200 OK
+[11:12:36] INFO:     127.0.0.1:64702 - "GET /docs HTTP/1.1" 200 OK
+[11:12:41] INFO:     127.0.0.1:64707 - "GET /docs HTTP/1.1" 200 OK
+[11:12:46] INFO:     127.0.0.1:64724 - "GET /docs HTTP/1.1" 200 OK
+[11:12:51] INFO:     127.0.0.1:64729 - "GET /docs HTTP/1.1" 200 OK
+[11:12:56] INFO:     127.0.0.1:64734 - "GET /docs HTTP/1.1" 200 OK
+[11:13:01] INFO:     127.0.0.1:64738 - "GET /docs HTTP/1.1" 200 OK
+[11:13:06] INFO:     127.0.0.1:64753 - "GET /docs HTTP/1.1" 200 OK
+[11:13:11] INFO:     127.0.0.1:64759 - "GET /docs HTTP/1.1" 200 OK
+[11:13:16] INFO:     127.0.0.1:64763 - "GET /docs HTTP/1.1" 200 OK
+[11:13:21] INFO:     127.0.0.1:64766 - "GET /docs HTTP/1.1" 200 OK
+[11:13:26] INFO:     127.0.0.1:64770 - "GET /docs HTTP/1.1" 200 OK
+[11:13:31] INFO:     127.0.0.1:64776 - "GET /docs HTTP/1.1" 200 OK
+[11:13:36] INFO:     127.0.0.1:64781 - "GET /docs HTTP/1.1" 200 OK
+[11:13:41] INFO:     127.0.0.1:64784 - "GET /docs HTTP/1.1" 200 OK
+[11:13:46] INFO:     127.0.0.1:64789 - "GET /docs HTTP/1.1" 200 OK
+[11:13:51] INFO:     127.0.0.1:64794 - "GET /docs HTTP/1.1" 200 OK
+[11:13:56] INFO:     127.0.0.1:64799 - "GET /docs HTTP/1.1" 200 OK
+[11:14:01] INFO:     127.0.0.1:61792 - "GET /docs HTTP/1.1" 200 OK
+[11:14:06] INFO:     127.0.0.1:61797 - "GET /docs HTTP/1.1" 200 OK
+[11:14:11] INFO:     127.0.0.1:61801 - "GET /docs HTTP/1.1" 200 OK
+[11:14:16] INFO:     127.0.0.1:61805 - "GET /docs HTTP/1.1" 200 OK
+[11:14:21] INFO:     127.0.0.1:61811 - "GET /docs HTTP/1.1" 200 OK
+[11:14:26] INFO:     127.0.0.1:61819 - "GET /docs HTTP/1.1" 200 OK
+[11:14:31] INFO:     127.0.0.1:61822 - "GET /docs HTTP/1.1" 200 OK
+[11:14:36] INFO:     127.0.0.1:49930 - "GET /docs HTTP/1.1" 200 OK
+[11:14:41] INFO:     127.0.0.1:62933 - "GET /docs HTTP/1.1" 200 OK
+[11:14:46] INFO:     127.0.0.1:62938 - "GET /docs HTTP/1.1" 200 OK
+[11:14:51] INFO:     127.0.0.1:62943 - "GET /docs HTTP/1.1" 200 OK
+[11:14:56] INFO:     127.0.0.1:62960 - "GET /docs HTTP/1.1" 200 OK
+[11:15:01] INFO:     127.0.0.1:62965 - "GET /docs HTTP/1.1" 200 OK
+[11:15:06] INFO:     127.0.0.1:62970 - "GET /docs HTTP/1.1" 200 OK
+[11:15:11] INFO:     127.0.0.1:62973 - "GET /docs HTTP/1.1" 200 OK
+[11:15:16] INFO:     127.0.0.1:62985 - "GET /docs HTTP/1.1" 200 OK
+[11:15:21] INFO:     127.0.0.1:62996 - "GET /docs HTTP/1.1" 200 OK
+[11:15:26] INFO:     127.0.0.1:63000 - "GET /docs HTTP/1.1" 200 OK
+[11:15:31] INFO:     127.0.0.1:63003 - "GET /docs HTTP/1.1" 200 OK
+[11:15:36] INFO:     127.0.0.1:63009 - "GET /docs HTTP/1.1" 200 OK
+[11:15:41] INFO:     127.0.0.1:63013 - "GET /docs HTTP/1.1" 200 OK
+[11:15:46] INFO:     127.0.0.1:63020 - "GET /docs HTTP/1.1" 200 OK
+[11:15:51] INFO:     127.0.0.1:63024 - "GET /docs HTTP/1.1" 200 OK
+[11:15:56] INFO:     127.0.0.1:63029 - "GET /docs HTTP/1.1" 200 OK
+[11:16:01] INFO:     127.0.0.1:63033 - "GET /docs HTTP/1.1" 200 OK
+[11:16:06] INFO:     127.0.0.1:63036 - "GET /docs HTTP/1.1" 200 OK
+[11:16:11] INFO:     127.0.0.1:63041 - "GET /docs HTTP/1.1" 200 OK
+[11:16:16] INFO:     127.0.0.1:63046 - "GET /docs HTTP/1.1" 200 OK
+[11:16:21] INFO:     127.0.0.1:63049 - "GET /docs HTTP/1.1" 200 OK
+[11:16:26] INFO:     127.0.0.1:63054 - "GET /docs HTTP/1.1" 200 OK
+[11:16:31] INFO:     127.0.0.1:63060 - "GET /docs HTTP/1.1" 200 OK
+[11:16:36] INFO:     127.0.0.1:63066 - "GET /docs HTTP/1.1" 200 OK
+[11:16:41] INFO:     127.0.0.1:63072 - "GET /docs HTTP/1.1" 200 OK
+[11:16:43] 2026-09-05 11:16:43,370 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111643_338826.jpg
+[11:16:43] INFO:     127.0.0.1:63074 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:16:46] INFO:     127.0.0.1:63079 - "GET /docs HTTP/1.1" 200 OK
+[11:16:51] INFO:     127.0.0.1:63085 - "GET /docs HTTP/1.1" 200 OK
+[11:16:54] 2026-09-05 11:16:54,665 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111654_632046.jpg
+[11:16:54] INFO:     127.0.0.1:63088 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:16:56] INFO:     127.0.0.1:63090 - "GET /docs HTTP/1.1" 200 OK
+[11:17:01] INFO:     127.0.0.1:63093 - "GET /docs HTTP/1.1" 200 OK
+[11:17:06] INFO:     127.0.0.1:63098 - "GET /docs HTTP/1.1" 200 OK
+[11:17:11] INFO:     127.0.0.1:63103 - "GET /docs HTTP/1.1" 200 OK
+[11:17:16] INFO:     127.0.0.1:63106 - "GET /docs HTTP/1.1" 200 OK
+[11:17:21] INFO:     127.0.0.1:63110 - "GET /docs HTTP/1.1" 200 OK
+[11:17:26] INFO:     127.0.0.1:63116 - "GET /docs HTTP/1.1" 200 OK
+[11:17:31] INFO:     127.0.0.1:63120 - "GET /docs HTTP/1.1" 200 OK
+[11:17:36] INFO:     127.0.0.1:63124 - "GET /docs HTTP/1.1" 200 OK
+[11:17:41] INFO:     127.0.0.1:63128 - "GET /docs HTTP/1.1" 200 OK
+[11:17:46] INFO:     127.0.0.1:63138 - "GET /docs HTTP/1.1" 200 OK
+[11:17:51] INFO:     127.0.0.1:53992 - "GET /docs HTTP/1.1" 200 OK
+[11:17:56] INFO:     127.0.0.1:54001 - "GET /docs HTTP/1.1" 200 OK
+[11:18:01] INFO:     127.0.0.1:54010 - "GET /docs HTTP/1.1" 200 OK
+[11:18:06] 2026-09-05 11:18:06,950 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111806_915829.jpg
+[11:18:06] INFO:     127.0.0.1:54018 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:18:06] INFO:     127.0.0.1:54023 - "GET /docs HTTP/1.1" 200 OK
+[11:18:10] 2026-09-05 11:18:10,813 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111810_785703.jpg
+[11:18:10] INFO:     127.0.0.1:54033 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:18:11] INFO:     127.0.0.1:54035 - "GET /docs HTTP/1.1" 200 OK
+[11:18:16] INFO:     127.0.0.1:54039 - "GET /docs HTTP/1.1" 200 OK
+[11:18:21] INFO:     127.0.0.1:54044 - "GET /docs HTTP/1.1" 200 OK
+[11:18:26] INFO:     127.0.0.1:54049 - "GET /docs HTTP/1.1" 200 OK
+[11:18:31] INFO:     127.0.0.1:54064 - "GET /docs HTTP/1.1" 200 OK
+[11:18:36] INFO:     127.0.0.1:54072 - "GET /docs HTTP/1.1" 200 OK
+[11:18:38] 2026-09-05 11:18:38,222 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111838_195536.jpg
+[11:18:38] INFO:     127.0.0.1:54074 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:18:41] INFO:     127.0.0.1:54080 - "GET /docs HTTP/1.1" 200 OK
+[11:18:46] INFO:     127.0.0.1:54083 - "GET /docs HTTP/1.1" 200 OK
+[11:18:49] 2026-09-05 11:18:49,457 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111849_429387.jpg
+[11:18:49] INFO:     127.0.0.1:54086 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:18:51] INFO:     127.0.0.1:54088 - "GET /docs HTTP/1.1" 200 OK
+[11:18:56] INFO:     127.0.0.1:54094 - "GET /docs HTTP/1.1" 200 OK
+[11:19:01] INFO:     127.0.0.1:53030 - "GET /docs HTTP/1.1" 200 OK
+[11:19:06] INFO:     127.0.0.1:53034 - "GET /docs HTTP/1.1" 200 OK
+[11:19:11] INFO:     127.0.0.1:53038 - "GET /docs HTTP/1.1" 200 OK
+[11:19:12] 2026-09-05 11:19:12,285 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111912_262218.jpg
+[11:19:12] INFO:     127.0.0.1:53040 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:19:16] 2026-09-05 11:19:16,074 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111916_053045.jpg
+[11:19:16] INFO:     127.0.0.1:53048 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:19:16] INFO:     127.0.0.1:53050 - "GET /docs HTTP/1.1" 200 OK
+[11:19:19] 2026-09-05 11:19:19,794 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111919_779372.jpg
+[11:19:19] INFO:     127.0.0.1:53059 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:19:21] INFO:     127.0.0.1:53065 - "GET /docs HTTP/1.1" 200 OK
+[11:19:26] INFO:     127.0.0.1:53073 - "GET /docs HTTP/1.1" 200 OK
+[11:19:28] 2026-09-05 11:19:28,850 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111928_831274.jpg
+[11:19:28] INFO:     127.0.0.1:53076 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:19:31] INFO:     127.0.0.1:53080 - "GET /docs HTTP/1.1" 200 OK
+[11:19:36] INFO:     127.0.0.1:53090 - "GET /docs HTTP/1.1" 200 OK
+[11:19:39] 2026-09-05 11:19:39,992 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_111939_969333.jpg
+[11:19:39] INFO:     127.0.0.1:53095 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:19:41] INFO:     127.0.0.1:53097 - "GET /docs HTTP/1.1" 200 OK
+[11:19:46] INFO:     127.0.0.1:53101 - "GET /docs HTTP/1.1" 200 OK
+[11:19:51] INFO:     127.0.0.1:53108 - "GET /docs HTTP/1.1" 200 OK
+[11:19:56] INFO:     127.0.0.1:53112 - "GET /docs HTTP/1.1" 200 OK
+[11:20:01] INFO:     127.0.0.1:53115 - "GET /docs HTTP/1.1" 200 OK
+[11:20:06] INFO:     127.0.0.1:53119 - "GET /docs HTTP/1.1" 200 OK
+[11:20:11] INFO:     127.0.0.1:53125 - "GET /docs HTTP/1.1" 200 OK
+[11:20:16] INFO:     127.0.0.1:53128 - "GET /docs HTTP/1.1" 200 OK
+[11:20:21] INFO:     127.0.0.1:53131 - "GET /docs HTTP/1.1" 200 OK
+[11:20:26] INFO:     127.0.0.1:53136 - "GET /docs HTTP/1.1" 200 OK
+[11:20:31] INFO:     127.0.0.1:53141 - "GET /docs HTTP/1.1" 200 OK
+[11:20:36] INFO:     127.0.0.1:53146 - "GET /docs HTTP/1.1" 200 OK
+[11:20:41] INFO:     127.0.0.1:53151 - "GET /docs HTTP/1.1" 200 OK
+[11:20:46] 2026-09-05 11:20:46,943 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_112046_925319.jpg
+[11:20:46] INFO:     127.0.0.1:53156 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:20:46] INFO:     127.0.0.1:53158 - "GET /docs HTTP/1.1" 200 OK
+[11:20:51] INFO:     127.0.0.1:53163 - "GET /docs HTTP/1.1" 200 OK
+[11:20:56] INFO:     127.0.0.1:53166 - "GET /docs HTTP/1.1" 200 OK
+[11:20:57] 2026-09-05 11:20:57,990 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_112057_974323.jpg
+[11:20:57] INFO:     127.0.0.1:53168 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:21:01] INFO:     127.0.0.1:53172 - "GET /docs HTTP/1.1" 200 OK
+[11:21:06] INFO:     127.0.0.1:53178 - "GET /docs HTTP/1.1" 200 OK
+[11:21:11] INFO:     127.0.0.1:53181 - "GET /docs HTTP/1.1" 200 OK
+[11:21:16] INFO:     127.0.0.1:53184 - "GET /docs HTTP/1.1" 200 OK
+[11:21:21] INFO:     127.0.0.1:53189 - "GET /docs HTTP/1.1" 200 OK
+[11:21:26] INFO:     127.0.0.1:53194 - "GET /docs HTTP/1.1" 200 OK
+[11:21:31] INFO:     127.0.0.1:53197 - "GET /docs HTTP/1.1" 200 OK
+[11:21:36] INFO:     127.0.0.1:53201 - "GET /docs HTTP/1.1" 200 OK
+[11:21:41] INFO:     127.0.0.1:53207 - "GET /docs HTTP/1.1" 200 OK
+[11:21:46] INFO:     127.0.0.1:53211 - "GET /docs HTTP/1.1" 200 OK
+[11:21:51] INFO:     127.0.0.1:53214 - "GET /docs HTTP/1.1" 200 OK
+[11:21:56] INFO:     127.0.0.1:53220 - "GET /docs HTTP/1.1" 200 OK
+[11:22:01] INFO:     127.0.0.1:53225 - "GET /docs HTTP/1.1" 200 OK
+[11:22:06] INFO:     127.0.0.1:53229 - "GET /docs HTTP/1.1" 200 OK
+[11:22:11] INFO:     127.0.0.1:53232 - "GET /docs HTTP/1.1" 200 OK
+[11:22:16] INFO:     127.0.0.1:53238 - "GET /docs HTTP/1.1" 200 OK
+[11:22:21] INFO:     127.0.0.1:53245 - "GET /docs HTTP/1.1" 200 OK
+[11:22:26] INFO:     127.0.0.1:53248 - "GET /docs HTTP/1.1" 200 OK
+[11:22:29] 2026-09-05 11:22:29,261 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_112229_240956.jpg
+[11:22:29] INFO:     127.0.0.1:53251 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:22:31] INFO:     127.0.0.1:53255 - "GET /docs HTTP/1.1" 200 OK
+[11:22:36] INFO:     127.0.0.1:53260 - "GET /docs HTTP/1.1" 200 OK
+[11:22:40] 2026-09-05 11:22:40,260 [INFO] Da luu anh fiducial: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\fiducial_detector\saved_images\2026\09\05\fiducial_20260905_112240_246136.jpg
+[11:22:40] INFO:     127.0.0.1:53264 - "POST /api/detect-marker HTTP/1.1" 200 OK
+[11:22:41] INFO:     127.0.0.1:53266 - "GET /docs HTTP/1.1" 200 OK
+[11:22:46] INFO:     127.0.0.1:53269 - "GET /docs HTTP/1.1" 200 OK
+[11:22:51] INFO:     127.0.0.1:56561 - "GET /docs HTTP/1.1" 200 OK
+[11:22:56] INFO:     127.0.0.1:61387 - "GET /docs HTTP/1.1" 200 OK
+[11:23:01] INFO:     127.0.0.1:61391 - "GET /docs HTTP/1.1" 200 OK
+[11:23:06] INFO:     127.0.0.1:61394 - "GET /docs HTTP/1.1" 200 OK
+[11:23:11] INFO:     127.0.0.1:61400 - "GET /docs HTTP/1.1" 200 OK
+[11:23:16] INFO:     127.0.0.1:61404 - "GET /docs HTTP/1.1" 200 OK
+[11:23:21] INFO:     127.0.0.1:61408 - "GET /docs HTTP/1.1" 200 OK
+[11:23:26] INFO:     127.0.0.1:61412 - "GET /docs HTTP/1.1" 200 OK
+[11:23:31] INFO:     127.0.0.1:61419 - "GET /docs HTTP/1.1" 200 OK
+[11:23:36] INFO:     127.0.0.1:61422 - "GET /docs HTTP/1.1" 200 OK
+[11:23:41] INFO:     127.0.0.1:61426 - "GET /docs HTTP/1.1" 200 OK
+[11:23:46] INFO:     127.0.0.1:61431 - "GET /docs HTTP/1.1" 200 OK
+[11:23:48] ### Dang gui tin hieu dung...
+[11:23:48] ### Dang gui tin hieu dung...
+[11:23:51] ### Dang gui tin hieu dung...
+[11:23:51] INFO:     127.0.0.1:61436 - "GET /docs HTTP/1.1" 200 OK
+[11:23:52] ### Dang gui tin hieu dung...
+[11:23:53] ### Dang gui tin hieu dung...
+[11:23:53] ### Dang gui tin hieu dung...
+[11:23:53] ### Dang gui tin hieu dung...
+[11:23:53] ### Dang gui tin hieu dung...
+[11:23:54] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:23:54] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:23:54] ### DA DUNG (exit code 1)

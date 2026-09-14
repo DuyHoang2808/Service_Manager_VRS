@@ -1,0 +1,108 @@
+[14:57:08] ==============================================================================
+[14:57:08] ### PHIEN MOI luc 2026-09-07 14:57:08
+[14:57:08] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[14:57:08] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[14:57:08] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[14:57:08] ### PID = 20500
+[14:58:01]   Condition number = 10.4 — OK.
+[14:58:01]   Model: bilinear (4 params)
+[14:58:01]   Residual: RMS = 0.0052 mm, Max = 0.0081 mm
+[14:58:01]     Điểm A (Board 9.900, 10.000): 0.0073 mm
+[14:58:01]     Điểm B (Board 597.900, 10.000): 0.0008 mm
+[14:58:01]     Điểm C (Board 596.600, 393.000): 0.0043 mm
+[14:58:01]     Điểm D (Board 9.900, 394.000): 0.0005 mm
+[14:58:01]     Điểm E (Board 69.000, 8.000): 0.0081 mm
+[14:58:01]     Điểm F (Board 534.500, 396.000): 0.0048 mm
+[14:58:01]   Condition number = 10.4 — OK.
+[14:58:01]   Model: bilinear (4 params)
+[14:58:01]   Residual: RMS = 0.0214 mm, Max = 0.0366 mm
+[14:58:01]     Điểm A (Board 9.900, 10.000): 0.0114 mm
+[14:58:01]     Điểm B (Board 597.900, 10.000): 0.0014 mm
+[14:58:01]     Điểm C (Board 596.600, 393.000): 0.0330 mm
+[14:58:01]     Điểm D (Board 9.900, 394.000): 0.0039 mm
+[14:58:01]     Điểm E (Board 69.000, 8.000): 0.0126 mm
+[14:58:01]     Điểm F (Board 534.500, 396.000): 0.0366 mm
+[14:59:57]   Condition number = 10.4 — OK.
+[14:59:57]   Model: bilinear (4 params)
+[14:59:57]   Residual: RMS = 0.0052 mm, Max = 0.0081 mm
+[14:59:57]     Điểm A (Board 9.900, 10.000): 0.0073 mm
+[14:59:57]     Điểm B (Board 597.900, 10.000): 0.0008 mm
+[14:59:57]     Điểm C (Board 596.600, 393.000): 0.0043 mm
+[14:59:57]     Điểm D (Board 9.900, 394.000): 0.0005 mm
+[14:59:57]     Điểm E (Board 69.000, 8.000): 0.0081 mm
+[14:59:57]     Điểm F (Board 534.500, 396.000): 0.0048 mm
+[14:59:57]   Condition number = 10.4 — OK.
+[14:59:57]   Model: bilinear (4 params)
+[14:59:57]   Residual: RMS = 0.0214 mm, Max = 0.0366 mm
+[14:59:57]     Điểm A (Board 9.900, 10.000): 0.0114 mm
+[14:59:57]     Điểm B (Board 597.900, 10.000): 0.0014 mm
+[14:59:57]     Điểm C (Board 596.600, 393.000): 0.0330 mm
+[14:59:57]     Điểm D (Board 9.900, 394.000): 0.0039 mm
+[14:59:57]     Điểm E (Board 69.000, 8.000): 0.0126 mm
+[14:59:57]     Điểm F (Board 534.500, 396.000): 0.0366 mm
+[15:14:28]   Condition number = 10.4 — OK.
+[15:14:28]   Model: bilinear (4 params)
+[15:14:28]   Residual: RMS = 0.0361 mm, Max = 0.0486 mm
+[15:14:28]     Điểm A (Board 9.900, 10.000): 0.0439 mm
+[15:14:28]     Điểm B (Board 597.900, 10.000): 0.0046 mm
+[15:14:28]     Điểm C (Board 596.600, 393.000): 0.0395 mm
+[15:14:28]     Điểm D (Board 9.900, 394.000): 0.0044 mm
+[15:14:28]     Điểm E (Board 69.000, 8.000): 0.0486 mm
+[15:14:28]     Điểm F (Board 534.500, 396.000): 0.0438 mm
+[15:14:28]   Condition number = 10.4 — OK.
+[15:14:28]   Model: bilinear (4 params)
+[15:14:28]   Residual: RMS = 0.0214 mm, Max = 0.0366 mm
+[15:14:28]     Điểm A (Board 9.900, 10.000): 0.0114 mm
+[15:14:28]     Điểm B (Board 597.900, 10.000): 0.0014 mm
+[15:14:28]     Điểm C (Board 596.600, 393.000): 0.0330 mm
+[15:14:28]     Điểm D (Board 9.900, 394.000): 0.0039 mm
+[15:14:28]     Điểm E (Board 69.000, 8.000): 0.0126 mm
+[15:14:28]     Điểm F (Board 534.500, 396.000): 0.0366 mm
+[15:14:35]   Condition number = 10.4 — OK.
+[15:14:35]   Model: bilinear (4 params)
+[15:14:35]   Residual: RMS = 0.0361 mm, Max = 0.0486 mm
+[15:14:35]     Điểm A (Board 9.900, 10.000): 0.0439 mm
+[15:14:35]     Điểm B (Board 597.900, 10.000): 0.0046 mm
+[15:14:35]     Điểm C (Board 596.600, 393.000): 0.0395 mm
+[15:14:35]     Điểm D (Board 9.900, 394.000): 0.0044 mm
+[15:14:35]     Điểm E (Board 69.000, 8.000): 0.0486 mm
+[15:14:35]     Điểm F (Board 534.500, 396.000): 0.0438 mm
+[15:14:35]   Condition number = 10.4 — OK.
+[15:14:35]   Model: bilinear (4 params)
+[15:14:35]   Residual: RMS = 0.0214 mm, Max = 0.0366 mm
+[15:14:35]     Điểm A (Board 9.900, 10.000): 0.0114 mm
+[15:14:35]     Điểm B (Board 597.900, 10.000): 0.0014 mm
+[15:14:35]     Điểm C (Board 596.600, 393.000): 0.0330 mm
+[15:14:35]     Điểm D (Board 9.900, 394.000): 0.0039 mm
+[15:14:35]     Điểm E (Board 69.000, 8.000): 0.0126 mm
+[15:14:35]     Điểm F (Board 534.500, 396.000): 0.0366 mm
+[15:19:45] ### Dang gui tin hieu dung...
+[15:19:51] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[15:19:51] ### DA DUNG (exit code 1)
+[15:31:11] ==============================================================================
+[15:31:11] ### PHIEN MOI luc 2026-09-07 15:31:11
+[15:31:11] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[15:31:11] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[15:31:11] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[15:31:11] ### PID = 18296
+[15:33:03]   Condition number = 10.4 — OK.
+[15:33:03]   Model: bilinear (4 params)
+[15:33:03]   Residual: RMS = 0.0361 mm, Max = 0.0486 mm
+[15:33:03]     Điểm A (Board 9.900, 10.000): 0.0439 mm
+[15:33:03]     Điểm B (Board 597.900, 10.000): 0.0046 mm
+[15:33:03]     Điểm C (Board 596.600, 393.000): 0.0395 mm
+[15:33:03]     Điểm D (Board 9.900, 394.000): 0.0044 mm
+[15:33:03]     Điểm E (Board 69.000, 8.000): 0.0486 mm
+[15:33:03]     Điểm F (Board 534.500, 396.000): 0.0438 mm
+[15:33:03]   Condition number = 10.4 — OK.
+[15:33:03]   Model: bilinear (4 params)
+[15:33:03]   Residual: RMS = 0.0214 mm, Max = 0.0366 mm
+[15:33:03]     Điểm A (Board 9.900, 10.000): 0.0114 mm
+[15:33:03]     Điểm B (Board 597.900, 10.000): 0.0014 mm
+[15:33:03]     Điểm C (Board 596.600, 393.000): 0.0330 mm
+[15:33:03]     Điểm D (Board 9.900, 394.000): 0.0039 mm
+[15:33:03]     Điểm E (Board 69.000, 8.000): 0.0126 mm
+[15:33:03]     Điểm F (Board 534.500, 396.000): 0.0366 mm
+[17:52:25] ### Dang gui tin hieu dung...
+[17:52:31] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[17:52:32] ### DA DUNG (exit code 1)

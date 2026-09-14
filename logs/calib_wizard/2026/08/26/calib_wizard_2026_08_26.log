@@ -1,0 +1,45 @@
+[10:18:33] ==============================================================================
+[10:18:33] ### PHIEN MOI luc 2026-08-26 10:18:33
+[10:18:33] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py)
+[10:18:33] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gui\Calib_Wizard_Ma_Hang_Moi.py
+[10:18:33] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gui
+[10:18:33] ### PID = 25232
+[10:19:25]   Condition number = 10.4 — OK.
+[10:19:25]   Model: bilinear (4 params)
+[10:19:25]   Residual: RMS = 0.0046 mm, Max = 0.0060 mm
+[10:19:25]     Điểm A (Board 9.900, 10.000): 0.0052 mm
+[10:19:25]     Điểm B (Board 9.900, 394.000): 0.0006 mm
+[10:19:25]     Điểm C (Board 596.600, 393.000): 0.0054 mm
+[10:19:25]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[10:19:25]     Điểm E (Board 69.000, 8.000): 0.0057 mm
+[10:19:25]     Điểm F (Board 534.500, 396.000): 0.0060 mm
+[10:19:25]   Condition number = 10.4 — OK.
+[10:19:25]   Model: bilinear (4 params)
+[10:19:25]   Residual: RMS = 0.0184 mm, Max = 0.0324 mm
+[10:19:25]     Điểm A (Board 9.900, 10.000): 0.0070 mm
+[10:19:25]     Điểm B (Board 9.900, 394.000): 0.0034 mm
+[10:19:25]     Điểm C (Board 596.600, 393.000): 0.0292 mm
+[10:19:25]     Điểm D (Board 597.900, 10.000): 0.0006 mm
+[10:19:25]     Điểm E (Board 69.000, 8.000): 0.0078 mm
+[10:19:25]     Điểm F (Board 534.500, 396.000): 0.0324 mm
+[11:27:32]   Condition number = 10.4 — OK.
+[11:27:32]   Model: bilinear (4 params)
+[11:27:32]   Residual: RMS = 0.0086 mm, Max = 0.0138 mm
+[11:27:32]     Điểm A (Board 9.900, 10.000): 0.0065 mm
+[11:27:32]     Điểm B (Board 597.900, 10.000): 0.0008 mm
+[11:27:32]     Điểm C (Board 596.600, 393.000): 0.0125 mm
+[11:27:32]     Điểm D (Board 9.900, 394.000): 0.0015 mm
+[11:27:32]     Điểm E (Board 69.000, 8.000): 0.0072 mm
+[11:27:32]     Điểm F (Board 534.500, 396.000): 0.0138 mm
+[11:27:32]   Condition number = 10.4 — OK.
+[11:27:32]   Model: bilinear (4 params)
+[11:27:32]   Residual: RMS = 0.0098 mm, Max = 0.0131 mm
+[11:27:32]     Điểm A (Board 9.900, 10.000): 0.0108 mm
+[11:27:32]     Điểm B (Board 597.900, 10.000): 0.0012 mm
+[11:27:32]     Điểm C (Board 596.600, 393.000): 0.0119 mm
+[11:27:32]     Điểm D (Board 9.900, 394.000): 0.0014 mm
+[11:27:32]     Điểm E (Board 69.000, 8.000): 0.0119 mm
+[11:27:32]     Điểm F (Board 534.500, 396.000): 0.0131 mm
+[18:14:30] ### Dang gui tin hieu dung...
+[18:14:36] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[18:14:37] ### DA DUNG (exit code 1)

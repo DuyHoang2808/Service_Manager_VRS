@@ -1,0 +1,579 @@
+[11:10:56] ==============================================================================
+[11:10:56] ### PHIEN MOI luc 2026-09-05 11:10:56
+[11:10:56] ### run_mode = script (target: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py)
+[11:10:56] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py --board-id BOARD-001 --board-side A --anchor-mode 2
+[11:10:56] ### Thu muc lam viec: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools
+[11:10:56] ### PID = 7416
+[11:10:58] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[11:10:58] Cách chạy:
+[11:10:58]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[11:10:58]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[11:10:58]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[11:10:58] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt A) ...
+[11:11:42] HTTP 200
+[11:11:42] {
+[11:11:42]   "success": false,
+[11:11:42]   "message": "Chỉ đo được 1/2 điểm mốc hợp lệ (cần >= 2). Kiểm tra ánh sáng/marker/Fiducial Detector Service.",
+[11:11:42]   "anchor_mode": 2,
+[11:11:42]   "anchor_results": [
+[11:11:42]     {
+[11:11:42]       "name": "A",
+[11:11:42]       "board_xy": [
+[11:11:42]         9.9,
+[11:11:42]         10.0
+[11:11:42]       ],
+[11:11:42]       "expected_plc_xy": [
+[11:11:42]         2.890790346946491,
+[11:11:42]         590.3990409065433
+[11:11:42]       ],
+[11:11:42]       "detected_pixel_xy": null,
+[11:11:42]       "detection_confidence": null,
+[11:11:42]       "detection_refined": null,
+[11:11:42]       "measured_plc_xy": null,
+[11:11:42]       "status": "fiducial_service_error",
+[11:11:42]       "detail": "Không gọi được Fiducial Detector Service tại http://127.0.0.1:8191/api/detect-marker"
+[11:11:42]     },
+[11:11:42]     {
+[11:11:42]       "name": "C",
+[11:11:42]       "board_xy": [
+[11:11:42]         596.6,
+[11:11:42]         393.0
+[11:11:42]       ],
+[11:11:42]       "expected_plc_xy": [
+[11:11:42]         386.64321359920876,
+[11:11:42]         4.7266455170987705
+[11:11:42]       ],
+[11:11:42]       "detected_pixel_xy": [
+[11:11:42]         395.3867182946834,
+[11:11:42]         118.2172299976972
+[11:11:42]       ],
+[11:11:42]       "detection_confidence": 0.9197450876235962,
+[11:11:42]       "detection_refined": true,
+[11:11:42]       "measured_plc_xy": [
+[11:11:42]         383.6101764258164,
+[11:11:42]         8.575733454874257
+[11:11:42]       ],
+[11:11:42]       "status": "ok",
+[11:11:42]       "detail": null
+[11:11:42]     }
+[11:11:42]   ],
+[11:11:42]   "theta_deg": null,
+[11:11:42]   "tx": null,
+[11:11:42]   "ty": null,
+[11:11:42]   "rms_error_mm": null,
+[11:11:42]   "max_error_mm": null,
+[11:11:42]   "offset_saved_path": null,
+[11:11:42]   "warning": null,
+[11:11:42]   "timing": {
+[11:11:42]     "plc_connect": 0.13611745834350586,
+[11:11:42]     "measure_all_anchors": 31.299901485443115
+[11:11:42]   }
+[11:11:42] }
+[11:11:42] ❌ Thất bại: Chỉ đo được 1/2 điểm mốc hợp lệ (cần >= 2). Kiểm tra ánh sáng/marker/Fiducial Detector Service.
+[11:11:42] ### THOAT BAT THUONG (exit code 1)
+[11:11:50] ==============================================================================
+[11:11:50] ### PHIEN MOI luc 2026-09-05 11:11:50
+[11:11:50] ### run_mode = script (target: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py)
+[11:11:50] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py --board-id BOARD-001 --board-side B --anchor-mode 2
+[11:11:50] ### Thu muc lam viec: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools
+[11:11:50] ### PID = 20004
+[11:11:50] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[11:11:50] Cách chạy:
+[11:11:50]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[11:11:50]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[11:11:50]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[11:11:50] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt B) ...
+[11:12:19] HTTP 200
+[11:12:19] {
+[11:12:19]   "success": false,
+[11:12:19]   "message": "Chỉ đo được 0/2 điểm mốc hợp lệ (cần >= 2). Kiểm tra ánh sáng/marker/Fiducial Detector Service.",
+[11:12:19]   "anchor_mode": 2,
+[11:12:19]   "anchor_results": [
+[11:12:19]     {
+[11:12:19]       "name": "A",
+[11:12:19]       "board_xy": [
+[11:12:19]         9.9,
+[11:12:19]         10.0
+[11:12:19]       ],
+[11:12:19]       "expected_plc_xy": [
+[11:12:19]         3.1302739260214483,
+[11:12:19]         0.3764421192002038
+[11:12:19]       ],
+[11:12:19]       "detected_pixel_xy": null,
+[11:12:19]       "detection_confidence": null,
+[11:12:19]       "detection_refined": null,
+[11:12:19]       "measured_plc_xy": null,
+[11:12:19]       "status": "not_found",
+[11:12:19]       "detail": "Khong phat hien duoc diem moc nao vuot nguong confidence"
+[11:12:19]     },
+[11:12:19]     {
+[11:12:19]       "name": "C",
+[11:12:19]       "board_xy": [
+[11:12:19]         596.6,
+[11:12:19]         393.0
+[11:12:19]       ],
+[11:12:19]       "expected_plc_xy": [
+[11:12:19]         386.4413212502973,
+[11:12:19]         588.5148802279635
+[11:12:19]       ],
+[11:12:19]       "detected_pixel_xy": null,
+[11:12:19]       "detection_confidence": null,
+[11:12:19]       "detection_refined": null,
+[11:12:19]       "measured_plc_xy": null,
+[11:12:19]       "status": "not_found",
+[11:12:19]       "detail": "Khong phat hien duoc diem moc nao vuot nguong confidence"
+[11:12:19]     }
+[11:12:19]   ],
+[11:12:19]   "theta_deg": null,
+[11:12:19]   "tx": null,
+[11:12:19]   "ty": null,
+[11:12:19]   "rms_error_mm": null,
+[11:12:19]   "max_error_mm": null,
+[11:12:19]   "offset_saved_path": null,
+[11:12:19]   "warning": null,
+[11:12:19]   "timing": {
+[11:12:19]     "plc_connect": 0.0,
+[11:12:19]     "measure_all_anchors": 15.33344054222107
+[11:12:19]   }
+[11:12:19] }
+[11:12:19] ❌ Thất bại: Chỉ đo được 0/2 điểm mốc hợp lệ (cần >= 2). Kiểm tra ánh sáng/marker/Fiducial Detector Service.
+[11:12:19] ### THOAT BAT THUONG (exit code 1)
+[11:16:36] ==============================================================================
+[11:16:36] ### PHIEN MOI luc 2026-09-05 11:16:36
+[11:16:36] ### run_mode = script (target: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py)
+[11:16:36] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py --board-id BOARD-001 --board-side B --anchor-mode 2
+[11:16:36] ### Thu muc lam viec: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools
+[11:16:36] ### PID = 7608
+[11:16:37] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[11:16:37] Cách chạy:
+[11:16:37]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[11:16:37]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[11:16:37]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[11:16:37] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt B) ...
+[11:17:05] HTTP 200
+[11:17:05] {
+[11:17:05]   "success": false,
+[11:17:05]   "message": "Chỉ đo được 0/2 điểm mốc hợp lệ (cần >= 2). Kiểm tra ánh sáng/marker/Fiducial Detector Service.",
+[11:17:05]   "anchor_mode": 2,
+[11:17:05]   "anchor_results": [
+[11:17:05]     {
+[11:17:05]       "name": "A",
+[11:17:05]       "board_xy": [
+[11:17:05]         9.9,
+[11:17:05]         10.0
+[11:17:05]       ],
+[11:17:05]       "expected_plc_xy": [
+[11:17:05]         3.1302739260214483,
+[11:17:05]         0.3764421192002038
+[11:17:05]       ],
+[11:17:05]       "detected_pixel_xy": null,
+[11:17:05]       "detection_confidence": null,
+[11:17:05]       "detection_refined": null,
+[11:17:05]       "measured_plc_xy": null,
+[11:17:05]       "status": "not_found",
+[11:17:05]       "detail": "Khong phat hien duoc diem moc nao vuot nguong confidence"
+[11:17:05]     },
+[11:17:05]     {
+[11:17:05]       "name": "C",
+[11:17:05]       "board_xy": [
+[11:17:05]         596.6,
+[11:17:05]         393.0
+[11:17:05]       ],
+[11:17:05]       "expected_plc_xy": [
+[11:17:05]         386.4413212502973,
+[11:17:05]         588.5148802279635
+[11:17:05]       ],
+[11:17:05]       "detected_pixel_xy": null,
+[11:17:05]       "detection_confidence": null,
+[11:17:05]       "detection_refined": null,
+[11:17:05]       "measured_plc_xy": null,
+[11:17:05]       "status": "not_found",
+[11:17:05]       "detail": "Khong phat hien duoc diem moc nao vuot nguong confidence"
+[11:17:05]     }
+[11:17:05]   ],
+[11:17:05]   "theta_deg": null,
+[11:17:05]   "tx": null,
+[11:17:05]   "ty": null,
+[11:17:05]   "rms_error_mm": null,
+[11:17:05]   "max_error_mm": null,
+[11:17:05]   "offset_saved_path": null,
+[11:17:05]   "warning": null,
+[11:17:05]   "timing": {
+[11:17:05]     "plc_connect": 0.0017902851104736328,
+[11:17:05]     "measure_all_anchors": 15.29974627494812
+[11:17:05]   }
+[11:17:05] }
+[11:17:05] ❌ Thất bại: Chỉ đo được 0/2 điểm mốc hợp lệ (cần >= 2). Kiểm tra ánh sáng/marker/Fiducial Detector Service.
+[11:17:05] ### THOAT BAT THUONG (exit code 1)
+[11:17:55] ==============================================================================
+[11:17:55] ### PHIEN MOI luc 2026-09-05 11:17:55
+[11:17:55] ### run_mode = script (target: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py)
+[11:17:55] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py --board-id BOARD-001 --board-side A --anchor-mode 2
+[11:17:55] ### Thu muc lam viec: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools
+[11:17:55] ### PID = 1480
+[11:17:55] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[11:17:55] Cách chạy:
+[11:17:55]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[11:17:55]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[11:17:55]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[11:17:55] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt A) ...
+[11:17:58] HTTP 409
+[11:17:58] {
+[11:17:58]   "detail": "PLC đang bận (calib trục camera (/api/calib/camera-axis)). Đợi lệnh hiện tại xong rồi thử lại."
+[11:17:58] }
+[11:17:58] ❌ Thất bại: None
+[11:17:58] ### THOAT BAT THUONG (exit code 1)
+[11:18:31] ==============================================================================
+[11:18:31] ### PHIEN MOI luc 2026-09-05 11:18:31
+[11:18:31] ### run_mode = script (target: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py)
+[11:18:31] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py --board-id BOARD-001 --board-side A --anchor-mode 2
+[11:18:31] ### Thu muc lam viec: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools
+[11:18:31] ### PID = 8256
+[11:18:32] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[11:18:32] Cách chạy:
+[11:18:32]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[11:18:32]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[11:18:32]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[11:18:32] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt A) ...
+[11:19:00] HTTP 200
+[11:19:00] {
+[11:19:00]   "success": true,
+[11:19:00]   "message": "Tính bù lệch board tự động THÀNH CÔNG (có cảnh báo)",
+[11:19:00]   "anchor_mode": 2,
+[11:19:00]   "anchor_results": [
+[11:19:00]     {
+[11:19:00]       "name": "A",
+[11:19:00]       "board_xy": [
+[11:19:00]         9.9,
+[11:19:00]         10.0
+[11:19:00]       ],
+[11:19:00]       "expected_plc_xy": [
+[11:19:00]         2.890790346946491,
+[11:19:00]         590.3990409065433
+[11:19:00]       ],
+[11:19:00]       "detected_pixel_xy": [
+[11:19:00]         356.3873781888617,
+[11:19:00]         482.5646381076793
+[11:19:00]       ],
+[11:19:00]       "detection_confidence": 0.9396471381187439,
+[11:19:00]       "detection_refined": true,
+[11:19:00]       "measured_plc_xy": [
+[11:19:00]         -0.4365411623723112,
+[11:19:00]         590.9346625773791
+[11:19:00]       ],
+[11:19:00]       "status": "ok",
+[11:19:00]       "detail": null
+[11:19:00]     },
+[11:19:00]     {
+[11:19:00]       "name": "C",
+[11:19:00]       "board_xy": [
+[11:19:00]         596.6,
+[11:19:00]         393.0
+[11:19:00]       ],
+[11:19:00]       "expected_plc_xy": [
+[11:19:00]         386.64321359920876,
+[11:19:00]         4.7266455170987705
+[11:19:00]       ],
+[11:19:00]       "detected_pixel_xy": [
+[11:19:00]         383.97007002452426,
+[11:19:00]         116.71090774333307
+[11:19:00]       ],
+[11:19:00]       "detection_confidence": 0.9383531808853149,
+[11:19:00]       "detection_refined": true,
+[11:19:00]       "measured_plc_xy": [
+[11:19:00]         383.5473342320111,
+[11:19:00]         8.58968467346918
+[11:19:00]       ],
+[11:19:00]       "status": "ok",
+[11:19:00]       "detail": null
+[11:19:00]     }
+[11:19:00]   ],
+[11:19:00]   "theta_deg": 0.16569358883072502,
+[11:19:00]   "tx": -2.350270620573866,
+[11:19:00]   "ty": 1.6373290335896513,
+[11:19:00]   "rms_error_mm": 1.3267049568311013,
+[11:19:00]   "max_error_mm": 1.3267049568311162,
+[11:19:00]   "offset_saved_path": "D:\\Camera\\Dev\\AutoBoardOffset_YOLO_2Mat\\gateway\\products\\aoi-23692109-250613-dht\\offset_runtime_side_a.json",
+[11:19:00]   "warning": "⚠️ Sai số dư RMS (1.3267mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.",
+[11:19:00]   "timing": {
+[11:19:00]     "plc_connect": 0.0,
+[11:19:00]     "measure_all_anchors": 15.110446691513062,
+[11:19:00]     "total": 15.143103122711182
+[11:19:00]   }
+[11:19:00] }
+[11:19:00] ✅ Mặt A: Tính bù lệch board tự động THÀNH CÔNG (có cảnh báo)
+[11:19:00]    theta_deg=+0.1657  tx=-2.3503  ty=+1.6373
+[11:19:00]    rms_error_mm=1.3267  max_error_mm=1.3267
+[11:19:00]    Đã lưu vào: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\aoi-23692109-250613-dht\offset_runtime_side_a.json
+[11:19:00]    ⚠️ Sai số dư RMS (1.3267mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.
+[11:19:00] ### HOAN TAT (exit code 0)
+[11:19:14] ==============================================================================
+[11:19:14] ### PHIEN MOI luc 2026-09-05 11:19:14
+[11:19:14] ### run_mode = script (target: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py)
+[11:19:14] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py --board-id BOARD-001 --board-side A --anchor-mode 2
+[11:19:14] ### Thu muc lam viec: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools
+[11:19:14] ### PID = 22064
+[11:19:15] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[11:19:15] Cách chạy:
+[11:19:15]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[11:19:15]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[11:19:15]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[11:19:15] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt A) ...
+[11:19:17] HTTP 409
+[11:19:17] {
+[11:19:17]   "detail": "PLC đang bận (calib trục camera (/api/calib/camera-axis)). Đợi lệnh hiện tại xong rồi thử lại."
+[11:19:17] }
+[11:19:17] ❌ Thất bại: None
+[11:19:17] ### THOAT BAT THUONG (exit code 1)
+[11:19:22] ==============================================================================
+[11:19:22] ### PHIEN MOI luc 2026-09-05 11:19:22
+[11:19:22] ### run_mode = script (target: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py)
+[11:19:22] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py --board-id BOARD-001 --board-side A --anchor-mode 2
+[11:19:22] ### Thu muc lam viec: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools
+[11:19:22] ### PID = 4272
+[11:19:23] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[11:19:23] Cách chạy:
+[11:19:23]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[11:19:23]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[11:19:23]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[11:19:23] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt A) ...
+[11:19:51] HTTP 200
+[11:19:51] {
+[11:19:51]   "success": true,
+[11:19:51]   "message": "Tính bù lệch board tự động THÀNH CÔNG (có cảnh báo)",
+[11:19:51]   "anchor_mode": 2,
+[11:19:51]   "anchor_results": [
+[11:19:51]     {
+[11:19:51]       "name": "A",
+[11:19:51]       "board_xy": [
+[11:19:51]         9.9,
+[11:19:51]         10.0
+[11:19:51]       ],
+[11:19:51]       "expected_plc_xy": [
+[11:19:51]         2.890790346946491,
+[11:19:51]         590.3990409065433
+[11:19:51]       ],
+[11:19:51]       "detected_pixel_xy": [
+[11:19:51]         353.0838208093355,
+[11:19:51]         483.65487701569447
+[11:19:51]       ],
+[11:19:51]       "detection_confidence": 0.9411147236824036,
+[11:19:51]       "detection_refined": true,
+[11:19:51]       "measured_plc_xy": [
+[11:19:51]         -0.4550542522986847,
+[11:19:51]         590.9248171324626
+[11:19:51]       ],
+[11:19:51]       "status": "ok",
+[11:19:51]       "detail": null
+[11:19:51]     },
+[11:19:51]     {
+[11:19:51]       "name": "C",
+[11:19:51]       "board_xy": [
+[11:19:51]         596.6,
+[11:19:51]         393.0
+[11:19:51]       ],
+[11:19:51]       "expected_plc_xy": [
+[11:19:51]         386.64321359920876,
+[11:19:51]         4.7266455170987705
+[11:19:51]       ],
+[11:19:51]       "detected_pixel_xy": [
+[11:19:51]         379.4797613483587,
+[11:19:51]         116.21944295383337
+[11:19:51]       ],
+[11:19:51]       "detection_confidence": 0.9368674159049988,
+[11:19:51]       "detection_refined": true,
+[11:19:51]       "measured_plc_xy": [
+[11:19:51]         383.5225958583283,
+[11:19:51]         8.594253192923373
+[11:19:51]       ],
+[11:19:51]       "status": "ok",
+[11:19:51]       "detail": null
+[11:19:51]     }
+[11:19:51]   ],
+[11:19:51]   "theta_deg": 0.16591844238596953,
+[11:19:51]   "tx": -2.370726379348355,
+[11:19:51]   "ty": 1.6339296029917705,
+[11:19:51]   "rms_error_mm": 1.3344351403216936,
+[11:19:51]   "max_error_mm": 1.3344351403217274,
+[11:19:51]   "offset_saved_path": "D:\\Camera\\Dev\\AutoBoardOffset_YOLO_2Mat\\gateway\\products\\aoi-23692109-250613-dht\\offset_runtime_side_a.json",
+[11:19:51]   "warning": "⚠️ Sai số dư RMS (1.3344mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.",
+[11:19:51]   "timing": {
+[11:19:51]     "plc_connect": 0.0017695426940917969,
+[11:19:51]     "measure_all_anchors": 14.844937324523926,
+[11:19:51]     "total": 14.857095003128052
+[11:19:51]   }
+[11:19:51] }
+[11:19:51] ✅ Mặt A: Tính bù lệch board tự động THÀNH CÔNG (có cảnh báo)
+[11:19:51]    theta_deg=+0.1659  tx=-2.3707  ty=+1.6339
+[11:19:51]    rms_error_mm=1.3344  max_error_mm=1.3344
+[11:19:51]    Đã lưu vào: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\aoi-23692109-250613-dht\offset_runtime_side_a.json
+[11:19:51]    ⚠️ Sai số dư RMS (1.3344mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.
+[11:19:51] ### HOAN TAT (exit code 0)
+[11:20:34] ==============================================================================
+[11:20:34] ### PHIEN MOI luc 2026-09-05 11:20:34
+[11:20:34] ### run_mode = script (target: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py)
+[11:20:34] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py --board-id BOARD-001 --board-side A --anchor-mode 2
+[11:20:34] ### Thu muc lam viec: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools
+[11:20:34] ### PID = 21612
+[11:20:35] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[11:20:35] Cách chạy:
+[11:20:35]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[11:20:35]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[11:20:35]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[11:20:35] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt A) ...
+[11:21:09] HTTP 200
+[11:21:09] {
+[11:21:09]   "success": true,
+[11:21:09]   "message": "Tính bù lệch board tự động THÀNH CÔNG (có cảnh báo)",
+[11:21:09]   "anchor_mode": 2,
+[11:21:09]   "anchor_results": [
+[11:21:09]     {
+[11:21:09]       "name": "A",
+[11:21:09]       "board_xy": [
+[11:21:09]         9.9,
+[11:21:09]         10.0
+[11:21:09]       ],
+[11:21:09]       "expected_plc_xy": [
+[11:21:09]         2.890790346946491,
+[11:21:09]         590.3990409065433
+[11:21:09]       ],
+[11:21:09]       "detected_pixel_xy": [
+[11:21:09]         351.68883051496744,
+[11:21:09]         480.6466619901196
+[11:21:09]       ],
+[11:21:09]       "detection_confidence": 0.9456872344017029,
+[11:21:09]       "detection_refined": true,
+[11:21:09]       "measured_plc_xy": [
+[11:21:09]         -0.4621242844693896,
+[11:21:09]         590.9522120136412
+[11:21:09]       ],
+[11:21:09]       "status": "ok",
+[11:21:09]       "detail": null
+[11:21:09]     },
+[11:21:09]     {
+[11:21:09]       "name": "C",
+[11:21:09]       "board_xy": [
+[11:21:09]         596.6,
+[11:21:09]         393.0
+[11:21:09]       ],
+[11:21:09]       "expected_plc_xy": [
+[11:21:09]         386.64321359920876,
+[11:21:09]         4.7266455170987705
+[11:21:09]       ],
+[11:21:09]       "detected_pixel_xy": [
+[11:21:09]         376.94768077463686,
+[11:21:09]         116.11088552241137
+[11:21:09]       ],
+[11:21:09]       "detection_confidence": 0.9467179179191589,
+[11:21:09]       "detection_refined": true,
+[11:21:09]       "measured_plc_xy": [
+[11:21:09]         383.5086095856796,
+[11:21:09]         8.595295883026616
+[11:21:09]       ],
+[11:21:09]       "status": "ok",
+[11:21:09]       "detail": null
+[11:21:09]     }
+[11:21:09]   ],
+[11:21:09]   "theta_deg": 0.1642526327568218,
+[11:21:09]   "tx": -2.3899221127394696,
+[11:21:09]   "ty": 1.6537860673689693,
+[11:21:09]   "rms_error_mm": 1.3253386031735626,
+[11:21:09]   "max_error_mm": 1.3253386031736119,
+[11:21:09]   "offset_saved_path": "D:\\Camera\\Dev\\AutoBoardOffset_YOLO_2Mat\\gateway\\products\\aoi-23692109-250613-dht\\offset_runtime_side_a.json",
+[11:21:09]   "warning": "⚠️ Sai số dư RMS (1.3253mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.",
+[11:21:09]   "timing": {
+[11:21:09]     "plc_connect": 0.0,
+[11:21:09]     "measure_all_anchors": 20.603405714035034,
+[11:21:09]     "total": 20.61613416671753
+[11:21:09]   }
+[11:21:09] }
+[11:21:09] ✅ Mặt A: Tính bù lệch board tự động THÀNH CÔNG (có cảnh báo)
+[11:21:09]    theta_deg=+0.1643  tx=-2.3899  ty=+1.6538
+[11:21:09]    rms_error_mm=1.3253  max_error_mm=1.3253
+[11:21:09]    Đã lưu vào: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\aoi-23692109-250613-dht\offset_runtime_side_a.json
+[11:21:09]    ⚠️ Sai số dư RMS (1.3253mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.
+[11:21:09] ### HOAN TAT (exit code 0)
+[11:22:16] ==============================================================================
+[11:22:16] ### PHIEN MOI luc 2026-09-05 11:22:16
+[11:22:16] ### run_mode = script (target: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py)
+[11:22:16] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools\run_auto_board_offset.py --board-id BOARD-001 --board-side A --anchor-mode 2
+[11:22:16] ### Thu muc lam viec: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\tools
+[11:22:16] ### PID = 12124
+[11:22:17] CLI tự động bù lệch board (thay bu_lech_board.py thủ công)
+[11:22:17] Cách chạy:
+[11:22:17]   python run_auto_board_offset.py --board-id BOARD-001              # mặt A (mặc định)
+[11:22:17]   python run_auto_board_offset.py --board-id BOARD-001 --board-side B  # mặt B
+[11:22:17]   python run_auto_board_offset.py --board-id BOARD-001 --anchor-mode 3 # 3 điểm mốc
+[11:22:17] --> Gọi http://localhost:8083/api/calib/auto-board-offset (mặt A) ...
+[11:22:51] HTTP 200
+[11:22:51] {
+[11:22:51]   "success": true,
+[11:22:51]   "message": "Tính bù lệch board tự động THÀNH CÔNG (có cảnh báo)",
+[11:22:51]   "anchor_mode": 2,
+[11:22:51]   "anchor_results": [
+[11:22:51]     {
+[11:22:51]       "name": "A",
+[11:22:51]       "board_xy": [
+[11:22:51]         9.9,
+[11:22:51]         10.0
+[11:22:51]       ],
+[11:22:51]       "expected_plc_xy": [
+[11:22:51]         2.890790346946491,
+[11:22:51]         590.3990409065433
+[11:22:51]       ],
+[11:22:51]       "detected_pixel_xy": [
+[11:22:51]         349.54936783860046,
+[11:22:51]         479.5772100543287
+[11:22:51]       ],
+[11:22:51]       "detection_confidence": 0.9501436948776245,
+[11:22:51]       "detection_refined": true,
+[11:22:51]       "measured_plc_xy": [
+[11:22:51]         -0.47373118339735365,
+[11:22:51]         590.9619870025705
+[11:22:51]       ],
+[11:22:51]       "status": "ok",
+[11:22:51]       "detail": null
+[11:22:51]     },
+[11:22:51]     {
+[11:22:51]       "name": "C",
+[11:22:51]       "board_xy": [
+[11:22:51]         596.6,
+[11:22:51]         393.0
+[11:22:51]       ],
+[11:22:51]       "expected_plc_xy": [
+[11:22:51]         386.64321359920876,
+[11:22:51]         4.7266455170987705
+[11:22:51]       ],
+[11:22:51]       "detected_pixel_xy": [
+[11:22:51]         375.37851320845755,
+[11:22:51]         116.35555995933208
+[11:22:51]       ],
+[11:22:51]       "detection_confidence": 0.9407344460487366,
+[11:22:51]       "detection_refined": true,
+[11:22:51]       "measured_plc_xy": [
+[11:22:51]         383.4998748624363,
+[11:22:51]         8.593104382909189
+[11:22:51]       ],
+[11:22:51]       "status": "ok",
+[11:22:51]       "detail": null
+[11:22:51]     }
+[11:22:51]   ],
+[11:22:51]   "theta_deg": 0.16390854448759087,
+[11:22:51]   "tx": -2.4018832718104477,
+[11:22:51]   "ty": 1.6587423574678724,
+[11:22:51]   "rms_error_mm": 1.3195529018663807,
+[11:22:51]   "max_error_mm": 1.3195529018664351,
+[11:22:51]   "offset_saved_path": "D:\\Camera\\Dev\\AutoBoardOffset_YOLO_2Mat\\gateway\\products\\aoi-23692109-250613-dht\\offset_runtime_side_a.json",
+[11:22:51]   "warning": "⚠️ Sai số dư RMS (1.3196mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.",
+[11:22:51]   "timing": {
+[11:22:51]     "plc_connect": 0.0027799606323242188,
+[11:22:51]     "measure_all_anchors": 20.705859422683716,
+[11:22:51]     "total": 20.715752124786377
+[11:22:51]   }
+[11:22:51] }
+[11:22:51] ✅ Mặt A: Tính bù lệch board tự động THÀNH CÔNG (có cảnh báo)
+[11:22:51]    theta_deg=+0.1639  tx=-2.4019  ty=+1.6587
+[11:22:51]    rms_error_mm=1.3196  max_error_mm=1.3196
+[11:22:51]    Đã lưu vào: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\aoi-23692109-250613-dht\offset_runtime_side_a.json
+[11:22:51]    ⚠️ Sai số dư RMS (1.3196mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.
+[11:22:51] ### HOAN TAT (exit code 0)

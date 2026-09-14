@@ -1,0 +1,44 @@
+[14:56:22] ==============================================================================
+[14:56:22] ### PHIEN MOI luc 2026-09-07 14:56:22
+[14:56:22] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py)
+[14:56:22] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py --anchor A --delta-mm 5.0 --yes
+[14:56:22] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\tools
+[14:56:22] ### PID = 9792
+[14:56:23] CLI tiện ích: hiệu chỉnh ma trận trục camera<->máy T (chạy 1 LẦN khi setup máy hoặc sau 
+[14:56:23] khi tháo/lắp lại camera - KHÔNG chạy lại mỗi khi đổi board).
+[14:56:23] Chỉ là 1 lớp mỏng gọi HTTP sang endpoint /api/calib/camera-axis của
+[14:56:23] `gateway/plc_offset_gateway.py` (toàn bộ logic thật nằm ở gateway, không lặp lại ở đây).
+[14:56:23] Yêu cầu trước khi chạy:
+[14:56:23] 1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8083)
+[14:56:23] 2. fiducial_detector/run_fiducial_service.py đang chạy VÀ đã có file .pt (mock mode sẽ báo lỗi)
+[14:56:23] 3. PLC + camera thật đã kết nối (script này sẽ DI CHUYỂN MÁY THẬT)
+[14:56:23] Cách chạy:
+[14:56:23] python calibrate_camera_axis.py --anchor A --delta-mm 5.0
+[14:56:25] 📍 anchor_name='A' -> Board=(9.900, 10.000) mm -> PLC kỳ vọng=(2.891, 590.399)
+[14:56:25] --> Gọi http://localhost:8083/api/calib/camera-axis với payload:
+[14:56:25] {
+[14:56:25]   "anchor_name": "A",
+[14:56:25]   "delta_mm": 5.0,
+[14:56:25]   "plc_pc_ip": "192.168.3.101",
+[14:56:25]   "plc_ip": "192.168.3.1",
+[14:56:25]   "plc_port": 9600
+[14:56:25] }
+[14:56:25] ⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). --yes đã bật, chạy ngay.
+[14:56:39] HTTP 200
+[14:56:39] {
+[14:56:39]   "success": false,
+[14:56:39]   "message": "Không phát hiện được marker tại P0: Không chụp được ảnh từ http://127.0.0.1:8001/snapshot: http://127.0.0.1:8001/snapshot -> HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /snapshot (Caused by NewConnectionError(\"HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it\"))",
+[14:56:39]   "anchor_board_xy": [
+[14:56:39]     9.9,
+[14:56:39]     10.0
+[14:56:39]   ],
+[14:56:39]   "anchor_plc_expected_xy": [
+[14:56:39]     2.890790346946491,
+[14:56:39]     590.3990409065433
+[14:56:39]   ],
+[14:56:39]   "camera_axis_matrix": null,
+[14:56:39]   "samples_pixel_xy": null,
+[14:56:39]   "sanity_check": null
+[14:56:39] }
+[14:56:39] ❌ Hiệu chỉnh thất bại: Không phát hiện được marker tại P0: Không chụp được ảnh từ http://127.0.0.1:8001/snapshot: http://127.0.0.1:8001/snapshot -> HTTPConnectionPool(host='127.0.0.1', port=8001): Max retries exceeded with url: /snapshot (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=8001): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+[14:56:39] ### THOAT BAT THUONG (exit code 1)

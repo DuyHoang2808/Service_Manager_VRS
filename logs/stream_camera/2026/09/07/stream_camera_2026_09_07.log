@@ -1,0 +1,16 @@
+[13:57:07] ==============================================================================
+[13:57:07] ### PHIEN MOI luc 2026-09-07 13:57:07
+[13:57:07] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[13:57:07] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[13:57:07] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[13:57:07] ### PID = 10320
+[13:57:09] 2026-09-07 13:57:09,622 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[13:57:09] 2026-09-07 13:57:09,622 [INFO] Đang mở camera Sony...
+[13:57:10] 2026-09-07 13:57:10,912 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[13:57:10] 2026-09-07 13:57:10,914 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[13:57:10] 2026-09-07 13:57:10,914 [INFO] GOP = 30 frame (1.0s/keyframe)
+[13:57:10] 2026-09-07 13:57:10,938 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[13:57:13] ### Dang gui tin hieu dung...
+[13:57:15] 2026-09-07 13:57:15,955 [INFO] Đang đẩy RTSP FPS: 29.89
+[13:57:19] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[13:57:19] ### DA DUNG (exit code 1)

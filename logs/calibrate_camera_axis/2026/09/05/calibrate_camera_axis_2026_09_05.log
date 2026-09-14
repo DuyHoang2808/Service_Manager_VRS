@@ -1,0 +1,58 @@
+[11:17:52] ==============================================================================
+[11:17:52] ### PHIEN MOI luc 2026-09-05 11:17:52
+[11:17:52] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py)
+[11:17:52] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py --anchor A --delta-mm 5.0 --yes
+[11:17:52] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\tools
+[11:17:52] ### PID = 23420
+[11:17:52] CLI tiện ích: hiệu chỉnh ma trận trục camera<->máy T (chạy 1 LẦN khi setup máy hoặc sau 
+[11:17:52] khi tháo/lắp lại camera - KHÔNG chạy lại mỗi khi đổi board).
+[11:17:52] Chỉ là 1 lớp mỏng gọi HTTP sang endpoint /api/calib/camera-axis của
+[11:17:52] `gateway/plc_offset_gateway.py` (toàn bộ logic thật nằm ở gateway, không lặp lại ở đây).
+[11:17:52] Yêu cầu trước khi chạy:
+[11:17:52] 1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8083)
+[11:17:52] 2. fiducial_detector/run_fiducial_service.py đang chạy VÀ đã có file .pt (mock mode sẽ báo lỗi)
+[11:17:52] 3. PLC + camera thật đã kết nối (script này sẽ DI CHUYỂN MÁY THẬT)
+[11:17:52] Cách chạy:
+[11:17:52] python calibrate_camera_axis.py --anchor A --delta-mm 5.0
+[11:17:53] ### Dang gui tin hieu dung...
+[11:17:55] 📍 anchor_name='A' -> Board=(9.900, 10.000) mm -> PLC kỳ vọng=(2.891, 590.399)
+[11:17:55] --> Gọi http://localhost:8083/api/calib/camera-axis với payload:
+[11:17:55] {
+[11:17:55]   "anchor_name": "A",
+[11:17:55]   "delta_mm": 5.0,
+[11:17:55]   "plc_pc_ip": "192.168.3.101",
+[11:17:55]   "plc_ip": "192.168.3.1",
+[11:17:55]   "plc_port": 9600
+[11:17:55] }
+[11:17:55] ⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). --yes đã bật, chạy ngay.
+[11:17:59] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:18:00] ### DA DUNG (exit code 1)
+[11:18:57] ==============================================================================
+[11:18:57] ### PHIEN MOI luc 2026-09-05 11:18:57
+[11:18:57] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py)
+[11:18:57] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\tools\calibrate_camera_axis.py --anchor A --delta-mm 5.0 --yes
+[11:18:57] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\tools
+[11:18:57] ### PID = 14260
+[11:18:58] CLI tiện ích: hiệu chỉnh ma trận trục camera<->máy T (chạy 1 LẦN khi setup máy hoặc sau 
+[11:18:58] khi tháo/lắp lại camera - KHÔNG chạy lại mỗi khi đổi board).
+[11:18:58] Chỉ là 1 lớp mỏng gọi HTTP sang endpoint /api/calib/camera-axis của
+[11:18:58] `gateway/plc_offset_gateway.py` (toàn bộ logic thật nằm ở gateway, không lặp lại ở đây).
+[11:18:58] Yêu cầu trước khi chạy:
+[11:18:58] 1. gateway/run_gateway.py đang chạy (mặc định http://localhost:8083)
+[11:18:58] 2. fiducial_detector/run_fiducial_service.py đang chạy VÀ đã có file .pt (mock mode sẽ báo lỗi)
+[11:18:58] 3. PLC + camera thật đã kết nối (script này sẽ DI CHUYỂN MÁY THẬT)
+[11:18:58] Cách chạy:
+[11:18:58] python calibrate_camera_axis.py --anchor A --delta-mm 5.0
+[11:19:00] 📍 anchor_name='A' -> Board=(9.900, 10.000) mm -> PLC kỳ vọng=(2.891, 590.399)
+[11:19:00] --> Gọi http://localhost:8083/api/calib/camera-axis với payload:
+[11:19:00] {
+[11:19:00]   "anchor_name": "A",
+[11:19:00]   "delta_mm": 5.0,
+[11:19:00]   "plc_pc_ip": "192.168.3.101",
+[11:19:00]   "plc_ip": "192.168.3.1",
+[11:19:00]   "plc_port": 9600
+[11:19:00] }
+[11:19:00] ⚠️  MÁY SẼ DI CHUYỂN THẬT (3 lần: P0, P0+dX, P0+dY). --yes đã bật, chạy ngay.
+[11:19:00] ### Dang gui tin hieu dung...
+[11:19:06] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:19:07] ### DA DUNG (exit code 1)

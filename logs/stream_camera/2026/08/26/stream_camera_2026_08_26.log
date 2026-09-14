@@ -1,0 +1,79 @@
+[09:58:08] ### KHONG TIM THAY FILE: D:\Ps_Duy\Project\Auto_VRS\deploy\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508\Stream_camera_Sony_20260508.exe
+[10:12:47] ==============================================================================
+[10:12:47] ### PHIEN MOI luc 2026-08-26 10:12:47
+[10:12:47] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[10:12:47] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[10:12:47] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[10:12:47] ### PID = 10540
+[10:12:48] 2026-08-26 10:12:48,079 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[10:12:48] 2026-08-26 10:12:48,079 [INFO] Đang mở camera Sony...
+[10:12:49] 2026-08-26 10:12:49,324 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[10:12:49] 2026-08-26 10:12:49,327 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[10:12:49] 2026-08-26 10:12:49,328 [INFO] GOP = 30 frame (1.0s/keyframe)
+[10:12:49] 2026-08-26 10:12:49,353 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[10:12:51] ### Dang gui tin hieu dung...
+[10:12:54] 2026-08-26 10:12:54,370 [INFO] Đang đẩy RTSP FPS: 29.90
+[10:12:57] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[10:12:57] ### DA DUNG (exit code 1)
+[15:31:14] ==============================================================================
+[15:31:14] ### PHIEN MOI luc 2026-08-26 15:31:14
+[15:31:14] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py)
+[15:31:14] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\stream_camera\Stream_camera_Sony_20260508.py
+[15:31:14] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\stream_camera
+[15:31:14] ### PID = 29488
+[15:31:14] 2026-08-26 15:31:14,783 [INFO] Snapshot endpoint ready: http://0.0.0.0:8001/snapshot (mặc định PNG, còn có /snapshot.png và /snapshot.jpg)
+[15:31:14] 2026-08-26 15:31:14,783 [INFO] Đang mở camera Sony...
+[15:31:16] 2026-08-26 15:31:16,065 [INFO] Camera đã mở: 1920x1080 @ 30.00003000003 FPS
+[15:31:16] 2026-08-26 15:31:16,068 [INFO] Đang khởi động FFmpeg đẩy luồng tới: rtsp://localhost:8554/mystream
+[15:31:16] 2026-08-26 15:31:16,068 [INFO] GOP = 30 frame (1.0s/keyframe)
+[15:31:16] 2026-08-26 15:31:16,073 [INFO] Bắt đầu đẩy luồng RTSP (Bấm Ctrl+C để dừng)...
+[15:31:21] 2026-08-26 15:31:21,094 [INFO] Đang đẩy RTSP FPS: 29.87
+[15:31:26] 2026-08-26 15:31:26,127 [INFO] Đang đẩy RTSP FPS: 30.03
+[15:31:31] 2026-08-26 15:31:31,156 [INFO] Đang đẩy RTSP FPS: 29.84
+[15:31:36] 2026-08-26 15:31:36,174 [INFO] Đang đẩy RTSP FPS: 30.14
+[15:31:41] 2026-08-26 15:31:41,185 [INFO] Đang đẩy RTSP FPS: 29.93
+[15:31:46] 2026-08-26 15:31:46,212 [INFO] Đang đẩy RTSP FPS: 30.07
+[15:31:51] 2026-08-26 15:31:51,244 [INFO] Đang đẩy RTSP FPS: 30.04
+[15:31:56] 2026-08-26 15:31:56,280 [INFO] Đang đẩy RTSP FPS: 28.84
+[15:32:01] 2026-08-26 15:32:01,302 [INFO] Đang đẩy RTSP FPS: 29.67
+[15:32:06] 2026-08-26 15:32:06,345 [INFO] Đang đẩy RTSP FPS: 29.80
+[15:32:11] 2026-08-26 15:32:11,388 [INFO] Đang đẩy RTSP FPS: 29.78
+[15:32:16] 2026-08-26 15:32:16,404 [INFO] Đang đẩy RTSP FPS: 29.96
+[15:32:21] 2026-08-26 15:32:21,412 [INFO] Đang đẩy RTSP FPS: 29.97
+[15:32:26] 2026-08-26 15:32:26,450 [INFO] Đang đẩy RTSP FPS: 29.82
+[15:32:31] 2026-08-26 15:32:31,486 [INFO] Đang đẩy RTSP FPS: 30.02
+[15:32:36] 2026-08-26 15:32:36,503 [INFO] Đang đẩy RTSP FPS: 30.12
+[15:32:41] 2026-08-26 15:32:41,505 [INFO] Đang đẩy RTSP FPS: 30.00
+[15:32:46] 2026-08-26 15:32:46,550 [INFO] Đang đẩy RTSP FPS: 29.98
+[15:32:51] 2026-08-26 15:32:51,573 [INFO] Đang đẩy RTSP FPS: 29.90
+[15:32:56] 2026-08-26 15:32:56,599 [INFO] Đang đẩy RTSP FPS: 30.31
+[15:33:01] 2026-08-26 15:33:01,603 [INFO] Đang đẩy RTSP FPS: 30.00
+[15:33:06] 2026-08-26 15:33:06,620 [INFO] Đang đẩy RTSP FPS: 29.89
+[15:33:11] 2026-08-26 15:33:11,638 [INFO] Đang đẩy RTSP FPS: 30.15
+[15:33:16] 2026-08-26 15:33:16,667 [INFO] Đang đẩy RTSP FPS: 30.03
+[15:33:21] 2026-08-26 15:33:21,673 [INFO] Đang đẩy RTSP FPS: 29.99
+[15:33:26] 2026-08-26 15:33:26,703 [INFO] Đang đẩy RTSP FPS: 30.04
+[15:33:31] 2026-08-26 15:33:31,714 [INFO] Đang đẩy RTSP FPS: 29.96
+[15:33:36] 2026-08-26 15:33:36,739 [INFO] Đang đẩy RTSP FPS: 29.90
+[15:33:41] 2026-08-26 15:33:41,763 [INFO] Đang đẩy RTSP FPS: 30.06
+[15:33:46] 2026-08-26 15:33:46,801 [INFO] Đang đẩy RTSP FPS: 30.20
+[15:33:51] 2026-08-26 15:33:51,833 [INFO] Đang đẩy RTSP FPS: 30.02
+[15:33:56] 2026-08-26 15:33:56,872 [INFO] Đang đẩy RTSP FPS: 30.03
+[15:34:01] 2026-08-26 15:34:01,903 [INFO] Đang đẩy RTSP FPS: 30.01
+[15:34:06] 2026-08-26 15:34:06,916 [INFO] Đang đẩy RTSP FPS: 29.36
+[15:34:11] 2026-08-26 15:34:11,941 [INFO] Đang đẩy RTSP FPS: 29.69
+[15:34:16] 2026-08-26 15:34:16,972 [INFO] Đang đẩy RTSP FPS: 30.05
+[15:34:22] 2026-08-26 15:34:22,016 [INFO] Đang đẩy RTSP FPS: 30.01
+[15:34:27] 2026-08-26 15:34:27,039 [INFO] Đang đẩy RTSP FPS: 29.71
+[15:34:32] 2026-08-26 15:34:32,082 [INFO] Đang đẩy RTSP FPS: 29.98
+[15:34:37] 2026-08-26 15:34:37,110 [INFO] Đang đẩy RTSP FPS: 30.07
+[15:34:42] 2026-08-26 15:34:42,142 [INFO] Đang đẩy RTSP FPS: 30.04
+[15:34:47] 2026-08-26 15:34:47,153 [INFO] Đang đẩy RTSP FPS: 29.94
+[15:34:52] 2026-08-26 15:34:52,179 [INFO] Đang đẩy RTSP FPS: 30.11
+[15:34:57] 2026-08-26 15:34:57,201 [INFO] Đang đẩy RTSP FPS: 30.11
+[15:35:02] 2026-08-26 15:35:02,216 [INFO] Đang đẩy RTSP FPS: 29.74
+[15:35:07] 2026-08-26 15:35:07,251 [INFO] Đang đẩy RTSP FPS: 30.03
+[15:35:09] ### Dang gui tin hieu dung...
+[15:35:12] 2026-08-26 15:35:12,260 [INFO] Đang đẩy RTSP FPS: 30.18
+[15:35:15] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[15:35:15] ### DA DUNG (exit code 1)

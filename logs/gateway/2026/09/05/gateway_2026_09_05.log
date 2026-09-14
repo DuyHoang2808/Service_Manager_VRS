@@ -1,0 +1,567 @@
+[11:09:57] ==============================================================================
+[11:09:57] ### PHIEN MOI luc 2026-09-05 11:09:57
+[11:09:57] ### run_mode = script (target: D:\Camera\Dev\Service_Manager\modules\gateway\run_gateway.py)
+[11:09:57] ### KHOI DONG: D:\Camera\Dev\Camera_venv\Scripts\python.exe -u D:\Camera\Dev\Service_Manager\modules\gateway\run_gateway.py
+[11:09:57] ### Thu muc lam viec: D:\Camera\Dev\Service_Manager\modules\gateway
+[11:09:57] ### PID = 10028
+[11:09:58] 🚀 Starting PLC Offset Gateway (AutoBoardOffset_YOLO_2Mat)...
+[11:09:58] 📋 Port: 8083
+[11:10:00] 📚 API Docs: http://localhost:8083/docs
+[11:10:00] 🔧 Press Ctrl+C to stop
+[11:10:04] 2026-09-05 11:10:04,105 [INFO] ✅ PLC DLL loaded successfully from: D:\Camera\Dev\Service_Manager\modules\gateway\ClassLibrary.dll
+[11:10:04] INFO:     Started server process [19712]
+[11:10:04] INFO:     Waiting for application startup.
+[11:10:04] 2026-09-05 11:10:04,643 [INFO] ============================================================
+[11:10:04] 2026-09-05 11:10:04,643 [INFO] 🚀 PLC Offset Gateway (AutoBoardOffset_YOLO_2Mat) Starting...
+[11:10:04] 2026-09-05 11:10:04,643 [INFO] ============================================================
+[11:10:04] 2026-09-05 11:10:04,643 [INFO] 💾 Config file: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\plc_offset_gateway_config.json
+[11:10:04] 2026-09-05 11:10:04,643 [INFO] 📷 Snapshot URL default: http://127.0.0.1:8001/snapshot
+[11:10:04] 2026-09-05 11:10:04,643 [INFO] 🎯 Fiducial Detector URL: http://127.0.0.1:8191/api/detect-marker
+[11:10:04] 2026-09-05 11:10:04,649 [INFO] 📦 Mã hàng đang active: aoi-23692109-250613-dht (xem D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products_registry.yaml)
+[11:10:04] 2026-09-05 11:10:04,649 [INFO] 📐 camera_axis_matrix calibrated: True (False = đang dùng ước lượng thô từ FOV, hãy chạy /api/calib/camera-axis)
+[11:10:04] 2026-09-05 11:10:04,649 [INFO] ✅ Services ready
+[11:10:04] INFO:     Application startup complete.
+[11:10:04] INFO:     Uvicorn running on http://0.0.0.0:8083 (Press CTRL+C to quit)
+[11:10:06] INFO:     127.0.0.1:64502 - "GET /docs HTTP/1.1" 200 OK
+[11:10:11] INFO:     127.0.0.1:64509 - "GET /docs HTTP/1.1" 200 OK
+[11:10:16] INFO:     127.0.0.1:64518 - "GET /docs HTTP/1.1" 200 OK
+[11:10:21] INFO:     127.0.0.1:64523 - "GET /docs HTTP/1.1" 200 OK
+[11:10:26] INFO:     127.0.0.1:64529 - "GET /docs HTTP/1.1" 200 OK
+[11:10:31] INFO:     127.0.0.1:64539 - "GET /docs HTTP/1.1" 200 OK
+[11:10:36] INFO:     127.0.0.1:64545 - "GET /docs HTTP/1.1" 200 OK
+[11:10:41] INFO:     127.0.0.1:64553 - "GET /docs HTTP/1.1" 200 OK
+[11:10:46] INFO:     127.0.0.1:64561 - "GET /docs HTTP/1.1" 200 OK
+[11:10:51] INFO:     127.0.0.1:64565 - "GET /docs HTTP/1.1" 200 OK
+[11:10:56] INFO:     127.0.0.1:64568 - "GET /docs HTTP/1.1" 200 OK
+[11:11:00] 2026-09-05 11:11:00,445 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:11:00] 2026-09-05 11:11:00,447 [INFO] 🔎 Điểm mốc A (mặt A): Board=(9.900,10.000) -> PLC kỳ vọng=(2.891,590.399)
+[11:11:00] 2026-09-05 11:11:00,479 [INFO] PLC float read OK: D2810-2811 -> 0.0
+[11:11:00] 2026-09-05 11:11:00,511 [INFO] PLC float read OK: D2910-2911 -> 0.0
+[11:11:00] 2026-09-05 11:11:00,704 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:11:00] 2026-09-05 11:11:00,704 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:11:01] INFO:     127.0.0.1:64578 - "GET /docs HTTP/1.1" 200 OK
+[11:11:02] 2026-09-05 11:11:02,244 [INFO] 🚀 PLC motion started: [15628, 55050, 20643, 16472]
+[11:11:02] 2026-09-05 11:11:02,751 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:11:06] INFO:     127.0.0.1:64593 - "GET /docs HTTP/1.1" 200 OK
+[11:11:08] 2026-09-05 11:11:08,417 [WARNING] ⚠️ PLC returned idle too early after 7712ms; waiting until at least 7872ms before capture
+[11:11:09] 2026-09-05 11:11:09,377 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:11:09] 2026-09-05 11:11:09,902 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:11:10] 2026-09-05 11:11:10,041 [INFO] Snapshot image captured: 1081040 bytes, type=image/jpeg, md5=1fbbfb17749db1cfbf0ae535c07a4472, shape=1920x1080
+[11:11:10] 2026-09-05 11:11:10,043 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:11:11] INFO:     127.0.0.1:64598 - "GET /docs HTTP/1.1" 200 OK
+[11:11:16] INFO:     127.0.0.1:64601 - "GET /docs HTTP/1.1" 200 OK
+[11:11:20] 2026-09-05 11:11:20,094 [ERROR] ❌ Fiducial Detector call failed: HTTPConnectionPool(host='127.0.0.1', port=8191): Read timed out. (read timeout=10.0)
+[11:11:20] 2026-09-05 11:11:20,097 [INFO] 🔎 Điểm mốc C (mặt A): Board=(596.600,393.000) -> PLC kỳ vọng=(386.643,4.727)
+[11:11:20] 2026-09-05 11:11:20,127 [INFO] PLC float read OK: D2810-2811 -> 2.8907904624938965
+[11:11:20] 2026-09-05 11:11:20,161 [INFO] PLC float read OK: D2910-2911 -> 590.3990478515625
+[11:11:20] 2026-09-05 11:11:20,318 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:11:20] 2026-09-05 11:11:20,320 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:11:21] INFO:     127.0.0.1:64608 - "GET /docs HTTP/1.1" 200 OK
+[11:11:21] 2026-09-05 11:11:21,869 [INFO] 🚀 PLC motion started: [34496, 44564, 16711, 49240]
+[11:11:22] 2026-09-05 11:11:22,371 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:11:26] INFO:     127.0.0.1:64626 - "GET /docs HTTP/1.1" 200 OK
+[11:11:28] 2026-09-05 11:11:28,020 [WARNING] ⚠️ PLC returned idle too early after 7702ms; waiting until at least 9335ms before capture
+[11:11:30] 2026-09-05 11:11:30,473 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:11:30] 2026-09-05 11:11:30,981 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:11:31] 2026-09-05 11:11:31,074 [INFO] Snapshot image captured: 445287 bytes, type=image/jpeg, md5=b665ae4476ced2ec62611738b60dcb19, shape=1920x1080
+[11:11:31] 2026-09-05 11:11:31,076 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:11:31] 2026-09-05 11:11:31,555 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=395.3867182946834, cy=118.2172299976972, conf=0.9197450876235962
+[11:11:31] 2026-09-05 11:11:31,586 [INFO] PLC float read OK: D2810-2811 -> 386.6432189941406
+[11:11:31] 2026-09-05 11:11:31,623 [INFO] PLC float read OK: D2910-2911 -> 4.726645469665527
+[11:11:31] 2026-09-05 11:11:31,625 [INFO] 🔙 Quay lại vị trí gốc (0,0) từ (386.643,4.727)
+[11:11:31] INFO:     127.0.0.1:64631 - "GET /docs HTTP/1.1" 200 OK
+[11:11:31] 2026-09-05 11:11:31,768 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:11:31] 2026-09-05 11:11:31,768 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:11:33] 2026-09-05 11:11:33,320 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:11:33] 2026-09-05 11:11:33,815 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:11:36] INFO:     127.0.0.1:64635 - "GET /docs HTTP/1.1" 200 OK
+[11:11:41] 2026-09-05 11:11:41,440 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 9666ms
+[11:11:41] INFO:     127.0.0.1:64640 - "GET /docs HTTP/1.1" 200 OK
+[11:11:42] 2026-09-05 11:11:42,175 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:11:42] 2026-09-05 11:11:42,679 [INFO] 🔌 PLC connection closed
+[11:11:42] INFO:     127.0.0.1:64574 - "POST /api/calib/auto-board-offset HTTP/1.1" 200 OK
+[11:11:46] INFO:     127.0.0.1:64644 - "GET /docs HTTP/1.1" 200 OK
+[11:11:51] INFO:     127.0.0.1:64649 - "GET /docs HTTP/1.1" 200 OK
+[11:11:53] 2026-09-05 11:11:53,005 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:11:53] 2026-09-05 11:11:53,005 [INFO] 🔎 Điểm mốc A (mặt B): Board=(9.900,10.000) -> PLC kỳ vọng=(3.130,0.376)
+[11:11:53] 2026-09-05 11:11:53,044 [INFO] PLC float read OK: D2810-2811 -> 0.0
+[11:11:53] 2026-09-05 11:11:53,062 [INFO] PLC float read OK: D2910-2911 -> 0.0
+[11:11:53] 2026-09-05 11:11:53,217 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:11:53] 2026-09-05 11:11:53,219 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:11:54] 2026-09-05 11:11:54,783 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:11:55] 2026-09-05 11:11:55,292 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 2000ms
+[11:11:55] 2026-09-05 11:11:55,292 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:11:56] 2026-09-05 11:11:56,033 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:11:56] 2026-09-05 11:11:56,552 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:11:56] 2026-09-05 11:11:56,631 [INFO] Snapshot image captured: 599317 bytes, type=image/jpeg, md5=b784960d2dbad006c50bc67f653eb7af, shape=1920x1080
+[11:11:56] 2026-09-05 11:11:56,633 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:11:56] INFO:     127.0.0.1:64657 - "GET /docs HTTP/1.1" 200 OK
+[11:11:57] 2026-09-05 11:11:57,024 [INFO] 🎯 Fiducial Detector kết quả: found=False, cx=None, cy=None, conf=None
+[11:11:57] 2026-09-05 11:11:57,028 [INFO] 🔎 Điểm mốc C (mặt B): Board=(596.600,393.000) -> PLC kỳ vọng=(386.441,588.515)
+[11:11:57] 2026-09-05 11:11:57,058 [INFO] PLC float read OK: D2810-2811 -> 3.1302738189697266
+[11:11:57] 2026-09-05 11:11:57,092 [INFO] PLC float read OK: D2910-2911 -> 0.3764421045780182
+[11:11:57] 2026-09-05 11:11:57,253 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:11:57] 2026-09-05 11:11:57,253 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:11:57] 2026-09-05 11:11:57,763 [INFO] 🚀 PLC motion started: [65470, 65535, 16383, 16449]
+[11:11:59] 2026-09-05 11:11:59,320 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:12:01] INFO:     127.0.0.1:64663 - "GET /docs HTTP/1.1" 200 OK
+[11:12:04] 2026-09-05 11:12:04,957 [WARNING] ⚠️ PLC returned idle too early after 7704ms; waiting until at least 9360ms before capture
+[11:12:06] INFO:     127.0.0.1:64666 - "GET /docs HTTP/1.1" 200 OK
+[11:12:07] 2026-09-05 11:12:07,387 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:12:07] 2026-09-05 11:12:07,880 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:12:07] 2026-09-05 11:12:07,972 [INFO] Snapshot image captured: 503025 bytes, type=image/jpeg, md5=f113abcf482c59de70c798ce2711d89f, shape=1920x1080
+[11:12:07] 2026-09-05 11:12:07,974 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:12:08] 2026-09-05 11:12:08,318 [INFO] 🎯 Fiducial Detector kết quả: found=False, cx=None, cy=None, conf=None
+[11:12:08] 2026-09-05 11:12:08,342 [INFO] PLC float read OK: D2810-2811 -> 386.4413146972656
+[11:12:08] 2026-09-05 11:12:08,376 [INFO] PLC float read OK: D2910-2911 -> 588.514892578125
+[11:12:08] 2026-09-05 11:12:08,377 [INFO] 🔙 Quay lại vị trí gốc (0,0) từ (386.441,588.515)
+[11:12:08] 2026-09-05 11:12:08,495 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:12:08] 2026-09-05 11:12:08,495 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:12:10] 2026-09-05 11:12:10,055 [INFO] 🚀 PLC motion started: [23312, 49807, 18677, 49240]
+[11:12:10] 2026-09-05 11:12:10,559 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:12:11] INFO:     127.0.0.1:64672 - "GET /docs HTTP/1.1" 200 OK
+[11:12:16] 2026-09-05 11:12:16,162 [WARNING] ⚠️ PLC returned idle too early after 7667ms; waiting until at least 9387ms before capture
+[11:12:16] INFO:     127.0.0.1:64678 - "GET /docs HTTP/1.1" 200 OK
+[11:12:18] 2026-09-05 11:12:18,652 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:12:19] 2026-09-05 11:12:19,162 [INFO] 🔌 PLC connection closed
+[11:12:19] INFO:     127.0.0.1:64651 - "POST /api/calib/auto-board-offset HTTP/1.1" 200 OK
+[11:12:21] INFO:     127.0.0.1:64682 - "GET /docs HTTP/1.1" 200 OK
+[11:12:26] INFO:     127.0.0.1:64689 - "GET /docs HTTP/1.1" 200 OK
+[11:12:31] INFO:     127.0.0.1:64693 - "GET /docs HTTP/1.1" 200 OK
+[11:12:36] INFO:     127.0.0.1:64701 - "GET /docs HTTP/1.1" 200 OK
+[11:12:41] INFO:     127.0.0.1:64706 - "GET /docs HTTP/1.1" 200 OK
+[11:12:46] INFO:     127.0.0.1:64723 - "GET /docs HTTP/1.1" 200 OK
+[11:12:51] INFO:     127.0.0.1:64728 - "GET /docs HTTP/1.1" 200 OK
+[11:12:56] INFO:     127.0.0.1:64733 - "GET /docs HTTP/1.1" 200 OK
+[11:13:01] INFO:     127.0.0.1:64737 - "GET /docs HTTP/1.1" 200 OK
+[11:13:06] INFO:     127.0.0.1:64752 - "GET /docs HTTP/1.1" 200 OK
+[11:13:11] INFO:     127.0.0.1:64758 - "GET /docs HTTP/1.1" 200 OK
+[11:13:16] INFO:     127.0.0.1:64762 - "GET /docs HTTP/1.1" 200 OK
+[11:13:21] INFO:     127.0.0.1:64765 - "GET /docs HTTP/1.1" 200 OK
+[11:13:26] INFO:     127.0.0.1:64769 - "GET /docs HTTP/1.1" 200 OK
+[11:13:31] INFO:     127.0.0.1:64775 - "GET /docs HTTP/1.1" 200 OK
+[11:13:34] 2026-09-05 11:13:34,415 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:13:34] 2026-09-05 11:13:34,450 [INFO] PLC float read OK: D2810-2811 -> 0.0
+[11:13:34] 2026-09-05 11:13:34,466 [INFO] PLC float read OK: D2910-2911 -> 0.0
+[11:13:34] 2026-09-05 11:13:34,635 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:13:34] 2026-09-05 11:13:34,637 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:13:34] 2026-09-05 11:13:34,757 [INFO] 🚀 PLC motion started: [65525, 65535, 32767, 16435]
+[11:13:36] INFO:     127.0.0.1:64780 - "GET /docs HTTP/1.1" 200 OK
+[11:13:38] 2026-09-05 11:13:38,829 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:13:39] 2026-09-05 11:13:39,346 [INFO] 🔌 PLC connection closed
+[11:13:39] INFO:     127.0.0.1:64779 - "POST /api/plc/move HTTP/1.1" 200 OK
+[11:13:41] INFO:     127.0.0.1:64783 - "GET /docs HTTP/1.1" 200 OK
+[11:13:46] INFO:     127.0.0.1:64788 - "GET /docs HTTP/1.1" 200 OK
+[11:13:51] INFO:     127.0.0.1:64793 - "GET /docs HTTP/1.1" 200 OK
+[11:13:56] INFO:     127.0.0.1:64798 - "GET /docs HTTP/1.1" 200 OK
+[11:14:01] INFO:     127.0.0.1:61791 - "GET /docs HTTP/1.1" 200 OK
+[11:14:06] INFO:     127.0.0.1:61796 - "GET /docs HTTP/1.1" 200 OK
+[11:14:11] INFO:     127.0.0.1:61800 - "GET /docs HTTP/1.1" 200 OK
+[11:14:16] INFO:     127.0.0.1:61804 - "GET /docs HTTP/1.1" 200 OK
+[11:14:21] INFO:     127.0.0.1:61810 - "GET /docs HTTP/1.1" 200 OK
+[11:14:26] INFO:     127.0.0.1:61818 - "GET /docs HTTP/1.1" 200 OK
+[11:14:31] INFO:     127.0.0.1:61821 - "GET /docs HTTP/1.1" 200 OK
+[11:14:36] INFO:     127.0.0.1:49929 - "GET /docs HTTP/1.1" 200 OK
+[11:14:41] INFO:     127.0.0.1:62932 - "GET /docs HTTP/1.1" 200 OK
+[11:14:46] INFO:     127.0.0.1:62937 - "GET /docs HTTP/1.1" 200 OK
+[11:14:51] INFO:     127.0.0.1:62942 - "GET /docs HTTP/1.1" 200 OK
+[11:14:56] INFO:     127.0.0.1:62959 - "GET /docs HTTP/1.1" 200 OK
+[11:15:01] INFO:     127.0.0.1:62964 - "GET /docs HTTP/1.1" 200 OK
+[11:15:06] INFO:     127.0.0.1:62969 - "GET /docs HTTP/1.1" 200 OK
+[11:15:11] INFO:     127.0.0.1:62972 - "GET /docs HTTP/1.1" 200 OK
+[11:15:16] INFO:     127.0.0.1:62984 - "GET /docs HTTP/1.1" 200 OK
+[11:15:21] INFO:     127.0.0.1:62995 - "GET /docs HTTP/1.1" 200 OK
+[11:15:26] INFO:     127.0.0.1:62999 - "GET /docs HTTP/1.1" 200 OK
+[11:15:31] INFO:     127.0.0.1:63002 - "GET /docs HTTP/1.1" 200 OK
+[11:15:36] INFO:     127.0.0.1:63008 - "GET /docs HTTP/1.1" 200 OK
+[11:15:41] INFO:     127.0.0.1:63012 - "GET /docs HTTP/1.1" 200 OK
+[11:15:46] INFO:     127.0.0.1:63019 - "GET /docs HTTP/1.1" 200 OK
+[11:15:51] INFO:     127.0.0.1:63023 - "GET /docs HTTP/1.1" 200 OK
+[11:15:56] INFO:     127.0.0.1:63028 - "GET /docs HTTP/1.1" 200 OK
+[11:16:01] INFO:     127.0.0.1:63032 - "GET /docs HTTP/1.1" 200 OK
+[11:16:06] INFO:     127.0.0.1:63035 - "GET /docs HTTP/1.1" 200 OK
+[11:16:11] INFO:     127.0.0.1:63040 - "GET /docs HTTP/1.1" 200 OK
+[11:16:16] INFO:     127.0.0.1:63045 - "GET /docs HTTP/1.1" 200 OK
+[11:16:21] INFO:     127.0.0.1:63048 - "GET /docs HTTP/1.1" 200 OK
+[11:16:24] 2026-09-05 11:16:24,361 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:16:24] 2026-09-05 11:16:24,377 [INFO] PLC float read OK: D2810-2811 -> 50.0
+[11:16:24] 2026-09-05 11:16:24,413 [INFO] PLC float read OK: D2910-2911 -> 200.0
+[11:16:24] 2026-09-05 11:16:24,554 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:16:24] 2026-09-05 11:16:24,556 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:16:24] 2026-09-05 11:16:24,750 [INFO] 🚀 PLC motion started: [65136, 65535, 65535, 49240]
+[11:16:26] INFO:     127.0.0.1:63053 - "GET /docs HTTP/1.1" 200 OK
+[11:16:30] 2026-09-05 11:16:30,344 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:16:30] 2026-09-05 11:16:30,840 [INFO] 🔌 PLC connection closed
+[11:16:30] INFO:     127.0.0.1:63052 - "POST /api/plc/move HTTP/1.1" 200 OK
+[11:16:31] INFO:     127.0.0.1:63059 - "GET /docs HTTP/1.1" 200 OK
+[11:16:36] INFO:     127.0.0.1:63065 - "GET /docs HTTP/1.1" 200 OK
+[11:16:39] 2026-09-05 11:16:39,409 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:16:39] 2026-09-05 11:16:39,409 [INFO] 🔎 Điểm mốc A (mặt B): Board=(9.900,10.000) -> PLC kỳ vọng=(3.130,0.376)
+[11:16:39] 2026-09-05 11:16:39,441 [INFO] PLC float read OK: D2810-2811 -> 0.0
+[11:16:39] 2026-09-05 11:16:39,454 [INFO] PLC float read OK: D2910-2911 -> 0.0
+[11:16:39] 2026-09-05 11:16:39,627 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:16:39] 2026-09-05 11:16:39,627 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:16:41] 2026-09-05 11:16:41,201 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:16:41] 2026-09-05 11:16:41,673 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 2000ms
+[11:16:41] 2026-09-05 11:16:41,673 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:16:41] INFO:     127.0.0.1:63071 - "GET /docs HTTP/1.1" 200 OK
+[11:16:42] 2026-09-05 11:16:42,429 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:16:42] 2026-09-05 11:16:42,941 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:16:43] 2026-09-05 11:16:43,036 [INFO] Snapshot image captured: 601490 bytes, type=image/jpeg, md5=eecdbd00a0995cc52bc8180e5be0d492, shape=1920x1080
+[11:16:43] 2026-09-05 11:16:43,038 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:16:43] 2026-09-05 11:16:43,376 [INFO] 🎯 Fiducial Detector kết quả: found=False, cx=None, cy=None, conf=None
+[11:16:43] 2026-09-05 11:16:43,378 [INFO] 🔎 Điểm mốc C (mặt B): Board=(596.600,393.000) -> PLC kỳ vọng=(386.441,588.515)
+[11:16:43] 2026-09-05 11:16:43,394 [INFO] PLC float read OK: D2810-2811 -> 3.1302738189697266
+[11:16:43] 2026-09-05 11:16:43,433 [INFO] PLC float read OK: D2910-2911 -> 0.3764421045780182
+[11:16:43] 2026-09-05 11:16:43,596 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:16:43] 2026-09-05 11:16:43,596 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:16:43] 2026-09-05 11:16:43,858 [INFO] 🚀 PLC motion started: [65511, 65535, 65535, 16472]
+[11:16:45] 2026-09-05 11:16:45,637 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:16:46] INFO:     127.0.0.1:63078 - "GET /docs HTTP/1.1" 200 OK
+[11:16:50] 2026-09-05 11:16:50,593 [WARNING] ⚠️ PLC returned idle too early after 6997ms; waiting until at least 9360ms before capture
+[11:16:51] INFO:     127.0.0.1:63084 - "GET /docs HTTP/1.1" 200 OK
+[11:16:53] 2026-09-05 11:16:53,739 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:16:54] 2026-09-05 11:16:54,245 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:16:54] 2026-09-05 11:16:54,317 [INFO] Snapshot image captured: 498011 bytes, type=image/jpeg, md5=b80ba1cb15410e6bda3c3613947eead3, shape=1920x1080
+[11:16:54] 2026-09-05 11:16:54,317 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:16:54] 2026-09-05 11:16:54,667 [INFO] 🎯 Fiducial Detector kết quả: found=False, cx=None, cy=None, conf=None
+[11:16:54] 2026-09-05 11:16:54,694 [INFO] PLC float read OK: D2810-2811 -> 386.4413146972656
+[11:16:54] 2026-09-05 11:16:54,728 [INFO] PLC float read OK: D2910-2911 -> 588.514892578125
+[11:16:54] 2026-09-05 11:16:54,728 [INFO] 🔙 Quay lại vị trí gốc (0,0) từ (386.441,588.515)
+[11:16:54] 2026-09-05 11:16:54,874 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:16:54] 2026-09-05 11:16:54,874 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:16:55] 2026-09-05 11:16:55,089 [INFO] 🚀 PLC motion started: [63136, 65535, 65535, 49240]
+[11:16:56] INFO:     127.0.0.1:63089 - "GET /docs HTTP/1.1" 200 OK
+[11:16:56] 2026-09-05 11:16:56,922 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:17:01] INFO:     127.0.0.1:63092 - "GET /docs HTTP/1.1" 200 OK
+[11:17:01] 2026-09-05 11:17:01,859 [WARNING] ⚠️ PLC returned idle too early after 6984ms; waiting until at least 9387ms before capture
+[11:17:05] 2026-09-05 11:17:05,028 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:17:05] 2026-09-05 11:17:05,532 [INFO] 🔌 PLC connection closed
+[11:17:05] INFO:     127.0.0.1:63070 - "POST /api/calib/auto-board-offset HTTP/1.1" 200 OK
+[11:17:06] INFO:     127.0.0.1:63097 - "GET /docs HTTP/1.1" 200 OK
+[11:17:11] INFO:     127.0.0.1:63102 - "GET /docs HTTP/1.1" 200 OK
+[11:17:16] INFO:     127.0.0.1:63105 - "GET /docs HTTP/1.1" 200 OK
+[11:17:21] INFO:     127.0.0.1:63109 - "GET /docs HTTP/1.1" 200 OK
+[11:17:26] INFO:     127.0.0.1:63115 - "GET /docs HTTP/1.1" 200 OK
+[11:17:31] INFO:     127.0.0.1:63119 - "GET /docs HTTP/1.1" 200 OK
+[11:17:36] INFO:     127.0.0.1:63123 - "GET /docs HTTP/1.1" 200 OK
+[11:17:41] INFO:     127.0.0.1:63127 - "GET /docs HTTP/1.1" 200 OK
+[11:17:46] INFO:     127.0.0.1:63137 - "GET /docs HTTP/1.1" 200 OK
+[11:17:51] INFO:     127.0.0.1:53991 - "GET /docs HTTP/1.1" 200 OK
+[11:17:55] INFO:     127.0.0.1:53996 - "GET /api/calib/anchor-info?anchor_name=A HTTP/1.1" 200 OK
+[11:17:56] INFO:     127.0.0.1:54000 - "GET /docs HTTP/1.1" 200 OK
+[11:17:57] 2026-09-05 11:17:57,117 [INFO] 🔎 Điểm mốc dùng để hiệu chỉnh: anchor='A' (mặt A) Board=(9.900,10.000) -> PLC kỳ vọng P0=(2.891,590.399)
+[11:17:57] 2026-09-05 11:17:57,117 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:17:57] 2026-09-05 11:17:57,119 [INFO] ➡️  Di chuyển tới P0: PLC target=(2.891,590.399)
+[11:17:57] 2026-09-05 11:17:57,143 [INFO] PLC float read OK: D2810-2811 -> 0.0
+[11:17:57] 2026-09-05 11:17:57,163 [INFO] PLC float read OK: D2910-2911 -> 0.0
+[11:17:57] 2026-09-05 11:17:57,314 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:17:57] 2026-09-05 11:17:57,314 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:17:57] 2026-09-05 11:17:57,422 [INFO] 🚀 PLC motion started: [65511, 65535, 65535, 16472]
+[11:17:58] 2026-09-05 11:17:58,045 [WARNING] ⛔ Từ chối 'calib bù lệch board (/api/calib/auto-board-offset)': PLC đang bận với 'calib trục camera (/api/calib/camera-axis)'
+[11:17:58] INFO:     127.0.0.1:54005 - "POST /api/calib/auto-board-offset HTTP/1.1" 409 Conflict
+[11:17:59] 2026-09-05 11:17:59,379 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:18:01] INFO:     127.0.0.1:54009 - "GET /docs HTTP/1.1" 200 OK
+[11:18:04] 2026-09-05 11:18:04,260 [WARNING] ⚠️ PLC returned idle too early after 6946ms; waiting until at least 7872ms before capture
+[11:18:06] 2026-09-05 11:18:06,010 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:18:06] 2026-09-05 11:18:06,527 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:18:06] 2026-09-05 11:18:06,639 [INFO] Snapshot image captured: 437747 bytes, type=image/jpeg, md5=02bd774d1425e4b185fc06a1b9ed6066, shape=1920x1080
+[11:18:06] 2026-09-05 11:18:06,643 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:18:06] INFO:     127.0.0.1:54022 - "GET /docs HTTP/1.1" 200 OK
+[11:18:06] 2026-09-05 11:18:06,952 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=357.9321930973567, cy=482.0321092859975, conf=0.9478666186332703
+[11:18:06] 2026-09-05 11:18:06,952 [INFO] ➡️  Di chuyển tới P1_dx: PLC target=(7.891,590.399)
+[11:18:06] 2026-09-05 11:18:06,980 [INFO] PLC float read OK: D2810-2811 -> 2.8907904624938965
+[11:18:06] 2026-09-05 11:18:06,998 [INFO] PLC float read OK: D2910-2911 -> 590.3990478515625
+[11:18:07] 2026-09-05 11:18:07,161 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:18:07] 2026-09-05 11:18:07,163 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:18:08] 2026-09-05 11:18:08,729 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:18:09] 2026-09-05 11:18:09,218 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 2000ms
+[11:18:09] 2026-09-05 11:18:09,218 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:18:09] 2026-09-05 11:18:09,933 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:18:10] 2026-09-05 11:18:10,430 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:18:10] 2026-09-05 11:18:10,520 [INFO] Snapshot image captured: 430058 bytes, type=image/jpeg, md5=0c3f0a778db6ef4ce44438c59ff1be92, shape=1920x1080
+[11:18:10] 2026-09-05 11:18:10,523 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:18:10] 2026-09-05 11:18:10,817 [INFO] 🎯 Fiducial Detector kết quả: found=False, cx=None, cy=None, conf=None
+[11:18:10] 2026-09-05 11:18:10,819 [INFO] 🔌 PLC connection closed
+[11:18:11] INFO:     127.0.0.1:54034 - "GET /docs HTTP/1.1" 200 OK
+[11:18:16] INFO:     127.0.0.1:54038 - "GET /docs HTTP/1.1" 200 OK
+[11:18:21] INFO:     127.0.0.1:54043 - "GET /docs HTTP/1.1" 200 OK
+[11:18:26] INFO:     127.0.0.1:54048 - "GET /docs HTTP/1.1" 200 OK
+[11:18:31] INFO:     127.0.0.1:54063 - "GET /docs HTTP/1.1" 200 OK
+[11:18:34] 2026-09-05 11:18:34,379 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:18:34] 2026-09-05 11:18:34,379 [INFO] 🔎 Điểm mốc A (mặt A): Board=(9.900,10.000) -> PLC kỳ vọng=(2.891,590.399)
+[11:18:34] 2026-09-05 11:18:34,406 [INFO] PLC float read OK: D2810-2811 -> 7.8907904624938965
+[11:18:34] 2026-09-05 11:18:34,427 [INFO] PLC float read OK: D2910-2911 -> 590.3990478515625
+[11:18:34] 2026-09-05 11:18:34,582 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:18:34] 2026-09-05 11:18:34,584 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:18:36] 2026-09-05 11:18:36,099 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:18:36] 2026-09-05 11:18:36,620 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 2000ms
+[11:18:36] 2026-09-05 11:18:36,620 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:18:36] INFO:     127.0.0.1:54071 - "GET /docs HTTP/1.1" 200 OK
+[11:18:37] 2026-09-05 11:18:37,314 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:18:37] 2026-09-05 11:18:37,827 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:18:37] 2026-09-05 11:18:37,900 [INFO] Snapshot image captured: 437885 bytes, type=image/jpeg, md5=4984b832dd7a1ae0501609aa378fe152, shape=1920x1080
+[11:18:37] 2026-09-05 11:18:37,902 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:18:38] 2026-09-05 11:18:38,229 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=356.3873781888617, cy=482.5646381076793, conf=0.9396471381187439
+[11:18:38] 2026-09-05 11:18:38,231 [INFO] 🔎 Điểm mốc C (mặt A): Board=(596.600,393.000) -> PLC kỳ vọng=(386.643,4.727)
+[11:18:38] 2026-09-05 11:18:38,264 [INFO] PLC float read OK: D2810-2811 -> 2.8907904624938965
+[11:18:38] 2026-09-05 11:18:38,285 [INFO] PLC float read OK: D2910-2911 -> 590.3990478515625
+[11:18:38] 2026-09-05 11:18:38,445 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:18:38] 2026-09-05 11:18:38,447 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:18:38] 2026-09-05 11:18:38,558 [INFO] 🚀 PLC motion started: [1600, 0, 0, 49241]
+[11:18:40] 2026-09-05 11:18:40,453 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:18:41] INFO:     127.0.0.1:54079 - "GET /docs HTTP/1.1" 200 OK
+[11:18:45] 2026-09-05 11:18:45,380 [WARNING] ⚠️ PLC returned idle too early after 6933ms; waiting until at least 9335ms before capture
+[11:18:46] INFO:     127.0.0.1:54082 - "GET /docs HTTP/1.1" 200 OK
+[11:18:48] 2026-09-05 11:18:48,562 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:18:49] 2026-09-05 11:18:49,057 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:18:49] 2026-09-05 11:18:49,130 [INFO] Snapshot image captured: 447179 bytes, type=image/jpeg, md5=e0ebfe6fa77bc948c234c8bfe930f903, shape=1920x1080
+[11:18:49] 2026-09-05 11:18:49,130 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:18:49] 2026-09-05 11:18:49,461 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=383.97007002452426, cy=116.71090774333307, conf=0.9383531808853149
+[11:18:49] 2026-09-05 11:18:49,480 [WARNING] ⚠️ Sai số dư RMS (1.3267mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.
+[11:18:49] 2026-09-05 11:18:49,530 [INFO] PLC float read OK: D2810-2811 -> 386.6432189941406
+[11:18:49] 2026-09-05 11:18:49,563 [INFO] PLC float read OK: D2910-2911 -> 4.726645469665527
+[11:18:49] 2026-09-05 11:18:49,563 [INFO] 🔙 Quay lại vị trí gốc (0,0) từ (386.643,4.727)
+[11:18:49] 2026-09-05 11:18:49,696 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:18:49] 2026-09-05 11:18:49,698 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:18:51] 2026-09-05 11:18:51,236 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:18:51] 2026-09-05 11:18:51,708 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:18:51] INFO:     127.0.0.1:54087 - "GET /docs HTTP/1.1" 200 OK
+[11:18:56] INFO:     127.0.0.1:54093 - "GET /docs HTTP/1.1" 200 OK
+[11:18:59] 2026-09-05 11:18:59,436 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 9666ms
+[11:19:00] 2026-09-05 11:19:00,191 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:19:00] INFO:     127.0.0.1:53027 - "GET /api/calib/anchor-info?anchor_name=A HTTP/1.1" 200 OK
+[11:19:00] 2026-09-05 11:19:00,697 [INFO] 🔌 PLC connection closed
+[11:19:00] INFO:     127.0.0.1:54068 - "POST /api/calib/auto-board-offset HTTP/1.1" 200 OK
+[11:19:01] INFO:     127.0.0.1:53029 - "GET /docs HTTP/1.1" 200 OK
+[11:19:02] 2026-09-05 11:19:02,649 [INFO] 🔎 Điểm mốc dùng để hiệu chỉnh: anchor='A' (mặt A) Board=(9.900,10.000) -> PLC kỳ vọng P0=(2.891,590.399)
+[11:19:02] 2026-09-05 11:19:02,649 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:19:02] 2026-09-05 11:19:02,649 [INFO] ➡️  Di chuyển tới P0: PLC target=(2.891,590.399)
+[11:19:02] 2026-09-05 11:19:02,676 [INFO] PLC float read OK: D2810-2811 -> 0.0
+[11:19:02] 2026-09-05 11:19:02,695 [INFO] PLC float read OK: D2910-2911 -> 0.0
+[11:19:02] 2026-09-05 11:19:02,845 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:19:02] 2026-09-05 11:19:02,845 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:19:02] 2026-09-05 11:19:02,966 [INFO] 🚀 PLC motion started: [65511, 65535, 65535, 16472]
+[11:19:04] 2026-09-05 11:19:04,931 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:19:06] INFO:     127.0.0.1:53033 - "GET /docs HTTP/1.1" 200 OK
+[11:19:09] 2026-09-05 11:19:09,803 [WARNING] ⚠️ PLC returned idle too early after 6959ms; waiting until at least 7872ms before capture
+[11:19:11] 2026-09-05 11:19:11,502 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:19:11] INFO:     127.0.0.1:53037 - "GET /docs HTTP/1.1" 200 OK
+[11:19:12] 2026-09-05 11:19:12,018 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:19:12] 2026-09-05 11:19:12,111 [INFO] Snapshot image captured: 437130 bytes, type=image/jpeg, md5=7097881e098e92f8dff93f00eb97dae6, shape=1920x1080
+[11:19:12] 2026-09-05 11:19:12,111 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:19:12] 2026-09-05 11:19:12,287 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=353.03280708317743, cy=480.7897393689986, conf=0.9393185973167419
+[11:19:12] 2026-09-05 11:19:12,289 [INFO] ➡️  Di chuyển tới P1_dx: PLC target=(7.891,590.399)
+[11:19:12] 2026-09-05 11:19:12,319 [INFO] PLC float read OK: D2810-2811 -> 2.8907904624938965
+[11:19:12] 2026-09-05 11:19:12,340 [INFO] PLC float read OK: D2910-2911 -> 590.3990478515625
+[11:19:12] 2026-09-05 11:19:12,484 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:19:12] 2026-09-05 11:19:12,484 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:19:14] 2026-09-05 11:19:14,039 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:19:14] 2026-09-05 11:19:14,524 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 2000ms
+[11:19:14] 2026-09-05 11:19:14,524 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:19:15] 2026-09-05 11:19:15,287 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:19:15] 2026-09-05 11:19:15,810 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:19:15] 2026-09-05 11:19:15,887 [INFO] Snapshot image captured: 442301 bytes, type=image/jpeg, md5=c6b69836880c7d7dbe6b23a83ed3920e, shape=1920x1080
+[11:19:15] 2026-09-05 11:19:15,887 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:19:16] 2026-09-05 11:19:16,076 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=1736.8294987315196, cy=577.0941591578456, conf=0.6053974628448486
+[11:19:16] 2026-09-05 11:19:16,077 [INFO] ➡️  Di chuyển tới P2_dy: PLC target=(2.891,595.399)
+[11:19:16] 2026-09-05 11:19:16,108 [INFO] PLC float read OK: D2810-2811 -> 7.8907904624938965
+[11:19:16] 2026-09-05 11:19:16,128 [INFO] PLC float read OK: D2910-2911 -> 590.3990478515625
+[11:19:16] 2026-09-05 11:19:16,270 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:19:16] 2026-09-05 11:19:16,272 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:19:16] INFO:     127.0.0.1:53049 - "GET /docs HTTP/1.1" 200 OK
+[11:19:17] 2026-09-05 11:19:17,597 [WARNING] ⛔ Từ chối 'calib bù lệch board (/api/calib/auto-board-offset)': PLC đang bận với 'calib trục camera (/api/calib/camera-axis)'
+[11:19:17] INFO:     127.0.0.1:53052 - "POST /api/calib/auto-board-offset HTTP/1.1" 409 Conflict
+[11:19:17] 2026-09-05 11:19:17,808 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:19:18] 2026-09-05 11:19:18,311 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 2000ms
+[11:19:18] 2026-09-05 11:19:18,311 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:19:19] 2026-09-05 11:19:19,023 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:19:19] 2026-09-05 11:19:19,522 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:19:19] 2026-09-05 11:19:19,593 [INFO] Snapshot image captured: 519581 bytes, type=image/jpeg, md5=147c60fccb0c85c8c1b81975c10d3915, shape=1920x1080
+[11:19:19] 2026-09-05 11:19:19,595 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:19:19] 2026-09-05 11:19:19,795 [INFO] 🎯 Fiducial Detector kết quả: found=False, cx=None, cy=None, conf=None
+[11:19:19] 2026-09-05 11:19:19,797 [INFO] 🔌 PLC connection closed
+[11:19:21] INFO:     127.0.0.1:53064 - "GET /docs HTTP/1.1" 200 OK
+[11:19:25] 2026-09-05 11:19:25,183 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:19:25] 2026-09-05 11:19:25,183 [INFO] 🔎 Điểm mốc A (mặt A): Board=(9.900,10.000) -> PLC kỳ vọng=(2.891,590.399)
+[11:19:25] 2026-09-05 11:19:25,203 [INFO] PLC float read OK: D2810-2811 -> 2.8907904624938965
+[11:19:25] 2026-09-05 11:19:25,226 [INFO] PLC float read OK: D2910-2911 -> 595.3990478515625
+[11:19:25] 2026-09-05 11:19:25,375 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:19:25] 2026-09-05 11:19:25,375 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:19:26] INFO:     127.0.0.1:53072 - "GET /docs HTTP/1.1" 200 OK
+[11:19:26] 2026-09-05 11:19:26,880 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:19:27] 2026-09-05 11:19:27,389 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 2000ms
+[11:19:27] 2026-09-05 11:19:27,389 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:19:28] 2026-09-05 11:19:28,069 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:19:28] 2026-09-05 11:19:28,582 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:19:28] 2026-09-05 11:19:28,689 [INFO] Snapshot image captured: 438305 bytes, type=image/jpeg, md5=3f68c878efb8cbde68d9a0b1a52fc223, shape=1920x1080
+[11:19:28] 2026-09-05 11:19:28,691 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:19:28] 2026-09-05 11:19:28,853 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=353.0838208093355, cy=483.65487701569447, conf=0.9411147236824036
+[11:19:28] 2026-09-05 11:19:28,855 [INFO] 🔎 Điểm mốc C (mặt A): Board=(596.600,393.000) -> PLC kỳ vọng=(386.643,4.727)
+[11:19:28] 2026-09-05 11:19:28,884 [INFO] PLC float read OK: D2810-2811 -> 2.8907904624938965
+[11:19:28] 2026-09-05 11:19:28,902 [INFO] PLC float read OK: D2910-2911 -> 590.3990478515625
+[11:19:29] 2026-09-05 11:19:29,044 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:19:29] 2026-09-05 11:19:29,045 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:19:29] 2026-09-05 11:19:29,138 [INFO] 🚀 PLC motion started: [64800, 65535, 49151, 49240]
+[11:19:31] 2026-09-05 11:19:31,107 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:19:31] INFO:     127.0.0.1:53079 - "GET /docs HTTP/1.1" 200 OK
+[11:19:35] 2026-09-05 11:19:35,949 [WARNING] ⚠️ PLC returned idle too early after 6904ms; waiting until at least 9335ms before capture
+[11:19:36] INFO:     127.0.0.1:53089 - "GET /docs HTTP/1.1" 200 OK
+[11:19:39] 2026-09-05 11:19:39,161 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:19:39] 2026-09-05 11:19:39,678 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:19:39] 2026-09-05 11:19:39,766 [INFO] Snapshot image captured: 447505 bytes, type=image/jpeg, md5=0f98f47709e22ab9913f8533959341ad, shape=1920x1080
+[11:19:39] 2026-09-05 11:19:39,770 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:19:39] 2026-09-05 11:19:39,994 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=379.4797613483587, cy=116.21944295383337, conf=0.9368674159049988
+[11:19:39] 2026-09-05 11:19:39,995 [WARNING] ⚠️ Sai số dư RMS (1.3344mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.
+[11:19:40] 2026-09-05 11:19:40,035 [INFO] PLC float read OK: D2810-2811 -> 386.6432189941406
+[11:19:40] 2026-09-05 11:19:40,065 [INFO] PLC float read OK: D2910-2911 -> 4.726645469665527
+[11:19:40] 2026-09-05 11:19:40,065 [INFO] 🔙 Quay lại vị trí gốc (0,0) từ (386.643,4.727)
+[11:19:40] 2026-09-05 11:19:40,192 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:19:40] 2026-09-05 11:19:40,192 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:19:41] 2026-09-05 11:19:41,740 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:19:41] INFO:     127.0.0.1:53096 - "GET /docs HTTP/1.1" 200 OK
+[11:19:42] 2026-09-05 11:19:42,213 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:19:46] INFO:     127.0.0.1:53100 - "GET /docs HTTP/1.1" 200 OK
+[11:19:49] 2026-09-05 11:19:49,860 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 9666ms
+[11:19:50] 2026-09-05 11:19:50,600 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:19:51] 2026-09-05 11:19:51,099 [INFO] 🔌 PLC connection closed
+[11:19:51] INFO:     127.0.0.1:53070 - "POST /api/calib/auto-board-offset HTTP/1.1" 200 OK
+[11:19:51] INFO:     127.0.0.1:53107 - "GET /docs HTTP/1.1" 200 OK
+[11:19:56] INFO:     127.0.0.1:53111 - "GET /docs HTTP/1.1" 200 OK
+[11:20:01] INFO:     127.0.0.1:53114 - "GET /docs HTTP/1.1" 200 OK
+[11:20:06] INFO:     127.0.0.1:53118 - "GET /docs HTTP/1.1" 200 OK
+[11:20:11] INFO:     127.0.0.1:53124 - "GET /docs HTTP/1.1" 200 OK
+[11:20:16] INFO:     127.0.0.1:53127 - "GET /docs HTTP/1.1" 200 OK
+[11:20:21] INFO:     127.0.0.1:53130 - "GET /docs HTTP/1.1" 200 OK
+[11:20:26] INFO:     127.0.0.1:53135 - "GET /docs HTTP/1.1" 200 OK
+[11:20:31] INFO:     127.0.0.1:53140 - "GET /docs HTTP/1.1" 200 OK
+[11:20:36] INFO:     127.0.0.1:53145 - "GET /docs HTTP/1.1" 200 OK
+[11:20:37] 2026-09-05 11:20:37,406 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:20:37] 2026-09-05 11:20:37,406 [INFO] 🔎 Điểm mốc A (mặt A): Board=(9.900,10.000) -> PLC kỳ vọng=(2.891,590.399)
+[11:20:37] 2026-09-05 11:20:37,430 [INFO] PLC float read OK: D2810-2811 -> 0.0
+[11:20:37] 2026-09-05 11:20:37,446 [INFO] PLC float read OK: D2910-2911 -> 0.0
+[11:20:37] 2026-09-05 11:20:37,591 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:20:37] 2026-09-05 11:20:37,591 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:20:37] 2026-09-05 11:20:37,703 [INFO] 🚀 PLC motion started: [65511, 65535, 65535, 16472]
+[11:20:39] 2026-09-05 11:20:39,643 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:20:41] INFO:     127.0.0.1:53150 - "GET /docs HTTP/1.1" 200 OK
+[11:20:44] 2026-09-05 11:20:44,501 [WARNING] ⚠️ PLC returned idle too early after 6911ms; waiting until at least 7872ms before capture
+[11:20:46] 2026-09-05 11:20:46,162 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:20:46] 2026-09-05 11:20:46,676 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:20:46] 2026-09-05 11:20:46,760 [INFO] Snapshot image captured: 425585 bytes, type=image/jpeg, md5=7acf67959f761f32cec96d96ca7e9ddc, shape=1920x1080
+[11:20:46] 2026-09-05 11:20:46,762 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:20:46] INFO:     127.0.0.1:53157 - "GET /docs HTTP/1.1" 200 OK
+[11:20:46] 2026-09-05 11:20:46,947 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=351.68883051496744, cy=480.6466619901196, conf=0.9456872344017029
+[11:20:46] 2026-09-05 11:20:46,947 [INFO] 🔎 Điểm mốc C (mặt A): Board=(596.600,393.000) -> PLC kỳ vọng=(386.643,4.727)
+[11:20:46] 2026-09-05 11:20:46,960 [INFO] PLC float read OK: D2810-2811 -> 2.8907904624938965
+[11:20:46] 2026-09-05 11:20:46,989 [INFO] PLC float read OK: D2910-2911 -> 590.3990478515625
+[11:20:47] 2026-09-05 11:20:47,146 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:20:47] 2026-09-05 11:20:47,146 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:20:47] 2026-09-05 11:20:47,165 [INFO] 🚀 PLC motion started: [64800, 65535, 49151, 49240]
+[11:20:49] 2026-09-05 11:20:49,210 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:20:51] INFO:     127.0.0.1:53162 - "GET /docs HTTP/1.1" 200 OK
+[11:20:53] 2026-09-05 11:20:53,979 [WARNING] ⚠️ PLC returned idle too early after 6832ms; waiting until at least 9335ms before capture
+[11:20:56] INFO:     127.0.0.1:53165 - "GET /docs HTTP/1.1" 200 OK
+[11:20:57] 2026-09-05 11:20:57,257 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:20:57] 2026-09-05 11:20:57,776 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:20:57] 2026-09-05 11:20:57,825 [INFO] Snapshot image captured: 446533 bytes, type=image/jpeg, md5=9d0952d0856a1c4ec6ff80bea8d872d1, shape=1920x1080
+[11:20:57] 2026-09-05 11:20:57,825 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:20:57] 2026-09-05 11:20:57,992 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=376.94768077463686, cy=116.11088552241137, conf=0.9467179179191589
+[11:20:57] 2026-09-05 11:20:57,996 [WARNING] ⚠️ Sai số dư RMS (1.3253mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.
+[11:20:58] 2026-09-05 11:20:58,037 [INFO] PLC float read OK: D2810-2811 -> 386.6432189941406
+[11:20:58] 2026-09-05 11:20:58,068 [INFO] PLC float read OK: D2910-2911 -> 4.726645469665527
+[11:20:58] 2026-09-05 11:20:58,068 [INFO] 🔙 Quay lại vị trí gốc (0,0) từ (386.643,4.727)
+[11:20:58] 2026-09-05 11:20:58,222 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:20:58] 2026-09-05 11:20:58,224 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:20:59] 2026-09-05 11:20:59,774 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:21:00] 2026-09-05 11:21:00,235 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:21:01] INFO:     127.0.0.1:53171 - "GET /docs HTTP/1.1" 200 OK
+[11:21:06] INFO:     127.0.0.1:53177 - "GET /docs HTTP/1.1" 200 OK
+[11:21:07] 2026-09-05 11:21:07,948 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 9666ms
+[11:21:08] 2026-09-05 11:21:08,691 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:21:09] 2026-09-05 11:21:09,212 [INFO] 🔌 PLC connection closed
+[11:21:09] INFO:     127.0.0.1:53147 - "POST /api/calib/auto-board-offset HTTP/1.1" 200 OK
+[11:21:11] INFO:     127.0.0.1:53180 - "GET /docs HTTP/1.1" 200 OK
+[11:21:16] INFO:     127.0.0.1:53183 - "GET /docs HTTP/1.1" 200 OK
+[11:21:21] INFO:     127.0.0.1:53188 - "GET /docs HTTP/1.1" 200 OK
+[11:21:26] INFO:     127.0.0.1:53193 - "GET /docs HTTP/1.1" 200 OK
+[11:21:31] INFO:     127.0.0.1:53196 - "GET /docs HTTP/1.1" 200 OK
+[11:21:36] INFO:     127.0.0.1:53200 - "GET /docs HTTP/1.1" 200 OK
+[11:21:41] INFO:     127.0.0.1:53206 - "GET /docs HTTP/1.1" 200 OK
+[11:21:46] INFO:     127.0.0.1:53210 - "GET /docs HTTP/1.1" 200 OK
+[11:21:51] INFO:     127.0.0.1:53213 - "GET /docs HTTP/1.1" 200 OK
+[11:21:56] INFO:     127.0.0.1:53219 - "GET /docs HTTP/1.1" 200 OK
+[11:22:01] INFO:     127.0.0.1:53224 - "GET /docs HTTP/1.1" 200 OK
+[11:22:06] INFO:     127.0.0.1:53228 - "GET /docs HTTP/1.1" 200 OK
+[11:22:11] INFO:     127.0.0.1:53231 - "GET /docs HTTP/1.1" 200 OK
+[11:22:16] INFO:     127.0.0.1:53237 - "GET /docs HTTP/1.1" 200 OK
+[11:22:19] 2026-09-05 11:22:19,588 [INFO] ✅ Connected to PLC: 192.168.3.1:9600
+[11:22:19] 2026-09-05 11:22:19,590 [INFO] 🔎 Điểm mốc A (mặt A): Board=(9.900,10.000) -> PLC kỳ vọng=(2.891,590.399)
+[11:22:19] 2026-09-05 11:22:19,617 [INFO] PLC float read OK: D2810-2811 -> 0.0
+[11:22:19] 2026-09-05 11:22:19,638 [INFO] PLC float read OK: D2910-2911 -> 0.0
+[11:22:19] 2026-09-05 11:22:19,795 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:22:19] 2026-09-05 11:22:19,799 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:22:21] 2026-09-05 11:22:21,321 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:22:21] 2026-09-05 11:22:21,391 [INFO] 🚀 PLC motion started: [11644, 50681, 65426, 16472]
+[11:22:21] 2026-09-05 11:22:21,822 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:22:21] INFO:     127.0.0.1:53244 - "GET /docs HTTP/1.1" 200 OK
+[11:22:26] INFO:     127.0.0.1:53247 - "GET /docs HTTP/1.1" 200 OK
+[11:22:27] 2026-09-05 11:22:27,499 [WARNING] ⚠️ PLC returned idle too early after 7700ms; waiting until at least 7872ms before capture
+[11:22:28] 2026-09-05 11:22:28,430 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:22:28] 2026-09-05 11:22:28,951 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:22:29] 2026-09-05 11:22:29,040 [INFO] Snapshot image captured: 419698 bytes, type=image/jpeg, md5=b187ed1cf9fecc66ec1392511d2d78db, shape=1920x1080
+[11:22:29] 2026-09-05 11:22:29,040 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:22:29] 2026-09-05 11:22:29,264 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=349.54936783860046, cy=479.5772100543287, conf=0.9501436948776245
+[11:22:29] 2026-09-05 11:22:29,264 [INFO] 🔎 Điểm mốc C (mặt A): Board=(596.600,393.000) -> PLC kỳ vọng=(386.643,4.727)
+[11:22:29] 2026-09-05 11:22:29,286 [INFO] PLC float read OK: D2810-2811 -> 2.8907904624938965
+[11:22:29] 2026-09-05 11:22:29,320 [INFO] PLC float read OK: D2910-2911 -> 590.3990478515625
+[11:22:29] 2026-09-05 11:22:29,451 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:22:29] 2026-09-05 11:22:29,453 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:22:30] 2026-09-05 11:22:30,362 [INFO] 🚀 PLC motion started: [62848, 65535, 16383, 49229]
+[11:22:31] 2026-09-05 11:22:31,527 [WARNING] ⚠️ PLC motion exceeded expected timeout 2000ms; continuing to wait until idle or hard timeout 20000ms
+[11:22:31] INFO:     127.0.0.1:53254 - "GET /docs HTTP/1.1" 200 OK
+[11:22:36] INFO:     127.0.0.1:53259 - "GET /docs HTTP/1.1" 200 OK
+[11:22:37] 2026-09-05 11:22:37,151 [WARNING] ⚠️ PLC returned idle too early after 7698ms; waiting until at least 9335ms before capture
+[11:22:39] 2026-09-05 11:22:39,504 [INFO] ✅ PLC motion completed with stable idle status; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:22:40] 2026-09-05 11:22:40,008 [INFO] 📸 Fetching snapshot 1/1: http://127.0.0.1:8001/snapshot
+[11:22:40] 2026-09-05 11:22:40,079 [INFO] Snapshot image captured: 444900 bytes, type=image/jpeg, md5=7970221202e666e242f1753f9a2852a4, shape=1920x1080
+[11:22:40] 2026-09-05 11:22:40,080 [INFO] 🎯 Gửi ảnh sang Fiducial Detector: http://127.0.0.1:8191/api/detect-marker
+[11:22:40] 2026-09-05 11:22:40,262 [INFO] 🎯 Fiducial Detector kết quả: found=True, cx=375.37851320845755, cy=116.35555995933208, conf=0.9407344460487366
+[11:22:40] 2026-09-05 11:22:40,266 [WARNING] ⚠️ Sai số dư RMS (1.3196mm) VƯỢT ngưỡng an toàn (1.0mm). Offset vẫn được lưu nhưng NÊN kiểm tra lại (đo lại, kiểm tra marker/ánh sáng, hoặc board bị méo) trước khi dùng cho sản xuất.
+[11:22:40] 2026-09-05 11:22:40,309 [INFO] PLC float read OK: D2810-2811 -> 386.6432189941406
+[11:22:40] 2026-09-05 11:22:40,328 [INFO] PLC float read OK: D2910-2911 -> 4.726645469665527
+[11:22:40] 2026-09-05 11:22:40,329 [INFO] 🔙 Quay lại vị trí gốc (0,0) từ (386.643,4.727)
+[11:22:40] 2026-09-05 11:22:40,482 [INFO] ✅ PLC write OK: X=True, Y=True, Trigger=True
+[11:22:40] 2026-09-05 11:22:40,484 [INFO] ⏳ Waiting PLC motion status: D466-469, poll=50ms
+[11:22:41] INFO:     127.0.0.1:53265 - "GET /docs HTTP/1.1" 200 OK
+[11:22:42] 2026-09-05 11:22:42,003 [WARNING] ⚠️ PLC has not reported motion yet after 1500ms; continuing to wait
+[11:22:42] 2026-09-05 11:22:42,530 [WARNING] ⚠️ PLC still has not reported motion by expected timeout 2000ms; continuing to wait until hard timeout 20000ms
+[11:22:46] INFO:     127.0.0.1:53268 - "GET /docs HTTP/1.1" 200 OK
+[11:22:50] 2026-09-05 11:22:50,195 [WARNING] PLC motion status stayed idle for a moving command; falling back to travel-time estimate after 9666ms
+[11:22:50] 2026-09-05 11:22:50,910 [INFO] ✅ PLC position wait completed using silent-motion fallback; idle status [0, 0, 0, 0] confirmed for 10 polls
+[11:22:51] 2026-09-05 11:22:51,412 [INFO] 🔌 PLC connection closed
+[11:22:51] INFO:     127.0.0.1:53243 - "POST /api/calib/auto-board-offset HTTP/1.1" 200 OK
+[11:22:51] INFO:     127.0.0.1:56560 - "GET /docs HTTP/1.1" 200 OK
+[11:22:56] INFO:     127.0.0.1:61386 - "GET /docs HTTP/1.1" 200 OK
+[11:23:01] INFO:     127.0.0.1:61390 - "GET /docs HTTP/1.1" 200 OK
+[11:23:06] INFO:     127.0.0.1:61393 - "GET /docs HTTP/1.1" 200 OK
+[11:23:11] INFO:     127.0.0.1:61399 - "GET /docs HTTP/1.1" 200 OK
+[11:23:16] INFO:     127.0.0.1:61403 - "GET /docs HTTP/1.1" 200 OK
+[11:23:21] INFO:     127.0.0.1:61407 - "GET /docs HTTP/1.1" 200 OK
+[11:23:26] INFO:     127.0.0.1:61411 - "GET /docs HTTP/1.1" 200 OK
+[11:23:31] INFO:     127.0.0.1:61418 - "GET /docs HTTP/1.1" 200 OK
+[11:23:36] INFO:     127.0.0.1:61421 - "GET /docs HTTP/1.1" 200 OK
+[11:23:41] INFO:     127.0.0.1:61425 - "GET /docs HTTP/1.1" 200 OK
+[11:23:46] INFO:     127.0.0.1:61430 - "GET /docs HTTP/1.1" 200 OK
+[11:23:48] ### Dang gui tin hieu dung...
+[11:23:48] ### Dang gui tin hieu dung...
+[11:23:51] ### Dang gui tin hieu dung...
+[11:23:51] INFO:     127.0.0.1:61435 - "GET /docs HTTP/1.1" 200 OK
+[11:23:52] ### Dang gui tin hieu dung...
+[11:23:53] ### Dang gui tin hieu dung...
+[11:23:53] ### Dang gui tin hieu dung...
+[11:23:53] ### Dang gui tin hieu dung...
+[11:23:53] ### Dang gui tin hieu dung...
+[11:23:54] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:23:54] ### Khong tu thoat - buoc dung ca cay process (taskkill /T /F)
+[11:23:54] ### DA DUNG (exit code 1)
