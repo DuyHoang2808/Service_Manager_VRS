@@ -446,6 +446,12 @@ class InspectDefectRequest(PLCFeedbackOverrides):
     defect_id: Optional[int] = None
     board_side: str = "A"  # "A" (mặc định) hoặc "B" — chọn calib tĩnh + offset runtime theo mặt
 
+    # Ma lo (tbLot.lot_code) + ma board (tbBoard.board_code) do app Flutter gui
+    # kem, forward sang AI Detection API de log/anh ghi theo lo/board. De
+    # trong -> AI API tu fallback ve unknown_lot/unknown_board.
+    lot_code: str = ""
+    board_code: str = ""
+
     plc_pc_ip: str = "192.168.3.101"
     plc_ip: str = "192.168.3.1"
     plc_port: int = 9600
@@ -1078,6 +1084,8 @@ class AIServiceClient:
         confidence_threshold: float,
         api_url: str,
         original_image_bytes: Optional[bytes] = None,
+        lot_code: str = "",
+        board_code: str = "",
     ) -> Optional[Dict[str, Any]]:
         """Send image to AI API and return detections."""
         try:
@@ -1089,12 +1097,14 @@ class AIServiceClient:
                     raise RuntimeError("Failed to encode image")
                 image_bytes = jpeg.tobytes()
 
-            logger.info(f"🤖 Sending to AI API: {api_url}")
+            logger.info(f"🤖 Sending to AI API: {api_url} (lot={lot_code or '-'} board={board_code or '-'})")
             response = requests.post(
                 api_url,
                 json={
                     "image_base64": base64.b64encode(image_bytes).decode("utf-8"),
                     "confidence_threshold": confidence_threshold,
+                    "lot_code": lot_code,
+                    "board_code": board_code,
                 },
                 timeout=30,
             )
@@ -1826,6 +1836,8 @@ async def inspect_defect(request: InspectDefectRequest):
             request.ai_confidence_threshold,
             ai_api_url,
             camera_service.last_snapshot_image_bytes,
+            request.lot_code,
+            request.board_code,
         )
         if ai_result is None:
             raise RuntimeError("AI detection failed")
