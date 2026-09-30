@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import os
-from datetime import datetime
+from pathlib import Path
 from typing import Optional
 
 from PySide6.QtGui import QFont, QTextCursor, QTextOption
@@ -45,10 +45,16 @@ class LogPane(QWidget):
         clear_btn = QPushButton("Xoa man hinh")
         clear_btn.clicked.connect(self._clear)
 
-        open_btn = QPushButton("Mo file log hom nay")
-        open_btn.clicked.connect(self._open_file)
+        open_btn = QPushButton(f"Mo thu muc dang chay ({svc.run_mode})")
+        open_btn.setToolTip(
+            "Mo thu muc chua file dang thuc su duoc chay (script .py hoac exe, tuy "
+            "run_mode) - noi cac file config/data (vd plc_offset_gateway_config.json, "
+            "Stream_cameras_configs.yml) thuong nam canh no - de sua config cho nhanh."
+        )
+        open_btn.clicked.connect(self._open_run_dir)
 
-        folder_btn = QPushButton("Mo thu muc")
+        folder_btn = QPushButton("Mo thu muc log")
+        folder_btn.setToolTip("Mo thu muc log rieng cua module (chua log cua tat ca cac ngay).")
         folder_btn.clicked.connect(self._open_folder)
 
         bar.addWidget(self.filter_edit, 1)
@@ -114,14 +120,19 @@ class LogPane(QWidget):
     def _clear(self) -> None:
         self.view.clear()
 
-    def _open_file(self) -> None:
-        path = self.svc.log_path_for(datetime.now())
-        if not path.exists():
-            QMessageBox.information(
-                self, "Log",
-                f"Hom nay module nay chua ghi log nao.\n\nFile se nam o:\n{path}")
+    def _open_run_dir(self) -> None:
+        """Mo thu muc chua file dang chay THAT (script hoac exe, tuy self.svc.run_mode) -
+        day cung la noi cac file config/data cua module (vd plc_offset_gateway_config.json
+        canh run_gateway.exe, Stream_cameras_configs.yml canh Stream_camera_Sony_20260508.py)
+        thuong nam canh file dang chay, xem ServiceProcess.cwd - de sua config nhanh,
+        khong can tu di tim duong dan qua Explorer."""
+        folder = Path(self.svc.cwd)
+        if not folder.exists():
+            QMessageBox.warning(
+                self, "Thu muc",
+                f"Khong tim thay thu muc (run_mode={self.svc.run_mode}):\n{folder}")
             return
-        os.startfile(str(path))  # noqa: S606 - mo bang trinh xem mac dinh cua Windows
+        os.startfile(str(folder))  # noqa: S606
 
     def _open_folder(self) -> None:
         """Mo thu muc rieng cua module (chua log cua tat ca cac ngay)."""

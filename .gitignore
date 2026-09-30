@@ -54,6 +54,7 @@ venv/
 # Runtime images
 /BE-AutoVRS/Image_input/
 /BE-AutoVRS/Image_output/
+/logs/
 # Visual Studio
 .vs/
 

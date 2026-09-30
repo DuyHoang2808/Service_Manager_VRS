@@ -24,19 +24,25 @@ products:
   # Ma hang dang chay production hien tai. vrs_calib_side_a/b.json + offset_runtime_side_a/b.json
   # da duoc gom rieng vao thu muc products/<ma_hang>/ nay (truoc do nam chung trong gateway/).
   "23691025-250616-0004-nvq-aoi":
-    weights_path: D:\Camera\Weight\VRS_yolo11n_640x640\weights\best.pt
+    weights_path: D:\Camera\Weight\VRS_260828_yolo11n_320x320\weights\best.pt
     class_name_filter: 0
-    imgsz: 640
+    imgsz: 320
     calib_dir: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\23691025-250616-0004-nvq-aoi
   # Ma hang moi - da co san file calib/offset trong thu muc rieng.
   "aoi-23692109-250613-dht":
-    weights_path: D:\Camera\Weight\VRS_yolo11n_640x640\weights\best.pt
+    weights_path: D:\Camera\Weight\VRS_260828_yolo11n_320x320\weights\best.pt
     class_name_filter: 0
-    imgsz: 640
+    imgsz: 320
     calib_dir: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\aoi-23692109-250613-dht
   # Ma hang moi - da co san file calib/offset trong thu muc rieng.
   "23693107-260615-outerthanh":
-    weights_path: D:\Camera\Weight\VRS_yolo11n_640x640\weights\best.pt
+    weights_path: D:\Camera\Weight\VRS_260828_yolo11n_320x320\weights\best.pt
     class_name_filter: 0
-    imgsz: 640
+    imgsz: 320
     calib_dir: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\23693107-260615-outerthanh
+  # Ma hang moi - da co san file calib/offset trong thu muc rieng.
+  "23691084-260904-inner-nta":
+    weights_path: D:\Camera\Weight\20260924_Model_23691084-260904-inner-nta\weights\best.pt
+    class_name_filter: 0
+    imgsz: 320
+    calib_dir: D:\Camera\Dev\AutoBoardOffset_YOLO_2Mat\gateway\products\23691084-260904-inner-nta

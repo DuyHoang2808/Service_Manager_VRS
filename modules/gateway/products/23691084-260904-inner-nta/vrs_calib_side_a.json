@@ -1,0 +1,82 @@
+{
+    "c0": -6.557594826154851,
+    "c1": -0.0008134431067429084,
+    "c2": 1.0006520418334957,
+    "c3": -4.9175188727035996e-08,
+    "d0": 604.8425832755933,
+    "d1": -1.000464726658919,
+    "d2": 0.002069564594962133,
+    "d3": 7.00900284478223e-08,
+    "_diagnostics": {
+        "n_points": 6,
+        "point_names_used": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F"
+        ],
+        "model": "bilinear",
+        "n_params": 4,
+        "condition_number": 11.243560809847356,
+        "rms_residual_mm": 0.016853766208369775,
+        "max_residual_mm": 0.02307936458573088,
+        "points": [
+            {
+                "name": "A",
+                "board_x": 11.0,
+                "board_y": 25.0,
+                "plc_x": 18.466336,
+                "plc_y": 593.895,
+                "residual_mm": 0.017565985936476926,
+                "is_outlier": false
+            },
+            {
+                "name": "B",
+                "board_x": 599.0,
+                "board_y": 25.0,
+                "plc_x": 17.974,
+                "plc_y": 5.618105,
+                "residual_mm": 0.003463364732107483,
+                "is_outlier": false
+            },
+            {
+                "name": "C",
+                "board_x": 599.0,
+                "board_y": 374.0,
+                "plc_x": 367.167,
+                "plc_y": 6.347343,
+                "residual_mm": 0.022009058194573022,
+                "is_outlier": false
+            },
+            {
+                "name": "D",
+                "board_x": 11.0,
+                "board_y": 377.0,
+                "plc_x": 370.676004,
+                "plc_y": 594.617,
+                "residual_mm": 0.003224185750826276,
+                "is_outlier": false
+            },
+            {
+                "name": "E",
+                "board_x": 79.55,
+                "board_y": 8.5,
+                "plc_x": 1.865378,
+                "plc_y": 525.267049,
+                "residual_mm": 0.01887556010297943,
+                "is_outlier": false
+            },
+            {
+                "name": "F",
+                "board_x": 539.55,
+                "board_y": 393.5,
+                "plc_x": 386.771672,
+                "plc_y": 65.878,
+                "residual_mm": 0.02307936458573088,
+                "is_outlier": false
+            }
+        ]
+    }
+}

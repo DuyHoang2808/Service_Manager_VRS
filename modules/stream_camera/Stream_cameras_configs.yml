@@ -1,5 +1,24 @@
+# =====================================================================
+# camera_backend: "msmf" hoac "dshow" - backend OpenCV dung de mo camera.
+# Da do thuc te tren may nay (xem chat/ghi chu ngay 2026-09-17):
+#   - msmf : phat RTSP MUOT, it giat/khung hinh - nhung ANH MO hon han voi
+#            camera Sony nay (Laplacian var ~6, tuc do net thap).
+#   - dshow: ANH NET gap ~3.7 lan msmf (Laplacian var ~22) - nhung de GIAT/
+#            khung hinh o 1920x1080@30fps, nghi do vuot bang thong USB2.0
+#            khi camera gui raw (YUY2) thay vi nen truoc khi truyen.
+# Doi gia tri xong PHAI RESTART lai module "stream_camera" qua Service
+# Manager moi co hieu luc (CameraConfig chi doc file nay 1 lan luc start()).
+#
+# LUU Y KY THUAT: CHỈ comment o NGOAI CUNG nay (truoc dong "CameraSonyConfig:")
+# moi giu duoc qua cac lan restart. Chuong trinh tu GHI DE lai toan bo khoi
+# "CameraSonyConfig:" moi lan khoi dong (qua save_to_yaml_v2 trong
+# Config/ParamsBase.py) bang 1 dict thuong dung tu code - comment gan kem
+# TRONG cac dong field (vd ngay sau "camera_backend: msmf") se bi XOA MAT o
+# lan restart ke tiep. Muon sua/them huong dan ben trong thi sua o
+# Stream_camera_Sony_20260508.py (class CameraConfig.__init__) thay vi o day.
+# =====================================================================
 CameraSonyConfig:
-    camera_index: 1
+    camera_index: 0
     width: 1920
     height: 1080
     fps: 30
@@ -7,6 +26,7 @@ CameraSonyConfig:
     snapshot_host: 0.0.0.0
     snapshot_port: 8001
     ffmpeg_path: D:\Driver\ffmpeg-2026-05-06-git-f2e5eff3ff-essentials_build\bin\ffmpeg.exe
+    camera_backend: msmf
     flip_horizontal: true
     snapshot_format: png
     snapshot_jpeg_quality: 95

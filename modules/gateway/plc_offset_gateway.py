@@ -104,8 +104,6 @@ PLC_MOTION_TIMEOUT_SAFETY_FACTOR = 1.5
 PLC_MOTION_TIMEOUT_OVERHEAD_MS = 1000
 PLC_MOTION_MIN_COMPLETION_RATIO = 0.8
 PLC_MOTION_MIN_COMPLETION_FLOOR_MS = 300
-CAMERA_SNAPSHOT_FRESH_FETCHES = 1
-CAMERA_SNAPSHOT_FRESH_DELAY_MS = 120
 PLC_ALREADY_IN_POSITION_TOLERANCE_MM = 0.5
 
 MOTION_ACTIVE_D466 = frozenset({2, 100, 600, 65136, 65386, 65448, 65511})
@@ -135,38 +133,81 @@ class GatewayConfigModel(BaseModel):
     """Persistent gateway config. Field defaults are the single source of truth."""
 
     # --- Camera / AI (giống gateway gốc) ---
-    camera_snapshot_url: str = "http://127.0.0.1:8001/snapshot"
-    camera_snapshot_timeout_ms: int = 3000
-    ai_api_url: str = "http://192.168.0.3:8082/api/ai-detection"
+    camera_snapshot_url: str = "http://127.0.0.1:8001/snapshot"   # URL /snapshot cua Stream Camera
+    camera_snapshot_timeout_ms: int = 3000    # timeout (ms) cho 1 lan GET snapshot
+    ai_api_url: str = "http://192.168.0.3:8082/api/ai-detection"  # AI Detection API (/api/inspect-defect dung)
+
+    # --- MỚI: chụp lại nhiều lần liên tiếp khi lấy snapshot, tránh dính frame cache cũ
+    # từ Stream Camera (HTTP có thể trả về frame vừa cache trước đó, chưa kịp cập nhật
+    # đúng lúc PLC vừa tới vị trí mới) - chỉ giữ lại ảnh của lần chụp CUỐI cùng.
+    camera_snapshot_fresh_fetches: int = 1        # so lan goi /snapshot lien tiep
+    camera_snapshot_fresh_delay_ms: int = 120     # cach nhau bao nhieu ms giua cac lan
 
     # --- PLC motion feedback (giống gateway gốc) ---
+    # Toc do truc PLC (mm/s) - CHI dung de TU UOC TINH timeout dong cho moi lenh di chuyen
+    # (xem apply_dynamic_motion_timeout: uoc luong quang duong / toc do nay -> ra
+    # motion_hard_timeout_ms thuc te ap dung). Toc do PLC that su nhanh/cham la do PLC
+    # tu quyet dinh (thong so servo/HMI) - doi gia tri nay CHI de gateway du doan dung
+    # thoi gian cho, KHONG dieu khien toc do may that.
     plc_axis_speed_mm_per_s: float = 60.0
+    # Bat co che cho theo cap thanh ghi done/busy (kieu cu). Neu False va
+    # use_plc_motion_status cung False -> gateway chi cho co dinh plc_move_timeout_ms
+    # roi coi nhu xong, khong kiem tra PLC that su da toi vi tri chua.
     use_plc_position_feedback: bool = False
-    plc_done_mem_area: str = "D"
-    plc_done_addr: Optional[int] = None
-    plc_done_value: int = 1
-    plc_busy_mem_area: str = "D"
-    plc_busy_addr: Optional[int] = None
-    plc_busy_idle_value: int = 0
-    plc_poll_interval_ms: int = 50
+    plc_done_mem_area: str = "D"       # vung nho (vd "D") chua thanh ghi "done"
+    plc_done_addr: Optional[int] = None    # dia chi thanh ghi "done" (None = khong dung)
+    plc_done_value: int = 1                # gia tri bao "da xong" tai thanh ghi done
+    plc_busy_mem_area: str = "D"       # vung nho chua thanh ghi "busy"
+    plc_busy_addr: Optional[int] = None    # dia chi thanh ghi "busy" (None = khong dung)
+    plc_busy_idle_value: int = 0           # gia tri bao "het ban/da dung" tai thanh ghi busy
+    plc_poll_interval_ms: int = 50     # chu ky doc lai thanh ghi PLC khi dang cho toi vi tri
+    # Bat co che cho theo "motion status" (doc D466-D469, xem is_motion_status_active/idle) -
+    # mac dinh True, hien dai hon done/busy, khong can khai bao them dia chi done/busy rieng.
     use_plc_motion_status: bool = True
-    plc_motion_status_mem_area: str = "D"
-    plc_motion_status_addr: int = 466
-    plc_motion_status_count: int = 4
+    plc_motion_status_mem_area: str = "D"  # vung nho chua cum thanh ghi motion status
+    plc_motion_status_addr: int = 466      # dia chi BAT DAU cum thanh ghi (D466..D469)
+    plc_motion_status_count: int = 4       # so thanh ghi lien tiep can doc (mac dinh 4: D466-D469)
+    # Thoi gian toi da cho PLC BAT DAU bao "dang di chuyen" sau khi gui lenh - qua thoi gian
+    # nay ma van chua thay motion-active thi coi la PLC "im lang" (khong bao trang thai),
+    # roi vao nhanh du doan theo estimated_travel_ms thay vi cho vo han.
     plc_motion_start_timeout_ms: int = 1500
+    # So lan doc LIEN TIEP thay trang thai "idle" moi duoc xac nhan la THAT SU da dung han
+    # (tranh nham 1 lan doc trung luc thanh ghi dang chuyen doi gia tri).
     plc_motion_idle_confirm_count: int = 10
+    # Thoi gian cho THEM (ms) SAU KHI da xac nhan PLC dung han, truoc khi tra ve cho phep
+    # chup anh - de rung dong co khi/may vi (do quan tinh luc dung dot ngot) tat het, tranh
+    # anh bi mo/nhoe. Day chinh la "thoi gian doi camera chup" - giam duoc phan nao neu PLC
+    # tang toc/giam toc em hon (it rung hon) sau khi day toc do len cao.
     plc_motion_settle_ms: int = 500
+    # Timeout CUNG toi da cho CA qua trinh cho 1 lenh move hoan tat (bat ke feedback the
+    # nao) - chan dung viec treo vo han neu PLC khong bao gio bao done/motion-idle.
     plc_motion_hard_timeout_ms: int = 20000
 
+    # --- MỚI: timeout "mềm" truyền cho wait_for_plc_position() ở mỗi lệnh move (soft_deadline
+    # + floor cho nhánh "silent fallback" khi PLC không kịp báo motion-active). Override được
+    # qua field plc_move_timeout_ms trong body request (xem PLCFeedbackOverrides). ---
+    plc_move_timeout_ms: int = 2000
+
+    # --- MỚI: timeout cho MỖI cuộc gọi PLC I/O riêng lẻ (Connect/ReadInt/WriteFloat...) ---
+    # OmronConnection (ClassLibrary.dll qua pythonnet) không có timeout riêng - nếu PLC mất
+    # kết nối/không phản hồi, cuộc gọi .NET có thể treo VĨNH VIỄN, khiến cả request HTTP treo
+    # theo, Flutter chờ mãi không bao giờ nhận được timeout. Xem plc_io() - mọi cuộc gọi PLC
+    # đều bọc qua đây, đảm bảo LUÔN trả lời (thành công hoặc lỗi timeout) trong tối đa
+    # plc_io_timeout_ms, dù DLL bên dưới có treo thật hay không.
+    plc_io_timeout_ms: int = 5000
+
     # --- MỚI: Fiducial Detector Service (YOLO riêng) ---
-    fiducial_api_url: str = "http://127.0.0.1:8193/api/detect-marker"
+    fiducial_api_url: str = "http://127.0.0.1:8193/api/detect-marker"  # API tim tam diem moc (marker)
+    # Nguong confidence toi thieu (0-1) de CHAP NHAN ket qua YOLO tim marker - duoi nguong
+    # nay coi nhu "khong tim thay", tra ve status "not_found" o buoc calib bu lech.
     fiducial_confidence_threshold: float = 0.5
 
     # --- MỚI: FOV / camera pixel geometry (theo mức zoom quang học đang dùng) ---
-    camera_fov_width_mm: float = 10.872
-    camera_fov_height_mm: float = 5.884
-    camera_image_width_px: int = 1920
-    camera_image_height_px: int = 1080
+    # Dung de tinh camera_axis_matrix MAC DINH (uoc luong tho, chua hieu chinh that).
+    camera_fov_width_mm: float = 10.872    # be rong vung nhin thay cua camera (mm) o do zoom hien tai
+    camera_fov_height_mm: float = 5.884    # chieu cao vung nhin thay cua camera (mm)
+    camera_image_width_px: int = 1920      # do rong anh camera tra ve (px)
+    camera_image_height_px: int = 1080     # chieu cao anh camera tra ve (px)
 
     # --- MỚI: Ma trận trục camera<->máy T (pixel_shift = T . plc_mm_shift) ---
     # Giá trị khởi tạo = ước lượng thô từ FOV (giả định trục thẳng hàng, không xoay/lật).
@@ -188,8 +229,14 @@ class GatewayConfigModel(BaseModel):
     camera_axis_invert_x: bool = False
     camera_axis_invert_y: bool = False
 
-    # --- MỚI: an toàn / ngưỡng cảnh báo ---
+    # --- MỚI: an toàn / ngưỡng cảnh báo (dùng ở /api/calib/auto-board-offset) ---
+    # Lech pixel toi da (tam marker phat hien duoc so voi tam anh) cho 1 diem moc - vuot
+    # nguong nay thi diem do bi loai bo (status="outlier_pixel_offset"), khong dua vao
+    # tinh Kabsch (tranh 1 diem do sai lam lech ca ket qua offset chung).
     max_allowed_pixel_offset_px: float = 150.0
+    # Sai so RMS (mm) toi da CHAP NHAN DUOC sau khi tinh Kabsch tu cac diem moc - vuot
+    # nguong nay VAN LUU offset nhung tra ve warning ro rang de nguoi dung kiem tra lai
+    # (do lai/kiem tra marker-anh sang/board bi meo) truoc khi dung cho san xuat that.
     max_allowed_rms_error_mm: float = 1.0
 
     # Đường dẫn file calib/offset tĩnh theo mặt board (A/B) KHÔNG còn khai báo ở đây nữa -
@@ -394,6 +441,7 @@ class PLCFeedbackOverrides(BaseModel):
     plc_motion_settle_ms: Optional[int] = None
     plc_motion_hard_timeout_ms: Optional[int] = None
     plc_axis_speed_mm_per_s: Optional[float] = None
+    plc_move_timeout_ms: Optional[int] = None
 
 
 class MoveRequest(PLCFeedbackOverrides):
@@ -446,6 +494,12 @@ class InspectDefectRequest(PLCFeedbackOverrides):
     defect_id: Optional[int] = None
     board_side: str = "A"  # "A" (mặc định) hoặc "B" — chọn calib tĩnh + offset runtime theo mặt
 
+    # Ma lo (tbLot.lot_code) + ma board (tbBoard.board_code) do app Flutter gui
+    # kem, forward sang AI Detection API de log/anh ghi theo lo/board. De
+    # trong -> AI API tu fallback ve unknown_lot/unknown_board.
+    lot_code: str = ""
+    board_code: str = ""
+
     plc_pc_ip: str = "192.168.3.101"
     plc_ip: str = "192.168.3.1"
     plc_port: int = 9600
@@ -453,7 +507,6 @@ class InspectDefectRequest(PLCFeedbackOverrides):
     plc_x_addr: int = 2810
     plc_y_addr: int = 2910
     plc_trigger_addr: int = 3000
-    plc_move_timeout_ms: int = 2000
 
     ai_confidence_threshold: float = 0.25
 
@@ -509,7 +562,6 @@ class AutoBoardOffsetRequest(PLCFeedbackOverrides):
     plc_x_addr: int = 2810
     plc_y_addr: int = 2910
     plc_trigger_addr: int = 3000
-    plc_move_timeout_ms: int = 2000
 
     fiducial_api_url: Optional[str] = None
     fiducial_confidence_threshold: Optional[float] = None
@@ -549,7 +601,6 @@ class CameraAxisCalibRequest(PLCFeedbackOverrides):
     plc_x_addr: int = 2810
     plc_y_addr: int = 2910
     plc_trigger_addr: int = 3000
-    plc_move_timeout_ms: int = 2000
 
     fiducial_api_url: Optional[str] = None
     fiducial_confidence_threshold: Optional[float] = None
@@ -683,6 +734,35 @@ class PLCService:
                 pass
 
 
+class PLCTimeoutError(Exception):
+    """PLC khong phan hoi trong plc_io_timeout_ms (GATEWAY_CONFIG) - xem plc_io()."""
+
+
+async def plc_io(func, *args, timeout_sec: Optional[float] = None, **kwargs):
+    """Goi 1 ham PLCService (connect/read_int/read_float_words/send_coordinates...) tren
+    thread rieng, GIOI HAN thoi gian cho toi da timeout_sec giay (mac dinh: doc tu
+    GATEWAY_CONFIG["plc_io_timeout_ms"], chinh duoc qua PUT /api/camera-config hoac
+    plc_offset_gateway_config.json - KHONG can sua code).
+
+    Cac endpoint deu co san `except Exception` de tra ve response loi ro rang cho Flutter
+    (thay vi HTTP request treo vo thoi han) - nhung dieu do chi hoat dong neu cuoc goi PLC
+    THAT SU raise. Goi thang plc.xxx qua asyncio.to_thread() KHONG dam bao dieu nay: neu
+    OmronConnection treo (PLC mat ket noi, khong tra loi), thread nen se khong bao gio
+    return, nen `except Exception` khong bao gio duoc kich hoat. Ham nay boc them
+    asyncio.wait_for() de LUON either tra ve gia tri that hoac raise PLCTimeoutError trong
+    toi da timeout_sec giay, bat ke luong .NET ben duoi co treo that hay khong (thread bi bo
+    lai chay ngam, khong the huy that su - nhung request/response da duoc giai phong)."""
+    if timeout_sec is None:
+        timeout_sec = GATEWAY_CONFIG.get("plc_io_timeout_ms", DEFAULT_GATEWAY_CONFIG["plc_io_timeout_ms"]) / 1000.0
+    try:
+        return await asyncio.wait_for(asyncio.to_thread(func, *args, **kwargs), timeout=timeout_sec)
+    except asyncio.TimeoutError:
+        raise PLCTimeoutError(
+            f"PLC không phản hồi sau {timeout_sec:.0f}s (mất kết nối hoặc PLC không trả lời) - "
+            f"lệnh: {getattr(func, '__name__', func)}{args}"
+        )
+
+
 # ===============================
 # Camera Service (giống hệt gateway gốc)
 # ===============================
@@ -707,7 +787,8 @@ class CameraService:
             frame = None
             image_bytes_raw = None
             content_type = None
-            fresh_fetches = max(CAMERA_SNAPSHOT_FRESH_FETCHES, 1)
+            fresh_fetches = max(int(GATEWAY_CONFIG.get("camera_snapshot_fresh_fetches", 1)), 1)
+            fresh_delay_ms = float(GATEWAY_CONFIG.get("camera_snapshot_fresh_delay_ms", 120))
 
             for fetch_index in range(fresh_fetches):
                 logger.info(f"📸 Fetching snapshot {fetch_index + 1}/{fresh_fetches}: {url}")
@@ -735,7 +816,7 @@ class CameraService:
                     raise RuntimeError("Failed to decode snapshot image")
 
                 if fetch_index < fresh_fetches - 1:
-                    time.sleep(CAMERA_SNAPSHOT_FRESH_DELAY_MS / 1000.0)
+                    time.sleep(fresh_delay_ms / 1000.0)
 
             self.last_snapshot_image_bytes = image_bytes_raw
             self.last_snapshot_image_md5 = hashlib.md5(image_bytes_raw).hexdigest() if image_bytes_raw else None
@@ -780,6 +861,10 @@ def resolve_fiducial_confidence_threshold(request_threshold: Optional[float] = N
 
 def resolve_ai_api_url() -> str:
     return GATEWAY_CONFIG["ai_api_url"]
+
+
+def resolve_plc_move_timeout_ms(request_timeout_ms: Optional[int] = None) -> int:
+    return int(request_timeout_ms if request_timeout_ms is not None else GATEWAY_CONFIG["plc_move_timeout_ms"])
 
 
 # ===============================
@@ -955,10 +1040,19 @@ async def _wait_motion_status(
         f"{motion_addr + motion_count - 1}, poll={fb.poll_interval_ms}ms"
     )
 
+    poll_count = 0
     while time.time() < hard_deadline:
-        status_values = await asyncio.to_thread(
+        status_values = await plc_io(
             plc.read_int, fb.motion_status_mem_area, motion_addr, motion_count
         )
+        poll_count += 1
+        # DEBUG tam thoi de dieu tra vi sao motion-status luon idle (xem canh bao
+        # "falling back to travel-time estimate"): log RAW gia tri doc duoc moi poll
+        # trong 1.5s dau (cua so quan trong nhat - luc dong PLC PHAI bat dau bao busy),
+        # sau do giam tan suat de khong spam console. Xoa block nay sau khi dieu tra xong.
+        if poll_count <= 30 or poll_count % 10 == 0:
+            logger.info(f"🔍 [debug motion-status] poll #{poll_count} raw={status_values}")
+
         if not status_values or len(status_values) < 4:
             await asyncio.sleep(poll_interval)
             continue
@@ -1050,13 +1144,13 @@ async def _wait_done_busy(
 
     while time.time() < deadline:
         if fb.done_addr is not None:
-            values = await asyncio.to_thread(plc.read_int, fb.done_mem_area, fb.done_addr, 1)
+            values = await plc_io(plc.read_int, fb.done_mem_area, fb.done_addr, 1)
             if values and values[0] == fb.done_value:
                 logger.info(f"✅ PLC done feedback reached value {values[0]}")
                 return time.time() - start_time
 
         if fb.busy_addr is not None:
-            values = await asyncio.to_thread(plc.read_int, fb.busy_mem_area, fb.busy_addr, 1)
+            values = await plc_io(plc.read_int, fb.busy_mem_area, fb.busy_addr, 1)
             if values and values[0] == fb.busy_idle_value:
                 logger.info(f"✅ PLC busy feedback reached idle value {values[0]}")
                 return time.time() - start_time
@@ -1078,6 +1172,8 @@ class AIServiceClient:
         confidence_threshold: float,
         api_url: str,
         original_image_bytes: Optional[bytes] = None,
+        lot_code: str = "",
+        board_code: str = "",
     ) -> Optional[Dict[str, Any]]:
         """Send image to AI API and return detections."""
         try:
@@ -1089,12 +1185,14 @@ class AIServiceClient:
                     raise RuntimeError("Failed to encode image")
                 image_bytes = jpeg.tobytes()
 
-            logger.info(f"🤖 Sending to AI API: {api_url}")
+            logger.info(f"🤖 Sending to AI API: {api_url} (lot={lot_code or '-'} board={board_code or '-'})")
             response = requests.post(
                 api_url,
                 json={
                     "image_base64": base64.b64encode(image_bytes).decode("utf-8"),
                     "confidence_threshold": confidence_threshold,
+                    "lot_code": lot_code,
+                    "board_code": board_code,
                 },
                 timeout=30,
             )
@@ -1392,7 +1490,7 @@ async def _move_and_wait(
     target_y: float,
 ) -> float:
     """Gửi toạ độ + chờ hoàn tất, dùng chung logic FeedbackConfig/wait_for_plc_position."""
-    if not await asyncio.to_thread(
+    if not await plc_io(
         plc.send_coordinates,
         request.plc_mem_area,
         request.plc_x_addr,
@@ -1405,7 +1503,7 @@ async def _move_and_wait(
 
     fb = FeedbackConfig.from_request(request)
     fb.apply_dynamic_motion_timeout(current_x, current_y, target_x, target_y)
-    return await wait_for_plc_position(plc, request.plc_move_timeout_ms, fb)
+    return await wait_for_plc_position(plc, resolve_plc_move_timeout_ms(request.plc_move_timeout_ms), fb)
 
 
 async def _capture_and_detect_marker(
@@ -1611,13 +1709,13 @@ async def move_camera_simple(request: MoveRequest):
     plc_config = {**DEFAULT_PLC_CONN, "mem_area": "D", "x_addr": 2810, "y_addr": 2910, "trigger_addr": 3000}
     plc = PLCService()
     try:
-        if not await asyncio.to_thread(plc.connect, plc_config["pc_ip"], plc_config["plc_ip"], plc_config["port"]):
+        if not await plc_io(plc.connect, plc_config["pc_ip"], plc_config["plc_ip"], plc_config["port"]):
             raise HTTPException(status_code=500, detail="Failed to connect to PLC")
 
-        current_x = await asyncio.to_thread(plc.read_float_words, plc_config["mem_area"], plc_config["x_addr"])
-        current_y = await asyncio.to_thread(plc.read_float_words, plc_config["mem_area"], plc_config["y_addr"])
+        current_x = await plc_io(plc.read_float_words, plc_config["mem_area"], plc_config["x_addr"])
+        current_y = await plc_io(plc.read_float_words, plc_config["mem_area"], plc_config["y_addr"])
 
-        if not await asyncio.to_thread(
+        if not await plc_io(
             plc.send_coordinates, plc_config["mem_area"], plc_config["x_addr"], plc_config["y_addr"],
             plc_config["trigger_addr"], request.x, request.y,
         ):
@@ -1625,7 +1723,7 @@ async def move_camera_simple(request: MoveRequest):
 
         fb = FeedbackConfig.from_request(request)
         fb.apply_dynamic_motion_timeout(current_x, current_y, request.x, request.y)
-        elapsed = await wait_for_plc_position(plc, 10000, fb)
+        elapsed = await wait_for_plc_position(plc, resolve_plc_move_timeout_ms(request.plc_move_timeout_ms), fb)
 
         return MoveResponse(success=True, message=f"Moved to ({request.x:.3f}, {request.y:.3f})",
                              plc_x=request.x, plc_y=request.y, elapsed_seconds=elapsed)
@@ -1686,13 +1784,13 @@ async def move_camera_bulech(request: MoveBuLechRequest):
     plc_config = {**DEFAULT_PLC_CONN, "mem_area": "D", "x_addr": 2810, "y_addr": 2910, "trigger_addr": 3000}
     plc = PLCService()
     try:
-        if not await asyncio.to_thread(plc.connect, plc_config["pc_ip"], plc_config["plc_ip"], plc_config["port"]):
+        if not await plc_io(plc.connect, plc_config["pc_ip"], plc_config["plc_ip"], plc_config["port"]):
             raise HTTPException(status_code=500, detail="Failed to connect to PLC")
 
-        current_x = await asyncio.to_thread(plc.read_float_words, plc_config["mem_area"], plc_config["x_addr"])
-        current_y = await asyncio.to_thread(plc.read_float_words, plc_config["mem_area"], plc_config["y_addr"])
+        current_x = await plc_io(plc.read_float_words, plc_config["mem_area"], plc_config["x_addr"])
+        current_y = await plc_io(plc.read_float_words, plc_config["mem_area"], plc_config["y_addr"])
 
-        if not await asyncio.to_thread(
+        if not await plc_io(
             plc.send_coordinates, plc_config["mem_area"], plc_config["x_addr"], plc_config["y_addr"],
             plc_config["trigger_addr"], final_x, final_y,
         ):
@@ -1700,7 +1798,7 @@ async def move_camera_bulech(request: MoveBuLechRequest):
 
         fb = FeedbackConfig.from_request(request)
         fb.apply_dynamic_motion_timeout(current_x, current_y, final_x, final_y)
-        elapsed = await wait_for_plc_position(plc, 10000, fb)
+        elapsed = await wait_for_plc_position(plc, resolve_plc_move_timeout_ms(request.plc_move_timeout_ms), fb)
 
         message = f"Moved to Board=({request.board_x:.3f},{request.board_y:.3f}) -> PLC=({final_x:.3f},{final_y:.3f})"
         if not offset_applied:
@@ -1784,15 +1882,15 @@ async def inspect_defect(request: InspectDefectRequest):
         logger.info(f"🔍 Inspecting defect: PLC target=({final_x:.3f}, {final_y:.3f})")
 
         step_start = time.time()
-        if not await asyncio.to_thread(plc.connect, request.plc_pc_ip, request.plc_ip, request.plc_port):
+        if not await plc_io(plc.connect, request.plc_pc_ip, request.plc_ip, request.plc_port):
             raise RuntimeError("Failed to connect to PLC")
         timing["plc_connect"] = time.time() - step_start
 
-        current_x = await asyncio.to_thread(plc.read_float_words, request.plc_mem_area, request.plc_x_addr)
-        current_y = await asyncio.to_thread(plc.read_float_words, request.plc_mem_area, request.plc_y_addr)
+        current_x = await plc_io(plc.read_float_words, request.plc_mem_area, request.plc_x_addr)
+        current_y = await plc_io(plc.read_float_words, request.plc_mem_area, request.plc_y_addr)
 
         step_start = time.time()
-        if not await asyncio.to_thread(
+        if not await plc_io(
             plc.send_coordinates,
             request.plc_mem_area,
             request.plc_x_addr,
@@ -1806,7 +1904,7 @@ async def inspect_defect(request: InspectDefectRequest):
 
         fb = FeedbackConfig.from_request(request)
         fb.apply_dynamic_motion_timeout(current_x, current_y, final_x, final_y)
-        timing["plc_wait"] = await wait_for_plc_position(plc, request.plc_move_timeout_ms, fb)
+        timing["plc_wait"] = await wait_for_plc_position(plc, resolve_plc_move_timeout_ms(request.plc_move_timeout_ms), fb)
 
         step_start = time.time()
         snapshot_url = resolve_camera_snapshot_url(request.camera_snapshot_url)
@@ -1826,6 +1924,8 @@ async def inspect_defect(request: InspectDefectRequest):
             request.ai_confidence_threshold,
             ai_api_url,
             camera_service.last_snapshot_image_bytes,
+            request.lot_code,
+            request.board_code,
         )
         if ai_result is None:
             raise RuntimeError("AI detection failed")
@@ -1871,7 +1971,7 @@ async def inspect_defect(request: InspectDefectRequest):
 async def test_plc():
     plc = PLCService()
     try:
-        if await asyncio.to_thread(plc.connect, **DEFAULT_PLC_CONN):
+        if await plc_io(plc.connect, **DEFAULT_PLC_CONN):
             return {"success": True, "message": "PLC connection OK", "plc_available": PLC_AVAILABLE}
         return {"success": False, "message": "PLC connection failed"}
     except Exception as e:
@@ -1886,17 +1986,17 @@ async def test_plc_feedback():
     """Đọc thử các thanh ghi PLC feedback (done/busy) đang cấu hình - dùng để debug."""
     plc = PLCService()
     try:
-        if not await asyncio.to_thread(plc.connect, **DEFAULT_PLC_CONN):
+        if not await plc_io(plc.connect, **DEFAULT_PLC_CONN):
             return {"success": False, "message": "Failed to connect to PLC"}
 
         done_value = busy_value = None
         if GATEWAY_CONFIG["plc_done_addr"] is not None:
-            values = await asyncio.to_thread(
+            values = await plc_io(
                 plc.read_int, GATEWAY_CONFIG["plc_done_mem_area"], GATEWAY_CONFIG["plc_done_addr"], 1
             )
             done_value = values[0] if values else None
         if GATEWAY_CONFIG["plc_busy_addr"] is not None:
-            values = await asyncio.to_thread(
+            values = await plc_io(
                 plc.read_int, GATEWAY_CONFIG["plc_busy_mem_area"], GATEWAY_CONFIG["plc_busy_addr"], 1
             )
             busy_value = values[0] if values else None
@@ -2005,7 +2105,7 @@ async def auto_board_offset(request: AutoBoardOffsetRequest):
 
     try:
         step_start = time.time()
-        if not await asyncio.to_thread(plc.connect, request.plc_pc_ip, request.plc_ip, request.plc_port):
+        if not await plc_io(plc.connect, request.plc_pc_ip, request.plc_ip, request.plc_port):
             return AutoBoardOffsetResponse(success=False, message="Không kết nối được PLC",
                                             anchor_mode=request.anchor_mode)
         timing["plc_connect"] = time.time() - step_start
@@ -2018,8 +2118,8 @@ async def auto_board_offset(request: AutoBoardOffsetRequest):
                 f"Board=({bx:.3f},{by:.3f}) -> PLC kỳ vọng=({ex:.3f},{ey:.3f})"
             )
 
-            current_x = await asyncio.to_thread(plc.read_float_words, request.plc_mem_area, request.plc_x_addr)
-            current_y = await asyncio.to_thread(plc.read_float_words, request.plc_mem_area, request.plc_y_addr)
+            current_x = await plc_io(plc.read_float_words, request.plc_mem_area, request.plc_x_addr)
+            current_y = await plc_io(plc.read_float_words, request.plc_mem_area, request.plc_y_addr)
 
             try:
                 await _move_and_wait(plc, request, current_x, current_y, ex, ey)
@@ -2130,8 +2230,8 @@ async def auto_board_offset(request: AutoBoardOffsetRequest):
     finally:
         try:
             # quay lại vị trí gốc (0,0) để tiến hành bước tiếp theo quy trình sản xuất, tránh để PLC dừng lệch vị trí ban đầu
-            current_x = await asyncio.to_thread(plc.read_float_words, request.plc_mem_area, request.plc_x_addr)
-            current_y = await asyncio.to_thread(plc.read_float_words, request.plc_mem_area, request.plc_y_addr)
+            current_x = await plc_io(plc.read_float_words, request.plc_mem_area, request.plc_x_addr)
+            current_y = await plc_io(plc.read_float_words, request.plc_mem_area, request.plc_y_addr)
             logger.info(f"🔙 Quay lại vị trí gốc (0,0) từ ({current_x:.3f},{current_y:.3f})")
             await _move_and_wait(plc, request, current_x, current_y, 0.0, 0.0)
         except Exception:
@@ -2214,7 +2314,7 @@ async def calibrate_camera_axis(request: CameraAxisCalibRequest):
     plc = PLCService()
     pixel_samples: Dict[str, List[float]] = {}
     try:
-        if not await asyncio.to_thread(plc.connect, request.plc_pc_ip, request.plc_ip, request.plc_port):
+        if not await plc_io(plc.connect, request.plc_pc_ip, request.plc_ip, request.plc_port):
             return CameraAxisCalibResponse(
                 success=False, message="Không kết nối được PLC",
                 anchor_board_xy=[bx, by], anchor_plc_expected_xy=list(p0_plc),
@@ -2222,8 +2322,8 @@ async def calibrate_camera_axis(request: CameraAxisCalibRequest):
 
         for label, (tx_, ty_) in targets.items():
             logger.info(f"➡️  Di chuyển tới {label}: PLC target=({tx_:.3f},{ty_:.3f})")
-            current_x = await asyncio.to_thread(plc.read_float_words, request.plc_mem_area, request.plc_x_addr)
-            current_y = await asyncio.to_thread(plc.read_float_words, request.plc_mem_area, request.plc_y_addr)
+            current_x = await plc_io(plc.read_float_words, request.plc_mem_area, request.plc_x_addr)
+            current_y = await plc_io(plc.read_float_words, request.plc_mem_area, request.plc_y_addr)
             try:
                 await _move_and_wait(plc, request, current_x, current_y, tx_, ty_)
             except Exception as e:
@@ -2242,8 +2342,8 @@ async def calibrate_camera_axis(request: CameraAxisCalibRequest):
             pixel_samples[label] = [float(det["cx"]), float(det["cy"])]
 
         # quay lại P0 cho an toàn (không để máy dừng lệch khỏi vị trí ban đầu)
-        current_x = await asyncio.to_thread(plc.read_float_words, request.plc_mem_area, request.plc_x_addr)
-        current_y = await asyncio.to_thread(plc.read_float_words, request.plc_mem_area, request.plc_y_addr)
+        current_x = await plc_io(plc.read_float_words, request.plc_mem_area, request.plc_x_addr)
+        current_y = await plc_io(plc.read_float_words, request.plc_mem_area, request.plc_y_addr)
         try:
             await _move_and_wait(plc, request, current_x, current_y, *p0_plc)
         except Exception:

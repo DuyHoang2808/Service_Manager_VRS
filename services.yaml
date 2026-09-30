@@ -47,10 +47,6 @@ services:
     # vat ly, sua o dau cung nhu nhau) - dung duong dan modules/ cho dong nhat.
     script: D:\Camera\Dev\Service_Manager\modules\gateway\run_gateway.py
     exe: D:\Camera\Dev\deploy\Service_Manager\modules\gateway\run_gateway\run_gateway.exe
-    # TAM thoi chay .py de test fix ANCHOR_POINTS_POOL/anchor theo tung ma hang (xem
-    # commit lien quan) - exe cu chua co fix nay. Doi lai "exe" (hoac xoa dong nay) sau
-    # khi rebuild lai run_gateway.exe voi code moi.
-    run_mode: script
     cwd: D:\Camera\Dev\deploy\Service_Manager\modules\gateway\run_gateway
     type: service
     health_url: http://127.0.0.1:8083/docs

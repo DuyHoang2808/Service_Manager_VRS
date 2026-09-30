@@ -51,8 +51,11 @@ logs/
 
 - Module chay xuyen dem se **tu dong chuyen sang file cua ngay moi** luc 00:00,
   va ghi lai 1 dong bao da chuyen o cuoi file ngay cu.
-- Nut **"Mo file log hom nay"** mo dung file cua ngay hien tai; nut **"Mo thu muc"**
-  mo thu muc rieng cua module de xem log cac ngay truoc.
+- Nut **"Mo thu muc dang chay (script/exe)"** mo thu muc chua file dang thuc su duoc
+  chay (script .py hoac file .exe, tuy `run_mode` cua module) - cung la noi cac file
+  config/data (vd `plc_offset_gateway_config.json`, `Stream_cameras_configs.yml`) nam
+  canh no, tien sua config nhanh. Nut **"Mo thu muc log"** mo thu muc log rieng cua
+  module de xem log cac ngay truoc.
 
 ## Cac module dang cau hinh
 

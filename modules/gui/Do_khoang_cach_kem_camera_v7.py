@@ -100,8 +100,8 @@ FALLBACK_FFMPEG_PATH = (
 DEFAULT_RTSP_URL = "rtsp://localhost:8554/mystream"
 DEFAULT_WEB_PORT = 8001
 DEFAULT_STREAM_FPS = 30
-DEFAULT_JPEG_QUALITY = 75
-DEFAULT_MAX_WIDTH = 1280  # 0 = giu nguyen do phan giai goc
+DEFAULT_JPEG_QUALITY = 100
+DEFAULT_MAX_WIDTH = 1920  # 0 = giu nguyen do phan giai goc
 
 # Neu RTSP server khong bat tay duoc, FFmpeg KHONG bao loi ma treo im lang (da
 # kiem chung tren ffmpeg 2026-05-06: chay 25s khong thoat, khong log gi). No van

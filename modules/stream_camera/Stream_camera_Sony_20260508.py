@@ -94,6 +94,17 @@ class CameraConfig(tactParametters):
         self.snapshot_port = 8001
         self.ffmpeg_path = r"D:\Driver\ffmpeg-2026-05-06-git-f2e5eff3ff-essentials_build\bin\ffmpeg.exe"
 
+        # Backend OpenCV mở camera: "msmf" (Media Foundation) hoặc "dshow" (DirectShow).
+        # Thử camera_backend TRƯỚC, backend còn lại chỉ dùng khi cái đầu KHÔNG mở được.
+        # Trước đây ép "dshow" trước - với 1 số camera/card capture, DirectShow giao
+        # frame không đều nhịp (dù cap.isOpened() vẫn True nên không bao giờ fallback),
+        # mà ffmpeg lại dùng "-f rawvideo -r {fps}" - GIẢ ĐỊNH frame tới đều tăm tắp
+        # theo fps khai báo để tính timestamp -> nhịp thật lệch nhịp giả định làm hình
+        # bị giật/khựng phía client xem RTSP dù cấu hình ffmpeg (preset/tune/crf/gop...)
+        # giống hệt module khác đang mượt hơn. Đổi mặc định sang "msmf" (thường ổn định
+        # nhịp hơn trên Win10/11) để thử - đổi lại "dshow" ở đây nếu máy này ngược lại.
+        self.camera_backend = "msmf"
+
         # Lật ngang khung hình (giữ nguyên hành vi cũ)
         self.flip_horizontal = True
 
@@ -375,10 +386,21 @@ class SonyCameraStreamer:
         # Khởi tạo Camera
         # =========================
         logger.info("Đang mở camera Sony...")
-        self.cap = cv2.VideoCapture(self.config.camera_index, cv2.CAP_DSHOW)
+        backend_map = {"msmf": cv2.CAP_MSMF, "dshow": cv2.CAP_DSHOW}
+        primary_name = str(getattr(self.config, "camera_backend", "msmf")).lower()
+        primary = backend_map.get(primary_name, cv2.CAP_MSMF)
+        fallback_name, fallback = next(
+            ((name, flag) for name, flag in backend_map.items() if flag != primary),
+            ("dshow", cv2.CAP_DSHOW),
+        )
+
+        logger.info(f"Thử mở camera bằng {primary_name.upper()} trước...")
+        self.cap = cv2.VideoCapture(self.config.camera_index, primary)
         if not self.cap.isOpened():
-            logger.warning("CAP_DSHOW thất bại, thử CAP_MSMF...")
-            self.cap = cv2.VideoCapture(self.config.camera_index, cv2.CAP_MSMF)
+            logger.warning(f"{primary_name.upper()} thất bại, thử {fallback_name.upper()}...")
+            self.cap = cv2.VideoCapture(self.config.camera_index, fallback)
+        else:
+            logger.info(f"Đã mở camera bằng {primary_name.upper()}.")
 
         if not self.cap.isOpened():
             logger.error("Không thể mở camera!")
