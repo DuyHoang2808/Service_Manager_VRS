@@ -1,9 +1,9 @@
 {
   "camera_snapshot_url": "http://127.0.0.1:8001/snapshot",
   "camera_snapshot_timeout_ms": 3000,
+  "ai_api_url": "http://192.84.106.84:8082/api/ai-detection",
   "camera_snapshot_fresh_fetches": 1,
   "camera_snapshot_fresh_delay_ms": 120,
-  "ai_api_url": "http://192.84.106.76:8082/api/ai-detection",
   "plc_axis_speed_mm_per_s": 1000.0,
   "use_plc_position_feedback": false,
   "plc_done_mem_area": "D",
@@ -19,7 +19,7 @@
   "plc_motion_status_count": 4,
   "plc_motion_start_timeout_ms": 1500,
   "plc_motion_idle_confirm_count": 10,
-  "plc_motion_settle_ms": 500,
+  "plc_motion_settle_ms": 1500,
   "plc_motion_hard_timeout_ms": 20000,
   "plc_move_timeout_ms": 2000,
   "plc_io_timeout_ms": 10000,
@@ -31,12 +31,12 @@
   "camera_image_height_px": 1080,
   "camera_axis_matrix": [
     [
-      -180.72123879099655,
-      4.281286033758898
+      184.6509806315104,
+      -0.81207275390625
     ],
     [
-      0.4330137761602657,
-      109.92113553178754
+      -0.983917236328125,
+      184.59757486979166
     ]
   ],
   "camera_axis_calibrated": true,

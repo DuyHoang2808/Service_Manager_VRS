@@ -129,6 +129,17 @@ SAVED_IMAGES_DIR = Path(CONFIG["saved_images_dir"])
 # ROI mo rong them bao nhieu % quanh bbox YOLO truoc khi tinh chinh sub-pixel
 ROI_MARGIN_RATIO = 0.35
 
+# Loc kich thuoc contour ung vien so voi bbox YOLO da bao (ty le [MIN,MAX] x rong/cao
+# bbox). Phat hien thuc te ngay 2026-10-07 (anh fiducial_20261007_093226_231876.jpg):
+# marker 4-lo vuong nam sat 1 pad tron lon ben canh - ROI mo rong 35% lan sang ca pad
+# do, va contour cua pad do (670x672px, lon hon han bbox YOLO 465x464px) co diem
+# area*extent CAO HON contour cua marker that (461x460px, khop bbox) -> thuat toan
+# chon NHAM contour cua pad lam tam marker, lech hang chuc-hang tram px. Them dieu
+# kien kich thuoc nay de LOAI NGAY cac contour qua lon/qua nho so voi bbox YOLO, bat
+# ke diem so area*extent co cao hon bao nhieu.
+CONTOUR_SIZE_MIN_RATIO = 0.5
+CONTOUR_SIZE_MAX_RATIO = 1.3
+
 
 # ===============================
 # Model loading + cache (ho tro NHIEU MA HANG - xem POST /api/select-model)
@@ -383,38 +394,48 @@ def _refine_center_subpixel(image_bgr: np.ndarray, bbox: List[float]) -> Tuple[f
 
         best_center = None
         best_score = -1.0
-        # Thu ca 2 chieu threshold (marker co the sang-tren-nen-toi hoac nguoc lai)
+        # Thu ca 2 chieu threshold (marker co the sang-tren-nen-toi hoac nguoc lai).
+        # Xet TAT CA contour tim duoc o CA 2 chieu (khong chi lay 1 contour lon nhat
+        # moi chieu roi moi loc) - vi contour dung co the khong phai lon nhat theo
+        # dien tich tho trong 1 chieu threshold, nhat la khi co vat the khac lon hon
+        # (vd pad tron ben canh) lan vao ROI mo rong.
         for thresh_type in (cv2.THRESH_BINARY + cv2.THRESH_OTSU, cv2.THRESH_BINARY_INV + cv2.THRESH_OTSU):
             _, binary = cv2.threshold(gray, 0, 255, thresh_type)
             contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-            if not contours:
-                continue
-            largest = max(contours, key=cv2.contourArea)
-            area = cv2.contourArea(largest)
-            if area < 4:  # qua nho, coi nhu nhieu
-                continue
-            # Loai bo contour kieu "ca hinh chu nhat ROI" (artifact cua threshold tren anh
-            # gan nhu dong nhat/nhieu) - 1 marker that, voi margin 35% quanh bbox, khong
-            # the chiem gan het dien tich ROI.
-            if area > 0.85 * roi_area:
-                continue
-            # Bo loc SHAPE-AGNOSTIC: extent = area / dien tich hinh chu nhat bao ngoai.
-            # Loai blob qua rong/manh (nhieu), giu ca hinh tron va hinh vuong.
-            bx_, by_, bw_, bh_ = cv2.boundingRect(largest)
-            rect_area = float(bw_ * bh_)
-            extent = area / rect_area if rect_area > 0 else 0.0
-            if extent < EXTENT_MIN:
-                continue
-            # Trong tam (centroid) qua moments - tam hinh hoc chinh xac cho hinh loi doi xung
-            M = cv2.moments(largest)
-            if M["m00"] <= 0:
-                continue
-            ccx = M["m10"] / M["m00"]
-            ccy = M["m01"] / M["m00"]
-            score = area * extent
-            if score > best_score:
-                best_score = score
-                best_center = (ccx, ccy)
+            for contour in contours:
+                area = cv2.contourArea(contour)
+                if area < 4:  # qua nho, coi nhu nhieu
+                    continue
+                # Loai bo contour kieu "ca hinh chu nhat ROI" (artifact cua threshold tren anh
+                # gan nhu dong nhat/nhieu) - 1 marker that, voi margin 35% quanh bbox, khong
+                # the chiem gan het dien tich ROI.
+                if area > 0.85 * roi_area:
+                    continue
+                bx_, by_, bw_, bh_ = cv2.boundingRect(contour)
+                # Loc kich thuoc so voi bbox YOLO (xem CONTOUR_SIZE_MIN/MAX_RATIO o dau
+                # file) - LOAI NGAY contour qua lon/qua nho so voi bbox YOLO da bao, du
+                # diem area*extent co cao hon bao nhieu. Day la fix cho bug tam marker
+                # "an theo" 1 vat the khac lon hon nam canh ben trong ROI mo rong.
+                if not (bw * CONTOUR_SIZE_MIN_RATIO <= bw_ <= bw * CONTOUR_SIZE_MAX_RATIO):
+                    continue
+                if not (bh * CONTOUR_SIZE_MIN_RATIO <= bh_ <= bh * CONTOUR_SIZE_MAX_RATIO):
+                    continue
+                # Bo loc SHAPE-AGNOSTIC: extent = area / dien tich hinh chu nhat bao ngoai.
+                # Loai blob qua rong/manh (nhieu), giu ca hinh tron va hinh vuong.
+                rect_area = float(bw_ * bh_)
+                extent = area / rect_area if rect_area > 0 else 0.0
+                if extent < EXTENT_MIN:
+                    continue
+                # Trong tam (centroid) qua moments - tam hinh hoc chinh xac cho hinh loi doi xung
+                M = cv2.moments(contour)
+                if M["m00"] <= 0:
+                    continue
+                ccx = M["m10"] / M["m00"]
+                ccy = M["m01"] / M["m00"]
+                score = area * extent
+                if score > best_score:
+                    best_score = score
+                    best_center = (ccx, ccy)
 
         if best_center is None:
             return bbox_cx, bbox_cy, False

@@ -762,6 +762,88 @@ class MergedMainWindowV7(MergedMainWindowV6):
         self._add_stream_group()
         self._add_detect_origin_group()
 
+    # ------------------------------------------------- bu truc X khi bo flip
+    # Do_khoang_cach_kem_camera_v3.py dong ~196 truoc day luon co
+    # "frame = cv2.flip(frame, 1)" (lat ngang) truoc khi phat frame cho GUI.
+    # Toan bo cong thuc tinh goi y di chuyen PLC trong v3 (calculate_click_result,
+    # calculate_p2_real_result) duoc viet dua tren gia dinh ANH DA LAT - vi vay
+    # chieu pixel X "that" (chua lat) la NGUOC voi chieu PLC X ma cong thuc gia
+    # dinh. Y da co san o tick "Dao chieu Y" de bu, nhung X thi KHONG - v3 cong
+    # thang dx_mm (khong doi dau).
+    #
+    # Neu bo dong flip o v3 (xem anh goc, khong bi lat ngang), PHAI dao dau lai
+    # phan dx_mm dung cho PLC o day - override 2 ham tinh toan ngay trong v7
+    # (KHONG sua v3/v4/v5/v6, dung quy uoc cua du an). Gia tri "dx=...mm" hien
+    # thi do khoang cach (dx_mm tra ve trong dict) GIU NGUYEN dau - khong doi y
+    # nghia nhan hien thi, vi do la do luong pixel that, khong phai huong PLC.
+    #
+    # NEU DONG LAI dong flip o v3 (quay ve nhu cu) thi PHAI XOA 2 ham override
+    # nay (hoac comment lai) - de lai se bi dao dau 2 lan -> sai huong nguoc lai!
+    def calculate_click_result(self, click_x, click_y):
+        result = super().calculate_click_result(click_x, click_y)
+        if result is None:
+            return None
+        plc_x = self.plc_x_spin.value()
+        # v3 goc: world_x = plc_x + dx_mm (gia dinh anh da lat). Anh KHONG lat
+        # nua -> dao dau: world_x = plc_x - dx_mm.
+        result["world_x"] = plc_x - result["dx_mm"]
+        return result
+
+    def calculate_p2_real_result(self):
+        """Ban sao calculate_p2_real_result cua v3, chi dao dau phan dx_pixel->dx_mm
+        (xem comment o calculate_click_result o tren) - anh huong p2_real_x,
+        center_real_x, move_x. plc_target_x/y tu dong dung vi da goi
+        self.calculate_click_result() (ham da override o tren)."""
+        if self.point1 is None or self.point2 is None:
+            return None
+
+        mm_per_pixel = self.get_mm_per_pixel()
+        if mm_per_pixel is None:
+            return None
+
+        mm_per_pixel_x, mm_per_pixel_y = mm_per_pixel
+        invert_y = self.invert_y_check.isChecked()
+
+        def pixel_offset_to_real(dx_pixel, dy_pixel):
+            dx_mm = -dx_pixel * mm_per_pixel_x   # DAO DAU X (anh khong con bi lat ngang)
+            dy_mm = dy_pixel * mm_per_pixel_y
+            return dx_mm, (-dy_mm if invert_y else dy_mm)
+
+        p1_real_x = self.p1_real_x_spin.value()
+        p1_real_y = self.p1_real_y_spin.value()
+
+        d12_real_x, d12_real_y = pixel_offset_to_real(
+            self.point2[0] - self.point1[0],
+            self.point2[1] - self.point1[1],
+        )
+        p2_real_x = p1_real_x + d12_real_x
+        p2_real_y = p1_real_y + d12_real_y
+
+        center_x = self.view.frame_w / 2.0
+        center_y = self.view.frame_h / 2.0
+        dc1_real_x, dc1_real_y = pixel_offset_to_real(
+            self.point1[0] - center_x,
+            self.point1[1] - center_y,
+        )
+        center_real_x = p1_real_x - dc1_real_x
+        center_real_y = p1_real_y - dc1_real_y
+
+        move_x = p2_real_x - center_real_x
+        move_y = p2_real_y - center_real_y
+
+        plc_target = self.calculate_click_result(self.point2[0], self.point2[1])
+
+        return {
+            "p2_real_x": p2_real_x,
+            "p2_real_y": p2_real_y,
+            "center_real_x": center_real_x,
+            "center_real_y": center_real_y,
+            "move_x": move_x,
+            "move_y": move_y,
+            "plc_target_x": plc_target["world_x"] if plc_target else None,
+            "plc_target_y": plc_target["world_y"] if plc_target else None,
+        }
+
     # ---------------------------------------------------------------- UI
     def _add_stream_group(self) -> None:
         """Chen nhom 'Phat stream (Server)' vao panel phai, ngay duoi nhom

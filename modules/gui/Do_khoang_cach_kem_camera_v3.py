@@ -193,7 +193,7 @@ class CameraThread(QThread):
                 self.status_signal.emit("Khong doc duoc frame tu camera.")
                 self.msleep(100)
                 continue
-            frame = cv2.flip(frame, 1)
+            # frame = cv2.flip(frame, 1)
             self.frame_ready.emit(frame)
             self.msleep(10)
 
